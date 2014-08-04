@@ -163,6 +163,15 @@ header.main{
 
 @import 'datepicker';
 
+/* --------------------------------------------------------------------------------
+                                    main search                                  */
+#main_search{ background: #F6F6F6; height: 80px; display: block;
+ .form{
+    width: 1000px; height: 54px; margin: 0 auto; position: relative; padding: 26px 0 0 0;
+    input.submit{ width: 16px; height: 16px; background: #fff url('../i/ico_main_search.png') no-repeat 0 0; font-size: 0; text-indent: -999999px; display: inline-block; border: none; vertical-align: middle; position: relative; left: 4px; top: 1px; }
+    input.text{ width: 970px; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; }
+  }
+}
 
 /* --------------------------------------------------------------------------------
                                     mega menu                                    */

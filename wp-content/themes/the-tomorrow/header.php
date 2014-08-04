@@ -83,19 +83,15 @@
 
 					<p>
 
-<!-- 					<input class="checkbox events" type="checkbox" value="events" />
-						<label>events</label>
-						
-						<input class="checkbox letters" type="checkbox" value="letters" />
-						<label>letters</label>
- -->
 						<div id="options">
 
 
 							<div class="option-set" data-group="type">
 
+								<!--
 								<input type="checkbox" value="" id="type-all" class="all" checked />
 								<label for="type-all">both</label>
+								-->
 
 								<input type="checkbox" value=".event" id="event" />
 								<label for="event">events</label>
@@ -152,7 +148,7 @@
 
 					<p>
 						<label>city</label>
-						<input class="text city" type="text" value="" />
+						<input class="text city" type="text" value="" id="city_search" />
 					</p>
 
 				</div>
@@ -181,6 +177,17 @@
 				</div>
 
 				<input class="submit" type="submit" value="apply" />
+
+			</form>
+
+		</div></div>
+
+		<div id="main_search"><div class="form">
+
+			<form method="#" action="#">
+
+				<input class="text" type="text" value="" />
+				<input class="submit" type="submit" value="search" />
 
 			</form>
 

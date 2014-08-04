@@ -14,7 +14,7 @@
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 /* --------------------------------------------------------------------------------
-                                    mega menu                                    */
+                                    main search                                  */
 /* https://code.google.com/p/wiquery/source/browse/trunk/src/main/resources/org/odlabs/wiquery/ui/themes/base/jquery.ui.datepicker.min.css?r=1008 */
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
   margin: 0;
@@ -425,8 +425,8 @@ header.main .nav_menu li.nav_menu_menu a {
   width: 90px;
 }
 #filter_nav .form div.filter.date button {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background: #fff url('../i/ico_filter_calendar.png') no-repeat 0 0;
   font-size: 0;
   text-indent: -999999px;
@@ -628,6 +628,43 @@ header.main .nav_menu li.nav_menu_menu a {
   left: -4px;
   width: 200px;
   height: 200px;
+}
+#main_search {
+  background: #f6f6f6;
+  height: 80px;
+  display: block;
+  /* --------------------------------------------------------------------------------
+                                    mega menu                                    */
+}
+#main_search .form {
+  width: 1000px;
+  height: 54px;
+  margin: 0 auto;
+  position: relative;
+  padding: 26px 0 0 0;
+}
+#main_search .form input.submit {
+  width: 16px;
+  height: 16px;
+  background: #fff url('../i/ico_main_search.png') no-repeat 0 0;
+  font-size: 0;
+  text-indent: -999999px;
+  display: inline-block;
+  border: none;
+  vertical-align: middle;
+  position: relative;
+  left: 4px;
+  top: 1px;
+}
+#main_search .form input.text {
+  width: 970px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
 nav#megamenu {
   background: #606a70;

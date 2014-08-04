@@ -1,82 +1,113 @@
-	// // home isotope
-	// $('#home_grid').isotope({
-	// 	itemSelector: '.home_box',
-	// 	layoutMode:'masonry',
-	// 	masonry: {
-	// 		columnWidth: 240
-	// 	}
- //  });
-
+//  Isotope combination filters with checkboxes -> http://codepen.io/desandro/pen/btFfG
+//  Isotope - filtering with search field -> http://codepen.io/desandro/pen/wfaGu
+//  date? http://stackoverflow.com/questions/14531504/combining-jquery-ui-datepicker-and-isotope-data-filters
 
 var $container;
 var filters = {};
 
 $(function(){
 
-  $container = $('#home_grid');
 
-  // createContent();
+
+  /* ----------------------------------------------------------------------------------------------------------------
+  initialize isotope */
+  $grid = $('#home_grid');
 
   var $filterDisplay = $('#filter-display');
 
-  $container.isotope({
+  var qsRegex;
+
+  var $container = $grid.isotope({
     itemSelector: '.home_box',
     layoutMode:'masonry',
     masonry: {
       columnWidth: 240
+    },
+    
+    // ricerca libera
+    filter: function() {
+      return qsRegex ? $(this).text().match( qsRegex ) : true;
+    },
+    
+    /* filter element with numbers greater than 50
+    filter: function() {
+      // `this` is the item element. Get text of element's .number
+      var number = $(this).find('.number').text();
+      // return true to show, false to hide
+      return parseInt( number, 10 ) > 50;
+    }  */
+
+    filter: function() {
+      var address = $(this).find('.address').text();
+      return qsRegex ? address.match( qsRegex ) : true;
     }
+     
   });
 
-  // do stuff when checkbox change
+  // use value of search field to filter (ricerca libera)
+  var $quicksearch = $('#main_search .text').keyup( function() {
+    qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+    $container.isotope();
+  } );
+
+  // use value of search field to filter (ricerca per città)
+  var $city_search = $('#city_search').keyup( debounce(function() {
+    qsRegex = new RegExp( $city_search.val(), 'gi' );
+    $container.isotope();
+  }, 200 ) );
+
+  /* ----------------------------------------------------------------------------------------------------------------
+  do stuff when checkbox change */
   $('#options').on( 'change', function( jQEvent ) {
+
     var $checkbox = $( jQEvent.target );
+
     manageCheckbox( $checkbox );
 
     var comboFilter = getComboFilter( filters );
 
-    $container.isotope({ filter: comboFilter });
+    $grid.isotope({ filter: comboFilter });
 
     $filterDisplay.text( comboFilter );
+
   });
+
+
+
+  /* ----------------------------------------------------------------------------------------------------------------
+  search 
+  // quick search regex
+  var qsRegex;
+  
+      // init Isotope
+      var $container = $('.isotope').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows',
+        filter: function() {
+          return qsRegex ? $(this).text().match( qsRegex ) : true;
+        }
+      });
+
+  // use value of search field to filter
+  var $quicksearch = $('#quicksearch').keyup( debounce( function() {
+    qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+    $container.isotope();
+  }, 200 ) );
+
+*/
+  
 
 });
 
 
 var data = {
-    type: 'event conversations'.split(' '),
-    brands: 'brand1 brand2 brand3 brand4'.split(' '),
-    productTypes: 'type1 type2 type3 type4'.split(' '),
-    colors: 'red blue yellow green'.split(' '),
-    sizes: 'uk-size8 uk-size9 uk-size10 uk-size11'.split(' ')
+    type: 'event conversations'.split(' ')
+//  ,
+//  brands: 'brand1 brand2 brand3 brand4'.split(' '),
+//  productTypes: 'type1 type2 type3 type4'.split(' '),
+//  colors: 'red blue yellow green'.split(' '),
+//  sizes: 'uk-size8 uk-size9 uk-size10 uk-size11'.split(' ')
 };
-
-function createContent() {
-  var brand, productType, color, size;
-  var items = '';
-  // dynamically create content
-  for (var i=0, len1 = data.brands.length; i < len1; i++) {
-    brand = data.brands[i];
-    for (var j=0, len2 = data.productTypes.length; j < len2; j++) {
-      productType = data.productTypes[j];
-        for (var l=0, len3 = data.colors.length; l < len3; l++) {
-        color = data.colors[l];
-        for (var k=0, len4 = data.sizes.length; k < len4; k++) {
-          size = data.sizes[k];
-          var itemHtml = '<div class="home_box ' + brand + ' ' +
-            productType + ' ' + color + ' ' + size + '">' +
-            '<p>' + brand + '</p>' +
-            '<p>' + productType + '</p>' +
-            '<p>' + size + '</p>' +
-            '</div>';
-            items += itemHtml;
-        }
-      }
-    }
-  }
-
-  $container.append( items );
-}
-
 
 function getComboFilter( filters ) {
   var i = 0;
@@ -114,7 +145,9 @@ function getComboFilter( filters ) {
   return comboFilter;
 }
 
-function manageCheckbox( $checkbox ) {
+/* ----------------------------------------------------------------------------------------------------------------
+*/
+  function manageCheckbox( $checkbox ) {
   var checkbox = $checkbox[0];
 
   var group = $checkbox.parents('.option-set').attr('data-group');
@@ -154,4 +187,22 @@ function manageCheckbox( $checkbox ) {
     }
   }
 
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------
+debounce so filtering doesn't happen every millisecond */
+
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    timeout = setTimeout( delayed, threshold || 100 );
+  }
 }
