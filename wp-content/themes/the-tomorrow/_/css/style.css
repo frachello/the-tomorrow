@@ -1,0 +1,1081 @@
+/* regole generali =========================================*/
+/* Neutralize styling: 
+   Elements we want to clean out entirely: */
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------
+                                    mega menu                                    */
+/* https://code.google.com/p/wiquery/source/browse/trunk/src/main/resources/org/odlabs/wiquery/ui/themes/base/jquery.ui.datepicker.min.css?r=1008 */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+  /* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+}
+img, object, embed {
+  max-width: 100%;
+  /* force a vertical scrollbar to prevent a jumpy page */
+}
+html {
+  overflow-y: scroll;
+  /* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+}
+ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+  /* tables still need cellspacing="0" in the markup */
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input, select {
+  vertical-align: middle;
+}
+pre {
+  /* CSS2 */
+  white-space: pre;
+  /* CSS 2.1 */
+  white-space: pre-wrap;
+  /* CSS 3 (and 2.1 as well, actually) */
+  white-space: pre-line;
+  /* IE */
+  word-wrap: break-word;
+}
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline;
+}
+.ie6 input {
+  vertical-align: text-bottom;
+}
+select, input, textarea {
+  font: 99% sans-serif;
+}
+table {
+  font-size: inherit;
+  font: 100%;
+  /* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+}
+a:hover, a:active {
+  outline: none;
+}
+small {
+  font-size: 85%;
+}
+strong, th {
+  font-weight: bold;
+}
+td, td img {
+  vertical-align: top;
+  /* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+  /* standardize any monospaced elements */
+}
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+  /* hand cursor on clickable elements */
+}
+.clickable, label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+  /* Webkit browsers add a 2px margin outside the chrome of form elements */
+}
+button, input, select, textarea {
+  margin: 0;
+  /* make buttons play nice in IE */
+}
+button {
+  width: auto;
+  overflow: visible;
+  /* scale images in IE7 more attractively */
+}
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+  /* prevent BG image flicker upon hover */
+}
+.ie6 html {
+  filter: expression(document.execCommand("BackgroundImageCache", false, true));
+  /* let's clear some floats */
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+  /* Print styles!
+-------------------------------------------------------------------------------*/
+}
+@media print {
+  /* Media queries!
+-------------------------------------------------------------------------------*/
+  /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */}
+html, body, form {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  border: 0;
+}
+label {
+  cursor: auto;
+}
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* Miscellaneous conveniences: */
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+input, select, textarea {
+  font: 12px Arial, Helvetica, sans-serif;
+}
+.clear {
+  clear: both;
+}
+br.clear {
+  clear: both;
+  line-height: 0;
+  height: 0;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  text-align: center;
+}
+.alignleft {
+  float: left;
+  margin-right: 5px;
+}
+.alignright {
+  float: right;
+  margin-left: 5px;
+  /* Apply styles  ========================================= */
+}
+body {
+  font: 12px/1.3 Arial, Helvetica, sans-serif;
+  color: #000;
+  text-align: center;
+  /*link*/
+}
+a, a:hover {
+  text-decoration: none;
+  /* struttura  */
+}
+#wrapper {
+  text-align: left;
+}
+#page {
+  margin: 0 10px;
+  padding-top: 10px;
+}
+footer {
+  margin-bottom: 40px;
+  height: 50px;
+}
+#content {
+  background: #fff;
+  /* float:left; */
+}
+#sidebar {
+  padding: 10px 0;
+  float: right;
+}
+#sidebarLeft {
+  float: left;
+}
+#sidebarRight {
+  float: right;
+}
+#main_content #post_col {
+  float: right;
+  margin-bottom: 30px;
+}
+#main_content #page_col {
+  float: right;
+  /************************************************
+*	Header  									*
+************************************************/
+}
+header.main {
+  position: relative;
+  background: #606a70;
+  color: #fff;
+  height: 140px;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+  /* --------------------------------------------------------------------------------
+                                    filter nav                                   */
+}
+header.main .inner {
+  width: 1000px;
+  height: 140px;
+  margin: 0 auto;
+  position: relative;
+}
+header.main .inner h1, header.main .inner a {
+  width: 279px;
+  height: 33px;
+}
+header.main .inner h1 {
+  padding: 49px 80px 0 0;
+  float: left;
+}
+header.main .inner h1 a {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background: url('../i/the_tomorrow_logo.png') no-repeat 0 0;
+}
+header.main .inner h2 {
+  height: 140px;
+  line-height: 140px;
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 16px;
+  float: left;
+}
+header.main .nav_menu {
+  width: 168px;
+  height: 23px;
+  position: absolute;
+  top: 61px;
+  right: 0;
+}
+header.main .nav_menu li, header.main .nav_menu li a {
+  width: 23px;
+  height: 23px;
+}
+header.main .nav_menu li {
+  float: left;
+  margin-right: 49px;
+}
+header.main .nav_menu li a {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background: url('../i/ico_nav_menu.png') no-repeat 0 0;
+}
+header.main .nav_menu li.nav_menu_filter a {
+  background-position: -23px 0;
+}
+header.main .nav_menu li.nav_menu_menu {
+  margin-right: 0;
+}
+header.main .nav_menu li.nav_menu_menu a {
+  background-position: -46px 0;
+}
+#filter_nav {
+  background: #f6f6f6;
+  height: 80px;
+  display: none;
+}
+#filter_nav .form {
+  width: 1000px;
+  height: 68px;
+  margin: 0 auto;
+  position: relative;
+  padding: 18px 0 0 0;
+}
+#filter_nav .form div.filter {
+  float: left;
+  margin: 0 40px 0 0;
+}
+#filter_nav .form div.filter * {
+  text-transform: uppercase;
+}
+#filter_nav .form div.filter .title {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 12px;
+}
+#filter_nav .form div.filter .text {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+#filter_nav .form div.filter label {
+  font-family: "adelle-sans";
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  top: 4px;
+}
+#filter_nav .form div.filter input.checkbox {
+  vertical-align: middle;
+}
+#filter_nav .form div.filter.show label {
+  margin-right: 18px;
+}
+#filter_nav .form div.filter.city .text {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+#filter_nav .form div.filter.date {
+  margin-right: 0;
+}
+#filter_nav .form div.filter.date p.calendar_date {
+  float: left;
+  margin-right: 23px;
+}
+#filter_nav .form div.filter.date label {
+  display: inline-block;
+  margin-right: 3px;
+}
+#filter_nav .form div.filter.date .text {
+  border: none;
+  width: 90px;
+  width: 90px;
+}
+#filter_nav .form div.filter.date button {
+  width: 15px;
+  height: 15px;
+  background: #fff url('../i/ico_filter_calendar.png') no-repeat 0 0;
+  font-size: 0;
+  text-indent: -999999px;
+  display: inline-block;
+  border: none;
+  vertical-align: middle;
+  position: relative;
+  left: 4px;
+  top: 1px;
+}
+#filter_nav .form .submit {
+  background: #fff;
+  border: 1px solid #191919;
+  width: 90px;
+  height: 40px;
+  float: right;
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.ui-datepicker {
+  background: #fff;
+  width: 17em;
+  padding: 0.2em 0.2em 0;
+  display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: 0.2em 0;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: red;
+  display: block;
+  text-indent: -999999px;
+  font-size: 0;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+  background: #000 url('../i/ico_arrow_small_left.png') no-repeat center center;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+  background: #000 url('../i/ico_arrow_small_right.png') no-repeat center center;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month-year {
+  width: 100%;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 49%;
+}
+.ui-datepicker table {
+  width: 100%;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  margin: 0 0 0.4em;
+}
+.ui-datepicker th {
+  padding: 0.7em 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+}
+.ui-datepicker td {
+  border: 0;
+  padding: 1px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  display: block;
+  padding: 0.2em;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+.ui-datepicker td a {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.ui-datepicker td.ui-datepicker-today a {
+  border: 1px solid #999;
+}
+.ui-datepicker td.ui-datepicker-current-day a {
+  padding: 0;
+  background: #ddd;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: 0.7em 0 0 0;
+  padding: 0 0.2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: 0.5em 0.2em 0.4em;
+  cursor: pointer;
+  padding: 0.2em 0.6em 0.3em 0.6em;
+  width: auto;
+  overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left;
+}
+.ui-datepicker.ui-datepicker-multi {
+  width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto 0.4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {
+  border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left;
+}
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+}
+.ui-datepicker-rtl {
+  direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+.ui-datepicker-cover {
+  display: none;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  filter: mask();
+  top: -4px;
+  left: -4px;
+  width: 200px;
+  height: 200px;
+}
+nav#megamenu {
+  background: #606a70;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  display: none;
+}
+nav#megamenu .inner {
+  width: 998px;
+  margin: 0 auto;
+  text-align: left;
+}
+nav#megamenu .megahead {
+  height: 35px;
+  padding: 50px 0 80px 0;
+}
+nav#megamenu .megahead .logotipo {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  width: 70px;
+  height: 35px;
+  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
+  float: left;
+}
+nav#megamenu .megahead .close {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../i/ico_megamenu_close.png) no-repeat 0 0;
+  float: right;
+  margin-top: 7px;
+}
+nav#megamenu .logotipo {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  width: 70px;
+  height: 35px;
+  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
+}
+nav#megamenu .close {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../i/ico_megamenu_close.png) no-repeat 0 0;
+}
+nav#megamenu .main_menu {
+  width: 998px;
+}
+nav#megamenu .main_menu li {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 45px;
+}
+nav#megamenu .main_menu a {
+  color: #fff;
+}
+nav#megamenu .secondary-nav {
+  width: 998px;
+  border-top: 1px solid #fff;
+  padding: 25px 0 50px 0;
+  clear: both;
+  margin-top: 30px;
+}
+nav#megamenu .secondary-nav h2.widgettitle {
+  display: none;
+}
+nav#megamenu .secondary-nav .secondary_menu {
+  float: left;
+  margin: 0 55px 0 0;
+}
+nav#megamenu .secondary-nav .secondary_menu#nav_menu-5, nav#megamenu .secondary-nav .secondary_menu#nav_menu-6 {
+  margin-right: 0;
+}
+nav#megamenu .secondary-nav .secondary_menu#nav_menu-6 {
+  float: right;
+}
+nav#megamenu .secondary-nav .secondary_menu div {
+  width: 226px;
+  float: left;
+}
+nav#megamenu .secondary-nav .secondary_menu div li {
+  font-size: 24px;
+  font-family: "adelle-sans";
+}
+nav#megamenu .secondary-nav .secondary_menu div li a {
+  color: #fff;
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container {
+  width: auto;
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li, nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li a {
+  width: 28px;
+  height: 20px;
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li {
+  float: left;
+  margin-right: 38px;
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li.menu-item-70 a {
+  background-image: url(../i/ico_megamenu_social_facebook.png);
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li.menu-item-71 a {
+  background-image: url(../i/ico_megamenu_social_twitter.png);
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li.menu-item-72 {
+  margin-right: 0;
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li.menu-item-72 a {
+  background-image: url(../i/ico_megamenu_social_youtube.png);
+}
+nav#megamenu .secondary-nav .secondary_menu .menu-social-links-container li a {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+nav#megamenu p.megamenu-footer {
+  width: 998px;
+  float: left;
+  display: block;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+  margin-top: 50px;
+}
+#logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /************************************************
+* POST    								        *
+************************************************/
+}
+.post {
+  padding: 10px 0;
+}
+.post .entry blockquote {
+  margin: 1.5em 1.3em 0.5em;
+  line-height: 150%;
+  color: #666;
+  font-style: italic;
+}
+.post .entry cite {
+  text-align: right;
+  display: block;
+  padding-right: 15px;
+}
+.post .entry code {
+  display: block;
+  margin: 1em 1.3em;
+  color: #444;
+  font-family: "courier new";
+}
+.post .entry ul {
+  margin: 0 1.3em;
+  list-style: none;
+}
+.post .entry ul li {
+  background: url("images/dotS.gif") no-repeat 0 6px;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+.post .entry ol {
+  margin: 0 1em 0 3em;
+}
+.post .entry ol li {
+  margin: 0 0 7px 0;
+}
+.postMeta {
+  color: #999;
+  font-size: 11px;
+  margin-top: 5px;
+  padding: 15px 0 0;
+  background: url("images/dot.gif") repeat-x 0 6px;
+  position: relative;
+}
+.postMetaTop {
+  color: #999;
+  font-size: 11px;
+}
+.postMetaTop span.category a {
+  font-weight: bold;
+}
+.postMeta span.comments {
+  position: absolute;
+  right: 0;
+}
+.postMeta span.tag {
+  /************************************************
+*	Sidebar      								*
+************************************************/
+  /* titoli */
+}
+#sidebar h3 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 2px 0;
+}
+#sidebar h3 span {
+  /* i box sono di 190px */
+}
+.boxS {
+  margin: 0 0 20px 0px;
+}
+.boxD {
+  margin: 0 0px 20px 0;
+}
+.boxL {
+  margin: 0 0px 20px;
+  padding: 10px;
+}
+#sidebarLarge {
+  background: url("images/dot.gif") top repeat-x;
+}
+.boxL {
+  font-size: 12px;
+  line-height: 140%;
+  background: url("images/dot.gif") bottom repeat-x;
+}
+.boxS ul, .boxD ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.boxS ul li, .boxD ul li {
+  martin: 2px 0;
+  pudding: 0;
+  /************************************************
+*	Footer      								*
+************************************************/
+}
+footer {
+  font-size: 11px;
+  margin: 0 10px;
+  position: relative;
+  background: #fff;
+  color: #666;
+}
+footer a {
+  color: #666;
+  /************************************************
+
+/* pagine */
+}
+h2.page-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  /* paginazione standard */
+}
+.navigation {
+  position: relative;
+  padding: 10px 0;
+  height: 18px;
+  line-height: 18px;
+}
+.navigation span.previous-entries {
+  position: absolute;
+  left: 0;
+}
+.navigation span.next-entries {
+  position: absolute;
+  right: 0;
+  /*
+#content.taxonomy_content .entry { display: none; }
+#content.taxonomy_content .highlight .entry { display: block; }
+.highlight .entry, .highlight h2 { margin: 0 20px 0 25px }
+#content.taxonomy_content h2 { cursor: pointer; }
+*/
+}
+.highlight {
+  background: yellow;
+  padding: 10px 10px 0 10px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  /* home page
+*/
+}
+#home_grid {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  /* Print styles!
+-------------------------------------------------------------------------------*/
+}
+#home_grid .home_box {
+  position: relative;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float: left;
+  height: 239px;
+}
+#home_grid .home_box.event {
+  width: 239px;
+}
+#home_grid .home_box.event .top {
+  width: 88%;
+  padding: 6%;
+  float: left;
+  position: relative;
+}
+#home_grid .home_box.event .top .bg {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: lime;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#home_grid .home_box.event .top.over p, #home_grid .home_box.event .top.over p a {
+  color: #fff !important;
+  z-index: 2;
+  position: relative;
+}
+#home_grid .home_box.event .top.over .bg {
+  height: 100%;
+}
+#home_grid .home_box.event .date {
+  margin: 0;
+}
+#home_grid .home_box.event .date .day {
+  font-size: 53px;
+  font-family: "adelle";
+  font-weight: 800;
+  font-style: normal;
+  float: left;
+  line-height: 41px;
+  margin-right: 5px;
+}
+#home_grid .home_box.event .date .ordinal-month {
+  font-size: 13px;
+  font-family: "adelle";
+  font-weight: 300;
+  font-style: normal;
+  vertical-align: super;
+}
+#home_grid .home_box.event .cat {
+  float: right;
+  display: block;
+  font-family: "adelle-sans";
+  text-transform: uppercase;
+  font-size: 11px;
+  height: 11px;
+  font-weight: 700;
+}
+#home_grid .home_box.event .title {
+  font-size: 19px;
+  font-family: 'adelle-sans';
+  font-weight: 300;
+  float: left;
+  margin: 6% 6% 0 6%;
+}
+#home_grid .home_box.event .title strong {
+  font-weight: 700;
+}
+#home_grid .home_box.event .title a, #home_grid .home_box.event .title strong a {
+  color: #000;
+}
+#home_grid .home_box.event .bottom {
+  height: 11px;
+  position: absolute;
+  left: 6%;
+  bottom: 6%;
+  width: 88%;
+}
+#home_grid .home_box.event .bottom .address {
+  background: url(../i/ico_hp_box_marker.png) no-repeat center left;
+  padding: 0 0 0 12px;
+  float: left;
+}
+#home_grid .home_box.event .bottom .share {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background: url(../i/ico_hp_box_share.png) no-repeat center left;
+  width: 11px;
+  height: 11px;
+  float: right;
+}
+#home_grid .home_box p {
+  margin-top: 0;
+}
+#home_grid .home_box.conversations {
+  width: 479px;
+}
+#home_grid .home_box.conversations .top {
+  width: 94%;
+  padding: 3%;
+  float: left;
+}
+#home_grid .home_box.conversations .top .title {
+  font-family: "adelle";
+  font-weight: 300;
+  font-size: 36px;
+  font-style: normal;
+  float: left;
+  line-height: 41px;
+}
+#home_grid .home_box.conversations .top .title a {
+  font-weight: 800;
+  color: #000;
+}
+#home_grid .home_box.conversations .bottom {
+  height: 11px;
+  position: absolute;
+  left: 3%;
+  bottom: 6%;
+  width: 94%;
+}
+#home_grid .home_box.conversations .bottom p {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 11px;
+  height: 11px;
+  line-height: 11px;
+  padding: 0 0 0 14px;
+}
+#home_grid .home_box.conversations .bottom p.date {
+  background: url(../i/ico_hp_box_time.png) no-repeat center left;
+  float: left;
+}
+#home_grid .home_box.conversations .bottom p.count-theme {
+  background: url(../i/ico_hp_box_letter.png) no-repeat center left;
+  float: right;
+}
+@media print {
+  /* Media queries!
+-------------------------------------------------------------------------------*/
+  /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */}
