@@ -69,31 +69,28 @@ a, a:hover {text-decoration:none;}
 
 
 header.main{
-  position:relative;
-  background: #606A70;
-  color: #fff;
-  height: 140px;
-  text-align: center;
+  position:fixed; background: #606A70; color: #fff; height: 140px; text-align: center; top: 0; left: 0; z-index: 9; width: 100%;
   -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   -moz-box-shadow:    0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+  @include transition(all 0.5s ease);
   .inner{
     width: 988px; height: 140px; margin: 0 auto; position: relative;
 
     h1, a { width: 279px; height: 33px; }
     h1{
-      padding: 49px 80px 0 0; float: left;
+      padding: 49px 80px 0 0; float: left; @include transition(padding-top 0.5s ease);
       a{
         @include ir; background: url('../i/the_tomorrow_logo.png') no-repeat 0 0;
       }
     }
     h2{
-      height: 140px; line-height: 140px; font-family: "adelle-sans"; font-weight: 300; font-size: 16px; float: left;
+      height: 40px; line-height: 40px; font-family: "adelle-sans"; font-weight: 300; font-size: 16px; float: left; margin-top: 50px; @include transition(all 0.5s ease);
     }
   }
 
   .nav_menu{
-    width: 168px; height: 23px; position: absolute; top: 61px; right: 0;
+    width: 168px; height: 23px; position: absolute; top: 61px; right: 0; @include transition(all 0.5s ease);
     li, li a{
       width: 23px; height: 23px;
     }
@@ -113,6 +110,17 @@ header.main{
       }
     }
   }
+
+}
+
+body.scrolled header.main{ height: 90px;
+  .inner{ height: 90px;
+    h1 { padding-top: 28px;
+      a { @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; } 
+    }
+    h2 { display: none; margin-top: 35px; }
+  }
+  .nav_menu { top: 34px; }
 
 }
 
@@ -164,7 +172,7 @@ header.main{
                                     mega menu                                    */
 
 nav#megamenu{
-  background: #606A70; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; color: #fff; text-align: center; display: none;
+  background: #606A70; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; color: #fff; text-align: center; display: none;
   .inner{ width: 988px; margin: 0 auto; text-align: left; }
 
   .megahead{ height: 35px; padding: 50px 0 80px 0;
@@ -295,6 +303,7 @@ section.internal_page {
 *	Footer      								*
 ************************************************/
 
+body.home footer { display: none; }
 footer {
   background: #606A70; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0;
   p.disclaimer { width: 988px; margin: 0 auto; text-align: left; clear: both; display: block; border-top: 1px solid #fff; padding: 10px 0 0 0;
@@ -359,18 +368,10 @@ h2.page-title {font-size:20px; margin-bottom:20px;}
 
 /* home page
 */
-#home_grid{
-  width: 100%; height: 100%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
 
-  .home_box {
-    position: relative;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    float: left;
-    height: 239px;
-
+body.scrolled #home_grid{ margin-top: 90px; }
+#home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc; margin-top: 140px;
+  .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
     &.event{
       width: 239px; text-align: left;
       .top{ width: 88%; padding: 6%; float: left; position: relative;

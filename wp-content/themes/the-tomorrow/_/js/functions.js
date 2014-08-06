@@ -4,7 +4,7 @@
 
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
-	
+
 	var id  = location.hash.substr(1); //Get the word after the hash from the url
 	console.log(id);
 	if (id) $('#'+id).addClass('highlight'); // add class highlight to element whose id is the word after the hash
@@ -15,12 +15,29 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	});
 
 
+	resize_header();
+
 	// toggle megamenu
-	$('#megamenu a.close').bind( "click", function(){
-		$('#megamenu').slideUp();
-	});
 	$('.nav_menu_menu a').bind( "click", function(){
 		$('#megamenu').slideDown();
+		// lock scroll position, but retain settings for later
+		var scrollPosition = [
+			self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+			self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+		];
+		var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+		html.data('scroll-position', scrollPosition);
+		html.data('previous-overflow', html.css('overflow'));
+		html.css('overflow', 'hidden');
+		window.scrollTo(scrollPosition[0], scrollPosition[1]);
+	});
+	$('#megamenu a.close').bind( "click", function(){
+		$('#megamenu').slideUp();
+		// un-lock scroll position
+		var html = jQuery('html');
+		var scrollPosition = html.data('scroll-position');
+		html.css('overflow', html.data('previous-overflow'));
+		window.scrollTo(scrollPosition[0], scrollPosition[1])
 	});
 
 
@@ -83,14 +100,56 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 });
 
 
-	/* optional triggers
+// decrease header height on scroll
+$(window).scroll(function () {
+	resize_header();
+});
 
-	$(window).load(function() {
-		
-	});
+/* optional triggers
 
-	$(window).resize(function() {
-		
-	});
+$(window).load(function() {
+	
+});
 
-	*/
+$(window).resize(function() {
+	
+});
+
+*/
+
+
+/* ----------------------------------------------------------------------------------------------------------------
+debounce(function() { }, 1234 )
+*/
+
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    timeout = setTimeout( delayed, threshold || 100 );
+  }
+}
+
+function resize_header() {
+    
+	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	    shrinkOn = 10,
+	    header = document.querySelector("header"),
+	    body = document.querySelector("body");
+	if (distanceY > shrinkOn) {
+	    classie.add(body,"scrolled");
+	    classie.add(header,"smaller");
+	} else {
+	    if (classie.has(header,"smaller")) {
+	    	classie.remove(body,"scrolled");
+	        classie.remove(header,"smaller");
+	    }
+	}
+
+}

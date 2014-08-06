@@ -1,5 +1,4 @@
 
-
 <footer>
 
   <div class="inner">
@@ -32,6 +31,7 @@
 
 <script src="<?php bloginfo('template_directory') ?>/_/js/isotope.pkgd.min.js"></script>
 <?php wp_footer(); ?>
+<script src="<?php bloginfo('template_directory') ?>/_/js/classie.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/_/js/functions.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
