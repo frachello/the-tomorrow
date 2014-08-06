@@ -71,17 +71,26 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
         });
     });
 
+	// home isotope
+	$('#home_grid').isotope({
+		itemSelector: '.home_box',
+		layoutMode:'masonry',
+		masonry: {
+			columnWidth: 240
+		}
+	});
+
 });
 
 
-/* optional triggers
+	/* optional triggers
 
-$(window).load(function() {
-	
-});
+	$(window).load(function() {
+		
+	});
 
-$(window).resize(function() {
-	
-});
+	$(window).resize(function() {
+		
+	});
 
-*/
+	*/

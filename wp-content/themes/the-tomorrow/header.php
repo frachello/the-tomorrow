@@ -88,11 +88,6 @@
 
 							<div class="option-set" data-group="type">
 
-								<!--
-								<input type="checkbox" value="" id="type-all" class="all" checked />
-								<label for="type-all">both</label>
-								-->
-
 								<input type="checkbox" value=".event" id="event" />
 								<label for="event">events</label>
 
@@ -101,42 +96,7 @@
 
 							</div>
 
-
-
-						<!-- 					  
-						  <div class="option-set" data-group="brand">
-						    <input type="checkbox" value=""        id="brand-all" class="all" checked /><label for="brand-all">all brands</label>
-						    <input type="checkbox" value=".brand1" id="brand1" /><label for="brand1">brand1</label>
-						    <input type="checkbox" value=".brand2" id="brand2" /><label for="brand2">brand2</label>
-						    <input type="checkbox" value=".brand3" id="brand3" /><label for="brand3">brand3</label>
-						    <input type="checkbox" value=".brand4" id="brand4" /><label for="brand4">brand4</label>
-						  </div>
-						  <div class="option-set" data-group="type">
-						    <input type="checkbox" value=""        id="type-all" class="all" checked /><label for="type-all">all types</label>
-						    <input type="checkbox" value=".type1" id="type1" /><label for="type1">type1</label>
-						    <input type="checkbox" value=".type2" id="type2" /><label for="type2">type2</label>
-						    <input type="checkbox" value=".type3" id="type3" /><label for="type3">type3</label>
-						    <input type="checkbox" value=".type4" id="type4" /><label for="type4">type4</label>
-						  </div>
-						  <div class="option-set" data-group="color">
-						    <input type="checkbox" value=""        id="color-all" class="all" checked /><label for="color-all">all colors</label>
-						    <input type="checkbox" value=".red" id="red" /><label for="red">red</label>
-						    <input type="checkbox" value=".blue" id="blue" /><label for="blue">blue</label>
-						    <input type="checkbox" value=".green" id="green" /><label for="green">green</label>
-						    <input type="checkbox" value=".yellow" id="yellow" /><label for="yellow">yellow</label>
-						  </div>
-						  <div class="option-set" data-group="size">
-						    <input type="checkbox" value=""        id="size-all" class="all" checked /><label for="size-all">all sizes</label>
-						    <input type="checkbox" value=".uk-size8" id="uk-size8" /><label for="uk-size8">uk-size8</label>
-						    <input type="checkbox" value=".uk-size9" id="uk-size9" /><label for="uk-size9">uk-size9</label>
-						    <input type="checkbox" value=".uk-size10" id="uk-size10" /><label for="uk-size10">uk-size10</label>
-						    <input type="checkbox" value=".uk-size11" id="uk-size11" /><label for="uk-size11">uk-size11</label>
-						  </div>
-						-->
-
 						</div>
-
-						<!-- <p id="filter-display"></p> -->
 
 					</p>
 

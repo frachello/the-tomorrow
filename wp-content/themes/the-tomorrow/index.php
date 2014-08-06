@@ -295,6 +295,4 @@
 
 </div> <!-- chiuso content -->
 
-<br class="clear" />
-
 <?php get_footer(); ?>

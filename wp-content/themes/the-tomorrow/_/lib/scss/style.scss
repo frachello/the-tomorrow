@@ -1,5 +1,5 @@
 $wrap-width-desktop	: 1105px;
-$primary-color: #000;
+$primary-color: #191919;
 
 
 @mixin ir() { font-size: 0; text-indent: -999999px; display: block; }
@@ -28,7 +28,9 @@ $primary-color: #000;
    
 html, body, form {margin: 0; padding: 0;}
 html {font-size:100%;}
-body { -webkit-font-smoothing: antialiased; }
+
+body{ font-family: "adelle-sans"; font-weight: 300; -webkit-font-smoothing: antialiased; }
+/* body strong { font-weight: 700; } */
 img {border:0;}
 label {cursor:auto}
 h1, h2, h3, h4 { font-weight: normal; }
@@ -60,21 +62,6 @@ body { font: 12px/1.3 Arial, Helvetica, sans-serif; color: $primary-color; text-
 /*link*/
 a, a:hover {text-decoration:none;}
 
-
-/* struttura  */
-#wrapper { text-align:left; }
-#page { margin:0 10px; padding-top:10px;}
-footer {margin-bottom:40px; height:50px;}
-#content { background:#fff; /* float:left; */ }
-#main_content { /* float:left; */ }
-#sidebar { padding:10px 0; float:right;}
-#sidebarLarge {}
-#sidebarLeft { float:left;}
-#sidebarRight { float:right;}
-#main_content #post_col { float:right; margin-bottom:30px;}
-#main_content #page_col { float:right; }
-
-
 	
 /************************************************
 *	Header  									*
@@ -91,7 +78,7 @@ header.main{
   -moz-box-shadow:    0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   .inner{
-    width: 1000px; height: 140px; margin: 0 auto; position: relative;
+    width: 988px; height: 140px; margin: 0 auto; position: relative;
 
     h1, a { width: 279px; height: 33px; }
     h1{
@@ -135,12 +122,12 @@ header.main{
 #filter_nav{
   background: #F6F6F6; height: 80px; display: none;
   .form{
-    width: 1000px; height: 68px; margin: 0 auto; position: relative; padding: 18px 0 0 0;
+    width: 988px; height: 68px; margin: 0 auto; position: relative; padding: 18px 0 0 0;
     div.filter{
       * { text-transform: uppercase; }
       float: left; margin: 0 40px 0 0;
       .title { font-family: "adelle-sans"; font-weight: 300; font-size: 12px; }
-      .text { font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; }
+      .text { font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; background: none }
       label { font-family: "adelle-sans"; font-weight: 700; font-size: 18px; position: relative; top: 4px; }
       input.checkbox { vertical-align: middle }
       &.show{
@@ -165,11 +152,11 @@ header.main{
 
 /* --------------------------------------------------------------------------------
                                     main search                                  */
-#main_search{ background: #F6F6F6; height: 80px; display: block;
+#main_search{ background: #F6F6F6; height: 80px; display: none;
  .form{
-    width: 1000px; height: 54px; margin: 0 auto; position: relative; padding: 26px 0 0 0;
-    input.submit{ width: 16px; height: 16px; background: #fff url('../i/ico_main_search.png') no-repeat 0 0; font-size: 0; text-indent: -999999px; display: inline-block; border: none; vertical-align: middle; position: relative; left: 4px; top: 1px; }
-    input.text{ width: 970px; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; }
+    width: 988px; height: 54px; margin: 0 auto; position: relative; padding: 26px 0 0 0;
+    input.submit{ width: 16px; height: 16px; background: url('../i/ico_main_search.png') no-repeat 0 0; font-size: 0; text-indent: -999999px; display: inline-block; border: none; vertical-align: middle; position: relative; left: 4px; top: 1px; }
+    input.text{ width: 970px; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; background: none; }
   }
 }
 
@@ -177,36 +164,21 @@ header.main{
                                     mega menu                                    */
 
 nav#megamenu{
-
   background: #606A70; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; color: #fff; text-align: center; display: none;
+  .inner{ width: 988px; margin: 0 auto; text-align: left; }
 
-  .inner{
-    width: 998px; margin: 0 auto; text-align: left;
-  }
-
-  .megahead{
-    height: 35px; padding: 50px 0 80px 0;
+  .megahead{ height: 35px; padding: 50px 0 80px 0;
     .logotipo{ @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; float: left; }
     .close{ @include ir; width: 20px; height: 20px; background: url(../i/ico_megamenu_close.png) no-repeat 0 0; float: right; margin-top: 7px; }
   }
 
-  .logotipo{
-    @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
-  }
-  .close{
-    @include ir; width: 20px; height: 20px; background: url(../i/ico_megamenu_close.png) no-repeat 0 0;
-  }
-
-  .main_menu{
-    width: 998px;
-    li{
-      font-family: "adelle-sans"; font-weight: 300; font-size: 45px;
-    }
+  .main_menu{ width: 988px;
+    li{ font-family: "adelle-sans"; font-weight: 300; font-size: 45px; }
     a { color: #fff }
   }
 
   .secondary-nav{
-    width: 998px; border-top: 1px solid #fff; padding: 25px 0 50px 0; clear: both; margin-top: 30px;
+    width: 988px; border-top: 1px solid #fff; padding: 25px 0 50px 0; clear: both; margin-top: 30px;
     h2.widgettitle { display: none; }    
     .secondary_menu{ float: left; margin: 0 55px 0 0;
     &#nav_menu-5, &#nav_menu-6 { margin-right: 0; }
@@ -232,21 +204,60 @@ nav#megamenu{
     }
   }
 
-  p.megamenu-footer { width: 998px; float: left; display: block; padding: 20px 0; border-top: 1px solid #fff; margin-top: 50px; }
+  p.megamenu-footer { width: 988px; float: left; display: block; padding: 20px 0; border-top: 1px solid #fff; margin-top: 50px; }
 
 }
 
 
 #logo { position:absolute; top:0px; left:0px; }	
 	
+/* --------------------------------------------------------------------------------
+                                    internal page                                */
+section.internal_page {
+  width: 988px; margin: 0 auto; text-align: left;
+  &.venue_page{
+    header.main_internal_page_header {
+      width: 100%; margin: 80px 0 30px 0; border-bottom: 1px solid #414042; padding-bottom: 20px;
+      .address { width: 220px; margin: 0 36px 0 0; float: left; text-transform: uppercase; }
+      h1.venue_title{ font-family: "adelle-sans"; font-weight: 700; font-size: 40px; height: 1em; line-height: .7em; }
+    }
+    .col {  }
+    .venue-events-calendar { margin: 30px 0; }
+    .content_col{
+      width: 476px; margin-left: 0; margin-left: 256px;
+      p { margin-bottom: 10px; }
+      p, li{ font-size: 20px; }
+      div.event{ display: none }
+    }
+    .leftcol { width: 220px; margin: 0 36px 0 0; float: left; }
+    .rightcol{ width: 190px; margin: 0 0 0 0; float: right; border-top: 1px solid #414042;
+      .li { border-bottom: 1px solid #414042;
+        a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
+        &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
+        &.expand a{ background-image: url(../i/ico_rightcol_expand.png); }
+        &.collapse a{ background-image: url(../i/ico_rightcol_collapse.png); }
+        &.map a{ background-image: url(../i/ico_rightcol_map.png); }
+      }      
+      .addthis { border-bottom: 1px solid #414042; padding: 20px 0; float: left; width: 100%;
+        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
+        .addthis_toolbox { float: right;
+          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
+            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
+            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
+            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+          }
+        }
+        .at15t, .at16nc, .at300bs { background: none }
+      }      
+    }
 
+  }
+}
 
 
 /************************************************
 * POST    								        *
 ************************************************/
-
-
 
 .post { padding: 10px 0;  }
 .post h2 { }
@@ -279,30 +290,52 @@ nav#megamenu{
 *	Sidebar      								*
 ************************************************/
 
-/* titoli */
-#sidebar h3 {text-transform:uppercase; margin:0; padding:2px 0; }
-#sidebar h3 span {}
-
-/* i box sono di 190px */
-.boxS, .boxD, .boxL {}
-.boxS {margin:0 0 20px 0px;}
-.boxD {margin:0 0px 20px 0;}
-.boxL {margin:0 0px 20px; padding:10px;}
-
-#sidebarLarge {background:url("images/dot.gif") top repeat-x;}
-.boxL { font-size:12px; line-height:140%; background:url("images/dot.gif") bottom repeat-x;}
-
-
-.boxS ul, .boxD ul {margin:0; padding:0; list-style:none;}
-.boxS ul li, .boxD ul li {martin:2px 0; pudding:0;}
-
 
 /************************************************
 *	Footer      								*
 ************************************************/
 
-footer {font-size:11px; margin:0 10px; position:relative; background:#fff; color:#666;}	
-footer a {color:#666;}
+footer {
+  background: #606A70; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0;
+  p.disclaimer { width: 988px; margin: 0 auto; text-align: left; clear: both; display: block; border-top: 1px solid #fff; padding: 10px 0 0 0;
+  }
+  .inner {
+    width: 988px; margin: 0 auto; text-align: left; clear: both; display: block;
+    .info { width: 200px; float: left;  margin-right: 47px; padding-bottom: 25px; }
+    .logo { @include ir; width: 29px; height: 25px; background: url(../i/the_tomorrow_logo_footer.png) no-repeat 0 0; margin-bottom: 20px; }
+    .desc { color: #fff; }
+
+    .secondary-nav{
+      width: 726px;  float: left; padding-bottom: 25px;
+      h2.widgettitle { display: none; }    
+      .secondary_menu{ float: left; margin: 0;
+      &#nav_menu-5, &#nav_menu-6 { margin-right: 0; }
+      &#nav_menu-6 { float: right;}
+        div{ width: 209px; float: left;
+          li { font-size: 14px; margin-bottom: 25px;
+            a { color: #fff }
+          }
+        }
+        .menu-about-container {  }
+        .menu-contacts-container {  }
+        .menu-utilities-container {  }
+        .menu-social-links-container { width: auto;
+          li, li a { width: 28px; height: 20px; }
+          li { margin-right: 38px; margin-bottom: 16px;
+          &.menu-item-70 a { background-image: url(../i/ico_megamenu_social_facebook.png); }
+          &.menu-item-71 a { background-image: url(../i/ico_megamenu_social_twitter.png); }
+          &.menu-item-72 { margin-right: 0; }
+          &.menu-item-72 a { background-image: url(../i/ico_megamenu_social_youtube.png); }
+            a { @include ir; background-repeat: no-repeat; background-position: center center; }
+          }
+        }
+      }
+    }
+
+  }
+  
+}	
+
 
 /************************************************
 
@@ -339,44 +372,24 @@ h2.page-title {font-size:20px; margin-bottom:20px;}
     height: 239px;
 
     &.event{
-      width: 239px;
-      .top{
-        width: 88%; padding: 6%; float: left; position: relative;
-        .bg{
-          @include transition(all 0.3s ease);
-          background: lime; width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
+      width: 239px; text-align: left;
+      .top{ width: 88%; padding: 6%; float: left; position: relative;
+        .bg{ @include transition(all 0.3s ease); background: lime; width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
         }
         &.over {
           p, p a { color: #fff !important; z-index: 2; position: relative; }
           .bg { height: 100%; }
         }
       }
-      .date{
-        margin: 0;
-        .day{
-          font-size: 53px;
-          font-family: "adelle"; font-weight: 800;
-          font-style: normal;
-          float: left;
-          line-height: 41px;
-          margin-right: 5px;
-        }
-        .ordinal-month{
-          font-size: 13px;
-          font-family: "adelle"; font-weight: 300;
-          font-style: normal;
-          vertical-align: super;
-        }
+      .date{ margin: 0;
+        .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
+        .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
       }
-      .cat{ float: right; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; height: 11px; font-weight: 700;
-        
-      }
+      .cat{ float: right; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; }
 
-      .title{
-        font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
-        strong{ font-weight: 700;
-        }
-        a, strong a { color: #000; }
+      .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
+        strong{ font-weight: 700; }
+        a, strong a { color: #191919; }
       }
       .bottom{
         height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
@@ -391,19 +404,11 @@ h2.page-title {font-size:20px; margin-bottom:20px;}
     p{
       margin-top: 0;
     }
-    &.conversations{
-      width: 479px;
+    &.conversations{ width: 479px; text-align: left;
       .top{
-        width: 94%; padding: 3%;
-        float: left;
-        .title{
-          font-family: "adelle";
-          font-weight: 300;
-          font-size: 36px;
-          font-style: normal;
-          float: left;
-          line-height: 41px;
-          a { font-weight: 800; color: #000 }
+        width: 94%; padding: 3%; float: left;
+        .title{ font-family: "adelle"; font-weight: 300; font-size: 36px; font-style: normal; float: left; line-height: 41px;
+          a { font-weight: 800; color: #191919; }
         }
       }
       .bottom{
