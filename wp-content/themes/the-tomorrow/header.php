@@ -52,111 +52,117 @@
 
 	<div id="wrapper">
 
-		<header class="main"
-		<?php $venue_id = eo_get_venue(); ?>
-		<?php if($venue_id){ $venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true); ?>
-			style=" background:url(<?php echo $venue_header_img; ?>) no-repeat center center; background-size:100%; "
-		<?php } ?>>
+		<header class="container">
 
-			
-			<div class="inner">
+			<header class="main"
+			<?php
+				$venue_id = eo_get_venue();
+				if($venue_id){
+					$venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true); ?>
+					style=" background-image:url(<?php echo $venue_header_img; ?>); "
+			<?php } ?>>
 
-				<h1><a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
-				<?php bloginfo('name') ?></a></h1>
-				<?php if(is_home()): ?><h2><?php bloginfo('description') ?></h2><?php endif; ?>
+				
+				<div class="inner">
 
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-				<?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+					<h1><a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
+					<?php bloginfo('name') ?></a></h1>
+					<?php if(is_home()): ?><h2><?php bloginfo('description') ?></h2><?php endif; ?>
 
-				<ul class="nav_menu">
-					<li class="nav_menu_search"><a href="#">search</a></li>
-					<?php if(is_home()): ?><li class="nav_menu_filter"><a href="#">filter</a></li><?php endif; ?>
-					<li class="nav_menu_menu"><a href="#">menu</a></li>
-				</ul>
+					<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+					<?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 
-			</div>
+					<ul class="nav_menu">
+						<li class="nav_menu_search"><a href="#">search</a></li>
+						<?php if(is_home()): ?><li class="nav_menu_filter"><a href="#">filter</a></li><?php endif; ?>
+						<li class="nav_menu_menu"><a href="#">menu</a></li>
+					</ul>
 
-		</header> 
+				</div>
 
-		<div id="filter_nav"><div class="form">
+			</header> 
 
-			<form method="#" action="#">
+			<div id="filter_nav"><div class="form">
 
-				<div class="filter show">
-					
-					<p class="title">show</p>
+				<form method="#" action="#">
 
-					<p>
+					<div class="filter show">
+						
+						<p class="title">show</p>
 
-						<div id="options">
+						<p>
+
+							<div id="options">
 
 
-							<div class="option-set" data-group="type">
+								<div class="option-set" data-group="type">
 
-								<input type="checkbox" value=".event" id="event" />
-								<label for="event">events</label>
+									<input type="checkbox" value=".event" id="event" />
+									<label for="event">events</label>
 
-								<input type="checkbox" value=".conversations" id="conversations" />
-								<label for="convestations">letters</label>
+									<input type="checkbox" value=".conversations" id="conversations" />
+									<label for="convestations">letters</label>
+
+								</div>
 
 							</div>
 
-						</div>
+						</p>
 
-					</p>
+					</div>
 
-				</div>
+					<div class="filter city">
+						
+						<p class="title">choose your city</p>
 
-				<div class="filter city">
-					
-					<p class="title">choose your city</p>
+						<p>
+							<label>city</label>
+							<input class="text city" type="text" value="" id="city_search" />
+						</p>
 
-					<p>
-						<label>city</label>
-						<input class="text city" type="text" value="" id="city_search" />
-					</p>
+					</div>
 
-				</div>
+					<div class="filter date">
+						
+						<?php
+							$today = date("d/m/Y"); // current date
+							$from_day = $today;
+						?>
 
-				<div class="filter date">
-					
-					<?php
-						$today = date("d/m/Y"); // current date
-						$from_day = $today;
-					?>
+						<p class="title">set a date</p>
 
-					<p class="title">set a date</p>
+						<p class="calendar_date">
+							<label>from</label>
+							<input class="text from" type="text" value="<?php echo $from_day; ?>" />
+							<!-- <span class="calendar"></span> -->
+						</p>
 
-					<p class="calendar_date">
-						<label>from</label>
-						<input class="text from" type="text" value="<?php echo $from_day; ?>" />
-						<!-- <span class="calendar"></span> -->
-					</p>
+						<p class="calendar_date">
+							<label>to</label>
+							<input class="text city" type="text" value="<?php echo $today; ?>" />
+							<!-- <span class="calendar"></span> -->
+						</p>
 
-					<p class="calendar_date">
-						<label>to</label>
-						<input class="text city" type="text" value="<?php echo $today; ?>" />
-						<!-- <span class="calendar"></span> -->
-					</p>
+					</div>
 
-				</div>
+					<input class="submit" type="submit" value="apply" />
 
-				<input class="submit" type="submit" value="apply" />
+				</form>
 
-			</form>
+			</div></div>
 
-		</div></div>
+			<div id="main_search"><div class="form">
 
-		<div id="main_search"><div class="form">
+				<form method="#" action="#">
 
-			<form method="#" action="#">
+					<input class="text" type="text" value="" />
+					<input class="submit" type="submit" value="search" />
 
-				<input class="text" type="text" value="" />
-				<input class="submit" type="submit" value="search" />
+				</form>
 
-			</form>
+			</div></div>
 
-		</div></div>
+		</header> <!-- close header.container -->
 
 		<nav id="megamenu">
 

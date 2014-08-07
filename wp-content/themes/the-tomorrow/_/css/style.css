@@ -280,6 +280,9 @@ body.open-filters #content {
 body.tax-event-venue #content {
   margin-top: 280px;
 }
+body.tax-event-venue.open-filters #content {
+  margin-top: 360px;
+}
 header.main {
   height: 140px;
   text-align: left;
@@ -381,16 +384,42 @@ body.home header.main .inner h1 a {
 }
 body.tax-event-venue header.main {
   height: 280px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #000;
 }
 body.tax-event-venue header.main .nav_menu li a {
   background-image: url('../i/ico_nav_menu_fff.png');
 }
 body.tax-event-venue header.main .inner h1 a {
   background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0;
+}
+body.tax-event-venue #main_search {
+  top: 280px;
+}
+body.tax-event-venue.scrolled #content {
+  margin-top: 90px;
+}
+body.tax-event-venue.scrolled.open-filters #content {
+  margin-top: 170px;
+}
+body.tax-event-venue.scrolled header.main {
+  background-color: #fff;
+  background-image: none !important;
+}
+body.tax-event-venue.scrolled header.main .nav_menu li a {
+  background-image: url('../i/ico_nav_menu_000.png');
+}
+body.tax-event-venue.scrolled header.main .inner h1 a {
+  background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0;
+}
+body.tax-event-venue.scrolled #main_search {
+  top: 90px;
 }
 body.scrolled header.main {
   height: 90px;
@@ -417,9 +446,6 @@ body.scrolled header.main .nav_menu {
   top: 34px;
 }
 body.home.scrolled header.main .inner h1 a {
-  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
-}
-body.tax-event-venue.scrolled header.main .inner h1 a {
   background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
 }
 body.home header.main {

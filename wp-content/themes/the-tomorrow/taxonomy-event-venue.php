@@ -73,26 +73,28 @@ get_header(); ?>
 
 		</div>
 
+		<?php if($venue_suggested_by||$venue_website):?>
 		<div class="col leftcol">
+			<?php if($venue_suggested_by):?>
 			<p>
 				suggested by<br />
 				<strong><?php echo $venue_suggested_by; ?></strong>
 			</p>
+			<?php endif; ?>
+			<?php if($venue_website):?>
 			<p>
 				website<br />
 				<strong><a href="<?php echo $venue_website; ?>"><?php echo $venue_website; ?></a></strong>
 			</p>
+			<?php endif; ?>
 		</div>
+		<?php endif; ?>
 
 		<div class="col content_col">
 
 			<?php if( $venue_description = eo_get_venue_description( $venue_id ) ){
 				 echo $venue_description;
-			}
-
-			print_r ($venue_meta);
-
-			?>
+			} ?>
 
 			<?php if ( have_posts() ) : ?>
 

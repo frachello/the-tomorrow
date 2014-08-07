@@ -12,11 +12,11 @@ $primary-color: #191919;
 }
 
 @mixin transition($val) {
-        -webkit-transition: $val;                  
-        -moz-transition: $val;                 
-        -o-transition: $val;   
-        -ms-transition: $val;          
-        transition: $val;
+  -webkit-transition: $val;                  
+  -moz-transition: $val;                 
+  -o-transition: $val;   
+  -ms-transition: $val;          
+  transition: $val;
 }
 
 @import 'reset';
@@ -71,8 +71,10 @@ body{
 //    #content { margin-top: 90px; }
 //    &.open-filters #content { margin-top: 170px }
 //  }
-  &.tax-event-venue #content { margin-top: 280px; }
-    
+  &.tax-event-venue{
+    #content { margin-top: 280px; }
+    &.open-filters #content { margin-top: 360px }
+  }
 }
 
 
@@ -128,9 +130,25 @@ body.home {
 }
 body.tax-event-venue{
   header.main {
-    height: 280px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+    height: 280px; background-repeat:  no-repeat; background-position: center center; background-size:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-color: #000;
     .nav_menu li a { background-image: url('../i/ico_nav_menu_fff.png');  }
     .inner h1 a { background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0; }
+  }
+  #main_search{
+    top: 280px;
+  }  
+}
+
+body.tax-event-venue.scrolled{
+  #content{ margin-top: 90px; }
+  &.open-filters #content { margin-top: 170px; }
+  header.main{
+    background-color: #fff; background-image: none !important;
+    .nav_menu li a { background-image: url('../i/ico_nav_menu_000.png'); }
+    .inner h1 a { background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0; }
+  }
+  #main_search{
+    top: 90px;
   }
 }
 
@@ -145,7 +163,7 @@ body.scrolled header.main{ height: 90px;
   .nav_menu { top: 34px; }
 }
 body.home.scrolled header.main .inner h1 a {  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; }
-body.tax-event-venue.scrolled header.main .inner h1 a {  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; }
+  
 body.home header.main{ background: #606A70; }
 
 /* --------------------------------------------------------------------------------
@@ -187,9 +205,7 @@ body.home{
     .submit { background: #fff; border: 1px solid #191919; width: 90px; height: 40px; float: right; font-family: "adelle-sans"; font-weight: 300; font-size: 12px; text-transform: uppercase; }
   }
 }
-body.scrolled #filter_nav {
-  position: fixed; top: 90px;
-}
+body.scrolled #filter_nav { position: fixed; top: 90px; }
 
 @import 'datepicker';
 
