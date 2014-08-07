@@ -14,6 +14,19 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //		$(this).next('div').toggle();
 //	});
 
+	// expand collapse letters
+	$('article.letter:gt(0)').addClass('closed');
+	$('article.letter .meta').bind( "click", function(e){
+		e.preventDefault();
+		if ($(this).next('.entry').is(':visible')) {
+			console.log('article not visible');
+			$(this).parent().addClass('closed');
+		}else{
+			$(this).parent().removeClass('closed');
+			console.log('article visible');
+		}
+
+	});
 
 	resize_header();
 
@@ -129,22 +142,8 @@ $(window).resize(function() {
 
 
 /* ----------------------------------------------------------------------------------------------------------------
-debounce(function() { }, 1234 )
+resize header
 */
-
-function debounce( fn, threshold ) {
-  var timeout;
-  return function debounced() {
-    if ( timeout ) {
-      clearTimeout( timeout );
-    }
-    function delayed() {
-      fn();
-      timeout = null;
-    }
-    timeout = setTimeout( delayed, threshold || 100 );
-  }
-}
 
 function resize_header() {
     
@@ -163,3 +162,22 @@ function resize_header() {
 	}
 
 }
+/* ----------------------------------------------------------------------------------------------------------------
+debounce(function() { }, 1234 ) */
+
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    timeout = setTimeout( delayed, threshold || 100 );
+  }
+}
+
+
+

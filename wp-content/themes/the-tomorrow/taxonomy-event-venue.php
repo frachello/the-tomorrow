@@ -20,10 +20,7 @@
 get_header(); ?>
 
 <!-- content -->
-<div id="content">
-
-<!-- main col -->
-<section id="main_content" class="internal_page venue_page">
+<div id="content" class="venue_page">
 
 	<!-- Page header, display venue title-->
 	<header class="main_internal_page_header">	
@@ -51,7 +48,6 @@ get_header(); ?>
 
 		<div class="col rightcol">
 			
-			<div class="li gallery"><a href="#">gallery</a></div>
 			<div class="li map"><a href="#">view on map</a></div>
 			
 			<div class="addthis">
@@ -168,8 +164,6 @@ get_header(); ?>
 		?>
 		</div>
 
-		<?php // comments_template(); ?>
-
 	    <div id="disqus_thread"></div>
 	    <script type="text/javascript">
 	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -186,8 +180,6 @@ get_header(); ?>
 	    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 	</div> <!-- / .page-content -->
-
-	</section>
 
 </div><!-- #content -->
 

@@ -125,11 +125,25 @@
 	}
 
 
+	/* ======================================== define taxonomies ======================================== */
+	/* http://wordpress.org/support/topic/list-posts-by-taxonomy-tag */ 
+	
+	function build_taxonomies() {  
 
+		// theme
+		register_taxonomy(
+			'themes',
+			'post',
+			array(
+				'hierarchical' => true,
+				'label' => 'Theme',
+				'query_var' => true,
+				'rewrite' => true
+			)
+		);
 
-
-
-
+	}
+	add_action( 'init', 'build_taxonomies', 10 );	
 
 
 ?>

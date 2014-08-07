@@ -277,12 +277,6 @@ body #content {
 body.open-filters #content {
   margin-top: 220px;
 }
-body.tax-event-venue #content {
-  margin-top: 280px;
-}
-body.tax-event-venue.open-filters #content {
-  margin-top: 360px;
-}
 header.main {
   height: 140px;
   text-align: left;
@@ -914,73 +908,31 @@ nav#megamenu p.megamenu-footer {
   /* --------------------------------------------------------------------------------
                                     internal page                                */
 }
-section.internal_page {
+body.internal-page #content {
   width: 988px;
-  margin: 0 auto;
+  margin: 90px auto 0 auto;
   text-align: left;
   padding: 80px 0 0 0;
+  background: #999 px;
   /************************************************
 * POST    								        *
 ************************************************/
+  /************************************************
+*	Sidebar      								*
+************************************************/
+  /************************************************
+*	Footer      								*
+************************************************/
 }
-section.internal_page.venue_page header.main_internal_page_header {
-  width: 100%;
-  padding: 0 0 20px 0;
-  border-bottom: 1px solid #414042;
-}
-section.internal_page.venue_page header.main_internal_page_header .address {
+body.internal-page #content .rightcol {
   width: 220px;
-  margin: 0 36px 0 0;
-  float: left;
-  text-transform: uppercase;
-}
-section.internal_page.venue_page header.main_internal_page_header h1.venue_title {
-  font-family: "adelle-sans";
-  font-weight: 700;
-  font-size: 40px;
-  height: 1em;
-  line-height: 0.7em;
-}
-section.internal_page.venue_page .venue-events-calendar {
-  margin: 30px 0;
-}
-section.internal_page.venue_page .content_col {
-  width: 476px;
-  margin-left: 0;
-  margin-left: 256px;
-  padding-top: 26px;
-}
-section.internal_page.venue_page .content_col p {
-  margin-bottom: 10px;
-}
-section.internal_page.venue_page .content_col p, section.internal_page.venue_page .content_col li {
-  font-size: 20px;
-}
-section.internal_page.venue_page .content_col div.event {
-  display: none;
-}
-section.internal_page.venue_page .leftcol {
-  width: 220px;
-  margin: 30px 36px 0 0;
-  float: left;
-  border-bottom: 1px solid #414042;
-}
-section.internal_page.venue_page .leftcol p {
-  text-transform: uppercase;
-  padding-bottom: 26px;
-}
-section.internal_page.venue_page .leftcol p a {
-  color: #191919;
-}
-section.internal_page.venue_page .rightcol {
-  width: 190px;
-  margin: 8px 0 0 0;
+  margin: 0;
   float: right;
 }
-section.internal_page.venue_page .rightcol .li {
-  border-bottom: 1px solid #414042;
+body.internal-page #content .rightcol .li {
+  border-top: 1px solid #414042;
 }
-section.internal_page.venue_page .rightcol .li a {
+body.internal-page #content .rightcol .li a {
   color: #191919;
   text-indent: 10px;
   padding: 20px 0;
@@ -991,25 +943,31 @@ section.internal_page.venue_page .rightcol .li a {
   background-position: center right;
   background-repeat: no-repeat;
 }
-section.internal_page.venue_page .rightcol .li.gallery a {
+body.internal-page #content .rightcol .li.gallery a {
   background-image: url(../i/ico_rightcol_gallery.png);
 }
-section.internal_page.venue_page .rightcol .li.expand a {
+body.internal-page #content .rightcol .li.expand a {
   background-image: url(../i/ico_rightcol_expand.png);
 }
-section.internal_page.venue_page .rightcol .li.collapse a {
+body.internal-page #content .rightcol .li.collapse a {
   background-image: url(../i/ico_rightcol_collapse.png);
 }
-section.internal_page.venue_page .rightcol .li.map a {
+body.internal-page #content .rightcol .li.map a {
   background-image: url(../i/ico_rightcol_map.png);
 }
-section.internal_page.venue_page .rightcol .addthis {
-  border-bottom: 1px solid #414042;
+body.internal-page #content .rightcol .li.prev a {
+  background-image: url(../i/ico_rightcol_prev.png);
+}
+body.internal-page #content .rightcol .li.next a {
+  background-image: url(../i/ico_rightcol_next.png);
+}
+body.internal-page #content .rightcol .addthis {
   padding: 20px 0;
   float: left;
   width: 100%;
+  border-top: 1px solid #414042;
 }
-section.internal_page.venue_page .rightcol .addthis p {
+body.internal-page #content .rightcol .addthis p {
   color: #191919;
   text-indent: 10px;
   text-transform: uppercase;
@@ -1018,10 +976,10 @@ section.internal_page.venue_page .rightcol .addthis p {
   margin-right: 10px;
   float: left;
 }
-section.internal_page.venue_page .rightcol .addthis .addthis_toolbox {
+body.internal-page #content .rightcol .addthis .addthis_toolbox {
   float: right;
 }
-section.internal_page.venue_page .rightcol .addthis .addthis_toolbox a {
+body.internal-page #content .rightcol .addthis .addthis_toolbox a {
   width: 19px;
   height: 15px;
   font-size: 0;
@@ -1031,79 +989,69 @@ section.internal_page.venue_page .rightcol .addthis .addthis_toolbox a {
   background-repeat: no-repeat;
   margin-left: 5px;
 }
-section.internal_page.venue_page .rightcol .addthis .addthis_toolbox a.addthis_button_facebook {
+body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_facebook {
   background-image: url(../i/ico_rightcol_share_facebook.png);
 }
-section.internal_page.venue_page .rightcol .addthis .addthis_toolbox a.addthis_button_twitter {
+body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_twitter {
   background-image: url(../i/ico_rightcol_share_twitter.png);
 }
-section.internal_page.venue_page .rightcol .addthis .addthis_toolbox a.addthis_button_email {
+body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_email {
   background-image: url(../i/ico_rightcol_share_email.png);
 }
-section.internal_page.venue_page .rightcol .addthis .at15t, section.internal_page.venue_page .rightcol .addthis .at16nc, section.internal_page.venue_page .rightcol .addthis .at300bs {
+body.internal-page #content .rightcol .addthis .at15t, body.internal-page #content .rightcol .addthis .at16nc, body.internal-page #content .rightcol .addthis .at300bs {
   background: none;
 }
-.post {
-  padding: 10px 0;
+body.internal-page #content.venue_page header.main_internal_page_header {
+  width: 100%;
+  padding: 0 0 20px 0;
 }
-.post .entry blockquote {
-  margin: 1.5em 1.3em 0.5em;
-  line-height: 150%;
-  color: #666;
-  font-style: italic;
+body.internal-page #content.venue_page header.main_internal_page_header .address {
+  width: 220px;
+  margin: 0 36px 0 0;
+  float: left;
+  text-transform: uppercase;
 }
-.post .entry cite {
-  text-align: right;
-  display: block;
-  padding-right: 15px;
+body.internal-page #content.venue_page header.main_internal_page_header h1.venue_title {
+  font-family: "adelle-sans";
+  font-weight: 700;
+  font-size: 40px;
+  height: 1em;
+  line-height: 0.7em;
 }
-.post .entry code {
-  display: block;
-  margin: 1em 1.3em;
-  color: #444;
-  font-family: "courier new";
+body.internal-page #content.venue_page .venue-events-calendar {
+  margin: 30px 0;
 }
-.post .entry ul {
-  margin: 0 1.3em;
-  list-style: none;
+body.internal-page #content.venue_page .content_col {
+  width: 476px;
+  margin-left: 0;
+  margin-left: 220px;
+  padding-top: 26px;
+  padding-left: 36px;
+  border-top: 1px solid #414042;
 }
-.post .entry ul li {
-  background: url("images/dotS.gif") no-repeat 0 6px;
-  padding-left: 10px;
-  margin-bottom: 7px;
+body.internal-page #content.venue_page .content_col p {
+  margin-bottom: 10px;
 }
-.post .entry ol {
-  margin: 0 1em 0 3em;
+body.internal-page #content.venue_page .content_col p, body.internal-page #content.venue_page .content_col li {
+  font-size: 20px;
 }
-.post .entry ol li {
-  margin: 0 0 7px 0;
+body.internal-page #content.venue_page .content_col div.event {
+  display: none;
 }
-.postMeta {
-  color: #999;
-  font-size: 11px;
-  margin-top: 5px;
-  padding: 15px 0 0;
-  background: url("images/dot.gif") repeat-x 0 6px;
-  position: relative;
+body.internal-page #content.venue_page .leftcol {
+  width: 220px;
+  margin: 0 36px 0 0;
+  padding-top: 30px;
+  float: left;
+  border-top: 1px solid #414042;
+  border-bottom: 1px solid #414042;
 }
-.postMetaTop {
-  color: #999;
-  font-size: 11px;
+body.internal-page #content.venue_page .leftcol p {
+  text-transform: uppercase;
+  padding-bottom: 26px;
 }
-.postMetaTop span.category a {
-  font-weight: bold;
-}
-.postMeta span.comments {
-  position: absolute;
-  right: 0;
-}
-.postMeta span.tag {
-  /************************************************
-*	Sidebar      								*
-************************************************/
-  /************************************************
-*	Footer      								*
-************************************************/
+body.internal-page #content.venue_page .leftcol p a {
+  color: #191919;
 }
 body.home footer {
   display: none;
@@ -1257,8 +1205,7 @@ h2.page-title {
   height: 100%;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  /* Print styles!
--------------------------------------------------------------------------------*/
+  /* pagina evento */
 }
 #home_grid .home_box {
   position: relative;
@@ -1407,6 +1354,76 @@ h2.page-title {
 #home_grid .home_box.conversations .bottom p.count-theme {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
+}
+body.tax-event-venue {
+  /* pagina evento */
+}
+body.tax-event-venue #content {
+  margin-top: 280px;
+}
+body.tax-event-venue.open-filters #content {
+  margin-top: 360px;
+}
+body.single-conversations {
+  /* Print styles!
+-------------------------------------------------------------------------------*/
+}
+body.single-conversations #content p.count-theme {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+body.single-conversations #content h2 {
+  border-top: 1px solid #414042;
+  font-weight: 700;
+  font-size: 40px;
+  padding: 14px 0 38px 0;
+  margin: 32px 0 0 0;
+}
+body.single-conversations #content .content_col {
+  width: 732px;
+  border-top: 1px solid #414042;
+}
+body.single-conversations #content .content_col article {
+  border-bottom: 1px solid #414042;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+  height: auto;
+}
+body.single-conversations #content .content_col article .letter, body.single-conversations #content .content_col article .comments {
+  display: block;
+}
+body.single-conversations #content .content_col article.closed .entry, body.single-conversations #content .content_col article.closed .comments {
+  display: none;
+}
+body.single-conversations #content .content_col article .meta {
+  width: 100%;
+  float: left;
+  margin: 22px 0 45px 0;
+  cursor: pointer;
+}
+body.single-conversations #content .content_col article .meta h3 {
+  text-transform: uppercase;
+  float: left;
+}
+body.single-conversations #content .content_col article .meta h3 strong {
+  font-weight: 700;
+}
+body.single-conversations #content .content_col article .meta .date {
+  float: right;
+}
+body.single-conversations #content .content_col article .entry p, body.single-conversations #content .content_col article .entry li {
+  font-size: 19px;
+}
+body.single-conversations #content .content_col article .entry p {
+  margin-bottom: 1em;
+}
+body.single-conversations #content .content_col p.show_comments {
+  text-transform: uppercase;
+  margin: 30px 0 40px 0;
 }
 @media print {
   /* Media queries!

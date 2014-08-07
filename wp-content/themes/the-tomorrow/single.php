@@ -1,13 +1,6 @@
 <?php get_header(); ?>
 <!-- content -->
 <div id="content">
-
-    <!-- main col -->
-    <div id="mainCol">
-
-<div id="postCol">
-    
-    
     
     <?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
@@ -35,7 +28,6 @@
 		
 		<?php endwhile; ?>
     
-    
             <div class="navigation"> 
                 <span class="previous-entries"><?php next_posts_link('precedenti') ?></span>
                 <span class="next-entries"><?php previous_posts_link('successivi') ?></span> 
@@ -46,19 +38,7 @@
             <h2>Non ci sono post, spiacente.</h2>
     
         <?php endif; ?>
-     
-
- </div>
-    <!-- chiusa postCol -->	
- 
-    </div>
-    <!-- chiusa mainCol -->	
-
-	
 
 </div> <!-- chiuso content -->
- <br class="clear" />
-
-
 
 <?php get_footer(); ?>
