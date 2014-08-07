@@ -52,20 +52,25 @@
 
 	<div id="wrapper">
 
-		<header class="main">
+		<header class="main"
+		<?php $venue_id = eo_get_venue(); ?>
+		<?php if($venue_id){ $venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true); ?>
+			style=" background:url(<?php echo $venue_header_img; ?>) no-repeat center center; background-size:100%; "
+		<?php } ?>>
+
 			
 			<div class="inner">
 
 				<h1><a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
 				<?php bloginfo('name') ?></a></h1>
-				<h2><?php bloginfo('description') ?></h2>
+				<?php if(is_home()): ?><h2><?php bloginfo('description') ?></h2><?php endif; ?>
 
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 				<?php // wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 
 				<ul class="nav_menu">
 					<li class="nav_menu_search"><a href="#">search</a></li>
-					<li class="nav_menu_filter"><a href="#">filter</a></li>
+					<?php if(is_home()): ?><li class="nav_menu_filter"><a href="#">filter</a></li><?php endif; ?>
 					<li class="nav_menu_menu"><a href="#">menu</a></li>
 				</ul>
 

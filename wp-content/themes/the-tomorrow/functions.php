@@ -28,87 +28,6 @@
 
 	}
 
-/* ======================================== define taxonomies ======================================== */
-/* http://wordpress.org/support/topic/list-posts-by-taxonomy-tag */ 
-	
-	function build_taxonomies() {  
-	
-//		$author_labels = array(
-//			'name'              => _x( 'Authors', 'taxonomy general name' ),
-//			'singular_name'     => _x( 'Author', 'taxonomy singular name' ),
-//			'search_items'      => __( 'Search Authors' ),
-//			'all_items'         => __( 'All Authors' ),
-//			'parent_item'       => __( 'Parent Author' ),
-//			'parent_item_colon' => __( 'Parent Author:' ),
-//			'edit_item'         => __( 'Edit Author' ),
-//			'update_item'       => __( 'Update Author' ),
-//			'add_new_item'      => __( 'Add New Author' ),
-//			'new_item_name'     => __( 'New Author Name' ),
-//			'menu_name'         => __( 'Author' ),
-//		);
-
-		// author
-//		register_taxonomy(
-//			'autore',
-//			'post',
-//			array(
-//				'hierarchical' => true,
-//				'label' => 'Autori',
-//				'labels' => $author_labels,
-//				'query_var' => true,
-//				'rewrite' => true
-//			)
-//		);
-
-		// theme
-		register_taxonomy(
-			'themes',
-			'post',
-			array(
-				'hierarchical' => true,
-				'label' => 'Theme',
-				'query_var' => true,
-				'rewrite' => true
-			)
-		);
-
-	}
-	add_action( 'init', 'build_taxonomies', 10 );	
-
-
-/* ======================================== define post types  ======================================== */
-
-	function create_multimedia_post_type() {
-
-//		register_post_type( 'lettere',
-//			array(
-//				'labels' => array(
-//					'name' => 'Lettere',
-//					'singular_name' => 'Lettere'
-//				),
-//				'supports' => array('post-formats','title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author'),
-//				'taxonomies' => array('autore','tema','discussione'),
-//				'public' => true
-//			)
-//		);
-
-//		register_post_type( 'eventi',
-//			array(
-//				'labels' => array(
-//					'name' => 'Eventi',
-//					'singular_name' => 'Evento'
-//				),
-//				'supports' => array('post-formats','title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author'),
-//				'taxonomies' => array('luoghi',),
-//				'public' => true
-//			)
-//		);
-
-
-	}
-
-//	add_action( 'init', 'create_multimedia_post_type',10 );	
-
 	/**
 	* Conditional function to check if post belongs to term in a custom taxonomy.
 	*
@@ -134,5 +53,83 @@
 		if ( is_wp_error( $return ) ) { return FALSE; }
 		return $return;
 	}
+
+
+
+
+
+
+
+
+
+
+	add_action('add_meta_boxes','my_add_metabox');
+
+	function my_add_metabox(){
+		add_meta_box('my_id','Venues meta', 'my_metabox_callback', 'event_page_venues', 'side', 'high');
+	}
+
+	function my_metabox_callback( $venue ){
+	
+		//Metabox's innards:
+//		$time = eo_get_venue_meta($venue->term_id, '_opening_times',true);
+		$suggested_by = eo_get_venue_meta($venue->term_id, '_suggested_by',true);
+		$website = eo_get_venue_meta($venue->term_id, '_website',true);
+		$header_img = eo_get_venue_meta($venue->term_id, '_header_img',true);
+
+		//Remember to use nonces!
+		wp_nonce_field('my_venue_meta_save', 'my_plugin_nonce_field' );	
+	?>	
+		<!--
+		<label> Opening times:</label>
+		<input type="text" name="my_opening_time" value="<?php echo esc_attr($time);?>" >
+		<br /><br />
+		-->
+		<label> Suggested by:</label>
+		<input type="text" name="my_suggested_by" value="<?php echo esc_attr($suggested_by);?>" >
+		<br /><br />
+		<label> Venue website:</label>
+		<input type="text" name="my_website" value="<?php echo esc_attr($website);?>" >
+		<br /><br />
+		<label> Image:</label><br />
+		<input type="text" name="my_header_img" value="<?php echo esc_attr($header_img);?>" >
+
+	<?php 
+	}
+
+	add_action ('eventorganiser_save_venue','my_save_venue_meta');
+	function my_save_venue_meta( $venue_id ){
+
+	    //If our nonce isn't present just silently abort.    
+	    if( !isset( $_POST['my_plugin_nonce_field'] ) )
+	        return;
+
+	    //Check permissions
+	    $tax = get_taxonomy( 'event-venue');
+	    if ( !current_user_can( $tax->cap->edit_terms ) )
+	        return;
+
+	    //Check nonce
+	    check_admin_referer( 'my_venue_meta_save', 'my_plugin_nonce_field' );
+
+	    //Retrieve meta value(s)
+	    $value_suggested_by = $_POST['my_suggested_by'];
+	    $value_website = $_POST['my_website'];
+	    $value_header_img = $_POST['my_header_img'];
+
+	    //Update venue meta
+	    eo_update_venue_meta($venue_id,  '_suggested_by', $value_suggested_by);
+	    eo_update_venue_meta($venue_id,  '_website', $value_website);
+	    eo_update_venue_meta($venue_id,  '_header_img', $value_header_img);
+	    return;
+	}
+
+
+
+
+
+
+
+
 
 ?>

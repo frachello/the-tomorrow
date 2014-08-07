@@ -33,6 +33,9 @@ get_header(); ?>
 			$venue_name = eo_get_venue_name();
 			$venue_url = eo_get_venue_link();
 			$address_details = eo_get_venue_address($venue_id);
+			$venue_meta = eo_get_venue_meta($venue_id);
+			$venue_suggested_by = eo_get_venue_meta($venue_id, '_suggested_by', true);
+			$venue_website = eo_get_venue_meta($venue_id, '_website', true);
 		?>
 		
 		<p class="address"><strong><?php echo $address_details['state']; ?></strong>, <?php echo $address_details['country']; ?></p>
@@ -71,17 +74,27 @@ get_header(); ?>
 		</div>
 
 		<div class="col leftcol">
-			<p>leftcol</p>
+			<p>
+				suggested by<br />
+				<strong><?php echo $venue_suggested_by; ?></strong>
+			</p>
+			<p>
+				website<br />
+				<strong><a href="<?php echo $venue_website; ?>"><?php echo $venue_website; ?></a></strong>
+			</p>
 		</div>
 
 		<div class="col content_col">
 
 			<?php if( $venue_description = eo_get_venue_description( $venue_id ) ){
-				 echo '<p class="venue-archive-meta">'.$venue_description.'</p>';
-			} ?>
+				 echo $venue_description;
+			}
+
+			print_r ($venue_meta);
+
+			?>
 
 			<?php if ( have_posts() ) : ?>
-
 
 				<?php while ( have_posts()) : the_post(); ?>
 

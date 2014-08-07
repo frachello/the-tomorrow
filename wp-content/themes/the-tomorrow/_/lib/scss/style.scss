@@ -62,17 +62,30 @@ body { font: 12px/1.3 Arial, Helvetica, sans-serif; color: $primary-color; text-
 /*link*/
 a, a:hover {text-decoration:none;}
 
+body{
+  background: #F4F4F0;
+  &.home { background: #fff; }
+  #content { margin-top: 140px; @include transition(all 0.5s ease); }  
+  &.open-filters #content { margin-top: 220px }
+//  &.scrolled{
+//    #content { margin-top: 90px; }
+//    &.open-filters #content { margin-top: 170px }
+//  }
+  &.tax-event-venue #content { margin-top: 280px; }
+    
+}
+
+
 	
 /************************************************
 *	Header  									*
 ************************************************/
 
-
 header.main{
-  position:fixed; background: #606A70; color: #fff; height: 140px; text-align: center; top: 0; left: 0; z-index: 9; width: 100%;
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow:    0px 2px 10px 0px rgba(0, 0, 0, 0.8);
-  box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+  height: 140px; text-align: left; position:fixed; background: #fff; color: #fff; text-align: center; top: 0; left: 0; z-index: 9; width: 100%;
+// -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+// -moz-box-shadow:    0px 2px 10px 0px rgba(0, 0, 0, 0.8);
+// box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   @include transition(all 0.5s ease);
   .inner{
     width: 988px; height: 140px; margin: 0 auto; position: relative;
@@ -81,7 +94,7 @@ header.main{
     h1{
       padding: 49px 80px 0 0; float: left; @include transition(padding-top 0.5s ease);
       a{
-        @include ir; background: url('../i/the_tomorrow_logo.png') no-repeat 0 0;
+        @include ir; background: url('../i/the_tomorrow_logo_000.png') no-repeat 0 0;
       }
     }
     h2{
@@ -89,46 +102,65 @@ header.main{
     }
   }
 
-  .nav_menu{
-    width: 168px; height: 23px; position: absolute; top: 61px; right: 0; @include transition(all 0.5s ease);
+  .nav_menu{ height: 23px; position: absolute; top: 61px; right: 0; @include transition(all 0.5s ease);
     li, li a{
       width: 23px; height: 23px;
     }
     li{
       float: left; margin-right: 49px;
       a{
-        @include ir; background: url('../i/ico_nav_menu.png') no-repeat 0 0; 
+        @include ir; background: url('../i/ico_nav_menu_000.png') no-repeat 0 0; 
       }
       &.nav_menu_filter a{
         background-position: -23px 0;
       }
-      &.nav_menu_menu{
-        margin-right: 0;
-        a{
-          background-position: -46px 0;
-        }
+      &.nav_menu_menu{ margin-right: 0;
+        a{ background-position: -46px 0; }
       }
     }
   }
-
 }
+body.home {
+  header.main { background: #606A70; 
+    .nav_menu li a { background-image: url('../i/ico_nav_menu_fff.png');  }
+    .inner h1 a { background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0; }
+  }
+}
+body.tax-event-venue{
+  header.main {
+    height: 280px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+    .nav_menu li a { background-image: url('../i/ico_nav_menu_fff.png');  }
+    .inner h1 a { background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0; }
+  }
+}
+
 
 body.scrolled header.main{ height: 90px;
   .inner{ height: 90px;
     h1 { padding-top: 28px;
-      a { @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; } 
+      a { @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_000.png) no-repeat 0 0; } 
     }
     h2 { display: none; margin-top: 35px; }
   }
   .nav_menu { top: 34px; }
-
 }
+body.home.scrolled header.main .inner h1 a {  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; }
+body.tax-event-venue.scrolled header.main .inner h1 a {  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; }
+body.home header.main{ background: #606A70; }
+
+/* --------------------------------------------------------------------------------
+                                    filter navs                                  */
+
+#filter_nav, #main_search { background: #fff; } 
+body.home{
+  #filter_nav, #main_search { background: #f4f4f0; }
+}
+
 
 /* --------------------------------------------------------------------------------
                                     filter nav                                   */
 
-#filter_nav{
-  background: #F6F6F6; height: 80px; display: none;
+#filter_nav{ height: 80px; display: none; top: 140px; width: 100%; position: fixed; text-align: left; z-index: 9;  @include transition(top 0.5s ease);
   .form{
     width: 988px; height: 68px; margin: 0 auto; position: relative; padding: 18px 0 0 0;
     div.filter{
@@ -155,18 +187,24 @@ body.scrolled header.main{ height: 90px;
     .submit { background: #fff; border: 1px solid #191919; width: 90px; height: 40px; float: right; font-family: "adelle-sans"; font-weight: 300; font-size: 12px; text-transform: uppercase; }
   }
 }
+body.scrolled #filter_nav {
+  position: fixed; top: 90px;
+}
 
 @import 'datepicker';
 
+
 /* --------------------------------------------------------------------------------
                                     main search                                  */
-#main_search{ background: #F6F6F6; height: 80px; display: none;
+
+#main_search { border-top: 1px solid #f4f4f0; height: 80px; display: none; text-align: left; top: 140px; width: 100%; position: fixed; z-index: 9; @include transition(top 0.5s ease);
  .form{
     width: 988px; height: 54px; margin: 0 auto; position: relative; padding: 26px 0 0 0;
-    input.submit{ width: 16px; height: 16px; background: url('../i/ico_main_search.png') no-repeat 0 0; font-size: 0; text-indent: -999999px; display: inline-block; border: none; vertical-align: middle; position: relative; left: 4px; top: 1px; }
-    input.text{ width: 970px; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; background: none; }
+    input.submit{ display: none; }
+    input.text{ width: 100%; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; background: none; }
   }
 }
+body.scrolled #main_search { top: 90px; }
 
 /* --------------------------------------------------------------------------------
                                     mega menu                                    */
@@ -222,23 +260,28 @@ nav#megamenu{
 /* --------------------------------------------------------------------------------
                                     internal page                                */
 section.internal_page {
-  width: 988px; margin: 0 auto; text-align: left;
+  width: 988px; margin: 0 auto; text-align: left; padding: 80px 0 0 0;
   &.venue_page{
     header.main_internal_page_header {
-      width: 100%; margin: 80px 0 30px 0; border-bottom: 1px solid #414042; padding-bottom: 20px;
+      width: 100%; padding: 0 0 20px 0; border-bottom: 1px solid #414042;
       .address { width: 220px; margin: 0 36px 0 0; float: left; text-transform: uppercase; }
       h1.venue_title{ font-family: "adelle-sans"; font-weight: 700; font-size: 40px; height: 1em; line-height: .7em; }
     }
     .col {  }
     .venue-events-calendar { margin: 30px 0; }
     .content_col{
-      width: 476px; margin-left: 0; margin-left: 256px;
+      width: 476px; margin-left: 0; margin-left: 256px; padding-top: 26px;
       p { margin-bottom: 10px; }
       p, li{ font-size: 20px; }
       div.event{ display: none }
     }
-    .leftcol { width: 220px; margin: 0 36px 0 0; float: left; }
-    .rightcol{ width: 190px; margin: 0 0 0 0; float: right; border-top: 1px solid #414042;
+    .leftcol { width: 220px; margin: 30px 36px 0 0; float: left; border-bottom: 1px solid #414042;
+      p{
+        text-transform: uppercase; padding-bottom: 26px;
+        a { color: $primary-color; }
+      }
+    }
+    .rightcol{ width: 190px; margin: 8px 0 0 0; float: right;
       .li { border-bottom: 1px solid #414042;
         a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
         &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
@@ -369,8 +412,8 @@ h2.page-title {font-size:20px; margin-bottom:20px;}
 /* home page
 */
 
-body.scrolled #home_grid{ margin-top: 90px; }
-#home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc; margin-top: 140px;
+
+#home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc;
   .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
     &.event{
       width: 239px; text-align: left;

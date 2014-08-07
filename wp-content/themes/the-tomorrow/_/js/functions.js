@@ -18,7 +18,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 	resize_header();
 
 	// toggle megamenu
-	$('.nav_menu_menu a').bind( "click", function(){
+	$('.nav_menu_menu a').bind( "click", function(e){
+		e.preventDefault();
 		$('#megamenu').slideDown();
 		// lock scroll position, but retain settings for later
 		var scrollPosition = [
@@ -31,13 +32,62 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		html.css('overflow', 'hidden');
 		window.scrollTo(scrollPosition[0], scrollPosition[1]);
 	});
-	$('#megamenu a.close').bind( "click", function(){
+	$('#megamenu a.close').bind( "click", function(e){
+		e.preventDefault();
 		$('#megamenu').slideUp();
 		// un-lock scroll position
 		var html = jQuery('html');
 		var scrollPosition = html.data('scroll-position');
 		html.css('overflow', html.data('previous-overflow'));
 		window.scrollTo(scrollPosition[0], scrollPosition[1])
+	});
+
+
+	// toggle filters
+	$('.nav_menu_filter a').bind( "click",function(e){
+		e.preventDefault();
+        if ($('#filter_nav').is(':visible')) {
+        	$('body').removeClass('open-filters');
+            $('#filter_nav').slideUp('fast');
+        } else {
+        	$('body').addClass('open-filters');
+            $('#filter_nav').slideDown('fast');
+            $('#main_search').slideUp('fast');
+        };
+	});
+
+
+	// toggle main search
+	$('.nav_menu_search a').bind( "click",function(e){
+		e.preventDefault();
+        if ($('#main_search').is(':visible')) {
+        	$('body').removeClass('open-filters');
+            $('#main_search').slideUp('fast');
+        } else {
+            $('body').addClass('open-filters');
+            $('#main_search').slideDown('fast');
+            $('#filter_nav').slideUp('fast');
+        };
+	});
+
+
+	// calendar filter
+  	$(function () {
+        $(".calendar_date input").datepicker({
+		//	constrainInput: true,
+			showOn: 'button',
+			buttonText: 'select start date'
+        });
+    });
+
+
+	// home isotope
+	$('#home_grid').isotope({
+		itemSelector: '.home_box',
+		layoutMode:'masonry',
+		masonry: {
+			columnWidth: 240
+		}
 	});
 
 
@@ -56,46 +106,6 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 	  }
 	});
 
-
-	// toggle filters
-	$('.nav_menu_filter a').bind( "click",function(){
-        if ($('#filter_nav').is(':visible')) {
-            $('#filter_nav').slideUp('fast');
-        } else {
-            $('#filter_nav').slideDown('fast');
-            $('#main_search').slideUp('fast');
-        };
-	});
-
-
-	// toggle main search
-	$('.nav_menu_search a').bind( "click",function(){
-        if ($('#main_search').is(':visible')) {
-            $('#main_search').slideUp('fast');
-        } else {
-            $('#main_search').slideDown('fast');
-            $('#filter_nav').slideUp('fast');
-        };
-	});
-
-
-	// calendar filter
-  	$(function () {
-        $(".calendar_date input").datepicker({
-		//	constrainInput: true,
-			showOn: 'button',
-			buttonText: 'select start date'
-        });
-    });
-
-	// home isotope
-	$('#home_grid').isotope({
-		itemSelector: '.home_box',
-		layoutMode:'masonry',
-		masonry: {
-			columnWidth: 240
-		}
-	});
 
 });
 
