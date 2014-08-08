@@ -476,19 +476,20 @@ body.single-conversations{
         &.closed { 
           .entry, .comments { display: none; }
         }
-        .meta{ width: 100%; float: left; margin: 22px 0 45px 0; cursor: pointer;
-          h3{ text-transform: uppercase; float: left; 
+        .meta{ width: 100%; float: left; padding: 22px 0 22px 0; cursor: pointer;
+          h3{ text-transform: uppercase; float: left;
             strong { font-weight: 700; }
           }
           .date { float: right; }
         }
         .entry{
+          margin-top: 23px; float: left;
           p, li { font-size: 19px; }
           p{ margin-bottom: 1em; }
         }
       }
       
-      p.show_comments { text-transform: uppercase; margin: 30px 0 40px 0; }
+      p.show_comments { text-transform: uppercase; margin: 30px 0 40px 0; font-weight: 700; cursor: pointer; }
       
     }
   }

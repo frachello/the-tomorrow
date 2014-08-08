@@ -73,7 +73,7 @@
 		<div class="col rightcol">
 			
 			
-			<div class="li expand"><a href="#">expand all</a></div>
+			<div class="li toggle_letters expand"><a href="#">expand all</a></div>
 			<div class="li prev"><a href="#">previous</a></div>
 			<div class="li next"><a href="#">next</a></div>
 			

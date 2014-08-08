@@ -1402,7 +1402,7 @@ body.single-conversations #content .content_col article.closed .entry, body.sing
 body.single-conversations #content .content_col article .meta {
   width: 100%;
   float: left;
-  margin: 22px 0 45px 0;
+  padding: 22px 0 22px 0;
   cursor: pointer;
 }
 body.single-conversations #content .content_col article .meta h3 {
@@ -1415,6 +1415,10 @@ body.single-conversations #content .content_col article .meta h3 strong {
 body.single-conversations #content .content_col article .meta .date {
   float: right;
 }
+body.single-conversations #content .content_col article .entry {
+  margin-top: 23px;
+  float: left;
+}
 body.single-conversations #content .content_col article .entry p, body.single-conversations #content .content_col article .entry li {
   font-size: 19px;
 }
@@ -1424,6 +1428,8 @@ body.single-conversations #content .content_col article .entry p {
 body.single-conversations #content .content_col p.show_comments {
   text-transform: uppercase;
   margin: 30px 0 40px 0;
+  font-weight: 700;
+  cursor: pointer;
 }
 @media print {
   /* Media queries!

@@ -18,14 +18,43 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 	$('article.letter:gt(0)').addClass('closed');
 	$('article.letter .meta').bind( "click", function(e){
 		e.preventDefault();
+
 		if ($(this).next('.entry').is(':visible')) {
-			console.log('article not visible');
 			$(this).parent().addClass('closed');
 		}else{
 			$(this).parent().removeClass('closed');
-			console.log('article visible');
 		}
 
+		var letters_count = $(".letter").length;
+		console.log('letters_count='+letters_count);
+		var closed_letters_count = $(".letter.closed").length;
+		console.log('closed_letters_count='+closed_letters_count);
+		if (closed_letters_count){
+			console.log('at least one letter is closed');
+			$('.rightcol .toggle_letters').addClass('expand');
+			$('.rightcol .toggle_letters').removeClass('collapse');
+			$('.rightcol .toggle_letters a').html('expand all');
+		}else{
+			console.log('all letters are open');
+			$('.rightcol .toggle_letters').removeClass('expand');
+			$('.rightcol .toggle_letters').addClass('collapse');
+			$('.rightcol .toggle_letters a').html('collapse all');
+		}
+
+	});
+	$('.rightcol .toggle_letters a').bind( "click", function(e){
+		e.preventDefault();
+		if( $(this).parent().hasClass('expand') ){
+			$('article.letter').removeClass('closed');
+			$('.rightcol .toggle_letters').removeClass('expand');
+			$('.rightcol .toggle_letters').addClass('collapse');
+			$('.rightcol .toggle_letters a').html('collapse all');
+		}else{
+			$('article.letter').addClass('closed');
+			$('.rightcol .toggle_letters').addClass('expand');
+			$('.rightcol .toggle_letters').removeClass('collapse all');
+			$('.rightcol .toggle_letters a').html('expand all');
+		}
 	});
 
 	resize_header();
