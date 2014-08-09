@@ -909,11 +909,11 @@ nav#megamenu p.megamenu-footer {
                                     internal page                                */
 }
 body.internal-page #content {
+  position: relative;
   width: 988px;
   margin: 90px auto 0 auto;
   text-align: left;
   padding: 80px 0 0 0;
-  background: #999 px;
   /************************************************
 * POST    								        *
 ************************************************/
@@ -924,15 +924,21 @@ body.internal-page #content {
 *	Footer      								*
 ************************************************/
 }
-body.internal-page #content .rightcol {
+body.internal-page #content #rightcol {
   width: 220px;
   margin: 0;
   float: right;
 }
-body.internal-page #content .rightcol .li {
+body.internal-page #content #rightcol.fixed {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: 274px;
+}
+body.internal-page #content #rightcol .li {
   border-top: 1px solid #414042;
 }
-body.internal-page #content .rightcol .li a {
+body.internal-page #content #rightcol .li a {
   color: #191919;
   text-indent: 10px;
   padding: 20px 0;
@@ -943,31 +949,31 @@ body.internal-page #content .rightcol .li a {
   background-position: center right;
   background-repeat: no-repeat;
 }
-body.internal-page #content .rightcol .li.gallery a {
+body.internal-page #content #rightcol .li.gallery a {
   background-image: url(../i/ico_rightcol_gallery.png);
 }
-body.internal-page #content .rightcol .li.expand a {
+body.internal-page #content #rightcol .li.expand a {
   background-image: url(../i/ico_rightcol_expand.png);
 }
-body.internal-page #content .rightcol .li.collapse a {
+body.internal-page #content #rightcol .li.collapse a {
   background-image: url(../i/ico_rightcol_collapse.png);
 }
-body.internal-page #content .rightcol .li.map a {
+body.internal-page #content #rightcol .li.map a {
   background-image: url(../i/ico_rightcol_map.png);
 }
-body.internal-page #content .rightcol .li.prev a {
+body.internal-page #content #rightcol .li.prev_letter a {
   background-image: url(../i/ico_rightcol_prev.png);
 }
-body.internal-page #content .rightcol .li.next a {
+body.internal-page #content #rightcol .li.next_letter a {
   background-image: url(../i/ico_rightcol_next.png);
 }
-body.internal-page #content .rightcol .addthis {
+body.internal-page #content #rightcol .addthis {
   padding: 20px 0;
   float: left;
   width: 100%;
   border-top: 1px solid #414042;
 }
-body.internal-page #content .rightcol .addthis p {
+body.internal-page #content #rightcol .addthis p {
   color: #191919;
   text-indent: 10px;
   text-transform: uppercase;
@@ -976,10 +982,10 @@ body.internal-page #content .rightcol .addthis p {
   margin-right: 10px;
   float: left;
 }
-body.internal-page #content .rightcol .addthis .addthis_toolbox {
+body.internal-page #content #rightcol .addthis .addthis_toolbox {
   float: right;
 }
-body.internal-page #content .rightcol .addthis .addthis_toolbox a {
+body.internal-page #content #rightcol .addthis .addthis_toolbox a {
   width: 19px;
   height: 15px;
   font-size: 0;
@@ -989,16 +995,16 @@ body.internal-page #content .rightcol .addthis .addthis_toolbox a {
   background-repeat: no-repeat;
   margin-left: 5px;
 }
-body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_facebook {
+body.internal-page #content #rightcol .addthis .addthis_toolbox a.addthis_button_facebook {
   background-image: url(../i/ico_rightcol_share_facebook.png);
 }
-body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_twitter {
+body.internal-page #content #rightcol .addthis .addthis_toolbox a.addthis_button_twitter {
   background-image: url(../i/ico_rightcol_share_twitter.png);
 }
-body.internal-page #content .rightcol .addthis .addthis_toolbox a.addthis_button_email {
+body.internal-page #content #rightcol .addthis .addthis_toolbox a.addthis_button_email {
   background-image: url(../i/ico_rightcol_share_email.png);
 }
-body.internal-page #content .rightcol .addthis .at15t, body.internal-page #content .rightcol .addthis .at16nc, body.internal-page #content .rightcol .addthis .at300bs {
+body.internal-page #content #rightcol .addthis .at15t, body.internal-page #content #rightcol .addthis .at16nc, body.internal-page #content #rightcol .addthis .at300bs {
   background: none;
 }
 body.internal-page #content.venue_page header.main_internal_page_header {
@@ -1186,7 +1192,6 @@ h2.page-title {
 }
 .highlight {
   background: yellow;
-  padding: 10px 10px 0 10px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

@@ -272,17 +272,19 @@ nav#megamenu{
 /* --------------------------------------------------------------------------------
                                     internal page                                */
 body.internal-page #content {
-  width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0; background: #999px;
 
-  .rightcol{ width: 220px; margin: 0; float: right;
+  position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
+
+  #rightcol{ width: 220px; margin: 0; float: right;
+    &.fixed{ position: fixed; top: 100px; left: 50%; margin-left: 274px; }
     .li { border-top: 1px solid #414042;
       a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
       &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
       &.expand a{ background-image: url(../i/ico_rightcol_expand.png); }
       &.collapse a{ background-image: url(../i/ico_rightcol_collapse.png); }
       &.map a{ background-image: url(../i/ico_rightcol_map.png); }
-      &.prev a{ background-image: url(../i/ico_rightcol_prev.png); }
-      &.next a{ background-image: url(../i/ico_rightcol_next.png); }
+      &.prev_letter a{ background-image: url(../i/ico_rightcol_prev.png); }
+      &.next_letter a{ background-image: url(../i/ico_rightcol_next.png); }
     }      
     .addthis { padding: 20px 0; float: left; width: 100%; border-top: 1px solid #414042;
       p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
@@ -305,7 +307,7 @@ body.internal-page #content {
     }
     .col {  }
     .venue-events-calendar { margin: 30px 0; }
-    .rightcol{ }
+    #rightcol{ }
     .content_col{
       width: 476px; margin-left: 0; margin-left: 220px; padding-top: 26px; padding-left: 36px; border-top: 1px solid #414042;
       p { margin-bottom: 10px; }
@@ -398,7 +400,7 @@ h2.page-title {font-size:20px; margin-bottom:20px;}
 #content.taxonomy_content h2 { cursor: pointer; }
 */
 
-.highlight { background: yellow; padding: 10px 10px 0 10px; @include transition(all 0.5s ease); }
+.highlight { background: yellow; @include transition(all 0.5s ease); }
 
 /* home page
 */

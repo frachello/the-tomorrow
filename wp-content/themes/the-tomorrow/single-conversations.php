@@ -12,13 +12,15 @@
 		// define query
 		$this_conv_letters_last_args = array(
 			'post_type' => 'letters',
+			'order' => 'ASC',
 			'tax_query' => array (
 		      array (
 		         'taxonomy' => 'conversations',
 		         'field' => 'ID',
 		         'terms' => $cur_id,
-		         'operator' => 'IN'
+		         'operator' => 'IN',
 		      )
+		      
 		   )
 		);
 		$this_conv_letters = new WP_Query($this_conv_letters_last_args);
@@ -70,12 +72,11 @@
 
 		<h2 class="post_<?php echo $cur_id; ?>"><?php echo $cur_title; ?></h2>
 
-		<div class="col rightcol">
-			
+		<div id="rightcol" class="col">
 			
 			<div class="li toggle_letters expand"><a href="#">expand all</a></div>
-			<div class="li prev"><a href="#">previous</a></div>
-			<div class="li next"><a href="#">next</a></div>
+			<div class="li prev_letter"><a href="#">previous</a></div>
+			<div class="li next_letter"><a href="#">next</a></div>
 			
 			<div class="addthis">
 			    <p>share</p>
@@ -106,7 +107,7 @@
 			$i++;
 			?>
 
-				<article class="letter" id="post-<?php echo $post->ID; ?>"  class="letter <?php if($i==1){ echo 'first'; } ?>">
+				<article id="letter-<?php echo $post->ID; ?>" class="letter <?php if($i==1){ echo 'first'; } ?>">
 
 					<div class="meta">
 						<h3>
@@ -122,10 +123,14 @@
 					  <?php the_content('[leggi tutto]'); ?>
 					</div>
 
+					<br class="clear" />
+
 					<div class="comments">
-						<p class="show_comments"><a onclick="loadDisqus(jQuery(this), '<?= $post->ID ?>','<?= $post->guid ?>', '<? the_permalink() ?>');">
-						Show comments
-						</a></p>
+						<p class="show_comments">
+							<a onclick="loadDisqus(jQuery(this), '<?= $post->ID ?>','<?= $post->guid ?>', '<? the_permalink() ?>');">
+							Show comments
+							</a>
+						</p>
 					</div>
 
 				</article> 
@@ -139,6 +144,8 @@
 		</div>
 
 	</div>
+
+	<br class="clear" />
 
 </div> <!-- chiuso content -->
 

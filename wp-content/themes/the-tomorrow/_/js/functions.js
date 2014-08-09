@@ -5,57 +5,111 @@
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
-	var id  = location.hash.substr(1); //Get the word after the hash from the url
-	console.log(id);
-	if (id) $('#'+id).addClass('highlight'); // add class highlight to element whose id is the word after the hash
+	// fix rightcol top position after scrolling
+	if($('#rightcol').length){ fix_rightcol_pos(); }
 
+	//Get the word after the hash from the url
+	var current_url_hash  = location.hash.substr(1);
 
-//	$('h2').bind( "click", function() {
-//		$(this).next('div').toggle();
-//	});
+	/* -----------------------------------------------------------
+	pagina singola conversazione
+	*/
 
-	// expand collapse letters
-	$('article.letter:gt(0)').addClass('closed');
-	$('article.letter .meta').bind( "click", function(e){
-		e.preventDefault();
+	if($('body.single-conversations').length){
 
-		if ($(this).next('.entry').is(':visible')) {
-			$(this).parent().addClass('closed');
-		}else{
-			$(this).parent().removeClass('closed');
+		// expand collapse letters
+		if (!current_url_hash){		
+			current_url_hash = $('article.letter:first-child').attr('id');
 		}
+		window.location.hash = '#'+current_url_hash;
+		var active_letter = '#'+current_url_hash;
 
-		var letters_count = $(".letter").length;
-		console.log('letters_count='+letters_count);
-		var closed_letters_count = $(".letter.closed").length;
-		console.log('closed_letters_count='+closed_letters_count);
-		if (closed_letters_count){
-			console.log('at least one letter is closed');
-			$('.rightcol .toggle_letters').addClass('expand');
-			$('.rightcol .toggle_letters').removeClass('collapse');
-			$('.rightcol .toggle_letters a').html('expand all');
-		}else{
-			console.log('all letters are open');
-			$('.rightcol .toggle_letters').removeClass('expand');
-			$('.rightcol .toggle_letters').addClass('collapse');
-			$('.rightcol .toggle_letters a').html('collapse all');
-		}
+		$(active_letter).addClass('active highlight');
+		setTimeout( function() {
+			$(active_letter).removeClass('highlight');
+		}, 2000);
 
-	});
-	$('.rightcol .toggle_letters a').bind( "click", function(e){
-		e.preventDefault();
-		if( $(this).parent().hasClass('expand') ){
-			$('article.letter').removeClass('closed');
-			$('.rightcol .toggle_letters').removeClass('expand');
-			$('.rightcol .toggle_letters').addClass('collapse');
-			$('.rightcol .toggle_letters a').html('collapse all');
-		}else{
-			$('article.letter').addClass('closed');
-			$('.rightcol .toggle_letters').addClass('expand');
-			$('.rightcol .toggle_letters').removeClass('collapse all');
-			$('.rightcol .toggle_letters a').html('expand all');
-		}
-	});
+		$("article.letter:not(.active)").addClass("closed");
+
+		$('html, body').animate({scrollTop: $(active_letter).offset().top-100}, 500);
+
+		$('article.letter .meta').bind( "click", function(e){
+
+			e.preventDefault();
+			if ($(this).next('.entry').is(':visible')) {
+				$(this).parent().addClass('closed');
+				$(this).parent().removeClass('active');
+				window.location.hash = '';
+			}else{
+				$(this).parent().addClass('active');
+				window.location.hash = $(this).parent().attr('id');
+				$(this).parent().removeClass('closed');
+			}
+
+			var letters_count = $(".letter").length;
+			console.log('letters_count='+letters_count);
+			var closed_letters_count = $(".letter.closed").length;
+			console.log('closed_letters_count='+closed_letters_count);
+			if (closed_letters_count){
+				console.log('at least one letter is closed');
+				$('#rightcol .toggle_letters').addClass('expand');
+				$('#rightcol .toggle_letters').removeClass('collapse');
+				$('#rightcol .toggle_letters a').html('expand all');
+			}else{
+				console.log('all letters are open');
+				$('#rightcol .toggle_letters').removeClass('expand');
+				$('#rightcol .toggle_letters').addClass('collapse');
+				$('#rightcol .toggle_letters a').html('collapse all');
+			}
+
+		});
+		$('#rightcol .toggle_letters a').bind( "click", function(e){
+			e.preventDefault();
+			if( $(this).parent().hasClass('expand') ){
+				$('article.letter').removeClass('closed');
+				$('#rightcol .toggle_letters').removeClass('expand');
+				$('#rightcol .toggle_letters').addClass('collapse');
+				$('#rightcol .toggle_letters a').html('collapse all');
+			}else{
+				$('article.letter').addClass('closed');
+				$('#rightcol .toggle_letters').addClass('expand');
+				$('#rightcol .toggle_letters').removeClass('collapse all');
+				$('#rightcol .toggle_letters a').html('expand all');
+				window.location.hash = '';
+			}
+		});
+
+		$('#rightcol .next_letter a').bind( "click", function(e){
+			e.preventDefault();
+			var next_letter = '#'+$('.letter.active').next().attr('id');
+			console.log(next_letter);
+			if(next_letter !== '#undefined'){ // se è l'ultima lettera della conversazione
+				console.log('go to '+next_letter);
+			    $('html, body').animate({
+			        scrollTop: $(next_letter).offset().top-100
+			    }, 500);
+			    $('.active').removeClass('active');
+			    $(next_letter).removeClass('closed');
+			    $(next_letter).addClass('active');
+			    window.location.hash = next_letter;
+			}
+		});
+		$('#rightcol .prev_letter a').bind( "click", function(e){
+			e.preventDefault();
+			var prev_letter = '#'+$('.letter.active').prev().attr('id');
+			console.log(prev_letter);
+			if(prev_letter !== '#undefined'){ // se è la prima lettera della conversazione
+				console.log('go to '+prev_letter);
+			    $('html, body').animate({
+			        scrollTop: $(prev_letter).offset().top-100
+			    }, 500);
+			    $('.active').removeClass('active');
+			    $(prev_letter).removeClass('closed');
+			    $(prev_letter).addClass('active');
+			    window.location.hash = prev_letter;
+			}
+		});
+	}
 
 	resize_header();
 
@@ -155,6 +209,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 // decrease header height on scroll
 $(window).scroll(function () {
 	resize_header();
+	if($('#rightcol').length){ fix_rightcol_pos(); }
 });
 
 /* optional triggers
@@ -177,9 +232,9 @@ resize header
 function resize_header() {
     
 	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-	    shrinkOn = 10,
-	    header = document.querySelector("header"),
-	    body = document.querySelector("body");
+    shrinkOn = 10,
+    header = document.querySelector("header"),
+    body = document.querySelector("body");
 	if (distanceY > shrinkOn) {
 	    classie.add(body,"scrolled");
 	    classie.add(header,"smaller");
@@ -187,6 +242,24 @@ function resize_header() {
 	    if (classie.has(header,"smaller")) {
 	    	classie.remove(body,"scrolled");
 	        classie.remove(header,"smaller");
+	    }
+	}
+
+}
+/* ----------------------------------------------------------------------------------------------------------------
+fix rightcol pos
+*/
+
+function fix_rightcol_pos() {
+    
+	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+    scroll_limit = 225,
+    rightcol = document.querySelector("#rightcol");
+	if (distanceY > scroll_limit) {
+	    classie.add(rightcol,"fixed");
+	} else {
+	    if (classie.has(rightcol,"fixed")) {
+	        classie.remove(rightcol,"fixed");
 	    }
 	}
 
