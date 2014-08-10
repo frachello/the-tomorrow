@@ -87,9 +87,19 @@
 
 		<header class="container">
 
-			<header class="main"
-			<?php
+			<header class="main" <?php
 				$venue_id = eo_get_venue();
+				$post_type = get_post_type();
+				
+				if ( is_singular( 'authors' ) ){
+					if ( has_post_thumbnail() ) {
+						$post_thumbnail_id = get_post_thumbnail_id($post->ID);
+						$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+				?>
+					style=" background-image:url(<?php echo $post_thumbnail_url; ?>); "
+				<?php
+					}
+				}
 				if($venue_id){
 					$venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true); ?>
 					style=" background-image:url(<?php echo $venue_header_img; ?>); "
@@ -126,7 +136,6 @@
 						<p>
 
 							<div id="options">
-
 
 								<div class="option-set" data-group="type">
 
@@ -167,13 +176,13 @@
 						<p class="calendar_date">
 							<label>from</label>
 							<input class="text from" type="text" value="<?php echo $from_day; ?>" />
-							<!-- <span class="calendar"></span> -->
+							
 						</p>
 
 						<p class="calendar_date">
 							<label>to</label>
 							<input class="text city" type="text" value="<?php echo $today; ?>" />
-							<!-- <span class="calendar"></span> -->
+							
 						</p>
 
 					</div>

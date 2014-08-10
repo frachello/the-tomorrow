@@ -31,22 +31,6 @@
 		if( $this_conv_letters->have_posts() ){
 			$i = 0;
 			$letters_num = $this_conv_letters->post_count; // letters number
-			while( $this_conv_letters->have_posts() ): $this_conv_letters->the_post();
-			$i++;
-				if ($i == $letters_num):
-				?>
-				<?php
-					$difference = round((strtotime(date("r")) - strtotime(get_the_time('r')))/(24*60*60),0);
-					if ($difference > 3) { $last_letter_date = get_the_date('j F Y'); // last letter date
-					}else{ $last_letter_date = human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; } // last letter date
-				?>														
-				<?php
-				endif;
-			?>
-
-
-			<?php
-			endwhile;
 		}
 		wp_reset_postdata();
 		?>

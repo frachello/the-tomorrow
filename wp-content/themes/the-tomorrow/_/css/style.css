@@ -249,7 +249,7 @@ br.clear {
   /* Apply styles  ========================================= */
 }
 body {
-  font: 12px/1.3 Arial, Helvetica, sans-serif;
+  font: 12px/1.3 'adelle-sans';
   color: #191919;
   text-align: center;
   /*link*/
@@ -273,6 +273,7 @@ body #content {
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  position: relative;
 }
 body.open-filters #content {
   margin-top: 220px;
@@ -375,45 +376,6 @@ body.home header.main .nav_menu li a {
 }
 body.home header.main .inner h1 a {
   background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0;
-}
-body.tax-event-venue header.main {
-  height: 280px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #000;
-}
-body.tax-event-venue header.main .nav_menu li a {
-  background-image: url('../i/ico_nav_menu_fff.png');
-}
-body.tax-event-venue header.main .inner h1 a {
-  background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0;
-}
-body.tax-event-venue #main_search {
-  top: 280px;
-}
-body.tax-event-venue.scrolled #content {
-  margin-top: 90px;
-}
-body.tax-event-venue.scrolled.open-filters #content {
-  margin-top: 170px;
-}
-body.tax-event-venue.scrolled header.main {
-  background-color: #fff;
-  background-image: none !important;
-}
-body.tax-event-venue.scrolled header.main .nav_menu li a {
-  background-image: url('../i/ico_nav_menu_000.png');
-}
-body.tax-event-venue.scrolled header.main .inner h1 a {
-  background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0;
-}
-body.tax-event-venue.scrolled #main_search {
-  top: 90px;
 }
 body.scrolled header.main {
   height: 90px;
@@ -908,12 +870,7 @@ nav#megamenu p.megamenu-footer {
   /* --------------------------------------------------------------------------------
                                     internal page                                */
 }
-body.internal-page #content {
-  position: relative;
-  width: 988px;
-  margin: 90px auto 0 auto;
-  text-align: left;
-  padding: 80px 0 0 0;
+body.internal-page {
   /************************************************
 * POST    								        *
 ************************************************/
@@ -923,6 +880,33 @@ body.internal-page #content {
   /************************************************
 *	Footer      								*
 ************************************************/
+}
+body.internal-page h2 {
+  font-weight: 700;
+  font-size: 40px;
+  padding: 0 0 38px 0;
+  margin: 0 0 0 0;
+  font-family: "adelle-sans";
+  font-weight: 700;
+}
+body.internal-page .archive-box {
+  position: relative;
+  margin: 0 36px 24px 0;
+  width: 220px;
+  height: 160px;
+  float: left;
+  font-family: 'adelle-sans';
+}
+body.internal-page .archive-box.counter_4 {
+  margin-right: 0;
+}
+body.internal-page #content {
+  position: relative;
+  width: 988px;
+  margin: 90px auto 0 auto;
+  text-align: left;
+  padding: 80px 0 0 0;
+  /* place page */
 }
 body.internal-page #content #rightcol {
   width: 220px;
@@ -1059,6 +1043,224 @@ body.internal-page #content.venue_page .leftcol p {
 body.internal-page #content.venue_page .leftcol p a {
   color: #191919;
 }
+body.internal-page.tax-event-venue #content, body.internal-page.single-authors #content {
+  margin-top: 520px;
+}
+body.internal-page.tax-event-venue.open-filters #content, body.internal-page.single-authors.open-filters #content {
+  margin-top: 700px;
+}
+body.internal-page.tax-event-venue header.main, body.internal-page.single-authors header.main {
+  height: 520px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body.internal-page.tax-event-venue #main_search, body.internal-page.single-authors #main_search {
+  top: 520px;
+}
+body.internal-page.tax-event-venue.scrolled #content, body.internal-page.single-authors.scrolled #content {
+  margin-top: 90px;
+}
+body.internal-page.tax-event-venue.scrolled.open-filters #content, body.internal-page.single-authors.scrolled.open-filters #content {
+  margin-top: 170px;
+}
+body.internal-page.tax-event-venue.scrolled header.main, body.internal-page.single-authors.scrolled header.main {
+  background-color: #fff;
+  background-image: none !important;
+  height: 90px;
+}
+body.internal-page.tax-event-venue.scrolled header.main .nav_menu li a, body.internal-page.single-authors.scrolled header.main .nav_menu li a {
+  background-image: url('../i/ico_nav_menu_000.png');
+}
+body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a {
+  background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0;
+}
+body.internal-page.tax-event-venue.scrolled #main_search, body.internal-page.single-authors.scrolled #main_search {
+  top: 90px;
+}
+body.internal-page.tax-event-venue {
+  /* single conversation page */
+}
+body.internal-page.tax-event-venue header.main .nav_menu li a {
+  background-image: url('../i/ico_nav_menu_fff.png');
+}
+body.internal-page.tax-event-venue header.main .inner h1 a {
+  background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0;
+}
+body.internal-page.single-conversations {
+  /* post types archives */
+}
+body.internal-page.single-conversations h2 {
+  border-top: 1px solid #414042;
+}
+body.internal-page.single-conversations #content p.count-theme {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+body.internal-page.single-conversations #content .content_col {
+  width: 732px;
+  border-top: 1px solid #414042;
+}
+body.internal-page.single-conversations #content .content_col article {
+  border-bottom: 1px solid #414042;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow: hidden;
+  height: auto;
+}
+body.internal-page.single-conversations #content .content_col article .letter, body.internal-page.single-conversations #content .content_col article .comments {
+  display: block;
+}
+body.internal-page.single-conversations #content .content_col article.closed .entry, body.internal-page.single-conversations #content .content_col article.closed .comments {
+  display: none;
+}
+body.internal-page.single-conversations #content .content_col article .meta {
+  width: 100%;
+  float: left;
+  padding: 22px 0 22px 0;
+  cursor: pointer;
+}
+body.internal-page.single-conversations #content .content_col article .meta h3 {
+  text-transform: uppercase;
+  float: left;
+}
+body.internal-page.single-conversations #content .content_col article .meta h3 strong {
+  font-weight: 700;
+}
+body.internal-page.single-conversations #content .content_col article .meta .date {
+  float: right;
+}
+body.internal-page.single-conversations #content .content_col article .entry {
+  margin-top: 23px;
+  float: left;
+}
+body.internal-page.single-conversations #content .content_col article .entry p, body.internal-page.single-conversations #content .content_col article .entry li {
+  font-size: 19px;
+}
+body.internal-page.single-conversations #content .content_col article .entry p {
+  margin-bottom: 1em;
+}
+body.internal-page.single-conversations #content .content_col p.show_comments {
+  text-transform: uppercase;
+  margin: 30px 0 40px 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+body.internal-page.post-type-archive-letters h2, body.internal-page.post-type-archive-conversations h2, body.internal-page.single-authors h2 {
+  padding-bottom: 0;
+}
+body.internal-page.post-type-archive-letters p.rules-link, body.internal-page.post-type-archive-conversations p.rules-link, body.internal-page.single-authors p.rules-link {
+  position: absolute;
+  top: 90px;
+  right: 0px;
+}
+body.internal-page.post-type-archive-letters p.rules-link a, body.internal-page.post-type-archive-conversations p.rules-link a, body.internal-page.single-authors p.rules-link a {
+  color: #191919;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+body.internal-page.post-type-archive-letters h3, body.internal-page.post-type-archive-conversations h3, body.internal-page.single-authors h3 {
+  float: left;
+  margin-top: 38px;
+  width: 100%;
+  clear: both;
+  font-size: 19px;
+  font-family: "adelle-sans";
+  font-weight: 700;
+  border-top: 1px solid #414042;
+  padding: 14px 0 35px 0;
+}
+body.internal-page.post-type-archive-letters .archive-box, body.internal-page.post-type-archive-conversations .archive-box, body.internal-page.single-authors .archive-box {
+  border-top: 1px solid #414042;
+}
+body.internal-page.post-type-archive-letters .archive-box h4, body.internal-page.post-type-archive-conversations .archive-box h4, body.internal-page.single-authors .archive-box h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+body.internal-page.post-type-archive-letters .archive-box h4 a, body.internal-page.post-type-archive-conversations .archive-box h4 a, body.internal-page.single-authors .archive-box h4 a {
+  color: #000;
+}
+body.internal-page.post-type-archive-letters .archive-box .entry p, body.internal-page.post-type-archive-conversations .archive-box .entry p, body.internal-page.single-authors .archive-box .entry p {
+  font-size: 14px;
+}
+body.internal-page.post-type-archive-letters .archive-box .bottom, body.internal-page.post-type-archive-conversations .archive-box .bottom, body.internal-page.single-authors .archive-box .bottom {
+  height: 11px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+body.internal-page.post-type-archive-letters .archive-box .bottom p, body.internal-page.post-type-archive-conversations .archive-box .bottom p, body.internal-page.single-authors .archive-box .bottom p {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 11px;
+  height: 11px;
+  line-height: 11px;
+  padding: 0 0 0 14px;
+}
+body.internal-page.post-type-archive-letters .archive-box .bottom p.date, body.internal-page.post-type-archive-conversations .archive-box .bottom p.date, body.internal-page.single-authors .archive-box .bottom p.date {
+  background: url(../i/ico_hp_box_time.png) no-repeat center left;
+  float: left;
+}
+body.internal-page.post-type-archive-letters .archive-box .bottom p.count-theme, body.internal-page.post-type-archive-conversations .archive-box .bottom p.count-theme, body.internal-page.single-authors .archive-box .bottom p.count-theme {
+  background: url(../i/ico_hp_box_letter.png) no-repeat center left;
+  float: right;
+}
+body.internal-page.post-type-archive-authors h3 {
+  float: left;
+  margin-top: 38px;
+  width: 100%;
+  clear: both;
+  font-size: 19px;
+  font-family: "adelle-sans";
+  font-weight: 700;
+  border-top: 1px solid #414042;
+  padding: 14px 0 35px 0;
+}
+body.internal-page.post-type-archive-authors .archive-box {
+  text-align: center;
+  height: 240px;
+}
+body.internal-page.post-type-archive-authors .archive-box h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+body.internal-page.post-type-archive-authors .archive-box h4 a {
+  color: #000;
+}
+body.internal-page.post-type-archive-authors .archive-box a.img {
+  width: 220px;
+  height: 180px;
+  display: block;
+  border-bottom: 1px solid #414042;
+}
+body.internal-page.post-type-archive-authors .archive-box a.img img {
+  height: 180px;
+  width: auto;
+}
+body.internal-page.post-type-archive-authors .archive-box .letters_count {
+  text-transform: uppercase;
+  font-family: "adelle-sans";
+  font-size: 13px;
+}
+body.internal-page.post-type-archive-authors .archive-box .letters_count a {
+  color: #191919;
+}
+body.internal-page.single-authors .author_desc p {
+  font-size: 19px;
+  margin-bottom: 35px;
+}
 body.home footer {
   display: none;
 }
@@ -1070,7 +1272,8 @@ footer {
   margin: 35px 0 0 0;
   /************************************************
 
-/* pagine */
+
+/* paginazione standard */
 }
 footer p.disclaimer {
   width: 988px;
@@ -1165,11 +1368,6 @@ footer .inner .secondary-nav .secondary_menu .menu-social-links-container li a {
   background-repeat: no-repeat;
   background-position: center center;
 }
-h2.page-title {
-  font-size: 20px;
-  margin-bottom: 20px;
-  /* paginazione standard */
-}
 .navigation {
   position: relative;
   padding: 10px 0;
@@ -1191,7 +1389,7 @@ h2.page-title {
 */
 }
 .highlight {
-  background: yellow;
+  background: #fff;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1210,7 +1408,8 @@ h2.page-title {
   height: 100%;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  /* pagina evento */
+  /* Print styles!
+-------------------------------------------------------------------------------*/
 }
 #home_grid .home_box {
   position: relative;
@@ -1359,82 +1558,6 @@ h2.page-title {
 #home_grid .home_box.conversations .bottom p.count-theme {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
-}
-body.tax-event-venue {
-  /* pagina evento */
-}
-body.tax-event-venue #content {
-  margin-top: 280px;
-}
-body.tax-event-venue.open-filters #content {
-  margin-top: 360px;
-}
-body.single-conversations {
-  /* Print styles!
--------------------------------------------------------------------------------*/
-}
-body.single-conversations #content p.count-theme {
-  text-transform: uppercase;
-  font-size: 14px;
-}
-body.single-conversations #content h2 {
-  border-top: 1px solid #414042;
-  font-weight: 700;
-  font-size: 40px;
-  padding: 14px 0 38px 0;
-  margin: 32px 0 0 0;
-}
-body.single-conversations #content .content_col {
-  width: 732px;
-  border-top: 1px solid #414042;
-}
-body.single-conversations #content .content_col article {
-  border-bottom: 1px solid #414042;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  overflow: hidden;
-  height: auto;
-}
-body.single-conversations #content .content_col article .letter, body.single-conversations #content .content_col article .comments {
-  display: block;
-}
-body.single-conversations #content .content_col article.closed .entry, body.single-conversations #content .content_col article.closed .comments {
-  display: none;
-}
-body.single-conversations #content .content_col article .meta {
-  width: 100%;
-  float: left;
-  padding: 22px 0 22px 0;
-  cursor: pointer;
-}
-body.single-conversations #content .content_col article .meta h3 {
-  text-transform: uppercase;
-  float: left;
-}
-body.single-conversations #content .content_col article .meta h3 strong {
-  font-weight: 700;
-}
-body.single-conversations #content .content_col article .meta .date {
-  float: right;
-}
-body.single-conversations #content .content_col article .entry {
-  margin-top: 23px;
-  float: left;
-}
-body.single-conversations #content .content_col article .entry p, body.single-conversations #content .content_col article .entry li {
-  font-size: 19px;
-}
-body.single-conversations #content .content_col article .entry p {
-  margin-bottom: 1em;
-}
-body.single-conversations #content .content_col p.show_comments {
-  text-transform: uppercase;
-  margin: 30px 0 40px 0;
-  font-weight: 700;
-  cursor: pointer;
 }
 @media print {
   /* Media queries!

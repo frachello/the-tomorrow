@@ -28,7 +28,7 @@
 					$address_details = eo_get_venue_address($venue_id);
 				?>
 
-				<div class="home_box event brand1">
+				<div class="home_box event">
 
 					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; " data-color="<?php echo eo_get_event_color(); ?>">
 
@@ -152,13 +152,7 @@
 								while( $this_conv_letters->have_posts() ): $this_conv_letters->the_post();
 								$i++;
 									if ($i == $letters_num):
-									?>
-									<?php
-										$difference = round((strtotime(date("r")) - strtotime(get_the_time('r')))/(24*60*60),0);
-										if ($difference > 3) { echo get_the_date('j F Y');
-										}else{ echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; }
-									?>														
-									<?php
+									echo date_ago(); 
 									endif;
 								endwhile;
 							}

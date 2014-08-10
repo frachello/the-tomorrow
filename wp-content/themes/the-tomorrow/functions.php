@@ -4,6 +4,18 @@
 //	add_filter('excerpt_length', 'my_excerpt_length');
 //	function my_excerpt_length($length) {
 //	return 30; }
+
+	/* excerpt */
+	function custom_excerpt_length( $length ) {
+		return 15;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+	function new_excerpt_more( $more ) {
+		return ' ...';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
+
 	
 	/* Disable the Admin Bar. */
 	add_filter( 'show_admin_bar', '__return_false' );
@@ -55,16 +67,7 @@
 	}
 
 
-
-
-
-
-
-
-
-
 	add_action('add_meta_boxes','my_add_metabox');
-
 	function my_add_metabox(){
 		add_meta_box('my_id','Venues meta', 'my_metabox_callback', 'event_page_venues', 'side', 'high');
 	}
@@ -143,7 +146,14 @@
 		);
 
 	}
-	add_action( 'init', 'build_taxonomies', 10 );	
+	add_action( 'init', 'build_taxonomies', 10 );
+
+
+	function date_ago() {  
+		$difference = round((strtotime(date("r")) - strtotime(get_the_time('r')))/(24*60*60),0);
+		if ($difference > 3) { return get_the_date('j F Y');
+		}else{ return human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; }
+	}
 
 
 ?>
