@@ -14,9 +14,12 @@
       <?php endif; ?>
     </div>
 
-  </div>
+    <div class="bottom">
+      <p class="address">the Tomorrow, via Donizetti 4 — 20122 Milan, Italy</p>
+      <p class="disclaimer"><a href="#">Some rights reserved - </a></p>
+    </div>
 
-  <p class="disclaimer">© the Tomorrow Associazione Culturale - Via Donizetti, 4 20122 Milan - All rights reserved</p>
+  </div>
 
 </footer>
     

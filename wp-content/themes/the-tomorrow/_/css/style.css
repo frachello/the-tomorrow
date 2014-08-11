@@ -919,6 +919,12 @@ body.internal-page #content #rightcol.fixed {
   left: 50%;
   margin-left: 274px;
 }
+body.internal-page #content #rightcol.fixed.relative {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+}
 body.internal-page #content #rightcol .li {
   border-top: 1px solid #414042;
 }
@@ -1100,6 +1106,7 @@ body.internal-page.single-conversations h2 {
 body.internal-page.single-conversations #content p.count-theme {
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 30px;
 }
 body.internal-page.single-conversations #content .content_col {
   width: 732px;
@@ -1270,19 +1277,38 @@ footer {
   color: #fff;
   padding: 35px 0 45px 0;
   margin: 35px 0 0 0;
+  position: relative;
+  z-index: 2;
   /************************************************
 
 
 /* paginazione standard */
 }
-footer p.disclaimer {
-  width: 988px;
+footer .bottom {
+  width: 100%;
   margin: 0 auto;
   text-align: left;
   clear: both;
   display: block;
   border-top: 1px solid #fff;
   padding: 10px 0 0 0;
+}
+footer .bottom p.address, footer .bottom p.disclaimer {
+  height: 16px;
+  line-height: 16px;
+}
+footer .bottom p.address {
+  float: left;
+}
+footer .bottom p.disclaimer {
+  float: right;
+  text-align: right;
+}
+footer .bottom p.disclaimer a {
+  padding-right: 70px;
+  background: url(../i/ico_footer_cc.png) no-repeat center right;
+  display: block;
+  color: #fff;
 }
 footer .inner {
   width: 988px;
@@ -1294,7 +1320,7 @@ footer .inner {
 footer .inner .info {
   width: 200px;
   float: left;
-  margin-right: 47px;
+  margin-right: 182px;
   padding-bottom: 25px;
 }
 footer .inner .logo {
@@ -1310,7 +1336,7 @@ footer .inner .desc {
   color: #fff;
 }
 footer .inner .secondary-nav {
-  width: 726px;
+  width: 606px;
   float: left;
   padding-bottom: 25px;
 }
@@ -1328,12 +1354,12 @@ footer .inner .secondary-nav .secondary_menu#nav_menu-6 {
   float: right;
 }
 footer .inner .secondary-nav .secondary_menu div {
-  width: 209px;
+  width: 180px;
   float: left;
 }
 footer .inner .secondary-nav .secondary_menu div li {
   font-size: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 footer .inner .secondary-nav .secondary_menu div li a {
   color: #fff;
@@ -1346,8 +1372,7 @@ footer .inner .secondary-nav .secondary_menu .menu-social-links-container li, fo
   height: 20px;
 }
 footer .inner .secondary-nav .secondary_menu .menu-social-links-container li {
-  margin-right: 38px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 }
 footer .inner .secondary-nav .secondary_menu .menu-social-links-container li.menu-item-70 a {
   background-image: url(../i/ico_megamenu_social_facebook.png);

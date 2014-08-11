@@ -62,11 +62,10 @@ body { font: 12px/1.3 'adelle-sans'; color: $primary-color; text-align: center; 
 /*link*/
 a, a:hover {text-decoration:none;}
 
-body{
-  background: #F4F4F0;
+body{ background: #F4F4F0;
   &.home { background: #fff; }
   #content { margin-top: 140px; @include transition(all 0.5s ease); position: relative; }  
-  &.open-filters #content { margin-top: 220px }
+  &.open-filters #content { margin-top: 220px; }
 //  &.scrolled{
 //    #content { margin-top: 90px; }
 //    &.open-filters #content { margin-top: 170px }
@@ -269,7 +268,10 @@ body.internal-page{
     position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
 
     #rightcol{ width: 220px; margin: 0; float: right;
-      &.fixed{ position: fixed; top: 100px; left: 50%; margin-left: 274px; }
+      &.fixed{ position: fixed; top: 100px; left: 50%; margin-left: 274px;
+        &.relative { position: relative; top: 0; left: 0; margin-left: 0; }
+      }
+
       .li { border-top: 1px solid #414042;
         a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
         &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
@@ -354,7 +356,7 @@ body.internal-page{
   &.single-conversations{
     h2{ border-top: 1px solid #414042; }
     #content {
-      p.count-theme { text-transform: uppercase; font-size: 14px; }
+      p.count-theme { text-transform: uppercase; font-size: 14px; margin-bottom: 30px; }
       .content_col{ width: 732px; border-top: 1px solid #414042; 
         article{ border-bottom: 1px solid #414042; @include transition(all 1s ease); overflow: hidden; height: auto;
           .letter, .comments { display: block; }
@@ -455,23 +457,30 @@ body.internal-page{
 
 body.home footer { display: none; }
 footer {
-  background: #606A70; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0;
-  p.disclaimer { width: 988px; margin: 0 auto; text-align: left; clear: both; display: block; border-top: 1px solid #fff; padding: 10px 0 0 0;
+  background: #606A70; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0; position: relative; z-index: 2;
+  .bottom {
+    width: 100%; margin: 0 auto; text-align: left; clear: both; display: block; border-top: 1px solid #fff; padding: 10px 0 0 0;
+    p.address, p.disclaimer { height: 16px; line-height: 16px; }
+    p.address { float: left; }
+    p.disclaimer { float: right; text-align: right; 
+      a { padding-right: 70px; background: url(../i/ico_footer_cc.png) no-repeat center right; display: block; color: #fff; }
+    }
   }
+
   .inner {
     width: 988px; margin: 0 auto; text-align: left; clear: both; display: block;
-    .info { width: 200px; float: left;  margin-right: 47px; padding-bottom: 25px; }
+    .info { width: 200px; float: left;  margin-right: 182px; padding-bottom: 25px; }
     .logo { @include ir; width: 29px; height: 25px; background: url(../i/the_tomorrow_logo_footer.png) no-repeat 0 0; margin-bottom: 20px; }
     .desc { color: #fff; }
 
     .secondary-nav{
-      width: 726px;  float: left; padding-bottom: 25px;
+      width: 606px;  float: left; padding-bottom: 25px;
       h2.widgettitle { display: none; }    
-      .secondary_menu{ float: left; margin: 0;
+      .secondary_menu{ float: left; margin: 0; 
       &#nav_menu-5, &#nav_menu-6 { margin-right: 0; }
       &#nav_menu-6 { float: right;}
-        div{ width: 209px; float: left;
-          li { font-size: 14px; margin-bottom: 25px;
+        div{ width: 180px; float: left;
+          li { font-size: 14px; margin-bottom: 10px;
             a { color: #fff }
           }
         }
@@ -480,7 +489,7 @@ footer {
         .menu-utilities-container {  }
         .menu-social-links-container { width: auto;
           li, li a { width: 28px; height: 20px; }
-          li { margin-right: 38px; margin-bottom: 16px;
+          li { margin-bottom: 26px;
           &.menu-item-70 a { background-image: url(../i/ico_megamenu_social_facebook.png); }
           &.menu-item-71 a { background-image: url(../i/ico_megamenu_social_twitter.png); }
           &.menu-item-72 { margin-right: 0; }

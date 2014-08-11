@@ -46,7 +46,7 @@ get_header(); ?>
 
 	<div class="page-content">
 
-		<div id="rightcol" class="col">
+		<div id="rightcol" class="col relative">
 			
 			<div class="li map"><a href="#">view on map</a></div>
 			
