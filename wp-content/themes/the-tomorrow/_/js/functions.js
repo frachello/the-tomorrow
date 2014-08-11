@@ -188,9 +188,11 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
 	// apply colors to event boxes
-	$('#home_grid .home_box.event .top .cat a').each(function() {
+	$('.event .top .cat a').each(function() {
 		box_top_color = $(this).closest('.top').attr("data-color");
 		$(this).css('color',box_top_color);
+	});
+	$('#home_grid .home_box.event .top .cat a').each(function() {
 		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
 	});
 	$('#home_grid .home_box.event').bind({

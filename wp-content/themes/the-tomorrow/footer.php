@@ -10,7 +10,7 @@
 
     <div class="secondary-nav">
       <?php
-        if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("secondary menu") ) : ?>     
+        if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer nav") ) : ?>     
       <?php endif; ?>
     </div>
 

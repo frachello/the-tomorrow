@@ -64,7 +64,7 @@ a, a:hover {text-decoration:none;}
 
 body{ background: #F4F4F0;
   &.home { background: #fff; }
-  #content { margin-top: 140px; @include transition(all 0.5s ease); position: relative; }  
+  #content { margin-top: 140px; @include transition(all 0.5s ease); position: relative; z-index: 1; }  
   &.open-filters #content { margin-top: 220px; }
 //  &.scrolled{
 //    #content { margin-top: 90px; }
@@ -221,9 +221,9 @@ nav#megamenu{
   .secondary-nav{
     width: 988px; border-top: 1px solid #fff; padding: 25px 0 50px 0; clear: both; margin-top: 30px;
     h2.widgettitle { display: none; }    
-    .secondary_menu{ float: left; margin: 0 55px 0 0;
-    &#nav_menu-5, &#nav_menu-6 { margin-right: 0; }
-    &#nav_menu-6 { float: right; }
+    .secondary_menu{ float: left; margin: 0;
+    &:first-child { width: 470px; }
+    &:last-child { float: right; margin-right: 0; width: 28px; }
       div{ width: 226px; float: left;
         li { font-size: 24px; font-family: "adelle-sans";
           a { color: #fff }
@@ -234,7 +234,7 @@ nav#megamenu{
       .menu-utilities-container {  }
       .menu-social-links-container { width: auto;
         li, li a { width: 28px; height: 20px; }
-        li { float: left; margin-right: 38px;
+        li { margin-bottom: 26px;
         &.menu-item-70 a { background-image: url(../i/ico_megamenu_social_facebook.png); }
         &.menu-item-71 a { background-image: url(../i/ico_megamenu_social_twitter.png); }
         &.menu-item-72 { margin-right: 0; }
@@ -245,15 +245,80 @@ nav#megamenu{
     }
   }
 
-  p.megamenu-footer { width: 988px; float: left; display: block; padding: 20px 0; border-top: 1px solid #fff; margin-top: 50px; }
+  .megamenu-footer {
+    width: 988px; float: left; display: block; padding: 20px 0; border-top: 1px solid #fff; margin-top: 50px;
+    p.address, p.disclaimer { height: 16px; line-height: 16px; }
+    p.address { float: left; }
+    p.disclaimer { float: right; text-align: right; 
+      a { padding-right: 70px; background: url(../i/ico_footer_cc.png) no-repeat center right; display: block; color: #fff; }
+    }
+  }
 
 }
 
 
 #logo { position:absolute; top:0px; left:0px; }	
 	
+
 /* --------------------------------------------------------------------------------
                                     internal page                                */
+
+
+#home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc;
+  .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
+    &.event{
+      width: 239px; text-align: left;
+      .top{ width: 88%; padding: 6%; float: left; position: relative;
+        .bg{ @include transition(all 0.3s ease); background: lime; width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
+        }
+        &.over {
+          p, p a { color: #fff !important; z-index: 2; position: relative; }
+          .bg { height: 100%; }
+        }
+      }
+      .date{ margin: 0;
+        .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
+        .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
+      }
+      .cat{ float: right; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; }
+
+      .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
+        strong{ font-weight: 700; }
+        a, strong a { color: #191919; }
+      }
+      .bottom{
+        height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
+        .address{
+          background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
+        }
+        .share{
+          @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right;
+        }      
+      }
+    }
+    p{
+      margin-top: 0;
+    }
+    &.conversations{ width: 479px; text-align: left;
+      .top{
+        width: 94%; padding: 3%; float: left;
+        .title{ font-family: "adelle"; font-weight: 300; font-size: 36px; font-style: normal; float: left; line-height: 41px;
+          a { font-weight: 800; color: #191919; }
+        }
+      }
+      .bottom{
+        height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
+        p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
+          &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
+          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; }
+        }
+      } 
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------------
+                                    internal pages                               */
 body.internal-page{
 
   h2{ font-weight: 700; font-size: 40px; padding: 0 0 38px 0; margin: 0 0 0 0; font-family: "adelle-sans"; font-weight: 700; }
@@ -281,17 +346,17 @@ body.internal-page{
         &.prev_letter a{ background-image: url(../i/ico_rightcol_prev.png); }
         &.next_letter a{ background-image: url(../i/ico_rightcol_next.png); }
       }      
-      .addthis { padding: 20px 0; float: left; width: 100%; border-top: 1px solid #414042;
-        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
-        .addthis_toolbox { float: right;
-          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
-            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
-            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
-            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
-          }
-        }
-        .at15t, .at16nc, .at300bs { background: none }
-      }      
+//      .addthis { padding: 20px 0; float: left; width: 100%; border-top: 1px solid #414042;
+//        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
+//        .addthis_toolbox { float: right;
+//          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
+//            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
+//            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
+//            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+//          }
+//        }
+//        .at15t, .at16nc, .at300bs { background: none }
+//      }      
     }
 
     &.venue_page{
@@ -437,18 +502,44 @@ body.internal-page{
     .author_desc p { font-size: 19px; margin-bottom: 35px; }
   }
 
+  &.single-event {
+    #content{
+      .entry-content{ width: 100%; float: left; clear: both;
+        .col.left{
+          .top{ width: 100%; padding-top: 20px; float: left; position: relative; }
+          .date{ margin: 0;
+            .day{ font-size: 60px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 37px; margin-right: 5px; }
+            .ordinal-month{ font-size: 14px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
+          }
+          .cat{ position: absolute; top: 21px; right: 0; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 14px; font-weight: 700; }
+
+          .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 30px 0 0 0;
+            strong{ font-weight: 700; }
+            a, strong a { color: #191919; }
+          }
+          .address{ margin-top: 35px; width: 100%; font-size: 14px; text-transform: uppercase; background: url(../i/ico_marker_000_medium.png) no-repeat center left; text-indent: 12px; float: left; height: 14px; line-height: 14px; }
+          .share{ @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right; }      
+          .addthis_col { float: right; margin-top: 30px; }
+        }
+      }
+      .eo-event-venue-map{ width: 476px; height: 300px; }
+      
+      .eventorganiser-event-meta{ display: none; }
+    }    
+  }
 }
 
-
-/************************************************
-* POST    								        *
-************************************************/
-
-
-
-/************************************************
-*	Sidebar      								*
-************************************************/
+.addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
+  p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
+  .addthis_toolbox { float: right;
+    a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
+      &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
+      &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
+      &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+    }
+  }
+  .at15t, .at16nc, .at300bs { background: none }
+}      
 
 
 /************************************************
@@ -522,63 +613,14 @@ footer {
 
 .highlight { background: #fff; @include transition(all 0.5s ease); }
 
-/* home page
-*/
-
-
-#home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc;
-  .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
-    &.event{
-      width: 239px; text-align: left;
-      .top{ width: 88%; padding: 6%; float: left; position: relative;
-        .bg{ @include transition(all 0.3s ease); background: lime; width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
-        }
-        &.over {
-          p, p a { color: #fff !important; z-index: 2; position: relative; }
-          .bg { height: 100%; }
-        }
-      }
-      .date{ margin: 0;
-        .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
-        .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
-      }
-      .cat{ float: right; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; }
-
-      .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
-        strong{ font-weight: 700; }
-        a, strong a { color: #191919; }
-      }
-      .bottom{
-        height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
-        .address{
-          background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
-        }
-        .share{
-          @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right;
-        }      
-      }
-    }
-    p{
-      margin-top: 0;
-    }
-    &.conversations{ width: 479px; text-align: left;
-      .top{
-        width: 94%; padding: 3%; float: left;
-        .title{ font-family: "adelle"; font-weight: 300; font-size: 36px; font-style: normal; float: left; line-height: 41px;
-          a { font-weight: 800; color: #191919; }
-        }
-      }
-      .bottom{
-        height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
-        p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
-          &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
-          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; }
-        }
-      } 
+#content{
+  .col{
+    &.col_2{
+      width: 476px;
+      &.left{ margin-right: 36px; }
     }
   }
 }
-
 
 /* Print styles!
 -------------------------------------------------------------------------------*/

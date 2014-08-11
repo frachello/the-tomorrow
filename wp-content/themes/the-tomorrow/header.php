@@ -85,7 +85,7 @@
 
 	<div id="wrapper">
 
-		<header class="container">
+		<div class="header_container">
 
 			<header class="main" <?php
 				$venue_id = eo_get_venue();
@@ -95,15 +95,13 @@
 					if ( has_post_thumbnail() ) {
 						$post_thumbnail_id = get_post_thumbnail_id($post->ID);
 						$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-				?>
-					style=" background-image:url(<?php echo $post_thumbnail_url; ?>); "
-				<?php
+				?>style=" background-image:url(<?php echo $post_thumbnail_url; ?>); " <?php
 					}
 				}
-				if($venue_id){
-					$venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true); ?>
-					style=" background-image:url(<?php echo $venue_header_img; ?>); "
-			<?php } ?>>
+				if( $venue_id && !is_singular() ){
+					$venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true);
+				?>style=" background-image:url(<?php echo $venue_header_img; ?>); " <?php
+				} ?>>
 
 				
 				<div class="inner">
@@ -117,7 +115,7 @@
 
 					<ul class="nav_menu">
 						<li class="nav_menu_search"><a href="#">search</a></li>
-						<?php if(is_home()): ?><li class="nav_menu_filter"><a href="#">filter</a></li><?php endif; ?>
+<?php if(is_home()): ?><li class="nav_menu_filter"><a href="#">filter</a></li><?php endif; ?>
 						<li class="nav_menu_menu"><a href="#">menu</a></li>
 					</ul>
 
@@ -127,7 +125,7 @@
 
 			<div id="filter_nav"><div class="form">
 
-				<form method="#" action="#">
+				<form method="get" action="/search.php">
 
 					<div class="filter show">
 						
@@ -135,19 +133,11 @@
 
 						<p>
 
-							<div id="options">
+							<input type="checkbox" value="event" id="event" />
+							<label for="event">events</label>
 
-								<div class="option-set" data-group="type">
-
-									<input type="checkbox" value=".event" id="event" />
-									<label for="event">events</label>
-
-									<input type="checkbox" value=".conversations" id="conversations" />
-									<label for="convestations">letters</label>
-
-								</div>
-
-							</div>
+							<input type="checkbox" value="conversations" id="conversations" />
+							<label for="conversations">letters</label>
 
 						</p>
 
@@ -195,7 +185,7 @@
 
 			<div id="main_search"><div class="form">
 
-				<form method="#" action="#">
+				<form method="get" action="/search.php">
 
 					<input class="text" type="text" value="" />
 					<input class="submit" type="submit" value="search" />
@@ -204,7 +194,7 @@
 
 			</div></div>
 
-		</header> <!-- close header.container -->
+		</div> <!-- close .header_container -->
 
 		<nav id="megamenu">
 
@@ -224,12 +214,15 @@
 				<!-- ######################## nav 2 ######################## -->
 				<div class="secondary-nav">
 					<?php
-						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("secondary menu") ) : ?>			
+						if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("megamenu sub nav") ) : ?>			
 					<?php endif; ?>
 				</div>
 				<!-- ######################## / nav 2 ######################## -->
 
-				<p class="megamenu-footer">© the Tomorrow Associazione Culturale - Via Donizetti, 4 20122 Milan - All rights reserved</p>
+			    <div class="megamenu-footer">
+			      <p class="address">the Tomorrow, via Donizetti 4 — 20122 Milan, Italy</p>
+			      <p class="disclaimer"><a href="#">Some rights reserved - </a></p>
+			    </div>
 
 			</div>
 

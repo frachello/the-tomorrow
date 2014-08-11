@@ -50,7 +50,7 @@ get_header(); ?>
 			
 			<div class="li map"><a href="#">view on map</a></div>
 			
-			<div class="addthis">
+			<div class="addthis_col">
 			    <p>share</p>
 			    <div class="addthis_toolbox addthis_default_style ">		    
 

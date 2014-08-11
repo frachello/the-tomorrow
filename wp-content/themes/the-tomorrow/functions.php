@@ -33,7 +33,13 @@
 	    ));    
 	
 	    register_sidebar(array(
-		'name' => 'secondary menu',
+		'name' => 'footer nav',
+	        'before_widget' => '<nav id="%1$s" class="secondary_menu %2$s boxD">',
+	        'after_widget' => '</nav>'
+	    ));    
+
+	    register_sidebar(array(
+		'name' => 'megamenu sub nav',
 	        'before_widget' => '<nav id="%1$s" class="secondary_menu %2$s boxD">',
 	        'after_widget' => '</nav>'
 	    ));    
