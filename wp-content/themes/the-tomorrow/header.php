@@ -103,9 +103,13 @@
 				?>style=" background-image:url(<?php echo $venue_header_img; ?>); " <?php
 				} ?>>
 
-				
 				<div class="inner">
 
+				<form method="get" action="#" id="search_venues_map">
+					<input class="text" type="text" value="" />
+					<input class="submit" type="submit" />
+				</form>
+				
 					<h1><a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
 					<?php bloginfo('name') ?></a></h1>
 					<?php if(is_home()): ?><h2><?php bloginfo('description') ?></h2><?php endif; ?>
@@ -176,6 +180,18 @@
 						</p>
 
 					</div>
+
+					<!--
+
+
+
+
+					http://docs.wp-event-organiser.com/querying-events/querying-venues/
+
+
+
+
+					-->
 
 					<input class="submit" type="submit" value="apply" />
 

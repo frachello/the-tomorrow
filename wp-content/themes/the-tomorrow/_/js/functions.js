@@ -5,6 +5,8 @@
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
+	places_map_height();
+
 	// fix rightcol top position after scrolling
 	if($('#rightcol').length){ fix_rightcol_pos(); }
 
@@ -178,13 +180,15 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
 	// home isotope
-	$('#home_grid').isotope({
-		itemSelector: '.home_box',
-		layoutMode:'masonry',
-		masonry: {
-			columnWidth: 240
-		}
-	});
+//	if( $('#home_grid').length ){
+		$('#home_grid').isotope({
+			itemSelector: '.home_box',
+			layoutMode:'masonry',
+			masonry: {
+				columnWidth: 240
+			}
+		});
+//	}
 
 
 	// apply colors to event boxes
@@ -219,12 +223,13 @@ $(window).scroll(function () {
 $(window).load(function() {
 	
 });
+*/
 
 $(window).resize(function() {
-	
+	places_map_height()	;
 });
 
-*/
+
 
 
 /* ----------------------------------------------------------------------------------------------------------------
@@ -266,6 +271,23 @@ function fix_rightcol_pos() {
 	}
 
 }
+
+/* ----------------------------------------------------------------------------------------------------------------
+places map
+*/
+
+function places_map_height(){
+	if ( $('.entry-map').length ){
+		win_h = $( window ).height()+'px';
+		console.log(win_h);
+		$('.entry-map').css('height',win_h)
+		$('.eo-venue-map').css('height',win_h)
+		
+	}
+}
+
+
+
 /* ----------------------------------------------------------------------------------------------------------------
 debounce(function() { }, 1234 ) */
 

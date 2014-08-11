@@ -8,8 +8,7 @@ Template Name: Archivio
 <!-- content -->
 <div id="content">
 
-<!-- main col -->
-<section id="main_content">
+	<div class="page-content">
 
 	<?php if (have_posts()) : ?>
 
@@ -92,11 +91,12 @@ Template Name: Archivio
 	?>
 
 
-</section>
-<!-- chiusa section#main_content -->	
+		</div>
+
+	</div>
+
+	<br class="clear" />
 
 </div> <!-- chiuso content -->
-
-<br class="clear" />
 
 <?php get_footer(); ?>
