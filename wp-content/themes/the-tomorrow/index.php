@@ -2,17 +2,35 @@
 <!-- content -->
 <div id="content">
 
+	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
+	<?php $cpts = $_GET['type']; ?>
+	
 	<?php
-	$home_boxes_query = new WP_Query(array(
-		'post_type'=>array('event','conversations'),
-		'post_per_page'=>-1
-	));
-	if( $home_boxes_query->have_posts() ){ ?>
+	if(isset($cpts)){
+		echo '<!-- results for ' . implode(', ', $cpts) . ' -->';
+	 	$home_boxes_array = array(
+	 		'post_type'=>$cpts,
+	 		'posts_per_page'=>10, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+	 		'paged' => $paged
+	 	);
+	}else{
+		$home_boxes_array = array(
+			'post_type'=>array('event','conversations'),
+			'posts_per_page'=>10, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			'paged' => $paged
+	 	);
+	}
+	$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
+
+	if( $wp_query->have_posts() ): ?>
+
+	<!-- <?php echo 'paged: ' . $paged; ?> -->
 
 		<div id="home_grid">
 
 			<?php
-			while( $home_boxes_query->have_posts() ): $home_boxes_query->the_post();
+			while( $wp_query->have_posts() ): $wp_query->the_post();
+		//	while ( have_posts() ) : the_post();
 			$cur_post_type = get_post_type( $post->ID );
 			?>
 			
@@ -63,6 +81,8 @@
 						<p class="cat" data-color="<?php echo eo_get_event_color(); ?>">
 							<?php echo $categories_list; ?>
 						</p>
+
+						<div class="bg" style="background: <?php echo eo_get_event_color(); ?>"></div>
 
 					</div> <!-- /close .top -->
 
@@ -177,108 +197,27 @@
 
 					</div>
 
+				<?php else: ?>
+					<p><?php the_title(); ?> <br /></p>
 				<?php endif; ?>
 
-			
 			<?php endwhile; ?>
+
+			<div class="pagination">
+
+				<!-- <span class="prev"> --> <?php next_posts_link('&laquo; previous') ?> <!-- </span> -->
+				<!-- <span class="next"> --> <?php previous_posts_link('next &raquo;') ?> <!-- </span> -->
+
+			</div>
+
 		</div>
-		<?php
-	}
+
+	<?php else: ?>
+		<h2>Sorry, no posts matched your search criteria.</h2>
+	<?php
+	endif;
 	wp_reset_postdata();
 	?>
-
-	<br />
-
-
-
-
-
-
-
-	<!--
-
-	<h3>authors:</h3>
-	<?php
-	$authors = new WP_Query(array(
-		'post_type'=>array('authors'),
-		'post_per_page'=>-1
-	));
-	if( $authors->have_posts() ){
-		?><ul><?php
-		while( $authors->have_posts() ): $authors->the_post();
-		//Content of loop
-		?>
-		<li><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a></li>
-		<?php
-		endwhile;
-		?></ul><?php
-	}
-	wp_reset_postdata();
-	?>
-
-	-->
-
-	<!--
-
-	<div class="discussione">
-
-	<?php
-	$taxonomy = 'discussione';
-	$terms = get_terms( $taxonomy );
-	?>
-
-	<h2>discussioni</h2>
-	<?php
-	echo '<ul>';
-
-	foreach ( $terms as $term ) {
-
-	    // The $term is an object, so we don't need to specify the $taxonomy.
-	    $term_link = get_term_link( $term );
-	   
-	    // If there was an error, continue to the next term.
-	    if ( is_wp_error( $term_link ) ) {
-	        continue;
-	    }
-
-	    // We successfully got a link. Print it out.
-	    echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
-	}
-
-	echo '</ul>';
-
-	?>
-
-	</div>
-
-	<div id="post_col">
-
-	<br /><br />
-
-	<h2>lettere</h2>
-
-	<?php
-		$args = array(
-            'orderby' => 'menu_order',
-            'order' => 'ASC'
-		);
-		$home_posts = new WP_Query( $args );
-		if ( $home_posts->have_posts() ) {
-			while ( $home_posts->have_posts() ) {
-				$home_posts->the_post();
-				$post_slug = $slug = basename(get_permalink());
-				$slug_lettera = wp_get_post_terms($post->ID, 'discussione', array("fields" => "slugs"));
-				$letter_in_thread_url = get_bloginfo('url').'/discussione/'.$slug_lettera[0].'/#'.$post_slug;
-
-	?>
-
-			<p><a href="<?php echo $letter_in_thread_url; ?>"><?php echo get_the_title(); ?></a></p>
-	<?php
-			}
-		}
-	?>
-
-	-->		
 
 </div> <!-- chiuso content -->
 

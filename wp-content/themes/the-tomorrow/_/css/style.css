@@ -902,9 +902,22 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   width: 100%;
   height: 100%;
   border-top: 1px solid #ccc;
+  /* padding-bottom: 40px; // per lasciare lo spazio alla immagine di loading */
   border-left: 1px solid #ccc;
   /* --------------------------------------------------------------------------------
                                     internal pages                               */
+}
+#home_grid .pagination {
+  display: none;
+}
+#home_grid #infscr-loading {
+  width: 220px;
+  /* bottom: 0; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -110px;
+  background: #fff;
 }
 #home_grid .home_box {
   position: relative;
@@ -1293,21 +1306,21 @@ body.internal-page.single-conversations #content .content_col p.show_comments {
   font-weight: 700;
   cursor: pointer;
 }
-body.internal-page.post-type-archive-letters h2, body.internal-page.post-type-archive-conversations h2, body.internal-page.single-authors h2 {
+body.internal-page.post-type-archive-letters h2, body.internal-page.post-type-archive-conversations h2, body.internal-page.single-authors h2, body.internal-page.tax-themes h2 {
   padding-bottom: 0;
 }
-body.internal-page.post-type-archive-letters p.rules-link, body.internal-page.post-type-archive-conversations p.rules-link, body.internal-page.single-authors p.rules-link {
+body.internal-page.post-type-archive-letters p.rules-link, body.internal-page.post-type-archive-conversations p.rules-link, body.internal-page.single-authors p.rules-link, body.internal-page.tax-themes p.rules-link {
   position: absolute;
   top: 90px;
   right: 0px;
 }
-body.internal-page.post-type-archive-letters p.rules-link a, body.internal-page.post-type-archive-conversations p.rules-link a, body.internal-page.single-authors p.rules-link a {
+body.internal-page.post-type-archive-letters p.rules-link a, body.internal-page.post-type-archive-conversations p.rules-link a, body.internal-page.single-authors p.rules-link a, body.internal-page.tax-themes p.rules-link a {
   color: #191919;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 700;
 }
-body.internal-page.post-type-archive-letters h3, body.internal-page.post-type-archive-conversations h3, body.internal-page.single-authors h3 {
+body.internal-page.post-type-archive-letters h3, body.internal-page.post-type-archive-conversations h3, body.internal-page.single-authors h3, body.internal-page.tax-themes h3 {
   float: left;
   margin-top: 38px;
   width: 100%;
@@ -1318,28 +1331,28 @@ body.internal-page.post-type-archive-letters h3, body.internal-page.post-type-ar
   border-top: 1px solid #414042;
   padding: 14px 0 35px 0;
 }
-body.internal-page.post-type-archive-letters .archive-box, body.internal-page.post-type-archive-conversations .archive-box, body.internal-page.single-authors .archive-box {
+body.internal-page.post-type-archive-letters .archive-box, body.internal-page.post-type-archive-conversations .archive-box, body.internal-page.single-authors .archive-box, body.internal-page.tax-themes .archive-box {
   border-top: 1px solid #414042;
 }
-body.internal-page.post-type-archive-letters .archive-box h4, body.internal-page.post-type-archive-conversations .archive-box h4, body.internal-page.single-authors .archive-box h4 {
+body.internal-page.post-type-archive-letters .archive-box h4, body.internal-page.post-type-archive-conversations .archive-box h4, body.internal-page.single-authors .archive-box h4, body.internal-page.tax-themes .archive-box h4 {
   font-size: 14px;
   font-weight: 700;
   margin: 20px 0;
 }
-body.internal-page.post-type-archive-letters .archive-box h4 a, body.internal-page.post-type-archive-conversations .archive-box h4 a, body.internal-page.single-authors .archive-box h4 a {
+body.internal-page.post-type-archive-letters .archive-box h4 a, body.internal-page.post-type-archive-conversations .archive-box h4 a, body.internal-page.single-authors .archive-box h4 a, body.internal-page.tax-themes .archive-box h4 a {
   color: #000;
 }
-body.internal-page.post-type-archive-letters .archive-box .entry p, body.internal-page.post-type-archive-conversations .archive-box .entry p, body.internal-page.single-authors .archive-box .entry p {
+body.internal-page.post-type-archive-letters .archive-box .entry p, body.internal-page.post-type-archive-conversations .archive-box .entry p, body.internal-page.single-authors .archive-box .entry p, body.internal-page.tax-themes .archive-box .entry p {
   font-size: 14px;
 }
-body.internal-page.post-type-archive-letters .archive-box .bottom, body.internal-page.post-type-archive-conversations .archive-box .bottom, body.internal-page.single-authors .archive-box .bottom {
+body.internal-page.post-type-archive-letters .archive-box .bottom, body.internal-page.post-type-archive-conversations .archive-box .bottom, body.internal-page.single-authors .archive-box .bottom, body.internal-page.tax-themes .archive-box .bottom {
   height: 11px;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-body.internal-page.post-type-archive-letters .archive-box .bottom p, body.internal-page.post-type-archive-conversations .archive-box .bottom p, body.internal-page.single-authors .archive-box .bottom p {
+body.internal-page.post-type-archive-letters .archive-box .bottom p, body.internal-page.post-type-archive-conversations .archive-box .bottom p, body.internal-page.single-authors .archive-box .bottom p, body.internal-page.tax-themes .archive-box .bottom p {
   font-family: "adelle-sans";
   font-weight: 300;
   text-transform: uppercase;
@@ -1348,11 +1361,11 @@ body.internal-page.post-type-archive-letters .archive-box .bottom p, body.intern
   line-height: 11px;
   padding: 0 0 0 14px;
 }
-body.internal-page.post-type-archive-letters .archive-box .bottom p.date, body.internal-page.post-type-archive-conversations .archive-box .bottom p.date, body.internal-page.single-authors .archive-box .bottom p.date {
+body.internal-page.post-type-archive-letters .archive-box .bottom p.date, body.internal-page.post-type-archive-conversations .archive-box .bottom p.date, body.internal-page.single-authors .archive-box .bottom p.date, body.internal-page.tax-themes .archive-box .bottom p.date {
   background: url(../i/ico_hp_box_time.png) no-repeat center left;
   float: left;
 }
-body.internal-page.post-type-archive-letters .archive-box .bottom p.count-theme, body.internal-page.post-type-archive-conversations .archive-box .bottom p.count-theme, body.internal-page.single-authors .archive-box .bottom p.count-theme {
+body.internal-page.post-type-archive-letters .archive-box .bottom p.count-theme, body.internal-page.post-type-archive-conversations .archive-box .bottom p.count-theme, body.internal-page.single-authors .archive-box .bottom p.count-theme, body.internal-page.tax-themes .archive-box .bottom p.count-theme {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
 }
@@ -1531,6 +1544,37 @@ body.internal-page.page-template-page-venues-php #fullscreen_map {
 body.internal-page.page-template-page-venues-php footer {
   display: none;
 }
+body.internal-page ul.themes-boxes li {
+  width: 329px;
+  height: 140px;
+  float: left;
+  font-size: 19px;
+}
+body.internal-page ul.themes-boxes li a {
+  font-weight: 700;
+  width: 328px;
+  height: 82px;
+  padding: 57px 0 0 0;
+  float: left;
+  border-right: 1px solid #191919;
+  border-bottom: 1px solid #191919;
+  text-align: center;
+  display: block;
+  color: #191919;
+}
+body.internal-page ul.themes-boxes li a span {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-left: 0.5em;
+}
+body.internal-page ul.themes-boxes li.first_row a {
+  border-top: 1px solid #191919;
+  border-left: 1px solid #191919;
+}
+body.internal-page ul.themes-boxes li.col_1 a {
+  border-left: 1px solid #191919;
+}
 .addthis_col {
   padding: 20px 0;
   float: left;
@@ -1699,17 +1743,17 @@ footer .inner .secondary-nav .secondary_menu .menu-social-links-container li a {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.navigation {
+.pagination {
   position: relative;
   padding: 10px 0;
   height: 18px;
   line-height: 18px;
 }
-.navigation span.previous-entries {
+.pagination span.prev {
   position: absolute;
   left: 0;
 }
-.navigation span.next-entries {
+.pagination span.next {
   position: absolute;
   right: 0;
   /*

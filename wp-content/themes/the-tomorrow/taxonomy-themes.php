@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Letters Archive
+Template Name: Conversations Archive by theme
 */
 ?>
 
@@ -17,22 +17,41 @@ Template Name: Letters Archive
 
 	<?php $rows_count = 1; ?>
 
-	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
-	<?php
-	$wp_query_array = array(
-		'post_type'=>$curr_page_term_name,
-		'posts_per_page'=>-1,
-		'paged' => $paged
-	);
-
-	$wp_query = new WP_Query($wp_query_array); // must be called $wp_query or the paging won't work
-	?>
-
-	<?php if( $wp_query->have_posts() ): ?>
+	<?php if (have_posts()) : ?>
 
 	<div class="archive-boxes">
 	<?php $current_month = ''; ?>
-	<?php while( $wp_query->have_posts() ): $wp_query->the_post(); ?>
+	<?php while (have_posts()) : the_post(); ?>
+
+		<?php
+		
+		$curr_page_term_slug = "";
+		$curr_page_term_slug = get_queried_object()->slug;
+		$this_term_posts_last_args = array(
+			'post_type' => 'conversations',
+		//	'posts_per_page' => 1,
+			'tax_query' => array (
+		      array (
+		         'taxonomy' => 'themes',
+		         'field' => 'slug',
+		         'terms' => $curr_page_term_slug
+		      )
+		   )
+		);
+		$this_term_posts = new WP_Query($this_term_posts_last_args);
+		if( $this_term_posts->have_posts() ){
+			$i = 0;
+			$letters_num = $this_term_posts->post_count;
+			while( $this_term_posts->have_posts() ): $this_term_posts->the_post();
+			$i++;
+				if ($i == $letters_num):
+				$conversation_display_date = date_ago(); 
+				endif;
+			endwhile;
+		}
+		wp_reset_postdata();
+		?>
+
 		<?php
 			$post_month = get_the_date('F Y');
 		    if ( $post_month != $current_month ) {
@@ -41,21 +60,17 @@ Template Name: Letters Archive
 				$rows_count = 1;
 		    }
 	    ?>
-		<?php
-			$conversation_slugs = wp_get_post_terms($post->ID, 'conversations', array("fields" => "slugs"));
-			$hash_permalink = get_bloginfo('url').'/conversations/'.$conversation_slugs[0].'/#letter-'.$post->ID;
-		?>
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
 
-			<h4><a href="<?php echo $hash_permalink; ?>" title="<?php the_title(); ?>">
+			<h4><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 				<?php the_title() ?>
 			</a></h4>
 			<div class="entry">
 			  <?php the_excerpt('[leggi tutto]'); ?>
 			</div>
 			<div class="bottom">
-				<p class="date"><?php echo date_ago(); ?></p>
+				<p class="date"><?php echo $conversation_display_date; ?></p>
 			</div>
 
 		</div>

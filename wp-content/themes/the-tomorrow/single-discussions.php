@@ -19,9 +19,9 @@
 		
 		<?php endwhile; ?>
 
-	        <div class="navigation"> 
-	            <span class="previous-entries"><?php next_posts_link('precedenti') ?></span>
-	            <span class="next-entries"><?php previous_posts_link('successivi') ?></span> 
+	        <div class="pagination"> 
+	            <span class="prev"><?php next_posts_link('precedenti') ?></span>
+	            <span class="next"><?php previous_posts_link('successivi') ?></span> 
 	        </div>
 
 	    <?php else : ?>

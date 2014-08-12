@@ -17,11 +17,22 @@ Template Name: Conversations Archive
 
 	<?php $rows_count = 1; ?>
 
-	<?php if (have_posts()) : ?>
+	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
+	<?php
+	$wp_query_array = array(
+		'post_type'=>$curr_page_term_name,
+		'posts_per_page'=>-1,
+		'paged' => $paged
+	);
+
+	$wp_query = new WP_Query($wp_query_array); // must be called $wp_query or the paging won't work
+	?>
+
+	<?php if( $wp_query->have_posts() ): ?>
 
 	<div class="archive-boxes">
 	<?php $current_month = ''; ?>
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while( $wp_query->have_posts() ): $wp_query->the_post(); ?>
 
 		<?php
 		// print the post time of the last letter of this conversation

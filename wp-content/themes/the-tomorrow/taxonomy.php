@@ -6,12 +6,9 @@ Template Name: Taxonomy
 
 <?php get_header(); ?>
 <!-- content -->
-<div id="content" class="taxonomy_content">
-aaa
-<!-- main col -->
-<section id="main_content">
+<div id="content">
 
-<div id="page_col">
+	<div class="page-content">
 
 	<?php
 
@@ -21,7 +18,6 @@ aaa
 	//	$current_tax_slug = $current_tax->labels->slug;
 
 		$current_tax = get_query_var('discussione');
-		echo '<h1> discussione '.$current_tax.'</h1><br /><br /><br /><br />';
 	?>
 
 	<?php if (have_posts()) : ?>

@@ -15,39 +15,50 @@ Template Name: Authors Archive
 	<h2><?php echo $curr_page_term_name; ?></h2>
 
 
-	<?php $rows_count = 1; ?>
+	<?php $row_count = 1; $col_count = 1; $cols_number = 4; ?>
 
-	<?php if (have_posts()) : ?>
+	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
+	<?php
+	$wp_query_array = array(
+		'post_type'=>$curr_page_term_name,
+		'posts_per_page'=>-1,
+		'paged' => $paged
+	);
+
+	$wp_query = new WP_Query($wp_query_array); // must be called $wp_query or the paging won't work
+	?>
+
+	<?php if( $wp_query->have_posts() ): ?>
 
 	<div class="archive-boxes">
 
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while( $wp_query->have_posts() ): $wp_query->the_post(); ?>
 
 		<?php
 		// print the post time of the last letter of this conversation
-		$author_id = "";
-		$author_id = $post->ID;
-		$get_letters_by_author = array(
+		$cpt_item_id = "";
+		$cpt_item_id = $post->ID;
+		$get_letters_by_cpt_item = array(
 			'post_type' => 'letters',
 		//	'posts_per_page' => 1,
 			'tax_query' => array (
 		      array (
-		         'taxonomy' => 'authors',
+		         'taxonomy' => $curr_page_term_name,
 		         'field' => 'ID',
-		         'terms' => $author_id,
+		         'terms' => $cpt_item_id,
 		         'operator' => 'IN'
 		      )
 		   )
 		);
-		$this_author_letters = new WP_Query($get_letters_by_author);
-		if( $this_author_letters->have_posts() ){
+		$this_cpt_item_letters = new WP_Query($get_letters_by_cpt_item);
+		if( $this_cpt_item_letters->have_posts() ){
 			$i = 0;
-			$letters_num = $this_author_letters->post_count;
+			$letters_num = $this_cpt_item_letters->post_count;
 		}
 		wp_reset_postdata();
 		?>
 
-		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
+		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $col_count; ?>">
 
 			
 				<?php if ( has_post_thumbnail() ) { // controlla se il post ha un'immagine in evidenza assegnata. ?>
@@ -57,7 +68,7 @@ Template Name: Authors Archive
 				}else{
 					if(is_user_logged_in()){
 						echo '<a href="'.get_edit_post_link().'">';
-						echo '<img src="http://placehold.it/220x180&text=add+author+image" />';
+						echo '<img src="http://placehold.it/220x180&text=add+cpt_item+image" />';
 					}else{ ?>
 						<a class="img" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 					<?php
@@ -72,10 +83,8 @@ Template Name: Authors Archive
 			<p class="letters_count"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php echo $letters_num; ?> letters</a></p>
 		</div>
 	<?php
-	if($rows_count==4){
-		$rows_count=0;
-	}
-	$rows_count++;
+	if($col_count == $cols_number){ $col_count=0; }
+	$col_count ++; $row_count ++;
 	endwhile;
 	?>
 
@@ -85,7 +94,7 @@ Template Name: Authors Archive
 
         <h2>Non ci sono post, spiacente.</h2>
 
-    <?php endif; ?>
+    <?php endif; wp_reset_postdata(); ?>
 
 	</div>
 

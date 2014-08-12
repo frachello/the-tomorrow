@@ -129,7 +129,7 @@
 
 			<div id="filter_nav"><div class="form">
 
-				<form method="get" action="/search.php">
+				<form method="get" action="<?php bloginfo('url'); ?>">
 
 					<div class="filter show">
 						
@@ -137,10 +137,10 @@
 
 						<p>
 
-							<input type="checkbox" value="event" id="event" />
+							<input name="type[]" type="checkbox" value="event" id="event" />
 							<label for="event">events</label>
 
-							<input type="checkbox" value="conversations" id="conversations" />
+							<input name="type[]" type="checkbox" value="conversations" id="conversations" />
 							<label for="conversations">letters</label>
 
 						</p>
@@ -152,8 +152,8 @@
 						<p class="title">choose your city</p>
 
 						<p>
-							<label>city</label>
-							<input class="text city" type="text" value="" id="city_search" />
+							<label for="city">city</label>
+							<input type="text city" name="city" value="" placeholder="" maxlength="50" class="text city" id="city_search" />
 						</p>
 
 					</div>
@@ -175,7 +175,7 @@
 
 						<p class="calendar_date">
 							<label>to</label>
-							<input class="text city" type="text" value="<?php echo $today; ?>" />
+							<input class="text to" type="text" value="<?php echo $today; ?>" />
 							
 						</p>
 
@@ -192,7 +192,7 @@
 
 
 					-->
-
+					<input type="hidden" name="search" value="search" />
 					<input class="submit" type="submit" value="apply" />
 
 				</form>

@@ -180,15 +180,55 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
 	// home isotope
-//	if( $('#home_grid').length ){
-		$('#home_grid').isotope({
+	var $iso_container = $('#home_grid');	
+	if( $iso_container.length ){
+
+		$iso_container.isotope({
 			itemSelector: '.home_box',
 			layoutMode:'masonry',
 			masonry: {
 				columnWidth: 240
 			}
 		});
-//	}
+
+	    // Infinite Scroll
+	    $('#home_grid').infinitescroll({
+	        navSelector  : 'div.pagination', 
+	        nextSelector : 'div.pagination a:first', 
+	        itemSelector : '.home_box',
+	        bufferPx     : 200,
+	        loading: {
+	            finishedMsg: 'All posts have been loaded.',
+	                        //img: +templateUrl+'ajax-loader.gif'
+	        }
+	    },
+	 
+	    // Infinite Scroll Callback
+	    function( newElements ) {
+	        var $newElems = jQuery( newElements ).hide(); 
+//	        $newElems.imagesLoaded(function(){
+	            $newElems.fadeIn();
+	            $iso_container.isotope( 'appended', $newElems );
+//	        });
+
+			// apply colors to event boxes
+			$('#home_grid .home_box.event .top .cat a').each(function() {
+				box_top_color = $(this).closest('.top').attr("data-color");
+				$(this).css('color',box_top_color);
+			});
+
+	//		$('#home_grid .home_box.event').bind({
+	//		  mouseenter: function() {
+	//			$(this).children('.top').toggleClass( "over" );
+	//		  },
+	//		  mouseleave: function() {
+	//			$(this).children('.top').toggleClass( "over" );
+	//		  }
+	//		});
+
+	    });
+
+	}
 
 
 	// apply colors to event boxes
@@ -196,17 +236,17 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		box_top_color = $(this).closest('.top').attr("data-color");
 		$(this).css('color',box_top_color);
 	});
-	$('#home_grid .home_box.event .top .cat a').each(function() {
-		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
-	});
-	$('#home_grid .home_box.event').bind({
-	  mouseenter: function() {
-		$(this).children('.top').toggleClass( "over" );
-	  },
-	  mouseleave: function() {
-		$(this).children('.top').toggleClass( "over" );
-	  }
-	});
+//	$('#home_grid .home_box.event .top .cat a').each(function() {
+//		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
+//	});
+//	$('#home_grid .home_box.event').bind({
+//	  mouseenter: function() {
+//		$(this).children('.top').toggleClass( "over" );
+//	  },
+//	  mouseleave: function() {
+//		$(this).children('.top').toggleClass( "over" );
+//	  }
+//	});
 
 
 });

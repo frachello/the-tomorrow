@@ -161,5 +161,47 @@
 		}else{ return human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; }
 	}
 
+	/*
+
+	function my_posts_nav_link( $type = '', $label = '',  $maxPageNum = '' ) {
+		$args = array_filter( compact('type', 'label', 'maxPageNum') );
+		echo my_get_posts_nav_link($args);
+	}
+
+	function my_get_posts_nav_link($args = array()) {
+		$return = '';
+		$defaults = array(
+			'maxPageNum' => '0',
+		);
+		$max_num_pages = $args['maxPageNum'];
+		$args = wp_parse_args( $args, $defaults );
+		$paged = get_query_var('paged');
+		if ( $max_num_pages > 1 ) {
+			if ($args['type'] == "next") {
+				$return = get_previous_posts_link($args['label']);
+			}
+			if ($args['type'] == "prev") {
+				$return = my_get_next_posts_link($args['label'], $max_num_pages);
+			}
+		}
+		return $return;
+	}
+
+	function my_get_next_posts_link( $label = 'Next Page &raquo;', $max_page = 0 ) {
+		global $paged, $wp_query;
+		if ( !$paged ) {
+			$paged = 1;
+		}
+		$nextpage = intval($paged) + 1;
+		if ( !is_single() && ( empty($paged) || $nextpage <= $max_page) ) {
+			$attr = apply_filters( 'next_posts_link_attributes', '' );
+			return '<a href="' . next_posts( $max_page, false ) . "\" $attr>" . preg_replace('/&([^#])(?![a-z]{1,8};)/i', '&$1', $label) . '</a>';
+		}
+	}
+
+	*/
+
+
+
 
 ?>
