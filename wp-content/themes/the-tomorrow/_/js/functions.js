@@ -67,6 +67,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
         // jcarousel swipe
+        // http://www.tom-maton.co.uk/blog/2013/february/jcarousel-with-swipe-gestures-using-touchswipe
 
 //		var carousel = $('.jcarousel');
 //	    carousel.swipe({
@@ -359,10 +360,15 @@ fix rightcol pos
 */
 
 function fix_rightcol_pos() {
-    
-	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    scroll_limit = 225,
-    rightcol = document.querySelector("#rightcol");
+    if($('body.page-template-default').length){
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	    scroll_limit = 70,
+	    rightcol = document.querySelector("#rightcol");
+    }else{
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	    scroll_limit = 225,
+	    rightcol = document.querySelector("#rightcol");
+    }
 	if (distanceY > scroll_limit) {
 	    classie.add(rightcol,"fixed");
 	} else {

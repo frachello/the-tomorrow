@@ -337,6 +337,34 @@ body.internal-page{
 
   #content {
 
+    .content_col{ width: 732px; border-top: 1px solid #414042; 
+
+      article{
+        .entry{
+          li{
+            margin-left: 1.3em;
+          }
+        }
+      }
+
+      &.col_1{ width: 220px; }
+
+      &.col_2{
+        width: 476px;
+        &.left{ margin-right: 36px; }
+      }
+
+      &.col_3{ width: 696px; }
+      .entry{
+        margin-top: 23px; float: left;
+        p, li { font-size: 19px; }
+        p{ margin-bottom: 1em; }
+        ul, ol { margin-bottom: .5em; }
+        li{ margin-left: 1.3em; margin-bottom: .5em; }
+      }
+
+    }
+
     position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
 
     #rightcol{ width: 220px; margin: 0; float: right;
@@ -344,7 +372,7 @@ body.internal-page{
         &.relative { position: relative; top: 0; left: 0; margin-left: 0; }
       }
 
-      .li { border-top: 1px solid #414042;
+      .li { border-top: 1px solid #414042; width: 220px; float: left;
         a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
         &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
         &.expand a{ background-image: url(../i/ico_rightcol_expand.png); }
@@ -352,18 +380,36 @@ body.internal-page{
         &.map a{ background-image: url(../i/ico_rightcol_map.png); }
         &.prev_letter a{ background-image: url(../i/ico_rightcol_prev.png); }
         &.next_letter a{ background-image: url(../i/ico_rightcol_next.png); }
+        &.contact_us a{ background-image: url(../i/ico_rightcol_share_email.png); }
+        &.credits a{ background-image: url(../i/ico_rightcol_pencil.png); }
+      }
+
+      .addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
+        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
+        .addthis_toolbox { float: right;
+          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
+            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
+            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
+            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+          }
+        }
+        .at15t, .at16nc, .at300bs { background: none }
       }      
-//      .addthis { padding: 20px 0; float: left; width: 100%; border-top: 1px solid #414042;
-//        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
-//        .addthis_toolbox { float: right;
-//          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
-//            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
-//            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
-//            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
-//          }
-//        }
-//        .at15t, .at16nc, .at300bs { background: none }
-//      }      
+
+      .follow_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
+        p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
+        .follow_ico { float: right;
+          a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px; float: left;
+            &.follow_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
+            &.follow_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
+            &.follow_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+          }
+
+        }
+        
+      }      
+
+
     }
 
     &.venue_page{
@@ -423,7 +469,6 @@ body.internal-page{
     }
   }
 
-
   /* single conversation page */
   &.single-conversations{
     h2{ border-top: 1px solid #414042; }
@@ -442,10 +487,7 @@ body.internal-page{
             .date { float: right; }
           }
           .entry{
-            margin-top: 23px; float: left;
-            p, li { font-size: 19px; }
-            p{ margin-bottom: 1em; }
-
+//          margin-top: 23px; float: left;
            .jcarousel { position: relative; overflow: hidden; height: 440px; width: 732px;
               ul { width: 20000em; position: absolute; list-style: none; margin: 0; padding: 0; 
                 li { float: left; width:732px;
@@ -579,17 +621,6 @@ body.internal-page{
 
 }
 
-.addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
-  p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
-  .addthis_toolbox { float: right;
-    a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
-      &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
-      &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
-      &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
-    }
-  }
-  .at15t, .at16nc, .at300bs { background: none }
-}      
 
 
 /************************************************
@@ -662,15 +693,6 @@ footer {
 */
 
 .highlight { background: #fff; @include transition(all 0.5s ease); }
-
-#content{
-  .col{
-    &.col_2{
-      width: 476px;
-      &.left{ margin-right: 36px; }
-    }
-  }
-}
 
 /* Print styles!
 -------------------------------------------------------------------------------*/

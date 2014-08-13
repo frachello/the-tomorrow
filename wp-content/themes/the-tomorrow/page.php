@@ -1,46 +1,74 @@
+<?php
+/*
+Template Name: Generic page
+*/
+?>
+
 <?php get_header(); ?>
+
+
 <!-- content -->
 <div id="content">
 
-<!-- main col -->
-<section id="main_content">
+	<div class="page-content">
 
-<div id="page_col">
+		<div id="rightcol" class="col">
+			
+			<div class="follow_col">
+				<p>follow us</p>
+			    <div class="follow_ico">		    
 
+				    <a class="follow_facebook" title="Facebook" href="#">
+				    	Follow on Facebook</a>
 
-<?php if (have_posts()) : ?>
+				    <a class="follow_twitter" title="Tweet" href="#">
+						Follow on Twitter</a>
 
-		<?php while (have_posts()) : the_post(); ?>
+				    <a class="follow_email" title="YouTube" href="#">
+				    	Follow on YouTube</a>
 
-		<div class="post">
-
-			<h2 class="page-title"><?php the_title(); ?></h2>
-
-			<div class="entry">
-				<?php the_content('leggi tutto'); ?>
+			    </div>
 			</div>
-			
-			<br class="clear" />
-			<!-- commenti -->
-			
+			<div class="li contact_us"><a href="#">contact us</a></div>
+			<div class="li credits"><a href="#">credits</a></div>
+		
+
 		</div>
-		
-		
 
-		<?php endwhile; ?>
+		<div class="col content_col">
 
-	<?php else : ?>
+		<?php if (have_posts()) : ?>
 
-		<h2>Errore.</h2>
-		<p>Spiacenti, ma la pagina che stai cercando non esite</p>
+			<?php while (have_posts()) : the_post(); ?>
 
-	<?php endif; ?>
+				<h2 class="page-title"><?php the_title(); ?></h2>
 
-</section>
-<!-- chiusa section#main_content -->	
+				<article id="post-<?php echo $post->ID; ?>" class="post">
+
+					<div class="entry">
+						<?php the_content('leggi tutto'); ?>
+					</div>
+
+				</article>
+				
+				<br class="clear" />
+				<!-- commenti -->
+
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+			<h2>Errore.</h2>
+			<p>Spiacenti, ma la pagina che stai cercando non esite</p>
+
+		<?php endif; ?>
+
+		</div>
+
+	</div>
+
+	<br class="clear" />
 
 </div> <!-- chiuso content -->
-
-<br class="clear" />
 
 <?php get_footer(); ?>

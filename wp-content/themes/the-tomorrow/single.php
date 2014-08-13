@@ -1,43 +1,73 @@
+<?php
+/*
+Template Name: Generic single post
+*/
+?>
+
 <?php get_header(); ?>
+
+
 <!-- content -->
 <div id="content">
-    
-    <?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); ?>
+
+	<div class="page-content">
+
+		<div id="rightcol" class="col">
 			
-			<div class="post" id="post-<?php the_ID(); ?>">
-			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a></h2>
-			<div class="postMetaTop">
-			<span class="autor">Scritto da  <strong><?php the_author(); ?></strong> </span>
-			<span class="date">il <?php the_time('j F Y') ?></span> in
-			<span class="category"> <?php the_category(', '); ?></span>
+			<div class="follow_col">
+				<p>follow us</p>
+			    <div class="follow_ico">		    
+
+				    <a class="follow_facebook" title="Facebook" href="#">
+				    	Follow on Facebook</a>
+
+				    <a class="follow_twitter" title="Tweet" href="#">
+						Follow on Twitter</a>
+
+				    <a class="follow_email" title="YouTube" href="#">
+				    	Follow on YouTube</a>
+
+			    </div>
 			</div>
-			<div class="entry">
-			  <?php the_content('[leggi tutto]'); ?>
-			</div>
-			<br class="clear" />
-			<div class="postMeta">
-			<span class="tag">TAG: <?php the_tags(' ',', '); ?></span> 
-			<span class="comments"> <?php comments_popup_link('0 commenti', '1 commento', '% commenti'); ?></span>
-			</div>
-			
-			
-			 <?php comments_template(); ?>
-			
-			</div> 
+			<div class="li contact_us"><a href="#">contact us</a></div>
+			<div class="li credits"><a href="#">credits</a></div>
 		
-		<?php endwhile; ?>
-    
-            <div class="navigation">
-                <span class="prev"><?php next_posts_link('precedenti') ?></span>
-                <span class="next"><?php previous_posts_link('successivi') ?></span> 
-            </div>
-    
-        <?php else : ?>
-    
-            <h2>Non ci sono post, spiacente.</h2>
-    
-        <?php endif; ?>
+
+		</div>
+
+		<div class="col content_col">
+
+		<?php if (have_posts()) : ?>
+
+			<?php while (have_posts()) : the_post(); ?>
+
+				<h2 class="page-title"><?php the_title(); ?></h2>
+
+				<article id="post-<?php echo $post->ID; ?>" class="post">
+
+					<div class="entry">
+						<?php the_content('leggi tutto'); ?>
+					</div>
+
+				</article>
+				
+				<br class="clear" />
+				<!-- commenti -->
+
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+			<h2>Errore.</h2>
+			<p>Spiacenti, ma la pagina che stai cercando non esite</p>
+
+		<?php endif; ?>
+
+		</div>
+
+	</div>
+
+	<br class="clear" />
 
 </div> <!-- chiuso content -->
 
