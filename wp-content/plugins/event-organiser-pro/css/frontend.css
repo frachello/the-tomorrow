@@ -1,0 +1,59 @@
+/* General booking form */
+#eo-bookings{ padding-top:30px;}
+#eo-booking-form p {margin:1em;}
+#eo-booking-form{ margin-bottom:30px;}
+
+/* Booking log-in form*/
+/*#eo-booking-login-form{float:right;width:50%;border-left: 1px solid;padding-left:15px;box-sizing:border-box;}*/
+/**/
+/*#eo-booking-login-form p {margin:1em;}*/
+#eo-booking-login-form label {display: block;}
+.eo-booking-form-login-form,
+.eo-booking-no-account-prompt{ display:none; }
+
+/* Booking notices */
+.eo-booking-error{background-color: #FFEBE8;border-color: #C00;margin: 5px 0 15px;padding: 0 .6em;border-radius: 3px;border-width: 1px;border-style: solid;}
+.eo-booking-notice{background-color: #ffffe0;border-color: #E6DB55;margin: 5px 0 15px;padding: 0 .6em;border-radius: 3px;border-width: 1px;border-style: solid;}
+.eo-booking-notice p{margin: .5em 0;padding: 2px;}
+.eo-booking-error p{margin: .5em 0;padding: 2px;}
+.eo-booking-field-error, .eo-booking-field-invalid, .eo-booking-field-required{background-color: #FFEBE8;border-color: #C00;}
+.eo-booking-form-field-errors{ color: #C00;}
+
+/* Booking fields */
+.eo-booking-label,.eo-booking-sub-label{ display: block; float:none; }
+.eo-booking-field-name-subfield{ width: 45%;margin-right: 3%;display: inline-block;}
+@media (max-width:600px){
+	.eo-booking-field-name-subfield{ width: 100%;margin-right: 0;display: block; clear: both;}
+}
+.eo-booking-field-terms-conditions-text{margin:10px 0 15px 0;padding:2px;height:150px;overflow-y:scroll;border: 2px solid #E5E5E5; background: #FBFBFB;width:50%; box-sizing:border-box;}
+#eo-booking-form .eo-booking-field{margin:10px 0;}
+#eo-booking-form .eo-booking-field p{padding:0;margin:0;}
+#eo-booking-form .eo-booking-field .description{font-size:0.9em;padding:0;margin:0;}
+.eo-booking-field-checkbox-list{ list-style: none; padding: 0;}
+
+/* Ticket picker table */
+.eo-booking-ticket-picker{padding-top:10px; width:100%;}
+.eo-booking-ticket-picker .eo-booking-ticket-name{width:30%;}
+.eo-booking-ticket-picker .eo-booking-date{ width:250px;min-width:250px;}
+.eo-booking-ticket-picker tbody, .eo-booking-ticket-picker tr, .eo-booking-ticket-picker td{vertical-align: middle;}
+
+/* Occurrence Picker*/
+#eo-booking-occurrence-picker a.ui-state-active{
+	background: #2a92bf;
+}
+
+#eo-booking-occurrence-picker .eo-booking-no-tickets-available span{
+	background: #e0776d;
+}
+
+/* Booking form - loading gif */
+.eo-booking-form-waiting{
+	vertical-align:middle;
+	margin-left: 10px;
+	width: auto;
+	height: auto;
+}
+
+/* Booking history */
+.eo-booking-cancellation-failure{background-color: #FFEBE8;border-color: #C00;margin: 5px 0 15px;padding: 0 .6em;border-radius: 3px;border-width: 1px;border-style: solid;}
+.eo-booking-cancellation-success{background-color: #ffffe0;border-color: #E6DB55;margin: 5px 0 15px;padding: 0 .6em;border-radius: 3px;border-width: 1px;border-style: solid;}

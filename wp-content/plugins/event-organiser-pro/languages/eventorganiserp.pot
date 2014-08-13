@@ -1,0 +1,1936 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: event-organiser-pro 1.8.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-11 22:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: admin/bookings.php:23 admin/bookings.php:26 admin/bookings.php:334
+#: admin/calendar.php:11 admin/settings.php:9 admin/settings.php:123
+#: includes/register.php:31 includes/register.php:36
+#: admin/js/booking-form.js:42
+msgid "Bookings"
+msgstr ""
+
+#: admin/bookings.php:75
+msgid "You are not allowed to cancel this booking."
+msgstr ""
+
+#: admin/bookings.php:78
+msgid "Error in cancelling the booking."
+msgstr ""
+
+#: admin/bookings.php:101
+msgid "You are not allowed to restore this booking."
+msgstr ""
+
+#: admin/bookings.php:104
+msgid "Error in restoring the booking."
+msgstr ""
+
+#: admin/bookings.php:134
+msgid "Error in deleting."
+msgstr ""
+
+#: admin/bookings.php:253 includes/booking-actions.php:170
+msgid "Thank you for your booking"
+msgstr ""
+
+#: admin/bookings.php:362 admin/bookings.php:501 admin/calendar.php:97
+#: includes/form-customiser/class-eo-booking-form.php:183
+msgid "Booking"
+msgstr ""
+
+#: admin/bookings.php:363 admin/bookings.php:620 admin/calendar.php:98
+#: includes/booking-actions.php:62 includes/booking-actions.php:210
+#: includes/class-eo-export-csv.php:165 includes/class-eo-export-csv.php:294
+msgid "Bookee"
+msgstr ""
+
+#: admin/bookings.php:364 admin/bookings.php:716
+#: includes/class-eo-export-csv.php:163 includes/class-eo-export-csv.php:292
+#: includes/functions.php:766 includes/shortcodes.php:188
+#: templates/event-booking-history.php:17
+msgid "Event"
+msgstr ""
+
+#: admin/bookings.php:365 admin/bookings.php:739 admin/calendar.php:99
+#: templates/event-booking-history.php:18
+msgid "Tickets"
+msgstr ""
+
+#: admin/bookings.php:366 admin/includes/event_ticket_table.php:40
+#: admin/includes/event_ticket_table.php:391 includes/booking-actions.php:94
+#: includes/email.php:623 templates/eo-ticket-picker.php:27
+msgid "Price"
+msgstr ""
+
+#: admin/bookings.php:367 includes/class-eo-export-csv.php:164
+#: includes/class-eo-export-csv.php:293
+#: includes/form-customiser/class-eo-booking-form-element.php:717
+#: includes/form-customiser/class-eo-booking-form-element.php:744
+#: templates/eo-ticket-picker.php:24 templates/event-booking-history.php:16
+#: admin/js/booking-form.js:426 admin/js/booking-form.js:427
+msgid "Date"
+msgstr ""
+
+#: admin/bookings.php:368 admin/bookings.php:557 admin/calendar.php:101
+#: templates/event-booking-history.php:20
+msgid "Status"
+msgstr ""
+
+#: admin/bookings.php:411
+msgid ""
+"The following bookings could not be automatically confirmed. Please confirm "
+"these manually:"
+msgstr ""
+
+#: admin/bookings.php:432
+msgid ""
+"The event associated with this booking could not be found. It may have been "
+"deleted."
+msgstr ""
+
+#: admin/bookings.php:434
+msgid "The occurrence date for which this booking was made no longer exists."
+msgstr ""
+
+#: admin/bookings.php:442
+msgid "This booking could not be confirmed for the following reasons"
+msgstr ""
+
+#: admin/bookings.php:454
+msgid "I want to confirm anyway"
+msgstr ""
+
+#: admin/bookings.php:500
+msgid "Booking Details"
+msgstr ""
+
+#: admin/bookings.php:516
+#, php-format
+msgid "Booking (#%d)"
+msgstr ""
+
+#: admin/bookings.php:542
+msgid "Back to table view"
+msgstr ""
+
+#: admin/bookings.php:574
+msgid "Resend tickets to bookee"
+msgstr ""
+
+#: admin/bookings.php:586 admin/includes/event_booking_table.php:57
+msgid "Cancel Booking"
+msgstr ""
+
+#: admin/bookings.php:591 admin/includes/venues.php:266
+msgid "Update"
+msgstr ""
+
+#: admin/bookings.php:610
+msgid "User not found"
+msgstr ""
+
+#: admin/bookings.php:614
+msgid "No account"
+msgstr ""
+
+#: admin/bookings.php:626 admin/includes/event_booking_table.php:690
+#: includes/booking-actions.php:65 includes/booking-actions.php:213
+#: includes/form-customiser/class-eo-booking-form-element.php:756
+#: includes/form-customiser/class-eo-booking-form-element.php:765
+#: includes/form-customiser/class-eo-booking-form.php:158
+msgid "Email"
+msgstr ""
+
+#: admin/bookings.php:641
+msgid "Other Recent bookings"
+msgstr ""
+
+#: admin/bookings.php:679
+msgid "Booking Date"
+msgstr ""
+
+#: admin/bookings.php:685 includes/class-eo-export-csv.php:162
+#: includes/class-eo-export-csv.php:291
+msgid "Booking Reference"
+msgstr ""
+
+#: admin/bookings.php:699
+msgid "Change"
+msgstr ""
+
+#: admin/bookings.php:706 admin/bookings.php:709
+msgid "Orphaned booking"
+msgstr ""
+
+#: admin/bookings.php:707
+msgid "Select date"
+msgstr ""
+
+#: admin/bookings.php:724 admin/calendar.php:100
+#: templates/event-booking-history.php:19
+msgid "Amount"
+msgstr ""
+
+#: admin/bookings.php:732
+msgid "Payment Gateway"
+msgstr ""
+
+#: admin/bookings.php:745 includes/class-eo-export-csv.php:169
+msgid "Booking Notes"
+msgstr ""
+
+#: admin/bookings.php:754
+msgid "Booking Meta"
+msgstr ""
+
+#: admin/bookings.php:799
+msgid "Gateway Response"
+msgstr ""
+
+#: admin/bookings.php:811
+msgid "Show gateway response"
+msgstr ""
+
+#: admin/bookings.php:812
+msgid "Hide gateway response"
+msgstr ""
+
+#: admin/bookings.php:839
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221; (%s)"
+msgstr ""
+
+#: admin/bookings.php:844
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/bookings.php:848
+#, php-format
+msgid "Bookings for user &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/bookings.php:853
+#, php-format
+msgid "Searching for booking ID &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/bookings.php:855
+#, php-format
+msgid "Searching for email address &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/bookings.php:857
+#, php-format
+msgid "Searching for bookee &#8220;%s&#8221;"
+msgstr ""
+
+#: admin/calendar.php:56
+msgid "Attending"
+msgstr ""
+
+#: admin/calendar.php:61
+msgid "View bookings"
+msgstr ""
+
+#: admin/calendar.php:63
+msgid "Export bookings"
+msgstr ""
+
+#: admin/calendar.php:112 includes/register.php:55
+msgid "Confirmed"
+msgstr ""
+
+#: admin/calendar.php:114
+msgid "Pending"
+msgstr ""
+
+#: admin/calendar.php:116 includes/booking-actions.php:108
+#: includes/email.php:637 templates/eo-ticket-picker.php:91
+msgid "Total"
+msgstr ""
+
+#: admin/calendar.php:118
+msgid "Capacity"
+msgstr ""
+
+#: admin/edit.php:7
+msgid "Event Tickets"
+msgstr ""
+
+#: admin/edit.php:17
+msgid ""
+"If you edit the event's dates you will need to update any event tickets. If "
+"you remove a date, any bookings for that date will be ignored until you re-"
+"assign them an event date."
+msgstr ""
+
+#: admin/edit.php:37
+#, php-format
+msgid "Cap booking at %s places"
+msgstr ""
+
+#: admin/edit.php:51
+msgid "Select a booking form:"
+msgstr ""
+
+#: admin/includes/ajax-actions.php:144 admin/includes/ajax-actions.php:169
+msgid "Please provide a custom field value."
+msgstr ""
+
+#: admin/includes/ajax-actions.php:167
+msgid "Please provide a custom field name."
+msgstr ""
+
+#: admin/includes/event_booking_table.php:30
+msgid "No bookings found."
+msgstr ""
+
+#: admin/includes/event_booking_table.php:52
+#: admin/includes/shortcode_popup.php:64
+msgid "View"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:55
+#: admin/includes/event_booking_table.php:75 includes/shortcodes.php:110
+msgid "Cancel booking"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:69
+msgid "Restore booking"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:71
+msgid "Restore Booking"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:77
+msgid "Delete Booking"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:149
+msgid "Unpublished"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:152 includes/bookings.php:298
+#: includes/class-eo-export-csv.php:253 includes/class-eo-export-csv.php:358
+msgid "Y/m/d g:i:s A"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:159
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:161
+msgid "Y/m/d"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:263
+msgid "All"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:329
+msgid "Download bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:336
+msgid "Download tickets"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:344
+msgid "Delete cancelled bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:417
+msgid "No confirmed attendees"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:419
+#, php-format
+msgid "%s confirmed attendee"
+msgid_plural "%s confirmed attendees"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/includes/event_booking_table.php:427
+msgid "No bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:429
+#, php-format
+msgid "%s booking"
+msgid_plural "%s bookings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/includes/event_booking_table.php:449
+msgid "Go to the first page"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:456
+msgid "Go to the previous page"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:465
+msgid "Current page"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:476
+msgid "Go to the next page"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:483
+msgid "Go to the last page"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:510
+msgid "Cancel Bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:511
+#: admin/includes/event_booking_table.php:650
+msgid "Email Bookees"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:512
+msgid "Confirm bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:516
+msgid "Restore Bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:517
+msgid "Delete Bookings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:592
+msgid "1. Select custom fields"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:593
+msgid "Select booking fields to be included in export"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:599
+msgid "2. CSV Export Settings"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:608
+msgid "Cell delimiter "
+msgstr ""
+
+#: admin/includes/event_booking_table.php:616
+msgid "Text delimiter "
+msgstr ""
+
+#: admin/includes/event_booking_table.php:627
+msgid "3. Download"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:629
+#: admin/includes/event_booking_table.php:689 admin/includes/venues.php:141
+#: includes/shortcodes.php:81
+msgid "Cancel"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:630
+msgid "Download"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:658
+msgid "Subject"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:661
+msgid "Message"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:664 admin/settings.php:273
+msgid "E-mailing Bookees"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:665
+msgid "In the e-mail subject & body you can use the following tags"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:675 admin/settings.php:284
+msgid "See full list"
+msgstr ""
+
+#: admin/includes/event_booking_table.php:677
+#, php-format
+msgid ""
+"<strong>Note:</strong> your hosting provider may limit the number of e-mails "
+"you can send in a 24 hour period. Plug-ins are available that <a href=\"%s\" "
+"target=\"_blank\">work around these restrictions.</a>"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:31
+msgid "No tickets"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:38
+#: admin/includes/event_ticket_table.php:390 includes/booking-actions.php:93
+#: includes/class-eo-export-csv.php:296 includes/email.php:622
+#: templates/eo-ticket-picker.php:26
+msgid "Ticket"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:39
+#: admin/includes/ticket-row-view.php:62
+msgid "Spaces"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:173
+msgid "Add Ticket"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:268
+msgid "Select All"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:389
+#: includes/class-eo-export-csv.php:297
+msgid "Ticket Reference"
+msgstr ""
+
+#: admin/includes/event_ticket_table.php:429
+msgid "Remove"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:8
+msgid "Event List"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:9
+msgid "Calendar"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:10
+msgid "Venue Map"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:11
+msgid "Event Search"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:16
+msgid "Display a list of events"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:19 admin/includes/shortcode_popup.php:31
+msgid "Events starting after"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:25
+msgid "Events starting before"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:38
+msgid "Events ending before"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:41
+msgid "You can use relative dates, e.g. 'now', 'next Tuesday'"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:45 admin/includes/shortcode_popup.php:84
+msgid "Events in categories"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:51 admin/includes/shortcode_popup.php:90
+msgid "Events at venues"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:61
+msgid "Display a calendar of events, similar to the admin calendar."
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:66
+msgid "Month"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:67
+msgid "Week"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:68
+msgid "Day"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:72
+msgid "Time format"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:78
+#: admin/includes/shortcode_popup.php:116
+msgid "Include tooltip"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:97
+msgid "Show only events current user is attending"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:106
+msgid "Display a Google map of venue or venues"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:109
+msgid "Venues"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:112
+msgid ""
+"Leave blank for venue of current event (if this is being used on an event's "
+"page"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:122
+msgid "Dimensions"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:124
+msgid "Height:"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:126
+msgid "Width:"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:133
+msgid "Allow your users to search events. Select which filters they can use."
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:136 includes/functions.php:791
+#: includes/shortcodes.php:208
+msgid "Category"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:140 includes/functions.php:816
+#: includes/shortcodes.php:229
+msgid "Venue"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:144
+#: includes/form-customiser/class-eo-booking-form-element-view.php:606
+#: includes/form-customiser/class-eo-booking-form-element-view.php:610
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:171
+#: includes/shortcodes.php:249 admin/js/booking-form.js:288
+msgid "City"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:148 includes/shortcodes.php:270
+#: admin/js/booking-form.js:289
+msgid "State"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:152
+#: includes/form-customiser/class-eo-booking-form-element-view.php:673
+#: includes/form-customiser/class-eo-booking-form-element-view.php:677
+#: includes/shortcodes.php:291 admin/js/booking-form.js:291
+msgid "Country"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:156
+msgid "Date range"
+msgstr ""
+
+#: admin/includes/shortcode_popup.php:164
+#, php-format
+msgid ""
+"You can view the full range of attributes for these shortcodes on the <a "
+"href=\"%s\" target=\"_blank\">plug-in website</a>"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:23
+msgid "Edit"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:27 admin/includes/venues.php:265
+msgid "Delete"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:43
+msgid "Ticket name:"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:49
+msgid "Price:"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:58
+msgid "Spaces:"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:63
+msgid ""
+"This indicates the quanity available of this ticket type. If you are selling "
+"tickets for individual occurrences, then this limit applies to each "
+"occurrence."
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:67 admin/includes/ticket-row-view.php:86
+#: admin/includes/ticket-row-view.php:130
+msgid "See this page for more details"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:74
+msgid "Tickets on sale:"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:79
+msgid "Sale starts"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:81
+msgid "Ticket availability"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:82
+msgid ""
+"You can specify a date when this ticket will go on sale, and when it is no "
+"longer available for purchase. Leave blank for no restriction. Tickets will "
+"automatically come off sale when the event starts"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:97
+msgid "Sale ends"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:103
+msgid "Bookings will be closed when an occurrences starts."
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:119
+msgid "Select all"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:119
+msgid "Deselect all"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:122
+msgid ""
+"Select the dates of the event for which you want this ticket to be sold. "
+"(Default: all dates)."
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:125
+msgid "Ticket dates"
+msgstr ""
+
+#: admin/includes/ticket-row-view.php:126
+msgid ""
+"You have the option of selling tickets for only specific dates, for instance "
+"you may wish to make a cheaper tickets available for only the first "
+"occurrence."
+msgstr ""
+
+#: admin/includes/venues.php:10
+msgid "Custom Fields"
+msgstr ""
+
+#: admin/includes/venues.php:11
+msgid "Featured Image"
+msgstr ""
+
+#: admin/includes/venues.php:117
+msgid "Add New Custom Field:"
+msgstr ""
+
+#: admin/includes/venues.php:121 admin/includes/venues.php:195
+msgctxt "meta name"
+msgid "Name"
+msgstr ""
+
+#: admin/includes/venues.php:122 admin/includes/venues.php:178
+#: admin/includes/venues.php:196 admin/includes/venues.php:267
+msgid "Value"
+msgstr ""
+
+#: admin/includes/venues.php:130
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: admin/includes/venues.php:140
+msgid "Enter new"
+msgstr ""
+
+#: admin/includes/venues.php:151
+msgid "Add Custom Field"
+msgstr ""
+
+#: admin/includes/venues.php:177
+#: includes/form-customiser/class-eo-booking-form-element.php:779
+#: includes/form-customiser/class-eo-booking-form-element.php:784
+#: includes/form-customiser/class-eo-booking-form.php:170
+#: admin/js/booking-form.js:57 admin/js/booking-form.js:373
+msgid "Name"
+msgstr ""
+
+#: admin/includes/venues.php:263
+msgid "Key"
+msgstr ""
+
+#: admin/includes/venues.php:311 admin/includes/venues.php:312
+msgid "Set featured image"
+msgstr ""
+
+#: admin/includes/venues.php:323
+msgid "Remove featured image"
+msgstr ""
+
+#: admin/settings.php:10
+msgid "Booking Form"
+msgstr ""
+
+#: admin/settings.php:24
+msgid "General"
+msgstr ""
+
+#: admin/settings.php:25
+msgid "PayPal"
+msgstr ""
+
+#: admin/settings.php:26
+msgid "Offline Payment"
+msgstr ""
+
+#: admin/settings.php:27 includes/class-eo-export-csv.php:166
+#: includes/class-eo-export-csv.php:295 admin/js/booking-form.js:462
+#: admin/js/booking-form.js:463
+msgid "E-mail"
+msgstr ""
+
+#: admin/settings.php:45
+msgid "Manage bookings"
+msgstr ""
+
+#: admin/settings.php:46
+msgid "Manage other events' bookings"
+msgstr ""
+
+#: admin/settings.php:49
+msgid "Booking management permissions"
+msgstr ""
+
+#: admin/settings.php:50
+msgid "Set permissions for booking management"
+msgstr ""
+
+#: admin/settings.php:55
+msgid "Role"
+msgstr ""
+
+#: admin/settings.php:69
+msgid "None"
+msgstr ""
+
+#: admin/settings.php:105
+msgid "Currency"
+msgstr ""
+
+#: admin/settings.php:113
+msgid "Currency Position"
+msgstr ""
+
+#: admin/settings.php:119
+msgid "Before"
+msgstr ""
+
+#: admin/settings.php:120
+msgid "After"
+msgstr ""
+
+#: admin/settings.php:125
+msgid "Particular Occurrence"
+msgstr ""
+
+#: admin/settings.php:125
+msgid "Entire series"
+msgstr ""
+
+#: admin/settings.php:129
+msgid ""
+"You can either sell tickets for individual dates of an event, or sell "
+"tickets for the entire series - for example, places on a course"
+msgstr ""
+
+#: admin/settings.php:132
+msgid "Reserve Pending Tickets"
+msgstr ""
+
+#: admin/settings.php:140
+msgid "Allow Logged-out Users to place bookings?"
+msgstr ""
+
+#: admin/settings.php:143
+msgid "No"
+msgstr ""
+
+#: admin/settings.php:144
+msgid "Yes but register an account for them"
+msgstr ""
+
+#: admin/settings.php:145
+msgid "Yes, account is optional"
+msgstr ""
+
+#: admin/settings.php:146
+msgid "Yes but do not register an account"
+msgstr ""
+
+#: admin/settings.php:153
+msgid "Notify me when"
+msgstr ""
+
+#: admin/settings.php:159
+msgid "A new booking is made"
+msgstr ""
+
+#: admin/settings.php:160
+msgid "A booking is confirmed"
+msgstr ""
+
+#: admin/settings.php:165 admin/settings.php:226
+#: gateways/class-eo-gateway.php:209
+msgid "Live Switch"
+msgstr ""
+
+#: admin/settings.php:170 admin/settings.php:229
+#: gateways/class-eo-gateway.php:205
+msgid "Live"
+msgstr ""
+
+#: admin/settings.php:171 gateways/class-eo-gateway.php:206
+msgid "Sandbox Mode"
+msgstr ""
+
+#: admin/settings.php:172 admin/settings.php:230
+#: gateways/class-eo-gateway.php:207
+msgid "Disable"
+msgstr ""
+
+#: admin/settings.php:177
+msgid "PayPal Email"
+msgstr ""
+
+#: admin/settings.php:185
+msgid "PayPal page style"
+msgstr ""
+
+#: admin/settings.php:192
+msgid "Style your PayPal payment page"
+msgstr ""
+
+#: admin/settings.php:194
+#, php-format
+msgid ""
+"PayPal allows you to tailor the booking payment page to you site. For more "
+"information, <a href=\"%s\" target=\"_blank\">see this tutorial</a>"
+msgstr ""
+
+#: admin/settings.php:200
+msgid "PayPal Local Site"
+msgstr ""
+
+#: admin/settings.php:203
+msgid "Australia"
+msgstr ""
+
+#: admin/settings.php:204
+msgid "Austria"
+msgstr ""
+
+#: admin/settings.php:205
+msgid "Belgium"
+msgstr ""
+
+#: admin/settings.php:206
+msgid "Canada"
+msgstr ""
+
+#: admin/settings.php:207
+msgid "China"
+msgstr ""
+
+#: admin/settings.php:208
+msgid "France"
+msgstr ""
+
+#: admin/settings.php:209
+msgid "Germany"
+msgstr ""
+
+#: admin/settings.php:210
+msgid "Italy"
+msgstr ""
+
+#: admin/settings.php:211
+msgid "Mexico"
+msgstr ""
+
+#: admin/settings.php:212
+msgid "Netherlands"
+msgstr ""
+
+#: admin/settings.php:213
+msgid "Philippines"
+msgstr ""
+
+#: admin/settings.php:214
+msgid "Poland"
+msgstr ""
+
+#: admin/settings.php:215
+msgid "Spain"
+msgstr ""
+
+#: admin/settings.php:216
+msgid "Switzerland"
+msgstr ""
+
+#: admin/settings.php:217
+msgid "United Kingdom"
+msgstr ""
+
+#: admin/settings.php:218
+msgid "United States"
+msgstr ""
+
+#: admin/settings.php:236
+msgid "Offline Payment Instructions"
+msgstr ""
+
+#: admin/settings.php:240
+msgid ""
+"This will appear on the booking form, informing the bookee on how to make "
+"payment."
+msgstr ""
+
+#: admin/settings.php:245
+msgid "E-mail template"
+msgstr ""
+
+#: admin/settings.php:252
+msgid "Custom Templates"
+msgstr ""
+
+#: admin/settings.php:254
+#, php-format
+msgid ""
+"You can <a href=\"%s\" target=\"_blank\">create your own e-mail templates</"
+"a> and add them to your theme."
+msgstr ""
+
+#: admin/settings.php:261
+msgid "Preview E-mail"
+msgstr ""
+
+#: admin/settings.php:265
+msgid "Booking email"
+msgstr ""
+
+#: admin/settings.php:271
+msgid "In the e-mail template you can use booking information placeholders"
+msgstr ""
+
+#: admin/settings.php:274
+msgid "You can use the following placeholders"
+msgstr ""
+
+#: admin/settings.php:303
+msgid "Preview Email"
+msgstr ""
+
+#: includes/booking-actions.php:45
+msgid "New event booking"
+msgstr ""
+
+#: includes/booking-actions.php:48
+#, php-format
+msgid "A new booking has been made on your site %s:"
+msgstr ""
+
+#: includes/booking-actions.php:63 includes/booking-actions.php:211
+msgid "Username"
+msgstr ""
+
+#: includes/booking-actions.php:69 includes/booking-actions.php:217
+#: admin/js/booking-form.js:41
+msgid "Booking form"
+msgstr ""
+
+#: includes/booking-actions.php:73 includes/booking-actions.php:221
+#, php-format
+msgid "You can view the <a href=\"%s\">booking here</a>"
+msgstr ""
+
+#: includes/booking-actions.php:79
+#, php-format
+msgid "[%s] New Event Booking for %s"
+msgstr ""
+
+#: includes/booking-actions.php:95 templates/eo-ticket-picker.php:28
+msgid "Quantity"
+msgstr ""
+
+#: includes/booking-actions.php:192
+msgid "Booking Confirmed"
+msgstr ""
+
+#: includes/booking-actions.php:195
+#, php-format
+msgid "A new booking has been confirmed on your site %s:"
+msgstr ""
+
+#: includes/booking-actions.php:227
+#, php-format
+msgid "[%s] Confirmed Event Booking for %s"
+msgstr ""
+
+#: includes/booking-actions.php:264
+msgid "Please select an event."
+msgstr ""
+
+#: includes/booking-actions.php:275
+msgid "Please provide a name."
+msgstr ""
+
+#: includes/booking-actions.php:279
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: includes/booking-actions.php:283
+msgid ""
+"This email is already registered, please choose another one or log-in with "
+"that account"
+msgstr ""
+
+#: includes/booking-actions.php:288
+msgid "You must be logged in to place a booking"
+msgstr ""
+
+#: includes/booking-actions.php:336
+msgid "You have not selected any tickets"
+msgstr ""
+
+#: includes/booking-actions.php:340
+msgid "The tickets you have selected are no longer available."
+msgstr ""
+
+#: includes/booking-actions.php:344
+msgid "Please select a ticket."
+msgstr ""
+
+#: includes/booking-actions.php:348 includes/booking-actions.php:358
+#: includes/booking-actions.php:367
+msgid "Sorry, but the requested number of tickets is unavailable."
+msgstr ""
+
+#: includes/booking-actions.php:373
+msgid "The payment gateway you have chosen is invalid"
+msgstr ""
+
+#: includes/booking-actions.php:422
+#, php-format
+msgid ""
+"Registration failed. Please contact an <a href=\"mailto:%s\">administrator</"
+"a>."
+msgstr ""
+
+#: includes/booking-actions.php:571 includes/booking-actions.php:604
+msgid "You do not have permission to cancel this booking."
+msgstr ""
+
+#: includes/booking-actions.php:575
+msgid "You must be logged in to cancel bookings."
+msgstr ""
+
+#: includes/booking-actions.php:579
+msgid "This booking can no longer be cancelled."
+msgstr ""
+
+#: includes/booking-form-handler.php:70
+msgid ""
+"<strong>Error:</strong> This event has non-free tickets and no gateway has "
+"been enabled. Please enable a gateway in <em>Settings > Event Organiser > "
+"Bookings </em>. This notice only appears to admins."
+msgstr ""
+
+#: includes/booking-form-handler.php:153
+msgid ""
+"Already registered? <a href=\"#\" class=\"eo-booking-login-toggle\">Log-in</"
+"a>."
+msgstr ""
+
+#: includes/booking-form-handler.php:159
+msgid ""
+"Not got an account? <a href=\"#\" class=\"eo-booking-no-account-toggle"
+"\">Click here</a>."
+msgstr ""
+
+#: includes/booking-form-handler.php:182
+msgid "Password Lost and Found"
+msgstr ""
+
+#: includes/booking-form-handler.php:182
+msgid "Lost your password?"
+msgstr ""
+
+#: includes/class-eo-export-csv.php:167
+msgid "Ticket Quantity"
+msgstr ""
+
+#: includes/class-eo-export-csv.php:168
+msgid "Total Price"
+msgstr ""
+
+#: includes/class-eo-export-csv.php:170 includes/class-eo-export-csv.php:299
+msgid "Booking Date (UTC)"
+msgstr ""
+
+#: includes/class-eo-export-csv.php:171 includes/class-eo-export-csv.php:300
+msgid "Booking Status"
+msgstr ""
+
+#: includes/class-eo-export-csv.php:298
+msgid "Ticket Price"
+msgstr ""
+
+#: includes/class-eo-user-attending-widget.php:14
+msgid "Displays a list of events a user is attending"
+msgstr ""
+
+#: includes/class-eo-user-attending-widget.php:15
+msgid "Events user is attending"
+msgstr ""
+
+#: includes/class-eo-user-attending-widget.php:23 admin/js/booking-form.js:62
+msgid "Title"
+msgstr ""
+
+#: includes/class-eo-user-attending-widget.php:27
+msgid "Number of events"
+msgstr ""
+
+#: includes/email.php:624
+msgid "Ref."
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-controller.php:96
+msgid "Standard Fields"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-controller.php:96
+msgid "Advanced Fields"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:179
+#, php-format
+msgid "What is %d + %d?"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:331
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:51
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:52
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:62
+msgid "First name"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:349
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:55
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:56
+msgid "Last name"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:568
+#: admin/js/booking-form.js:286
+msgid "Street address"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:572
+msgid "Street Address"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:591
+msgid "Address Line 2"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:629
+msgid "State/Province"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:634
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:180
+msgid "State /Province"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element-view.php:650
+#: includes/form-customiser/class-eo-booking-form-element-view.php:655
+msgid "Post Code"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:305
+#: includes/form-customiser/class-eo-booking-form-element.php:310
+msgid "<strong>ERROR</strong>: Please fill in all required fields"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:315
+msgid "<strong>ERROR</strong>: Some fields are not valid"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:505
+msgid "Input"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:522
+#: admin/js/booking-form.js:579
+msgid "Select"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:527
+#: includes/form-customiser/class-eo-booking-form-element.php:566
+#: admin/js/booking-form.js:283 admin/js/booking-form.js:310
+#: admin/js/booking-form.js:321 admin/js/booking-form.js:332
+#: admin/js/booking-form.js:337 admin/js/booking-form.js:349
+#: admin/js/booking-form.js:380 admin/js/booking-form.js:391
+#: admin/js/booking-form.js:400 admin/js/booking-form.js:436
+#: admin/js/booking-form.js:454 admin/js/booking-form.js:488
+#: admin/js/booking-form.js:524 admin/js/booking-form.js:535
+#: admin/js/booking-form.js:546 admin/js/booking-form.js:556
+#: admin/js/booking-form.js:571 admin/js/booking-form.js:578
+#: admin/js/booking-form.js:589 admin/js/booking-form.js:607
+#: admin/js/booking-form.js:617 admin/js/booking-form.js:625
+msgid "Label"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:553
+#: admin/js/booking-form.js:618
+msgid "Textarea"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:561
+msgid "Radio Buttons"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:594
+#: admin/js/booking-form.js:311
+msgid "Checkbox"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:620
+#: admin/js/booking-form.js:356 admin/js/booking-form.js:360
+msgid "Hook"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:637
+#: admin/js/booking-form.js:365 admin/js/booking-form.js:368
+msgid "HTML"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:648
+msgid "Section Break"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:653
+#: admin/js/booking-form.js:566 admin/js/booking-form.js:567
+msgid "Section"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:668
+#: admin/js/booking-form.js:331
+msgid "Fieldset"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:682
+#: includes/form-customiser/class-eo-booking-form-element.php:687
+#: admin/js/booking-form.js:599 admin/js/booking-form.js:600
+msgid "Terms & Conditions"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:688
+#: admin/js/booking-form.js:601
+msgid "Your terms & conditions"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:689
+msgid " I have read and agree to the terms and conditions detailed above."
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:701
+msgid "Antispam maths question"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:785
+msgid "First Name"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:786
+msgid "Last Name"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:809
+#: includes/form-customiser/class-eo-booking-form-element.php:818
+#: admin/js/booking-form.js:477 admin/js/booking-form.js:478
+msgid "Number"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:838
+msgid "<strong>ERROR:</strong> Entered value is not numeric."
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:847
+#, php-format
+msgid "<strong>ERROR:</strong> Please enter a number between %1$s and %2$s."
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:864
+#: includes/form-customiser/class-eo-booking-form-element.php:873
+#: admin/js/booking-form.js:499 admin/js/booking-form.js:500
+msgid "Phone"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:884
+#: includes/form-customiser/class-eo-booking-form-element.php:893
+msgid "Time"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:907
+#: includes/form-customiser/class-eo-booking-form-element.php:916
+#: admin/js/booking-form.js:511 admin/js/booking-form.js:512
+msgid "Website"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:932
+msgid "Hidden"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:953
+#: admin/js/booking-form.js:525
+msgid "Multiselect"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:993
+#: includes/form-customiser/class-eo-booking-form-element.php:998
+#: admin/js/booking-form.js:274 admin/js/booking-form.js:275
+msgid "Address"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:1055
+#: admin/js/booking-form.js:649
+msgid "Ticket picker"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:1080
+#: admin/js/booking-form.js:344
+msgid "Gateway picker"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-element.php:1116
+msgid "Submit button"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-view.php:172
+msgid "You have already made a booking for this event."
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form-view.php:186
+#, php-format
+msgid "You are logged in as <strong>%s</strong>. <a href=\"%s\">Not you?</a>"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form.php:136
+#: admin/js/booking-form.js:345
+msgid "Select a payment gateway"
+msgstr ""
+
+#: includes/form-customiser/class-eo-booking-form.php:147
+#: includes/form-customiser/class-eo-booking-form.php:210
+#: admin/js/booking-form.js:449
+msgid "Book"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:25
+msgid ""
+"This form element only appears if there there are multiple gateways enabled. "
+"It cannot be removed but can be placed anywhere in the booking form."
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:29
+msgid ""
+"This form element allows the user to select their ticket(s). It cannot be "
+"removed but can be placed anywhere in the booking form."
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:34
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:45
+msgid "This form element will not appear if the user is logged in."
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:109
+msgid ""
+"This form element allows you to enter any HTML, to be displayed on the form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:134
+msgid ""
+"This form element asks the user a simple random maths question in order to "
+"help prevent spam"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:153
+msgid "Street Address "
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:162
+#: admin/js/booking-form.js:287
+msgid "Second line"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-elements-templates.php:187
+#: admin/js/booking-form.js:290
+msgid "Postcode"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:3
+msgid ""
+"You can add additional fields to your booking form using the buttons to the "
+"right, and then arrange them by dragging the fields. Click the added form "
+"field to reveal its options "
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:7
+msgid "Create a new form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:7
+msgid "Create New Form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:8
+msgid "Edit Form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:34
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:71
+msgid "Save Form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:41
+msgid "Form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:46
+#: includes/register.php:410
+msgid "Settings"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:66
+msgid "Delete this form"
+msgstr ""
+
+#: includes/form-customiser/templates/admin-view/eo-booking-form-templates.php:67
+msgid "Delete Form"
+msgstr ""
+
+#: includes/functions.php:346
+msgid "Create an account (optional)"
+msgstr ""
+
+#: includes/functions.php:796 includes/shortcodes.php:214
+msgid "All categories"
+msgstr ""
+
+#: includes/functions.php:821 includes/shortcodes.php:235
+msgid "All venues"
+msgstr ""
+
+#: includes/functions.php:839 includes/shortcodes.php:317
+msgid "Select dates"
+msgstr ""
+
+#: includes/functions.php:842 includes/shortcodes.php:320
+msgid "From"
+msgstr ""
+
+#: includes/functions.php:843 includes/shortcodes.php:321
+msgid "To"
+msgstr ""
+
+#: includes/functions.php:857 includes/shortcodes.php:338
+msgid "Search"
+msgstr ""
+
+#: includes/gateways.php:159
+msgid ""
+"Thank you for your booking. You shall receive an e-mail containing your "
+"tickets once we have confirmed payment"
+msgstr ""
+
+#: includes/gateways.php:163
+msgid "Thank you for registering"
+msgstr ""
+
+#: includes/gateways.php:168
+msgid ""
+"Thank you for your booking. You shall receive an e-mail containing your "
+"tickets shortly"
+msgstr ""
+
+#: includes/register.php:27 includes/register.php:83
+msgid "Add New"
+msgstr ""
+
+#: includes/register.php:28
+msgid "Add New Booking"
+msgstr ""
+
+#: includes/register.php:29
+msgid "Edit Bookings"
+msgstr ""
+
+#: includes/register.php:30
+msgid "New Bookings"
+msgstr ""
+
+#: includes/register.php:32
+msgid "View Booking"
+msgstr ""
+
+#: includes/register.php:33
+msgid "Search Bookings"
+msgstr ""
+
+#: includes/register.php:34
+msgid "No Bookings found"
+msgstr ""
+
+#: includes/register.php:35
+msgid "No Bookings found in Trash"
+msgstr ""
+
+#: includes/register.php:69
+msgid "Cancelled"
+msgstr ""
+
+#: includes/register.php:84
+msgid "Add New Booking Form"
+msgstr ""
+
+#: includes/register.php:85
+msgid "Edit Booking Forms"
+msgstr ""
+
+#: includes/register.php:86
+msgid "New Booking Forms"
+msgstr ""
+
+#: includes/register.php:87 includes/register.php:92
+msgid "Booking Forms"
+msgstr ""
+
+#: includes/register.php:88
+msgid "View Booking Form"
+msgstr ""
+
+#: includes/register.php:89
+msgid "Search Booking Forms"
+msgstr ""
+
+#: includes/register.php:90
+msgid "No Booking Forms found"
+msgstr ""
+
+#: includes/register.php:91
+msgid "No Booking Forms found in Trash"
+msgstr ""
+
+#: includes/register.php:174
+msgid "View all countries"
+msgstr ""
+
+#: includes/register.php:175
+msgid "View all states"
+msgstr ""
+
+#: includes/register.php:176
+msgid "View all cities"
+msgstr ""
+
+#: includes/register.php:267
+msgid "Show dates"
+msgstr ""
+
+#: includes/register.php:268
+msgid "Hide dates"
+msgstr ""
+
+#: includes/register.php:271
+msgid "Hour"
+msgstr ""
+
+#: includes/register.php:272
+msgid "Minute"
+msgstr ""
+
+#: includes/register.php:433
+msgid ""
+"There has been an error with Event Organiser Pro. The "
+"<code>eo_booking_tickets</code> table is missing. Please try re-installing "
+"the plugin."
+msgstr ""
+
+#: includes/shortcodes.php:120
+#, php-format
+msgid "Booking #%s has been successfully cancelled."
+msgstr ""
+
+#: includes/shortcodes.php:129
+#, php-format
+msgid "Booking #%s could not be cancelled."
+msgstr ""
+
+#: includes/shortcodes.php:255
+msgid "All cities"
+msgstr ""
+
+#: includes/shortcodes.php:276
+msgid "All states"
+msgstr ""
+
+#: includes/shortcodes.php:297
+msgid "All countries"
+msgstr ""
+
+#: includes/shortcodes.php:470
+#: templates/user-attending-widget-event-list.php:41
+msgid "on"
+msgstr ""
+
+#: includes/template-tags.php:68
+msgid "Sold out"
+msgstr ""
+
+#: includes/utility-functions.php:456
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/utility-functions.php:457
+msgid "Dismiss"
+msgstr ""
+
+#: templates/eo-booking-form.php:19
+msgid "Bookings are no longer available for this event."
+msgstr ""
+
+#: templates/eo-booking-form.php:24
+msgid "This event has sold out."
+msgstr ""
+
+#: templates/eo-booking-form.php:31
+msgid "Only logged in users can place bookings"
+msgstr ""
+
+#: templates/eo-booking-form.php:32 templates/eo-booking-form.php:38
+msgid "Username / Email"
+msgstr ""
+
+#: templates/eo-email-template-blue.php:31
+#: templates/eo-email-template-distinct.php:31
+#: templates/eo-email-template-event-organiser.php:31
+#: templates/eo-email-template-green.php:31
+#: templates/eo-email-template-orange.php:31
+msgid "Powered by"
+msgstr ""
+
+#: templates/eo-ticket-picker.php:40
+msgid "Please select a date"
+msgstr ""
+
+#: templates/event-booking-history.php:15
+msgid "Booking ref"
+msgstr ""
+
+#: templates/event-booking-history.php:98
+msgid "You have not made any bookings"
+msgstr ""
+
+#: templates/user-attending-widget-event-list.php:49
+msgid "You are not currently registered for any events"
+msgstr ""
+
+#: admin/js/booking-form.js:59
+msgid "Booking Form Name"
+msgstr ""
+
+#: admin/js/booking-form.js:60
+msgid ""
+"This is only used to help you identify the form on the event admin page."
+msgstr ""
+
+#: admin/js/booking-form.js:63
+msgid "Error classes"
+msgstr ""
+
+#: admin/js/booking-form.js:64
+msgid "Notice classes"
+msgstr ""
+
+#: admin/js/booking-form.js:284
+msgid "Address includes"
+msgstr ""
+
+#: admin/js/booking-form.js:294 admin/js/booking-form.js:323
+#: admin/js/booking-form.js:401 admin/js/booking-form.js:437
+#: admin/js/booking-form.js:489 admin/js/booking-form.js:537
+#: admin/js/booking-form.js:558 admin/js/booking-form.js:591
+#: admin/js/booking-form.js:608 admin/js/booking-form.js:626
+msgid "Required"
+msgstr ""
+
+#: admin/js/booking-form.js:295 admin/js/booking-form.js:302
+#: admin/js/booking-form.js:324 admin/js/booking-form.js:402
+#: admin/js/booking-form.js:419 admin/js/booking-form.js:438
+#: admin/js/booking-form.js:490 admin/js/booking-form.js:538
+#: admin/js/booking-form.js:559 admin/js/booking-form.js:592
+#: admin/js/booking-form.js:627
+msgid "Description"
+msgstr ""
+
+#: admin/js/booking-form.js:296 admin/js/booking-form.js:303
+#: admin/js/booking-form.js:325 admin/js/booking-form.js:338
+#: admin/js/booking-form.js:350 admin/js/booking-form.js:382
+#: admin/js/booking-form.js:404 admin/js/booking-form.js:420
+#: admin/js/booking-form.js:441 admin/js/booking-form.js:455
+#: admin/js/booking-form.js:493 admin/js/booking-form.js:539
+#: admin/js/booking-form.js:560 admin/js/booking-form.js:572
+#: admin/js/booking-form.js:593 admin/js/booking-form.js:611
+#: admin/js/booking-form.js:628
+msgid "CSS Class"
+msgstr ""
+
+#: admin/js/booking-form.js:322 admin/js/booking-form.js:536
+#: admin/js/booking-form.js:557 admin/js/booking-form.js:590
+msgid "Options"
+msgstr ""
+
+#: admin/js/booking-form.js:374
+msgid "Bookee name"
+msgstr ""
+
+#: admin/js/booking-form.js:381
+msgid "Include second name"
+msgstr ""
+
+#: admin/js/booking-form.js:392
+msgid "Text field"
+msgstr ""
+
+#: admin/js/booking-form.js:403 admin/js/booking-form.js:491
+msgid "Placeholder"
+msgstr ""
+
+#: admin/js/booking-form.js:410
+msgid "Antispam"
+msgstr ""
+
+#: admin/js/booking-form.js:411
+msgid "What is x + y?"
+msgstr ""
+
+#: admin/js/booking-form.js:439
+msgid "Date format"
+msgstr ""
+
+#: admin/js/booking-form.js:440
+msgid "Opening date"
+msgstr ""
+
+#: admin/js/booking-form.js:447
+msgid "Button"
+msgstr ""
+
+#: admin/js/booking-form.js:448
+msgid "Submit"
+msgstr ""
+
+#: admin/js/booking-form.js:492
+msgid "Range"
+msgstr ""
+
+#: admin/js/booking-form.js:492
+msgid "Min"
+msgstr ""
+
+#: admin/js/booking-form.js:492
+msgid "Max"
+msgstr ""
+
+#: admin/js/booking-form.js:547
+msgid "Radio"
+msgstr ""
+
+#: admin/js/booking-form.js:602
+msgid "I have read and agree to the terms and conditions detailed above."
+msgstr ""
+
+#: admin/js/booking-form.js:609
+msgid "Terms"
+msgstr ""
+
+#: admin/js/booking-form.js:610
+msgid "Checkbox label"
+msgstr ""
+
+#: admin/js/booking-form.js:634
+msgid "Use drop-down list"
+msgstr ""
+
+#: admin/js/booking-form.js:636
+msgid "Date selection"
+msgstr ""
+
+#: admin/js/booking-form.js:637
+msgid ""
+"If checked a drop-down select menu is used for selecting a date, rather than "
+"a datepicker."
+msgstr ""
+
+#: admin/js/booking-form.js:640 admin/js/booking-form.js:642
+msgid "Simple Booking Mode"
+msgstr ""
+
+#: admin/js/booking-form.js:643
+msgid ""
+"Simple Booking Mode only comes into effect if:<ul><li>This option is "
+"selected.</li><li>The event has only one ticket currently on sale.</"
+"li><li>You are booking by series, or the event is non-recurring (no date "
+"needs to be selected).</li></ul>Under those conditions the date and ticket "
+"selection is hidden from the booking form, and the booking consist of only "
+"one ticket."
+msgstr ""
+
+#: admin/js/booking-form.js:929
+msgid ""
+"No form found... <a href=\"#\" title=\"Create a new form\" class=\"eo-bfc-"
+"add-form-btn\">create new</a>"
+msgstr ""

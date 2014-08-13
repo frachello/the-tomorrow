@@ -1,0 +1,1634 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Organiser Pro\n"
+"Report-Msgid-Bugs-To: stephenh1988@gmail.com\n"
+"POT-Creation-Date: 2008-09-01 09:37+0000\n"
+"PO-Revision-Date: 2013-09-16 19:11+0100\n"
+"Last-Translator: Stephen Harris <contact@stephenharris.info>\n"
+"Language-Team: \n"
+"Language: Russian (Russian Federation)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../admin/includes/form-customiser.php:547
+msgid " I have read and agree to the terms and conditions detailed above."
+msgstr " Я прочитал и согласен с условиями и условиями описано выше."
+
+#: ../admin/bookings.php:254
+#, php-format
+msgid "%d bookees emailed"
+msgstr "%d bookees по электронной почте"
+
+#: ../admin/bookings.php:263
+#, php-format
+msgid "%d bookings cancelled"
+msgstr "%d отмену заказа"
+
+#: ../admin/includes/form-customiser.php:642
+#, php-format
+msgid "%s - ID: %s"
+msgstr "%s - ID: %s"
+
+#: ../admin/includes/event_booking_table.php:124
+#, php-format
+msgid "%s ago"
+msgstr "%s назад"
+
+#: ../admin/includes/event_booking_table.php:369
+#, php-format
+msgid "%s bookings"
+msgstr "%s заказы"
+
+#: ../admin/includes/event_booking_table.php:354
+#, php-format
+msgid "%s confirmed attendees"
+msgstr "%s подтвержденных участников"
+
+#: ../admin/includes/venues.php:130
+msgid "&mdash; Select &mdash;"
+msgstr "выбрано"
+
+#: ../admin/includes/event_ticket_table.php:140
+msgid "+ Add Tickets"
+msgstr "+ Добавить Билеты"
+
+#: ../admin/bookings.php:252
+msgid "1 bookee emailed"
+msgstr "1 Bookee по электронной почте"
+
+#: ../admin/includes/event_booking_table.php:366
+msgid "1 booking"
+msgstr "1 желтая"
+
+#: ../admin/bookings.php:261
+msgid "1 booking cancelled"
+msgstr "1 желтая карточка отменена"
+
+#: ../admin/includes/event_booking_table.php:351
+msgid "1 confirmed attendee"
+msgstr "1 подтвердил участник"
+
+#: ../admin/includes/form-customiser.php:775
+msgid "24 Hour"
+msgstr "24 часа"
+
+#: ../admin/includes/form-customiser.php:1876
+msgid "<strong>ERROR</strong>: Please fill in all required fields"
+msgstr "<strong> ОШИБКА </strong>: Пожалуйста, заполните все обязательные поля"
+
+#: ../admin/includes/form-customiser.php:1885
+msgid "<strong>ERROR</strong>: Some fields are not valid"
+msgstr "<strong> ОШИБКА </strong>: Некоторые поля не действительны"
+
+#: ../includes/addon.php:66
+#, php-format
+msgid "<strong>Event Organiser Pro</strong> has been deactivated as it requires %1$s (version %2$s or higher). Please <a href=\"%3$s\"> install %1$s</a>."
+msgstr "<strong> Event Организатор Pro </strong> была отключена, так как требует %1$s (версия %2$s или выше). Пожалуйста, <A HREF = \" %3$s \"> установить %1$s </a>."
+
+#: ../includes/addon.php:95
+#, php-format
+msgid "<strong>Event Organiser Pro</strong> requires %1$s to function correctly. Click to <a href=\"%2$s\" title=\"%3$s\" >activate %1$s</a>"
+msgstr "<strong> Event Организатор Pro </strong> требует %1$s для правильного функционирования. Нажмите, чтобы <A HREF = \" %2$s \"название = \" %3$s \"> Включить %1$s </a>"
+
+#: ../admin/includes/event_booking_table.php:545
+#, php-format
+msgid "<strong>Note:</strong> your hosting provider may limit the number of e-mails you can send in a 24 hour period. Plug-ins are available that <a href=\"%s\" target=\"_blank\">work around these restrictions.</a>"
+msgstr "<strong> Примечание: </strong> ваш хостинг-провайдер может ограничить число электронных писем вы можете отправить в течение 24 часов. Плагины доступны, что <A HREF = \" %s \"целевых = \" _blank \"> обойти эти ограничения. </a>"
+
+#: ../admin/settings.php:133
+msgid "A booking is confirmed"
+msgstr "Заказ подтвержден"
+
+#: ../includes/booking-actions.php:175
+#, php-format
+msgid "A new booking has been confirmed on your site %s:"
+msgstr "Новый заказ был подтвержден на вашем сайте %s :"
+
+#: ../includes/booking-actions.php:48
+#, php-format
+msgid "A new booking has been made on your site %s:"
+msgstr "Новый заказ был сделан на ваш сайт %s :"
+
+#: ../admin/settings.php:132
+msgid "A new booking is made"
+msgstr "Новый заказ сделан"
+
+#: ../includes/addon.php:98
+msgid "Activate this plugin"
+msgstr "Активируйте этот плагин"
+
+#: ../admin/includes/venues.php:151
+msgid "Add Custom Field"
+msgstr "Добавление пользовательских полей"
+
+#: ../includes/register.php:30
+#: ../includes/register.php:75
+msgid "Add New"
+msgstr "Добавить"
+
+#: ../includes/register.php:31
+msgid "Add New Booking"
+msgstr "Добавить бронирование"
+
+#: ../includes/register.php:76
+msgid "Add New Booking Form"
+msgstr "Добавить форму"
+
+#: ../admin/includes/venues.php:117
+msgid "Add New Custom Field:"
+msgstr "Добавить новое поле:"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:541
+msgid "Address"
+msgstr "Адрес"
+
+#: ../admin/includes/form-customiser.php:1317
+msgid "Address Includes"
+msgstr "Адрес Включает"
+
+#: ../admin/includes/form-customiser.php:1143
+#: ../admin/includes/form-customiser.php:1247
+msgid "Address Line 2"
+msgstr "Адрес (2-я строка)"
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Advanced Fields"
+msgstr "Передовых областях"
+
+#: ../admin/settings.php:94
+msgid "After"
+msgstr "После"
+
+#: ../admin/includes/form-customiser.php:554
+msgid "AIM"
+msgstr "Цель"
+
+#: ../admin/includes/event_booking_table.php:222
+msgid "All"
+msgstr "Все"
+
+#: ../includes/shortcodes.php:142
+msgid "All categories"
+msgstr "Все категории"
+
+#: ../includes/shortcodes.php:183
+msgid "All cities"
+msgstr "Все города"
+
+#: ../includes/shortcodes.php:225
+msgid "All countries"
+msgstr "Все страны"
+
+#: ../includes/shortcodes.php:204
+msgid "All states"
+msgstr "Все государства"
+
+#: ../includes/shortcodes.php:163
+msgid "All venues"
+msgstr "Все площадки"
+
+#: ../admin/settings.php:114
+msgid "Allow Logged-out Users to place bookings?"
+msgstr "Разрешить Записан выезда пользователям размещать заказы?"
+
+#: ../admin/includes/shortcode_popup.php:133
+msgid "Allow your users to search events. Select which filters they can use."
+msgstr "Позвольте вашим пользователям осуществлять поиск событий. Выберите, какие фильтры они могут использовать."
+
+#: ../includes/booking-form-handler.php:122
+msgid "Already registered?"
+msgstr "Уже регистрировались?"
+
+#: ../admin/bookings.php:575
+#: ../admin/calendar.php:101
+msgid "Amount"
+msgstr "Количество"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+msgid "Antispam maths question"
+msgstr "Антиспам математику вопрос"
+
+#: ../admin/calendar.php:56
+msgid "Attending"
+msgstr "Обучаемые"
+
+#: ../admin/settings.php:174
+msgid "Australia"
+msgstr "Австралия "
+
+#: ../admin/settings.php:175
+msgid "Austria"
+msgstr "Австрия"
+
+#: ../admin/includes/event_ticket_table.php:35
+msgid "Availablity"
+msgstr "Доступностью"
+
+#: ../admin/bookings.php:390
+msgid "Back to table view"
+msgstr "Вернуться к таблице"
+
+#: ../admin/settings.php:93
+msgid "Before"
+msgstr "До"
+
+#: ../admin/settings.php:176
+msgid "Belgium"
+msgstr "Бельгия"
+
+#: ../admin/includes/form-customiser.php:563
+msgid "Bio"
+msgstr "О себе"
+
+#: ../admin/includes/form-customiser.php:440
+msgid "Book"
+msgstr "Edit Contact Detail"
+
+#: ../admin/bookings.php:234
+#: ../admin/bookings.php:471
+#: ../admin/calendar.php:99
+msgid "Bookee"
+msgstr "Bookee"
+
+#: ../admin/bookings.php:233
+#: ../admin/bookings.php:349
+#: ../admin/calendar.php:98
+msgid "Booking"
+msgstr "Бронирование"
+
+#: ../admin/bookings.php:364
+#, php-format
+msgid "Booking (#%d)"
+msgstr "Бронирование (# %d )"
+
+#: ../includes/booking-actions.php:172
+msgid "Booking Confirmed"
+msgstr "Подтверждение брони"
+
+#: ../admin/bookings.php:530
+msgid "Booking Date"
+msgstr "Даты бронирования"
+
+#: ../includes/import_export_csv.php:156
+#: ../includes/import_export_csv.php:274
+msgid "Booking Date (UTC)"
+msgstr "Даты бронирования (UTC)"
+
+#: ../admin/bookings.php:348
+msgid "Booking Details"
+msgstr "Детали заказа"
+
+#: ../admin/settings.php:236
+msgid "Booking email"
+msgstr "Бронирование электронной почте"
+
+#: ../admin/settings.php:10
+msgid "Booking Form"
+msgstr "Форма бронирования"
+
+#: ../includes/register.php:79
+#: ../includes/register.php:84
+msgid "Booking Forms"
+msgstr "Бланк бронирования"
+
+#: ../admin/bookings.php:605
+msgid "Booking Meta"
+msgstr "Бронирование Мета"
+
+#: ../admin/bookings.php:596
+msgid "Booking Notes"
+msgstr "Бронирование отмечает"
+
+#: ../templates/event-booking-history.php:12
+msgid "Booking ref"
+msgstr ""
+
+#: ../admin/bookings.php:536
+msgid "Booking Reference"
+msgstr "Брони"
+
+#: ../includes/import_export_csv.php:157
+#: ../includes/import_export_csv.php:275
+msgid "Booking Status"
+msgstr "Статус брони"
+
+#: ../admin/bookings.php:268
+msgid "Booking updated"
+msgstr "Бронирование? Обновляется"
+
+#: ../admin/settings.php:9
+#: ../admin/settings.php:97
+#: ../admin/bookings.php:23
+#: ../admin/bookings.php:26
+#: ../admin/bookings.php:212
+#: ../admin/calendar.php:11
+msgid "Bookings"
+msgstr "Заказы"
+
+#: ../includes/booking-form-handler.php:53
+msgid "Bookings are no longer available for this event."
+msgstr "Заказы больше не доступна для этого события."
+
+#: ../admin/bookings.php:696
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221;"
+msgstr "Заказы на событие &#8220;%s&#8221;"
+
+#: ../admin/bookings.php:691
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221; (%s)"
+msgstr "Заказы на событие &#8220;%s&#8221; (%s)"
+
+#: ../admin/bookings.php:700
+#, php-format
+msgid "Bookings for user &#8220;%s&#8221;"
+msgstr "Заказы для пользователя &#8220;%s&#8221;"
+
+#: ../admin/edit.php:80
+msgid "Bookings will be closed when an occurrences starts."
+msgstr "Бронирование будет закрыто, когда вхождения начинается."
+
+#: ../admin/includes/shortcode_popup.php:9
+msgid "Calendar"
+msgstr "Календарь"
+
+#: ../admin/settings.php:177
+msgid "Canada"
+msgstr "Канада"
+
+#: ../admin/includes/event_booking_table.php:498
+#: ../admin/includes/event_booking_table.php:557
+#: ../admin/includes/venues.php:141
+msgid "Cancel"
+msgstr "Отмена"
+
+#: ../admin/bookings.php:437
+#: ../admin/includes/event_booking_table.php:50
+msgid "Cancel Booking"
+msgstr "Отменить бронирование"
+
+#: ../admin/includes/event_booking_table.php:447
+msgid "Cancel Bookings"
+msgstr "Отменить бронирование"
+
+#: ../admin/includes/event_booking_table.php:48
+msgid "Cancel this booking permanently"
+msgstr "Отменить этот заказ постоянно"
+
+#: ../admin/edit.php:132
+#, php-format
+msgid "Cap booking at %s places"
+msgstr "Номер в отеле Cap %s места"
+
+#: ../admin/calendar.php:118
+msgid "Capacity"
+msgstr "Объём"
+
+#: ../admin/includes/shortcode_popup.php:136
+msgid "Category"
+msgstr "Категория"
+
+#: ../admin/bookings.php:550
+msgid "Change"
+msgstr "Изменение"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Checkbox"
+msgstr "Чекбокс"
+
+#: ../admin/includes/form-customiser.php:1698
+msgid "Checkbox label"
+msgstr "Метки флажка"
+
+#: ../admin/settings.php:178
+msgid "China"
+msgstr "Китай"
+
+#: ../admin/includes/shortcode_popup.php:144
+#: ../admin/includes/form-customiser.php:1153
+#: ../admin/includes/form-customiser.php:1157
+#: ../admin/includes/form-customiser.php:1257
+#: ../admin/includes/form-customiser.php:1262
+msgid "City"
+msgstr "Город"
+
+#: ../admin/edit.php:33
+msgid "Concession"
+msgstr "концессия"
+
+#: ../admin/bookings.php:411
+#: ../admin/calendar.php:112
+#: ../admin/includes/event_booking_table.php:150
+#: ../admin/includes/event_booking_table.php:226
+msgid "Confirmed"
+msgstr "Подтвержденный"
+
+#: ../admin/includes/shortcode_popup.php:152
+#: ../admin/includes/form-customiser.php:1197
+#: ../admin/includes/form-customiser.php:1201
+#: ../admin/includes/form-customiser.php:1302
+#: ../admin/includes/form-customiser.php:1306
+msgid "Country"
+msgstr "Страна"
+
+#: ../admin/includes/form-customiser.php:179
+msgid "Create an account (optional)"
+msgstr "Создайте аккаунт (опционально)"
+
+#: ../admin/edit.php:111
+msgid "Create Tickets"
+msgstr "Создать билетов"
+
+#: ../admin/settings.php:79
+msgid "Currency"
+msgstr "Валюта "
+
+#: ../admin/settings.php:87
+msgid "Currency Position"
+msgstr "Валютная позиция"
+
+#: ../admin/includes/event_booking_table.php:405
+msgid "Current page"
+msgstr "Current page != Expression 1"
+
+#: ../admin/includes/venues.php:10
+msgid "Custom Fields"
+msgstr "Персональная настройка полей"
+
+#: ../admin/settings.php:223
+msgid "Custom Templates"
+msgstr "Пользовательские шаблоны"
+
+#: ../admin/bookings.php:238
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:514
+msgid "Date"
+msgstr "date "
+
+#: ../admin/includes/shortcode_popup.php:156
+msgid "Date range"
+msgstr "Диапазон дат"
+
+#: ../admin/includes/shortcode_popup.php:68
+msgid "Day"
+msgstr "День"
+
+#: ../admin/includes/venues.php:267
+msgid "Delete"
+msgstr "Удалить"
+
+#: ../admin/includes/form-customiser.php:1775
+msgid "Delete Element"
+msgstr "Удалить элемент"
+
+#: ../admin/includes/form-customiser.php:1776
+msgid "Delete this element"
+msgstr "Удалить этот элемент"
+
+#: ../admin/includes/form-customiser.php:1798
+msgid "Description"
+msgstr "Описание"
+
+#: ../admin/edit.php:104
+msgid "Deselect all"
+msgstr "Отменить выделение"
+
+#: ../admin/includes/shortcode_popup.php:122
+msgid "Dimensions"
+msgstr "Размеры"
+
+#: ../admin/settings.php:145
+#: ../admin/settings.php:201
+msgid "Disable"
+msgstr "Отключить"
+
+#: ../admin/includes/shortcode_popup.php:61
+msgid "Display a calendar of events, similar to the admin calendar."
+msgstr "Показать календарь событий, похожий на администратора календаря."
+
+#: ../admin/includes/shortcode_popup.php:106
+msgid "Display a Google map of venue or venues"
+msgstr "Показать карту Google месте или местах"
+
+#: ../admin/includes/shortcode_popup.php:16
+msgid "Display a list of events"
+msgstr "Отображение списка событий"
+
+#: ../includes/class-eo-user-attending-widget.php:14
+msgid "Displays a list of events a user is attending"
+msgstr ""
+
+#: ../admin/includes/event_booking_table.php:499
+msgid "Download"
+msgstr "Скачать"
+
+#: ../admin/includes/event_booking_table.php:271
+msgid "Download bookings"
+msgstr "Скачать заказы"
+
+#: ../admin/includes/event_booking_table.php:277
+msgid "Download tickets"
+msgstr "Скачать билеты"
+
+#: ../admin/settings.php:25
+#: ../admin/includes/form-customiser.php:172
+msgid "E-mail"
+msgstr "Эл. почта"
+
+#: ../admin/settings.php:216
+msgid "E-mail template"
+msgstr "Шаблон электронной почты"
+
+#: ../admin/settings.php:244
+#: ../admin/includes/event_booking_table.php:532
+msgid "E-mailing Bookees"
+msgstr "E-рассылки Bookees"
+
+#: ../includes/register.php:77
+msgid "Edit Booking Forms"
+msgstr "Редактировать Бланк бронирования"
+
+#: ../includes/register.php:32
+msgid "Edit Bookings"
+msgstr "Изменить бронирование"
+
+#: ../admin/includes/booking-form-customiser.php:202
+#: ../admin/includes/form-customiser.php:383
+msgid "Edit Form"
+msgstr "Редактировать форму"
+
+#: ../admin/bookings.php:477
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/event_booking_table.php:558
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:510
+msgid "Email"
+msgstr "Почта"
+
+#: ../admin/includes/event_booking_table.php:448
+#: ../admin/includes/event_booking_table.php:518
+msgid "Email Bookees"
+msgstr "E-mail Bookees"
+
+#: ../admin/includes/venues.php:140
+msgid "Enter new"
+msgstr "Введите новое"
+
+#: ../admin/settings.php:99
+msgid "Entire series"
+msgstr "Вся серия"
+
+#: ../admin/bookings.php:235
+#: ../admin/bookings.php:567
+msgid "Event"
+msgstr "EVENT"
+
+#: ../admin/edit.php:85
+msgid "Event dates"
+msgstr "Даты проведения"
+
+#: ../admin/includes/shortcode_popup.php:8
+msgid "Event List"
+msgstr "Список событий"
+
+#: ../admin/includes/shortcode_popup.php:11
+msgid "Event Search"
+msgstr "Поиск по событию"
+
+#: ../admin/edit.php:7
+msgid "Event Tickets"
+msgstr "Билеты"
+
+#: ../admin/includes/shortcode_popup.php:51
+#: ../admin/includes/shortcode_popup.php:90
+msgid "Events at venues"
+msgstr "События на площадках"
+
+#: ../admin/includes/shortcode_popup.php:38
+msgid "Events ending before"
+msgstr "События, заканчивая до"
+
+#: ../admin/includes/shortcode_popup.php:45
+#: ../admin/includes/shortcode_popup.php:84
+msgid "Events in categories"
+msgstr "События в категории"
+
+#: ../admin/includes/shortcode_popup.php:19
+#: ../admin/includes/shortcode_popup.php:31
+msgid "Events starting after"
+msgstr "После событий, начиная"
+
+#: ../admin/includes/shortcode_popup.php:25
+msgid "Events starting before"
+msgstr "События начиная до"
+
+#: ../includes/class-eo-user-attending-widget.php:15
+msgid "Events user is attending"
+msgstr ""
+
+#: ../admin/calendar.php:63
+msgid "Export bookings"
+msgstr "Экспорт заказов"
+
+#: ../admin/includes/venues.php:11
+msgid "Featured Image"
+msgstr "Избранные изображения"
+
+#: ../admin/includes/form-customiser.php:170
+#: ../admin/includes/form-customiser.php:1354
+#: ../admin/includes/form-customiser.php:1396
+msgid "First Name"
+msgstr "Имя"
+
+#: ../admin/includes/booking-form-customiser.php:215
+#: ../admin/includes/form-customiser.php:396
+msgid "Form name"
+msgstr "Имя формы"
+
+#: ../admin/includes/form-customiser.php:764
+msgid "Format"
+msgstr "Формат"
+
+#: ../admin/settings.php:179
+msgid "France"
+msgstr "Франция"
+
+#: ../admin/edit.php:75
+msgid "From"
+msgstr "От"
+
+#: ../admin/includes/booking-form-customiser.php:62
+#: ../admin/includes/form-customiser.php:62
+msgid "Gateway picker"
+msgstr "Шлюз выбора"
+
+#: ../admin/bookings.php:652
+msgid "Gateway Response"
+msgstr "Шлюз ответ"
+
+#: ../admin/settings.php:22
+msgid "General"
+msgstr "Общая информация "
+
+#: ../admin/settings.php:180
+msgid "Germany"
+msgstr "Германия"
+
+#: ../admin/includes/event_booking_table.php:389
+msgid "Go to the first page"
+msgstr "Перейти на первую страницу"
+
+#: ../admin/includes/event_booking_table.php:423
+msgid "Go to the last page"
+msgstr "Перейти на последнюю страницу"
+
+#: ../admin/includes/event_booking_table.php:416
+msgid "Go to the next page"
+msgstr "Перейти на следующую страницу"
+
+#: ../admin/includes/event_booking_table.php:396
+msgid "Go to the previous page"
+msgstr "Перейти на предыдущую страницу"
+
+#: ../admin/includes/shortcode_popup.php:124
+msgid "Height:"
+msgstr "Высота."
+
+#: ../admin/bookings.php:665
+msgid "Hide gateway response"
+msgstr "Скрыть шлюз ответ"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "HTML"
+msgstr "HTML"
+
+#: ../admin/bookings.php:302
+msgid "I want to confirm anyway"
+msgstr "Я хочу подтвердить, так или иначе"
+
+#: ../admin/edit.php:17
+msgid "If you edit the event's dates you will need to update any event tickets. Editing event dates will lose existing bookings for this event"
+msgstr "При изменении даты мероприятия вам необходимо обновить любые билеты на мероприятия. Редактирование даты событий потеряют существующие заказы для этого события"
+
+#: ../admin/settings.php:61
+#, php-format
+msgid "If you have a entered valid license which does not seem to work, please <a href=\"%s\">contact suppport</a>."
+msgstr "Если у вас есть вступившего в силу лицензии, которая, кажется, не работает, <a href=\" %s \"> свяжитесь Suppport </a>."
+
+#: ../admin/includes/event_booking_table.php:533
+msgid "In the e-mail subject & body you can use the following tags"
+msgstr "В теме письма и тела, вы можете использовать следующие теги"
+
+#: ../admin/settings.php:242
+msgid "In the e-mail template you can use booking information placeholders"
+msgstr "В шаблон электронной почты можно использовать заполнители информацию о бронировании"
+
+#: ../admin/includes/form-customiser.php:1422
+msgid "Include"
+msgstr "Включены "
+
+#: ../admin/includes/shortcode_popup.php:78
+#: ../admin/includes/shortcode_popup.php:116
+msgid "Include tooltip"
+msgstr "Включите подсказки"
+
+#: ../admin/settings.php:54
+msgid "Invalid license key"
+msgstr "Неверный лицензионный ключ"
+
+#: ../admin/settings.php:181
+msgid "Italy"
+msgstr "Италия"
+
+#: ../admin/includes/form-customiser.php:560
+msgid "Jabber / Google Talk"
+msgstr "Jabber / Google Talk"
+
+#: ../admin/includes/venues.php:265
+msgid "Key"
+msgstr "Кнопка"
+
+#: ../admin/includes/form-customiser.php:506
+#: ../admin/includes/form-customiser.php:570
+#: ../admin/includes/form-customiser.php:1043
+#: ../admin/includes/form-customiser.php:1686
+msgid "Label"
+msgstr "Название будильника"
+
+#: ../admin/includes/form-customiser.php:171
+#: ../admin/includes/form-customiser.php:1364
+#: ../admin/includes/form-customiser.php:1407
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: ../admin/includes/shortcode_popup.php:112
+msgid "Leave blank for venue of current event (if this is being used on an event's page"
+msgstr "Оставьте пустым местом проведения текущего события (если это используется на странице события"
+
+#: ../admin/settings.php:36
+msgid "License"
+msgstr "Лицензия"
+
+#: ../admin/settings.php:143
+#: ../admin/settings.php:200
+msgid "Live"
+msgstr "."
+
+#: ../admin/settings.php:138
+#: ../admin/settings.php:197
+msgid "Live Switch"
+msgstr "Живите Переключитесь"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Lost your password?"
+msgstr "Забыли пароль?"
+
+#: ../admin/includes/form-customiser.php:793
+msgid "Max"
+msgstr "Maкс"
+
+#: ../admin/includes/event_booking_table.php:529
+msgid "Message"
+msgstr "Сообщение"
+
+#: ../admin/settings.php:182
+msgid "Mexico"
+msgstr " "
+
+#: ../admin/includes/form-customiser.php:791
+msgid "Min"
+msgstr "Мин"
+
+#: ../admin/includes/shortcode_popup.php:66
+msgid "Month"
+msgstr "Ежемесячно"
+
+#: ../admin/includes/booking-form-customiser.php:53
+#: ../admin/includes/form-customiser.php:53
+msgid "Multiselect"
+msgstr "МножВыбор"
+
+#: ../admin/includes/form-customiser.php:566
+#: ../admin/includes/venues.php:177
+msgid "Name"
+msgstr "Имена:"
+
+#: ../admin/settings.php:183
+msgid "Netherlands"
+msgstr "Нидерланды"
+
+#: ../includes/register.php:78
+msgid "New Booking Forms"
+msgstr "Новые формы бронирования"
+
+#: ../includes/register.php:33
+msgid "New Bookings"
+msgstr "Новых бронирований"
+
+#: ../includes/booking-actions.php:45
+msgid "New event booking"
+msgstr "Новые события бронирование"
+
+#: ../admin/settings.php:117
+msgid "No"
+msgstr "Нет"
+
+#: ../admin/bookings.php:465
+msgid "No account"
+msgstr "Не отмечает прогресс"
+
+#: ../includes/register.php:82
+msgid "No Booking Forms found"
+msgstr "Нет Бланк бронирования не найдено"
+
+#: ../includes/register.php:83
+msgid "No Booking Forms found in Trash"
+msgstr "Нет Бланк бронирования не найдено в Trash"
+
+#: ../admin/includes/event_booking_table.php:363
+msgid "No bookings"
+msgstr "Нет заказов"
+
+#: ../includes/register.php:37
+msgid "No Bookings found"
+msgstr "Никаких заказов не найдено"
+
+#: ../includes/register.php:38
+msgid "No Bookings found in Trash"
+msgstr "Никаких заказов не найдено в Trash"
+
+#: ../admin/includes/event_booking_table.php:30
+msgid "No bookings found."
+msgstr "Никаких заказов не найдено."
+
+#: ../admin/includes/event_booking_table.php:348
+msgid "No confirmed attendees"
+msgstr "Нет подтвержденных участников"
+
+#: ../admin/includes/event_ticket_table.php:25
+msgid "No tickets"
+msgstr "Нет билетов"
+
+#: ../admin/settings.php:126
+msgid "Notify me when"
+msgstr "Сообщите мне, когда"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+#: ../admin/includes/form-customiser.php:520
+msgid "Number"
+msgstr "Количество скоб"
+
+#: ../includes/class-eo-user-attending-widget.php:27
+msgid "Number of events"
+msgstr ""
+
+#: ../admin/settings.php:24
+msgid "Offline Payment"
+msgstr "платеж в режиме офлайн"
+
+#: ../admin/settings.php:207
+msgid "Offline Payment Instructions"
+msgstr "Offline платежные инструкции"
+
+#: ../templates/user-attending-widget-event-list.php:41
+msgid "on"
+msgstr ""
+
+#: ../includes/booking-form-handler.php:74
+msgid "Only logged in users can place bookings"
+msgstr "Только зарегистрированные пользователи могут размещать заказы"
+
+#: ../admin/includes/form-customiser.php:1712
+msgid "Options"
+msgstr "опции"
+
+#: ../includes/addon.php:379
+#, php-format
+msgid "or entered a valid license key <a href=\"%s\">here</a>"
+msgstr "или введено действующий лицензионный ключ <A HREF = \" %s \"> здесь </a>"
+
+#: ../admin/bookings.php:557
+#: ../admin/bookings.php:560
+msgid "Orphaned booking"
+msgstr "Сироты бронирование"
+
+#: ../admin/bookings.php:492
+msgid "Other Recent bookings"
+msgstr ""
+
+#: ../admin/settings.php:99
+msgid "Particular Occurrence"
+msgstr "Особое Возникновение"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Password Lost and Found"
+msgstr "Password Lost and Found"
+
+#: ../admin/bookings.php:583
+msgid "Payment Gateway"
+msgstr "Платежный шлюз"
+
+#: ../admin/settings.php:23
+msgid "PayPal"
+msgstr "PayPal"
+
+#: ../admin/settings.php:165
+#, php-format
+msgid "PayPal allows you to tailor the booking payment page to you site. For more information, <a href=\"%s\" target=\"_blank\">see this tutorial</a>"
+msgstr "PayPal позволяет адаптировать страницу оплаты бронирования вашего сайта. Для получения дополнительной информации, <A HREF = \" %s \"целевых = \" _blank \"> см. этого урока </a>"
+
+#: ../admin/settings.php:150
+msgid "PayPal Email"
+msgstr "PayPal e-mail"
+
+#: ../admin/settings.php:171
+msgid "PayPal Local Site"
+msgstr "PayPal Локальный сайт"
+
+#: ../admin/settings.php:157
+msgid "PayPal page style"
+msgstr "PayPal стиль страницы"
+
+#: ../admin/bookings.php:410
+#: ../admin/calendar.php:114
+#: ../admin/includes/event_booking_table.php:152
+#: ../admin/includes/event_booking_table.php:229
+msgid "Pending"
+msgstr "В ожидании"
+
+#: ../admin/settings.php:184
+msgid "Philippines"
+msgstr "Филиппины"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:538
+msgid "Phone"
+msgstr "Телефон"
+
+#: ../admin/includes/form-customiser.php:1786
+msgid "Placeholder"
+msgstr "placeholder"
+
+#: ../admin/includes/ajax-actions.php:153
+msgid "Please provide a custom field name."
+msgstr "Пожалуйста, пользовательское имя поля."
+
+#: ../admin/includes/ajax-actions.php:130
+#: ../admin/includes/ajax-actions.php:155
+msgid "Please provide a custom field value."
+msgstr "Пожалуйста, значение данного поля."
+
+#: ../includes/booking-actions.php:271
+msgid "Please provide a name."
+msgstr "Пожалуйста, укажите имя."
+
+#: ../includes/booking-actions.php:275
+msgid "Please provide a valid email address."
+msgstr "Укажите действительный адрес электронной почты."
+
+#: ../admin/includes/booking-form-customiser.php:372
+#: ../admin/includes/form-customiser.php:1547
+msgid "Please select a date"
+msgstr "Выберите дату"
+
+#: ../includes/booking-actions.php:342
+msgid "Please select a ticket."
+msgstr "Пожалуйста, выберите билет."
+
+#: ../includes/booking-actions.php:260
+msgid "Please select an event."
+msgstr "Пожалуйста, выберите событие."
+
+#: ../admin/settings.php:185
+msgid "Poland"
+msgstr "Польша"
+
+#: ../admin/includes/form-customiser.php:1182
+#: ../admin/includes/form-customiser.php:1187
+#: ../admin/includes/form-customiser.php:1287
+#: ../admin/includes/form-customiser.php:1292
+msgid "Post Code"
+msgstr "{0}Почтовый индекс{/0} {1} {/1}"
+
+#: ../templates/eo-email-template-event-organiser.php:31
+msgid "Powered by"
+msgstr "Создано"
+
+#: ../admin/settings.php:232
+msgid "Preview E-mail"
+msgstr "Просмотра электронной почты"
+
+#: ../admin/settings.php:274
+msgid "Preview Email"
+msgstr "Предварительный просмотр e-mail"
+
+#: ../admin/edit.php:37
+#: ../admin/bookings.php:237
+#: ../admin/includes/booking-form-customiser.php:354
+#: ../admin/includes/form-customiser.php:1529
+#: ../admin/includes/event_ticket_table.php:34
+#: ../admin/includes/event_ticket_table.php:353
+msgid "Price"
+msgstr "ЦЕНА:"
+
+#: ../admin/settings.php:52
+#: ../admin/settings.php:57
+msgid "Purchase a license key"
+msgstr "Приобрести лицензионный ключ"
+
+#: ../admin/includes/booking-form-customiser.php:355
+#: ../admin/includes/form-customiser.php:1530
+msgid "Quantity"
+msgstr "Количество"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Radio Buttons"
+msgstr "Radio Buttons"
+
+#: ../admin/includes/form-customiser.php:790
+msgid "Range"
+msgstr "Диапазон применения"
+
+#: ../includes/email.php:356
+msgid "Ref."
+msgstr "Ref. (Ссылка)"
+
+#: ../includes/booking-actions.php:399
+#, php-format
+msgid "Registration failed. Please contact an <a href=\"mailto:%s\">administrator</a>."
+msgstr "Регистрация не удалась. Пожалуйста, свяжитесь с <A HREF = \"электронной почты: %s \"> Администратор </a>."
+
+#: ../admin/includes/event_ticket_table.php:391
+msgid "Remove"
+msgstr "Удалить"
+
+#: ../admin/includes/venues.php:326
+msgid "Remove featured image"
+msgstr "Удалить Избранные изображения"
+
+#: ../admin/includes/form-customiser.php:1762
+msgid "Required"
+msgstr "Требуется"
+
+#: ../admin/bookings.php:425
+msgid "Resend tickets to bookee"
+msgstr "Повторная билеты на Bookee"
+
+#: ../admin/settings.php:106
+msgid "Reserve Pending Tickets"
+msgstr "Резервный ожидании Билеты"
+
+#: ../admin/settings.php:144
+msgid "Sandbox Mode"
+msgstr "Изолированный режим"
+
+#: ../admin/includes/booking-form-customiser.php:153
+#: ../admin/includes/form-customiser.php:334
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: ../includes/shortcodes.php:267
+msgid "Search"
+msgstr "Поиск"
+
+#: ../includes/register.php:81
+msgid "Search Booking Forms"
+msgstr "Поисковые формы бронирования"
+
+#: ../includes/register.php:36
+msgid "Search Bookings"
+msgstr "Поиск Бронирование"
+
+#: ../admin/includes/form-customiser.php:551
+msgid "Section"
+msgstr "Раздел"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "Section Break"
+msgstr "Разрыв раздела"
+
+#: ../admin/settings.php:255
+#: ../admin/includes/event_booking_table.php:543
+msgid "See full list"
+msgstr "Просмотреть полный список"
+
+#: ../admin/edit.php:53
+#: ../admin/edit.php:70
+#: ../admin/edit.php:96
+msgid "See this page for more details"
+msgstr "См. эту страницу с более подробной информации"
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Select"
+msgstr "выбрано"
+
+#: ../admin/edit.php:146
+msgid "Select a booking form:"
+msgstr "Выберите форму бронирования:"
+
+#: ../admin/includes/booking-form-customiser.php:102
+#: ../admin/includes/form-customiser.php:102
+msgid "Select a payment gateway"
+msgstr "Выберите платежный шлюз"
+
+#: ../admin/edit.php:102
+msgid "Select all"
+msgstr "Выделить все"
+
+#: ../admin/includes/event_ticket_table.php:230
+msgid "Select All"
+msgstr "Выбрать Все"
+
+#: ../admin/includes/event_booking_table.php:492
+msgid "Select booking fields to be included in export"
+msgstr "Выберите бронирования поля, которые будут включены в экспорт"
+
+#: ../admin/bookings.php:558
+msgid "Select date"
+msgstr "Выберите дату"
+
+#: ../includes/shortcodes.php:245
+msgid "Select dates"
+msgstr "Выберите дату"
+
+#: ../admin/edit.php:89
+msgid "Select the dates of the event for which you want this ticket to be sold. (Default: all dates)"
+msgstr "Выберите даты события, для которого вы хотите этот билет будет продано. (По умолчанию: все даты)"
+
+#: ../admin/includes/venues.php:314
+#: ../admin/includes/venues.php:315
+msgid "Set featured image"
+msgstr "Установить признакам изображения"
+
+#: ../includes/register.php:307
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../admin/bookings.php:664
+msgid "Show gateway response"
+msgstr "Показать шлюза ответ"
+
+#: ../admin/includes/shortcode_popup.php:97
+msgid "Show only events current user is attending"
+msgstr ""
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Single Line Text"
+msgstr "Однострочный текст"
+
+#: ../includes/booking-actions.php:346
+#: ../includes/booking-actions.php:356
+msgid "Sorry, but the requested number of tickets is unavailable."
+msgstr "Извините, но запрошенное количество билетов недоступен."
+
+#: ../admin/edit.php:44
+#: ../admin/edit.php:48
+#: ../admin/includes/event_ticket_table.php:33
+msgid "Spaces"
+msgstr "Пространства"
+
+#: ../admin/settings.php:186
+msgid "Spain"
+msgstr "Испания"
+
+#: ../admin/edit.php:63
+msgid "Specify when this ticket will be available for purchase."
+msgstr "Укажите, когда этот билет будет доступен для покупки."
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Standard Fields"
+msgstr "Стандартные поля"
+
+#: ../admin/includes/shortcode_popup.php:148
+msgid "State"
+msgstr "Штат"
+
+#: ../admin/includes/form-customiser.php:1175
+#: ../admin/includes/form-customiser.php:1280
+msgid "State /Province"
+msgstr "страна"
+
+#: ../admin/includes/form-customiser.php:1170
+#: ../admin/includes/form-customiser.php:1275
+msgid "State/Province"
+msgstr "страна"
+
+#: ../admin/bookings.php:239
+#: ../admin/bookings.php:405
+#: ../admin/calendar.php:102
+msgid "Status"
+msgstr "Статус"
+
+#: ../admin/includes/form-customiser.php:1125
+#: ../admin/includes/form-customiser.php:1227
+msgid "Street address"
+msgstr "Адрес:"
+
+#: ../admin/includes/form-customiser.php:1129
+#: ../admin/includes/form-customiser.php:1232
+msgid "Street Address"
+msgstr "Улица"
+
+#: ../admin/settings.php:163
+msgid "Style your PayPal payment page"
+msgstr "Стиль вашей странице оплаты PayPal"
+
+#: ../admin/includes/event_booking_table.php:526
+msgid "Subject"
+msgstr "Предметы"
+
+#: ../admin/settings.php:187
+msgid "Switzerland"
+msgstr "Швейцария"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+#: ../admin/includes/form-customiser.php:545
+#: ../admin/includes/form-customiser.php:1010
+msgid "Terms & Conditions"
+msgstr "Правила и условия "
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Textarea"
+msgstr "Textarea"
+
+#: ../includes/functions.php:124
+msgid "Thank you for registering"
+msgstr "Спасибо за регистрацию"
+
+#: ../admin/bookings.php:135
+msgid "Thank you for your booking"
+msgstr "Спасибо за Ваш заказ"
+
+#: ../includes/functions.php:122
+msgid "Thank you for your booking. You shall recieve an e-mail containing your tickets once we have confirmed payment"
+msgstr "Спасибо за Ваш заказ. Вы должны получать электронную почту, содержащую ваши билеты как только мы подтвердили оплату"
+
+#: ../includes/functions.php:123
+msgid "Thank you for your booking. You shall recieve an e-mail containing your tickets shortly"
+msgstr "Спасибо за Ваш заказ. Вы должны получать электронную почту, содержащую ваши билеты вскоре"
+
+#: ../admin/settings.php:393
+msgid "The data submitted using these fields is stored alongside the booking."
+msgstr "Данные, представленные с помощью этих полей хранится наряду с бронированием."
+
+#: ../admin/bookings.php:280
+msgid "The event associated with this booking could not be found. It may have been deleted."
+msgstr "Событие, связанное с этим заказ не мог быть найден. Возможно, он был удален."
+
+#: ../admin/settings.php:51
+msgid "The license key you have entered is invalid."
+msgstr "Лицензионный ключ вы введен неверно."
+
+#: ../admin/bookings.php:282
+msgid "The occurrence date for which this booking was made no longer exists."
+msgstr "Дату возникновения, для которых этот заказ был сделан больше не существует."
+
+#: ../includes/booking-actions.php:363
+msgid "The payment gateway you have chosen is invalid"
+msgstr "Платежный шлюз вы выбрали недействительным"
+
+#: ../includes/booking-actions.php:338
+msgid "The tickets you have selected are no longer available."
+msgstr "Билеты вы выбрали больше не доступны."
+
+#: ../includes/register.php:330
+msgid "There has been an error with Event Organiser Pro. The <code>eo_booking_tickets</code> table is missing. Please try re-installing the plugin."
+msgstr "Там была ошибка с Event Организатор Pro. <code> Eo_booking_tickets </code> таблице отсутствует. Пожалуйста, попробуйте повторно установить плагин."
+
+#: ../admin/bookings.php:290
+msgid "This booking could not be confirmed for the following reasons"
+msgstr "Этот заказ не мог быть подтвержден по следующим причинам"
+
+#: ../includes/booking-actions.php:279
+msgid "This email is already registered, please choose another one or log-in with that account"
+msgstr "Этот адрес уже зарегистрировались, пожалуйста, выберите другой или войдите в систему с этой учетной записью"
+
+#: ../includes/booking-form-handler.php:61
+msgid "This event has sold out."
+msgstr "Это событие распроданы."
+
+#: ../admin/includes/booking-form-customiser.php:448
+#: ../admin/includes/form-customiser.php:1623
+msgid "This form element allows the user to select their ticket(s). It cannot be removed but can be placed anywhere in the booking form."
+msgstr "Этот элемент формы позволяет пользователю выбрать свой билет (ы). Она не может быть удален, но может быть размещен в любом месте формы бронирования."
+
+#: ../admin/includes/form-customiser.php:963
+msgid "This form element allows you to enter any HTML, to be displayed on the form"
+msgstr "Эта форма элементов позволяет вводить любые HTML, который будет отображаться в форме"
+
+#: ../admin/includes/form-customiser.php:1097
+msgid "This form element asks the user a simple random maths question in order to help prevent spam"
+msgstr "Этот элемент формы задает пользователю простой случайный вопрос математику для того, чтобы помочь предотвратить спам"
+
+#: ../admin/includes/booking-form-customiser.php:436
+#: ../admin/includes/form-customiser.php:1611
+msgid "This form element only appears if there there are multiple gateways enabled. It cannot be removed but can be placed anywhere in the booking form."
+msgstr "Эта форма элемент появляется, только если там есть несколько шлюзов включен. Она не может быть удален, но может быть размещен в любом месте формы бронирования."
+
+#: ../admin/edit.php:49
+msgid "This indicates the quanity available of this ticket type. If you are selling tickets for individual occurrences, then this limit applies to each occurrence."
+msgstr "Это указывает на Quanity доступны этого типа билета. Если вы продаете билеты на отдельные случаи, то это ограничение применяется к каждому возникновения."
+
+#: ../admin/settings.php:211
+msgid "This will appear on the booking form, informing the bookee on how to make payment."
+msgstr "Оно появится на форме заказа, информирование Bookee о том, как произвести оплату."
+
+#: ../admin/includes/booking-form-customiser.php:353
+#: ../admin/includes/form-customiser.php:1528
+#: ../admin/includes/event_ticket_table.php:32
+#: ../admin/includes/event_ticket_table.php:352
+msgid "Ticket"
+msgstr "Билеты"
+
+#: ../admin/edit.php:65
+msgid "Ticket availability"
+msgstr "Наличии билетов"
+
+#: ../admin/edit.php:91
+msgid "Ticket dates"
+msgstr "Билет даты"
+
+#: ../admin/edit.php:31
+msgid "Ticket name"
+msgstr "Билет имя"
+
+#: ../admin/includes/booking-form-customiser.php:63
+#: ../admin/includes/form-customiser.php:63
+msgid "Ticket picker"
+msgstr "Выбор билетов"
+
+#: ../includes/import_export_csv.php:273
+msgid "Ticket Price"
+msgstr "Стоимость билета"
+
+#: ../includes/import_export_csv.php:153
+msgid "Ticket Quantity"
+msgstr "Количество билетов"
+
+#: ../admin/includes/event_ticket_table.php:351
+msgid "Ticket Reference"
+msgstr "Ссылка билетов"
+
+#: ../admin/bookings.php:236
+#: ../admin/bookings.php:590
+#: ../admin/calendar.php:100
+msgid "Tickets"
+msgstr "Билеты"
+
+#: ../admin/edit.php:106
+msgid "Tickets are for the entire series."
+msgstr "Билеты для всей серии."
+
+#: ../admin/edit.php:60
+msgid "Tickets on sale"
+msgstr "Билеты уже в продаже"
+
+#: ../admin/includes/form-customiser.php:525
+msgid "Time"
+msgstr "Время "
+
+#: ../admin/includes/shortcode_popup.php:72
+msgid "Time format"
+msgstr "Формат времени"
+
+#: ../includes/class-eo-user-attending-widget.php:23
+msgid "Title"
+msgstr ""
+
+#: ../includes/shortcodes.php:250
+msgid "To"
+msgstr "T"
+
+#: ../admin/calendar.php:116
+#: ../admin/includes/booking-form-customiser.php:423
+#: ../admin/includes/form-customiser.php:1598
+msgid "Total"
+msgstr "ВСЕГО"
+
+#: ../includes/import_export_csv.php:154
+msgid "Total Price"
+msgstr "Общая стоимость"
+
+#: ../admin/settings.php:188
+msgid "United Kingdom"
+msgstr "Великобритания"
+
+#: ../admin/settings.php:189
+msgid "United States"
+msgstr "Соединённые Штаты Америки"
+
+#: ../admin/includes/event_booking_table.php:114
+msgid "Unpublished"
+msgstr "Не опубликовано"
+
+#: ../admin/edit.php:77
+msgid "Until"
+msgstr "Покуда ..."
+
+#: ../admin/bookings.php:442
+#: ../admin/includes/venues.php:268
+msgid "Update"
+msgstr "Обновить"
+
+#: ../admin/bookings.php:461
+msgid "User not found"
+msgstr "Пользователь не найден"
+
+#: ../includes/booking-actions.php:191
+msgid "Username"
+msgstr "Имя пользователя (Логин)"
+
+#: ../includes/booking-form-handler.php:77
+#: ../includes/booking-form-handler.php:86
+msgid "Username / Email"
+msgstr "Имя пользователя / E-mail"
+
+#: ../admin/includes/venues.php:122
+#: ../admin/includes/venues.php:178
+#: ../admin/includes/venues.php:196
+#: ../admin/includes/venues.php:270
+msgid "Value"
+msgstr "Значение"
+
+#: ../admin/includes/shortcode_popup.php:140
+msgid "Venue"
+msgstr "Место проведения "
+
+#: ../admin/includes/shortcode_popup.php:10
+msgid "Venue Map"
+msgstr "Место проведения Карта"
+
+#: ../admin/includes/shortcode_popup.php:109
+msgid "Venues"
+msgstr "Помещения"
+
+#: ../admin/includes/shortcode_popup.php:64
+#: ../admin/includes/event_booking_table.php:46
+msgid "View"
+msgstr "Просмотр:"
+
+#: ../includes/register.php:156
+msgid "View all cities"
+msgstr ""
+
+#: ../includes/register.php:154
+msgid "View all countries"
+msgstr ""
+
+#: ../includes/register.php:155
+msgid "View all states"
+msgstr ""
+
+#: ../includes/register.php:35
+msgid "View Booking"
+msgstr "Посмотреть бронирование"
+
+#: ../includes/register.php:80
+msgid "View Booking Form"
+msgstr "Посмотреть Форма бронирования"
+
+#: ../admin/calendar.php:61
+msgid "View bookings"
+msgstr "Посмотреть заказы"
+
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:533
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: ../admin/includes/shortcode_popup.php:67
+msgid "Week"
+msgstr "неделя"
+
+#: ../admin/includes/form-customiser.php:1063
+#: ../admin/includes/form-customiser.php:1098
+#, php-format
+msgid "What is %d + %d?"
+msgstr "Что такое %d + %d ?"
+
+#: ../admin/includes/shortcode_popup.php:126
+msgid "Width:"
+msgstr "Ширина:"
+
+#: ../admin/settings.php:56
+msgid "Without a valid license key you will not be eligable for automatic updates, priority support or unrestricted access to tutorials."
+msgstr "Без лицензионного ключа вы не сможете eligable для автоматического обновления, приоритетная поддержка или неограниченный доступ к обучающим материалам."
+
+#: ../admin/includes/event_booking_table.php:126
+msgid "Y/m/d"
+msgstr "Y/m/d"
+
+#: ../admin/includes/event_booking_table.php:117
+msgid "Y/m/d g:i:s A"
+msgstr "Г / М / ДГ: Я: S"
+
+#: ../admin/includes/form-customiser.php:557
+msgid "Yahoo IM"
+msgstr "Yahoo IM"
+
+#: ../admin/settings.php:118
+msgid "Yes but register an account for them"
+msgstr "Да, зарегистрируйтесь для них"
+
+#: ../admin/settings.php:119
+msgid "Yes, account is optional"
+msgstr "Да, счета не является обязательным"
+
+#: ../admin/includes/form-customiser.php:281
+#, php-format
+msgid "You are logged in as <strong>%s</strong>. <a href=\"%s\">Not you?</a>"
+msgstr "Вы вошли как <strong>%s</strong>. <a href = \"%s\"> не так ли? </a>"
+
+#: ../templates/user-attending-widget-event-list.php:49
+msgid "You are not currently registered for any events"
+msgstr ""
+
+#: ../includes/addon.php:80
+#, php-format
+msgid "You are running version <strong>%1$s</strong> of %2$s. <strong>Event Organiser Pro</strong> requires version <strong>%3$s</strong> or higher to function correctly. <a href=\"%4$s\">Update %2$s</a>."
+msgstr "Вы используете версию <strong> %1$s </strong> из %2$s . <strong> Event Организатор Pro </strong> <strong> требует версии %3$s </strong> или выше для правильного функционирования. <A HREF = \" %4$s \"> Обновление %2$s </a>."
+
+#: ../admin/settings.php:225
+#, php-format
+msgid "You can <a href=\"%s\" target=\"_blank\">create your own e-mail templates</a> and add them to your theme."
+msgstr "Вы можете <A HREF = \" %s \"целевых = \" _blank \"> создать свои собственные шаблоны электронной почты </a> и добавить их к вашей теме."
+
+#: ../admin/settings.php:392
+msgid "You can add additional fields to your booking form using the buttons to the right, and then arrange them by dragging the fields. Click the added form field to reveal its options "
+msgstr "Вы можете добавить дополнительные поля в форме бронирования с помощью кнопок вправо, а затем организовать их, перетаскивая поля. Нажмите Добавлено поле формы выявить его варианты "
+
+#: ../admin/settings.php:103
+msgid "You can either sell tickets for individual dates of an event, or sell tickets for the entire series - for example, places on a course"
+msgstr "Вы можете либо продать билеты на отдельные даты события, или продажа билетов для всей серии - например, места на курсе"
+
+#: ../admin/edit.php:66
+msgid "You can specify a date when this ticket will go on sale, and when it is no longer available for purchase. Leave blank for no restriction. Tickets will automatically come off sale when the event starts"
+msgstr "Вы можете указать дату, когда это билет поступит в продажу, а когда он больше не доступны для приобретения. Оставьте пустым для каких-либо ограничений. Билеты будут автоматически приходят от продажи, когда событие начинается"
+
+#: ../admin/includes/shortcode_popup.php:41
+msgid "You can use relative dates, e.g. 'now', 'next Tuesday'"
+msgstr "Вы можете использовать относительные даты, например, 'сейчас', 'в следующий вторник'"
+
+#: ../admin/settings.php:245
+msgid "You can use the following placeholders"
+msgstr "Вы можете использовать следующие заполнители"
+
+#: ../includes/booking-actions.php:69
+#: ../includes/booking-actions.php:198
+#, php-format
+msgid "You can view the <a href=\"%s\">booking here</a>"
+msgstr "Вы можете просмотреть <A HREF = \" %s \"> заказ здесь </a>"
+
+#: ../admin/includes/shortcode_popup.php:164
+#, php-format
+msgid "You can view the full range of attributes for these shortcodes on the <a href=\"%s\" target=\"_blank\">plug-in website</a>"
+msgstr "Вы можете просмотреть полный спектр атрибутов для данных на короткие номера <A HREF = \" %s \"целевых = \" _blank \"> плагин сайта </a>"
+
+#: ../admin/includes/form-customiser.php:267
+msgid "You have already made a booking for this event."
+msgstr "Вы уже сделали заказ для этого события."
+
+#: ../templates/event-booking-history.php:95
+msgid "You have not made any bookings"
+msgstr ""
+
+#: ../admin/edit.php:92
+msgid "You have the option of selling tickets for only specific dates, for instance you may wish to make a cheaper tickets available for only the first occurrence."
+msgstr "У Вас есть возможность продавать билеты только для определенных дат, например, вы можете пожелать сделать более дешевые билеты доступны только для первого появления."
+
+#: ../includes/booking-actions.php:284
+msgid "You must be logged in to place a booking"
+msgstr "Вы должны войти под своим бронирование"
+
+#: ../admin/includes/form-customiser.php:546
+msgid "Your terms & conditions"
+msgstr "Ваши условия и условия"
+
+#: ../includes/booking-actions.php:204
+#, php-format
+msgid "[%s] Confirmed Event Booking for %s"
+msgstr "[ %s ] подтвердили события резервацию %s"
+
+#: ../includes/booking-actions.php:75
+#, php-format
+msgid "[%s] New Event Booking for %s"
+msgstr "[ %s ] новый заказ событие для %s"
+

@@ -1,0 +1,1667 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Organiser Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-28 09:53+0100\n"
+"PO-Revision-Date: 2013-08-06 12:36+0100\n"
+"Last-Translator: Stephen Harris <contact@stephenharris.info>\n"
+"Language-Team: \n"
+"Language: French (France)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../admin/settings.php:9
+#: ../admin/settings.php:107
+#: ../admin/bookings.php:23
+#: ../admin/bookings.php:26
+#: ../admin/bookings.php:248
+#: ../admin/calendar.php:11
+msgid "Bookings"
+msgstr "Réservations"
+
+#: ../admin/settings.php:10
+msgid "Booking Form"
+msgstr "Formulaire de réservation"
+
+#: ../admin/settings.php:22
+msgid "General"
+msgstr "Général"
+
+#: ../admin/settings.php:23
+msgid "PayPal"
+msgstr "PayPal"
+
+#: ../admin/settings.php:24
+msgid "Offline Payment"
+msgstr "Paiement hors ligne"
+
+#: ../admin/settings.php:25
+#: ../admin/includes/form-customiser.php:172
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../admin/settings.php:61
+msgid "The license key you have entered is invalid."
+msgstr "La clé de licence que vous avez entré n'est pas valide."
+
+#: ../admin/settings.php:62
+#: ../admin/settings.php:67
+msgid "Purchase a license key"
+msgstr "Procurez-vous une clé de licence"
+
+#: ../admin/settings.php:64
+msgid "Invalid license key"
+msgstr "Clé de licence non valide"
+
+#: ../admin/settings.php:66
+msgid "Without a valid license key you will not be eligable for automatic updates, priority support or unrestricted access to tutorials."
+msgstr "Sans une clé de licence valide, vous ne serez pas eligable les mises à jour automatiques, le support de priorité ou d'un accès illimité à des tutoriels."
+
+#: ../admin/settings.php:71
+#, php-format
+msgid "If you have a entered valid license which does not seem to work, please <a href=\"%s\">contact suppport</a>."
+msgstr "Si vous avez un permis de conduire valide est entré, qui ne semble pas fonctionner, s'il vous plaît <a href = \\ \" %s \\ \"> contact suppport </a>."
+
+#: ../admin/settings.php:89
+msgid "Currency"
+msgstr "Devise"
+
+#: ../admin/settings.php:97
+msgid "Currency Position"
+msgstr "Position de la Devise"
+
+#: ../admin/settings.php:103
+msgid "Before"
+msgstr "Avant"
+
+#: ../admin/settings.php:104
+msgid "After"
+msgstr "Après"
+
+#: ../admin/settings.php:109
+msgid "Particular Occurrence"
+msgstr "Présence particulière"
+
+#: ../admin/settings.php:109
+msgid "Entire series"
+msgstr "La série entière"
+
+#: ../admin/settings.php:113
+msgid "You can either sell tickets for individual dates of an event, or sell tickets for the entire series - for example, places on a course"
+msgstr "Vous pouvez soit vendre des billets pour différentes dates d'un événement, ou vendre des billets pour toute la série - par exemple, les lieux sur un parcours"
+
+#: ../admin/settings.php:116
+msgid "Reserve Pending Tickets"
+msgstr "Réserver des billets en attente"
+
+#: ../admin/settings.php:124
+msgid "Allow Logged-out Users to place bookings?"
+msgstr "Permettre connecté sur les utilisateurs à effectuer des réservations?"
+
+#: ../admin/settings.php:127
+msgid "No"
+msgstr "Non"
+
+#: ../admin/settings.php:128
+msgid "Yes but register an account for them"
+msgstr "Oui mais créer un compte pour eux"
+
+#: ../admin/settings.php:129
+msgid "Yes, account is optional"
+msgstr "Oui, compte est facultative"
+
+#: ../admin/settings.php:136
+msgid "Notify me when"
+msgstr "Prévenez-moi lorsque"
+
+#: ../admin/settings.php:142
+msgid "A new booking is made"
+msgstr "Une nouvelle réservation est faite"
+
+#: ../admin/settings.php:143
+msgid "A booking is confirmed"
+msgstr "Une réservation est confirmée"
+
+#: ../admin/settings.php:148
+#: ../admin/settings.php:207
+msgid "Live Switch"
+msgstr "Mettez vivre"
+
+#: ../admin/settings.php:153
+#: ../admin/settings.php:210
+msgid "Live"
+msgstr "Vivez"
+
+#: ../admin/settings.php:154
+msgid "Sandbox Mode"
+msgstr "Sandbox mode"
+
+#: ../admin/settings.php:155
+#: ../admin/settings.php:211
+msgid "Disable"
+msgstr "Désactiver"
+
+#: ../admin/settings.php:160
+msgid "PayPal Email"
+msgstr "PayPal Email"
+
+#: ../admin/settings.php:167
+msgid "PayPal page style"
+msgstr "PayPal style de page"
+
+#: ../admin/settings.php:173
+msgid "Style your PayPal payment page"
+msgstr "Votre style de page de paiement PayPal"
+
+#: ../admin/settings.php:175
+#, php-format
+msgid "PayPal allows you to tailor the booking payment page to you site. For more information, <a href=\"%s\" target=\"_blank\">see this tutorial</a>"
+msgstr "PayPal vous permet de personnaliser la page de paiement de la réservation de votre site. Pour plus d'informations, <a href = \\ \" %s \\ \"target = \" _blank \\ \"> Voir ce tutoriel </a>"
+
+#: ../admin/settings.php:181
+msgid "PayPal Local Site"
+msgstr "Site local PayPal"
+
+#: ../admin/settings.php:184
+msgid "Australia"
+msgstr "Australie"
+
+#: ../admin/settings.php:185
+msgid "Austria"
+msgstr "Autriche"
+
+#: ../admin/settings.php:186
+msgid "Belgium"
+msgstr "Belgique"
+
+#: ../admin/settings.php:187
+msgid "Canada"
+msgstr "Canada"
+
+#: ../admin/settings.php:188
+msgid "China"
+msgstr "Chine"
+
+#: ../admin/settings.php:189
+msgid "France"
+msgstr "France"
+
+#: ../admin/settings.php:190
+msgid "Germany"
+msgstr "Allemagne"
+
+#: ../admin/settings.php:191
+msgid "Italy"
+msgstr "Italie"
+
+#: ../admin/settings.php:192
+msgid "Mexico"
+msgstr "Mexique"
+
+#: ../admin/settings.php:193
+msgid "Netherlands"
+msgstr "Pays-Bas"
+
+#: ../admin/settings.php:194
+msgid "Philippines"
+msgstr "Philippines"
+
+#: ../admin/settings.php:195
+msgid "Poland"
+msgstr "Pologne"
+
+#: ../admin/settings.php:196
+msgid "Spain"
+msgstr "Espagne"
+
+#: ../admin/settings.php:197
+msgid "Switzerland"
+msgstr "Suisse"
+
+#: ../admin/settings.php:198
+msgid "United Kingdom"
+msgstr "Royaume-Uni"
+
+#: ../admin/settings.php:199
+msgid "United States"
+msgstr "États-Unis"
+
+#: ../admin/settings.php:217
+msgid "Offline Payment Instructions"
+msgstr "Instructions de paiement hors ligne"
+
+#: ../admin/settings.php:221
+msgid "This will appear on the booking form, informing the bookee on how to make payment."
+msgstr "Ces informations figureront sur le formulaire de réservation, en informant le bookee sur la façon d'effectuer le paiement."
+
+#: ../admin/settings.php:226
+msgid "E-mail template"
+msgstr "Modèle E-mail"
+
+#: ../admin/settings.php:233
+msgid "Custom Templates"
+msgstr "Modèles personnalisés"
+
+#: ../admin/settings.php:235
+#, php-format
+msgid "You can <a href=\"%s\" target=\"_blank\">create your own e-mail templates</a> and add them to your theme."
+msgstr "Vous pouvez <a href = \\ \" %s \\ \"target = \" _blank \\ \"> créer vos propres modèles de courrier électronique </a> et les ajouter à votre thème."
+
+#: ../admin/settings.php:242
+msgid "Preview E-mail"
+msgstr "Preview E-mail"
+
+#: ../admin/settings.php:246
+msgid "Booking email"
+msgstr "Réservation email"
+
+#: ../admin/settings.php:252
+msgid "In the e-mail template you can use booking information placeholders"
+msgstr "Dans le modèle e-mail, vous pouvez utiliser les informations de réservation des espaces réservés"
+
+#: ../admin/settings.php:254
+#: ../admin/includes/event_booking_table.php:564
+msgid "E-mailing Bookees"
+msgstr "Bookees E-mailing"
+
+#: ../admin/settings.php:255
+msgid "You can use the following placeholders"
+msgstr "Vous pouvez utiliser les options suivantes avec"
+
+#: ../admin/settings.php:265
+#: ../admin/includes/event_booking_table.php:575
+msgid "See full list"
+msgstr "Voir la liste complète"
+
+#: ../admin/settings.php:284
+msgid "Preview Email"
+msgstr "Aperçu Email"
+
+#: ../admin/settings.php:402
+msgid "You can add additional fields to your booking form using the buttons to the right, and then arrange them by dragging the fields. Click the added form field to reveal its options "
+msgstr "Vous pouvez ajouter des champs supplémentaires à votre formulaire de réservation à l'aide des boutons situés à droite, puis disposez-les en faisant glisser les champs. Cliquez sur le champ de formulaire ajoutée à révéler ses options "
+
+#: ../admin/settings.php:403
+msgid "The data submitted using these fields is stored alongside the booking."
+msgstr "Les données présentées à l'aide de ces champs sont stockées le long de la réservation."
+
+#: ../admin/edit.php:7
+msgid "Event Tickets"
+msgstr "Billets d'entrée"
+
+#: ../admin/edit.php:17
+msgid "If you edit the event's dates you will need to update any event tickets. Editing event dates will lose existing bookings for this event"
+msgstr "Si vous modifiez les dates de l'événement que vous devrez mettre à jour les billets de l'événement. Modification des dates de l'événement perdra réservations existantes pour cet événement"
+
+#: ../admin/edit.php:31
+msgid "Ticket name"
+msgstr "Nom de billets"
+
+#: ../admin/edit.php:33
+msgid "Concession"
+msgstr "Concession"
+
+#: ../admin/edit.php:37
+#: ../admin/bookings.php:273
+#: ../admin/includes/booking-form-customiser.php:354
+#: ../admin/includes/form-customiser.php:1529
+#: ../admin/includes/event_ticket_table.php:34
+#: ../admin/includes/event_ticket_table.php:353
+msgid "Price"
+msgstr "Prix"
+
+#: ../admin/edit.php:44
+#: ../admin/edit.php:48
+#: ../admin/includes/event_ticket_table.php:33
+msgid "Spaces"
+msgstr "Spaces"
+
+#: ../admin/edit.php:49
+msgid "This indicates the quanity available of this ticket type. If you are selling tickets for individual occurrences, then this limit applies to each occurrence."
+msgstr "Ceci indique que le Quanity disponible de ce type de billets. Si vous vendez des billets pour les événements individuels, alors cette limite s'applique à chaque occurrence."
+
+#: ../admin/edit.php:53
+#: ../admin/edit.php:70
+#: ../admin/edit.php:96
+msgid "See this page for more details"
+msgstr "Voir cette page pour plus de détails"
+
+#: ../admin/edit.php:60
+msgid "Tickets on sale"
+msgstr "Billets en vente"
+
+#: ../admin/edit.php:63
+msgid "Specify when this ticket will be available for purchase."
+msgstr "Précisez quand ce billet sera disponible à l'achat."
+
+#: ../admin/edit.php:65
+msgid "Ticket availability"
+msgstr "La disponibilité des billets"
+
+#: ../admin/edit.php:66
+msgid "You can specify a date when this ticket will go on sale, and when it is no longer available for purchase. Leave blank for no restriction. Tickets will automatically come off sale when the event starts"
+msgstr "Vous pouvez spécifier une date où ce billet sera mis en vente, et quand il n'est plus disponible à l'achat. Laissez ce champ vide pour aucune restriction. Les billets seront automatiquement se détacher vente lors de l'événement commence"
+
+#: ../admin/edit.php:75
+msgid "From"
+msgstr "À partir de"
+
+#: ../admin/edit.php:77
+msgid "Until"
+msgstr "Jusqu'à"
+
+#: ../admin/edit.php:80
+msgid "Bookings will be closed when an occurrences starts."
+msgstr "Les réservations seront fermées lorsqu'une occurrences commence."
+
+#: ../admin/edit.php:85
+msgid "Event dates"
+msgstr "Dates de l'événement"
+
+#: ../admin/edit.php:89
+msgid "Select the dates of the event for which you want this ticket to be sold. (Default: all dates)"
+msgstr "Sélectionnez les dates de l'événement pour lequel vous souhaitez que cette billet pour être vendu. (Par défaut: toutes les dates)"
+
+#: ../admin/edit.php:91
+msgid "Ticket dates"
+msgstr "Dates des billets"
+
+#: ../admin/edit.php:92
+msgid "You have the option of selling tickets for only specific dates, for instance you may wish to make a cheaper tickets available for only the first occurrence."
+msgstr "Vous avez la possibilité de vendre des billets pour les seules dates précises, par exemple, vous voudrez peut-être faire un des billets moins chers disponibles que pour la première occurrence."
+
+#: ../admin/edit.php:102
+msgid "Select all"
+msgstr "Sélectionner tous"
+
+#: ../admin/edit.php:104
+msgid "Deselect all"
+msgstr "Désélectionner tous"
+
+#: ../admin/edit.php:106
+msgid "Tickets are for the entire series."
+msgstr "Les billets sont pour toute la série."
+
+#: ../admin/edit.php:111
+msgid "Create Tickets"
+msgstr "Créer les billets"
+
+#: ../admin/edit.php:132
+#, php-format
+msgid "Cap booking at %s places"
+msgstr "Réservation au Cap de %s des places"
+
+#: ../admin/edit.php:146
+msgid "Select a booking form:"
+msgstr "Sélectionnez un formulaire de réservation:"
+
+#: ../admin/bookings.php:171
+msgid "Thank you for your booking"
+msgstr "Merci pour votre réservation"
+
+#: ../admin/bookings.php:269
+#: ../admin/bookings.php:404
+#: ../admin/calendar.php:98
+msgid "Booking"
+msgstr "Réservation"
+
+#: ../admin/bookings.php:270
+#: ../admin/bookings.php:526
+#: ../admin/calendar.php:99
+msgid "Bookee"
+msgstr "Participant"
+
+#: ../admin/bookings.php:271
+#: ../admin/bookings.php:622
+msgid "Event"
+msgstr "Événement"
+
+#: ../admin/bookings.php:272
+#: ../admin/bookings.php:645
+#: ../admin/calendar.php:100
+msgid "Tickets"
+msgstr "Billets"
+
+#: ../admin/bookings.php:274
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:514
+msgid "Date"
+msgstr "Date"
+
+#: ../admin/bookings.php:275
+#: ../admin/bookings.php:460
+#: ../admin/calendar.php:102
+msgid "Status"
+msgstr "Statut"
+
+#: ../admin/bookings.php:296
+msgid "1 bookee emailed"
+msgstr "1 email envoyé"
+
+#: ../admin/bookings.php:296
+#, php-format
+msgid "%d bookees emailed"
+msgstr "%d participants contactés"
+
+#: ../admin/bookings.php:301
+msgid "1 booking cancelled"
+msgstr "1 réservation annulée"
+
+#: ../admin/bookings.php:301
+#, php-format
+msgid "%d bookings cancelled"
+msgstr "%d réservations annulées"
+
+#: ../admin/bookings.php:306
+msgid "Booking updated"
+msgstr "Réservation mise à jour"
+
+#: ../admin/bookings.php:310
+#, fuzzy
+msgid "1 booking confirmed"
+msgstr "Une réservation est confirmée"
+
+#: ../admin/bookings.php:310
+#, fuzzy, php-format
+msgid "%d bookings confirmed"
+msgstr "Une réservation est confirmée"
+
+#: ../admin/bookings.php:315
+msgid "The following bookings could not be automatically confirmed. Please confirm these manually:"
+msgstr "longer"
+
+#: ../admin/bookings.php:335
+msgid "The event associated with this booking could not be found. It may have been deleted."
+msgstr "L'événement associé à cette réservation n'a pu être trouvé. Il a peut-être été supprimé."
+
+#: ../admin/bookings.php:337
+msgid "The occurrence date for which this booking was made no longer exists."
+msgstr "Le jour de l'occurence pour lequel cette réservation a été effectuée n'existe plus."
+
+#: ../admin/bookings.php:345
+msgid "This booking could not be confirmed for the following reasons"
+msgstr "Cette réservation ne peut être confirmée pour les raisons suivantes"
+
+#: ../admin/bookings.php:357
+msgid "I want to confirm anyway"
+msgstr "Je tiens tout de même à confirmer"
+
+#: ../admin/bookings.php:403
+msgid "Booking Details"
+msgstr "Détails de la réservation"
+
+#: ../admin/bookings.php:419
+#, php-format
+msgid "Booking (#%d)"
+msgstr "Réservation (# %d )"
+
+#: ../admin/bookings.php:445
+msgid "Back to table view"
+msgstr "Retour à la vue de table"
+
+#: ../admin/bookings.php:465
+#: ../admin/calendar.php:114
+#: ../admin/includes/event_booking_table.php:152
+#: ../admin/includes/event_booking_table.php:229
+msgid "Pending"
+msgstr "En attente"
+
+#: ../admin/bookings.php:466
+#: ../admin/calendar.php:112
+#: ../admin/includes/event_booking_table.php:150
+#: ../admin/includes/event_booking_table.php:226
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#: ../admin/bookings.php:480
+msgid "Resend tickets to bookee"
+msgstr "Renvoyer les billets au participant"
+
+#: ../admin/bookings.php:492
+#: ../admin/includes/event_booking_table.php:50
+msgid "Cancel Booking"
+msgstr "Annuler la réservation"
+
+#: ../admin/bookings.php:497
+#: ../admin/includes/venues.php:268
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: ../admin/bookings.php:516
+msgid "User not found"
+msgstr "Utilisateur introuvable"
+
+#: ../admin/bookings.php:520
+msgid "No account"
+msgstr "Pas de compte"
+
+#: ../admin/bookings.php:532
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/event_booking_table.php:590
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:510
+msgid "Email"
+msgstr "Email"
+
+#: ../admin/bookings.php:547
+msgid "Other Recent bookings"
+msgstr "Autres réservations récentes"
+
+#: ../admin/bookings.php:585
+msgid "Booking Date"
+msgstr "Date de Réservation"
+
+#: ../admin/bookings.php:591
+msgid "Booking Reference"
+msgstr "Référence de réservation"
+
+#: ../admin/bookings.php:605
+msgid "Change"
+msgstr "Changer"
+
+#: ../admin/bookings.php:612
+#: ../admin/bookings.php:615
+msgid "Orphaned booking"
+msgstr "Réservation orpheline"
+
+#: ../admin/bookings.php:613
+msgid "Select date"
+msgstr "Sélectionnez la date"
+
+#: ../admin/bookings.php:630
+#: ../admin/calendar.php:101
+msgid "Amount"
+msgstr "Montant"
+
+#: ../admin/bookings.php:638
+msgid "Payment Gateway"
+msgstr "Passerelle de paiement"
+
+#: ../admin/bookings.php:651
+msgid "Booking Notes"
+msgstr "Notes de Réservation"
+
+#: ../admin/bookings.php:660
+msgid "Booking Meta"
+msgstr "Réservation Meta"
+
+#: ../admin/bookings.php:707
+msgid "Gateway Response"
+msgstr "Réponse de la passerelle"
+
+#: ../admin/bookings.php:719
+msgid "Show gateway response"
+msgstr "Voir la réponse de la passerelle"
+
+#: ../admin/bookings.php:720
+msgid "Hide gateway response"
+msgstr "Cachez réponse de la passerelle"
+
+#: ../admin/bookings.php:747
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221; (%s)"
+msgstr "Les réservations pour l'événement \"%s s\" ( %s )"
+
+#: ../admin/bookings.php:752
+#, php-format
+msgid "Bookings for event &#8220;%s&#8221;"
+msgstr "Les réservations pour l'événement \"%s s\""
+
+#: ../admin/bookings.php:756
+#, php-format
+msgid "Bookings for user &#8220;%s&#8221;"
+msgstr "Les réservations pour l'utilisateur \"%s s\""
+
+#: ../admin/bookings.php:761
+#, fuzzy, php-format
+msgid "Searching for booking ID &#8220;%s&#8221;"
+msgstr "Les réservations pour l'événement \"%s s\""
+
+#: ../admin/bookings.php:763
+#, fuzzy, php-format
+msgid "Searching for email address &#8220;%s&#8221;"
+msgstr "Les réservations pour l'utilisateur \"%s s\""
+
+#: ../admin/bookings.php:765
+#, fuzzy, php-format
+msgid "Searching for bookee &#8220;%s&#8221;"
+msgstr "Les réservations pour l'événement \"%s s\""
+
+#: ../admin/calendar.php:56
+msgid "Attending"
+msgstr "Participer"
+
+#: ../admin/calendar.php:61
+msgid "View bookings"
+msgstr "Voir réservations"
+
+#: ../admin/calendar.php:63
+msgid "Export bookings"
+msgstr "Exporter les réservations"
+
+#: ../admin/calendar.php:116
+#: ../admin/includes/booking-form-customiser.php:423
+#: ../admin/includes/form-customiser.php:1598
+msgid "Total"
+msgstr "Total"
+
+#: ../admin/calendar.php:118
+msgid "Capacity"
+msgstr "Capacité"
+
+#: ../admin/includes/ajax-actions.php:171
+#: ../admin/includes/ajax-actions.php:196
+msgid "Please provide a custom field value."
+msgstr "Fournir une valeur de champ personnalisé s'il vous plaît ."
+
+#: ../admin/includes/ajax-actions.php:194
+msgid "Please provide a custom field name."
+msgstr "Veuiller fournir un nom de champ personnalisé s'il vous plaît."
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Select"
+msgstr "Sélectionner"
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Single Line Text"
+msgstr "Ligne texte"
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Textarea"
+msgstr "Zone texte"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Radio Buttons"
+msgstr "Boutons radio"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Checkbox"
+msgstr "Case"
+
+#: ../admin/includes/booking-form-customiser.php:53
+#: ../admin/includes/form-customiser.php:53
+msgid "Multiselect"
+msgstr "Sélection Multiple"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+#: ../admin/includes/form-customiser.php:520
+msgid "Number"
+msgstr "Nombre"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "Section Break"
+msgstr "Saut de section"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "HTML"
+msgstr "HTML"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:541
+msgid "Address"
+msgstr "Adresse"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:538
+msgid "Phone"
+msgstr "Téléphone"
+
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:533
+msgid "Website"
+msgstr "Site Web"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+msgid "Antispam maths question"
+msgstr "Question mathématique anti-SPAM"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+#: ../admin/includes/form-customiser.php:545
+#: ../admin/includes/form-customiser.php:1010
+msgid "Terms & Conditions"
+msgstr "Conditions générales"
+
+#: ../admin/includes/booking-form-customiser.php:62
+#: ../admin/includes/form-customiser.php:62
+msgid "Gateway picker"
+msgstr "Sélectionneur de passerelle"
+
+#: ../admin/includes/booking-form-customiser.php:63
+#: ../admin/includes/form-customiser.php:63
+msgid "Ticket picker"
+msgstr "Sélectionneur de billets"
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Standard Fields"
+msgstr "Champs standards"
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Advanced Fields"
+msgstr "Les champs avancés"
+
+#: ../admin/includes/booking-form-customiser.php:102
+#: ../admin/includes/form-customiser.php:102
+msgid "Select a payment gateway"
+msgstr "Sélectionnez une passerelle de paiement"
+
+#: ../admin/includes/booking-form-customiser.php:153
+#: ../admin/includes/form-customiser.php:334
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: ../admin/includes/booking-form-customiser.php:202
+#: ../admin/includes/form-customiser.php:383
+msgid "Edit Form"
+msgstr "Modifier le formulaire"
+
+#: ../admin/includes/booking-form-customiser.php:215
+#: ../admin/includes/form-customiser.php:396
+msgid "Form name"
+msgstr "Nom du formulaire"
+
+#: ../admin/includes/booking-form-customiser.php:353
+#: ../admin/includes/form-customiser.php:1528
+#: ../admin/includes/event_ticket_table.php:32
+#: ../admin/includes/event_ticket_table.php:352
+msgid "Ticket"
+msgstr "Billet"
+
+#: ../admin/includes/booking-form-customiser.php:355
+#: ../admin/includes/form-customiser.php:1530
+msgid "Quantity"
+msgstr "Quantité"
+
+#: ../admin/includes/booking-form-customiser.php:372
+#: ../admin/includes/form-customiser.php:1547
+msgid "Please select a date"
+msgstr "Choisir une date s'il vous plait"
+
+#: ../admin/includes/booking-form-customiser.php:436
+#: ../admin/includes/form-customiser.php:1611
+msgid "This form element only appears if there there are multiple gateways enabled. It cannot be removed but can be placed anywhere in the booking form."
+msgstr "Cet élément de formulaire apparaît seulement si il existe plusieurs passerelles activées. Il ne peut pas être supprimé mais peut être placé n'importe où dans le formulaire de réservation."
+
+#: ../admin/includes/booking-form-customiser.php:448
+#: ../admin/includes/form-customiser.php:1623
+msgid "This form element allows the user to select their ticket(s). It cannot be removed but can be placed anywhere in the booking form."
+msgstr "Cet élément de formulaire permet à l'utilisateur de choisir leur billet (s). Il ne peut pas être supprimé mais peut être placé n'importe où dans le formulaire de réservation."
+
+#: ../admin/includes/shortcode_popup.php:8
+msgid "Event List"
+msgstr "Liste des événements"
+
+#: ../admin/includes/shortcode_popup.php:9
+msgid "Calendar"
+msgstr "Calendrier"
+
+#: ../admin/includes/shortcode_popup.php:10
+msgid "Venue Map"
+msgstr "Carte du lieu"
+
+#: ../admin/includes/shortcode_popup.php:11
+msgid "Event Search"
+msgstr "Recherche d'événements"
+
+#: ../admin/includes/shortcode_popup.php:16
+msgid "Display a list of events"
+msgstr "Afficher la liste des événements"
+
+#: ../admin/includes/shortcode_popup.php:19
+#: ../admin/includes/shortcode_popup.php:31
+msgid "Events starting after"
+msgstr "Événements commencant après"
+
+#: ../admin/includes/shortcode_popup.php:25
+msgid "Events starting before"
+msgstr "Événements commencant avant"
+
+#: ../admin/includes/shortcode_popup.php:38
+msgid "Events ending before"
+msgstr "Événements se terminant avant"
+
+#: ../admin/includes/shortcode_popup.php:41
+msgid "You can use relative dates, e.g. 'now', 'next Tuesday'"
+msgstr "Vous pouvez utiliser les dates relatives, par exemple, «maintenant», «mardi prochain»"
+
+#: ../admin/includes/shortcode_popup.php:45
+#: ../admin/includes/shortcode_popup.php:84
+msgid "Events in categories"
+msgstr "Événements dans les catégories"
+
+#: ../admin/includes/shortcode_popup.php:51
+#: ../admin/includes/shortcode_popup.php:90
+msgid "Events at venues"
+msgstr "Événements sur les sites"
+
+#: ../admin/includes/shortcode_popup.php:61
+msgid "Display a calendar of events, similar to the admin calendar."
+msgstr "Afficher un calendrier des événements, à l'instar du calendrier d'administration."
+
+#: ../admin/includes/shortcode_popup.php:64
+#: ../admin/includes/event_booking_table.php:46
+msgid "View"
+msgstr "Voir"
+
+#: ../admin/includes/shortcode_popup.php:66
+msgid "Month"
+msgstr "Mois"
+
+#: ../admin/includes/shortcode_popup.php:67
+msgid "Week"
+msgstr "Semaine"
+
+#: ../admin/includes/shortcode_popup.php:68
+msgid "Day"
+msgstr "Journée"
+
+#: ../admin/includes/shortcode_popup.php:72
+msgid "Time format"
+msgstr "Format de l'heure"
+
+#: ../admin/includes/shortcode_popup.php:78
+#: ../admin/includes/shortcode_popup.php:116
+msgid "Include tooltip"
+msgstr "Inclure info-bulle"
+
+#: ../admin/includes/shortcode_popup.php:97
+msgid "Show only events current user is attending"
+msgstr "Montrer seulement les événements auxquels participe cet utilisateur"
+
+#: ../admin/includes/shortcode_popup.php:106
+msgid "Display a Google map of venue or venues"
+msgstr "Afficher une carte Google du lieu ou des lieux"
+
+#: ../admin/includes/shortcode_popup.php:109
+msgid "Venues"
+msgstr "Lieux"
+
+#: ../admin/includes/shortcode_popup.php:112
+msgid "Leave blank for venue of current event (if this is being used on an event's page"
+msgstr "Laissez ce champ vide pour le lieu de l'événement en cours (si cela est utilisé sur la page de l'événement"
+
+#: ../admin/includes/shortcode_popup.php:122
+msgid "Dimensions"
+msgstr "Dimensions"
+
+#: ../admin/includes/shortcode_popup.php:124
+msgid "Height:"
+msgstr "Taille"
+
+#: ../admin/includes/shortcode_popup.php:126
+msgid "Width:"
+msgstr "Largeur:"
+
+#: ../admin/includes/shortcode_popup.php:133
+msgid "Allow your users to search events. Select which filters they can use."
+msgstr "Permettez à vos utilisateurs de rechercher des événements. Sélectionnez les filtres qu'ils peuvent utiliser."
+
+#: ../admin/includes/shortcode_popup.php:136
+msgid "Category"
+msgstr "Catégorie"
+
+#: ../admin/includes/shortcode_popup.php:140
+msgid "Venue"
+msgstr "Lieu"
+
+#: ../admin/includes/shortcode_popup.php:144
+#: ../admin/includes/form-customiser.php:1153
+#: ../admin/includes/form-customiser.php:1157
+#: ../admin/includes/form-customiser.php:1257
+#: ../admin/includes/form-customiser.php:1262
+msgid "City"
+msgstr "Ville"
+
+#: ../admin/includes/shortcode_popup.php:148
+msgid "State"
+msgstr "État"
+
+#: ../admin/includes/shortcode_popup.php:152
+#: ../admin/includes/form-customiser.php:1197
+#: ../admin/includes/form-customiser.php:1201
+#: ../admin/includes/form-customiser.php:1302
+#: ../admin/includes/form-customiser.php:1306
+msgid "Country"
+msgstr "Pays"
+
+#: ../admin/includes/shortcode_popup.php:156
+msgid "Date range"
+msgstr "Plage de dates:"
+
+#: ../admin/includes/shortcode_popup.php:164
+#, php-format
+msgid "You can view the full range of attributes for these shortcodes on the <a href=\"%s\" target=\"_blank\">plug-in website</a>"
+msgstr "Vous pouvez consulter la gamme complète des attributs pour ces shortcodes sur le <a href = \\ \" %s \\ \"target = \" _blank \\ \"> plug-in site </a>"
+
+#: ../admin/includes/event_booking_table.php:30
+msgid "No bookings found."
+msgstr "Pas de réservation trouvée."
+
+#: ../admin/includes/event_booking_table.php:48
+msgid "Cancel this booking permanently"
+msgstr "Annuler cette réservation définitivement"
+
+#: ../admin/includes/event_booking_table.php:114
+msgid "Unpublished"
+msgstr "Non publié"
+
+#: ../admin/includes/event_booking_table.php:117
+msgid "Y/m/d g:i:s A"
+msgstr "Y / m / dg: i: s A"
+
+#: ../admin/includes/event_booking_table.php:124
+#, php-format
+msgid "%s ago"
+msgstr "Il y a %s"
+
+#: ../admin/includes/event_booking_table.php:126
+msgid "Y/m/d"
+msgstr "A/m/j"
+
+#: ../admin/includes/event_booking_table.php:222
+msgid "All"
+msgstr "Tous"
+
+#: ../admin/includes/event_booking_table.php:271
+msgid "Download bookings"
+msgstr "Télécharger réservations"
+
+#: ../admin/includes/event_booking_table.php:277
+msgid "Download tickets"
+msgstr "Télécharger les billets"
+
+#: ../admin/includes/event_booking_table.php:348
+msgid "No confirmed attendees"
+msgstr "Aucun des participant confirmé"
+
+#: ../admin/includes/event_booking_table.php:351
+msgid "1 confirmed attendee"
+msgstr "1 participant confirmé"
+
+#: ../admin/includes/event_booking_table.php:354
+#, php-format
+msgid "%s confirmed attendees"
+msgstr "%s des participants confirmés"
+
+#: ../admin/includes/event_booking_table.php:363
+msgid "No bookings"
+msgstr "Pas de réservations"
+
+#: ../admin/includes/event_booking_table.php:366
+msgid "1 booking"
+msgstr "1 billet"
+
+#: ../admin/includes/event_booking_table.php:369
+#, php-format
+msgid "%s bookings"
+msgstr "%s les réservations"
+
+#: ../admin/includes/event_booking_table.php:389
+msgid "Go to the first page"
+msgstr "Aller à la première page"
+
+#: ../admin/includes/event_booking_table.php:396
+msgid "Go to the previous page"
+msgstr "Aller à la page précédente"
+
+#: ../admin/includes/event_booking_table.php:405
+msgid "Current page"
+msgstr "Page courante"
+
+#: ../admin/includes/event_booking_table.php:416
+msgid "Go to the next page"
+msgstr "Aller à la page suivante"
+
+#: ../admin/includes/event_booking_table.php:423
+msgid "Go to the last page"
+msgstr "Aller à la dernière page"
+
+#: ../admin/includes/event_booking_table.php:447
+msgid "Cancel Bookings"
+msgstr "Annuler les Réservations"
+
+#: ../admin/includes/event_booking_table.php:448
+#: ../admin/includes/event_booking_table.php:550
+msgid "Email Bookees"
+msgstr "Contacter les Participants"
+
+#: ../admin/includes/event_booking_table.php:449
+#, fuzzy
+msgid "Confirm bookings"
+msgstr "Pas de réservations"
+
+#: ../admin/includes/event_booking_table.php:524
+msgid "Select booking fields to be included in export"
+msgstr "Sélectionnez les champs de réservation devant être inclus dans l'exportation"
+
+#: ../admin/includes/event_booking_table.php:530
+#: ../admin/includes/event_booking_table.php:589
+#: ../admin/includes/venues.php:141
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../admin/includes/event_booking_table.php:531
+msgid "Download"
+msgstr "Téléchargement"
+
+#: ../admin/includes/event_booking_table.php:558
+msgid "Subject"
+msgstr "Sujet"
+
+#: ../admin/includes/event_booking_table.php:561
+msgid "Message"
+msgstr "Message"
+
+#: ../admin/includes/event_booking_table.php:565
+msgid "In the e-mail subject & body you can use the following tags"
+msgstr "Vous pouvez utiliser les balises suivantes dans le sujet et le corps de l'email"
+
+#: ../admin/includes/event_booking_table.php:577
+#, php-format
+msgid "<strong>Note:</strong> your hosting provider may limit the number of e-mails you can send in a 24 hour period. Plug-ins are available that <a href=\"%s\" target=\"_blank\">work around these restrictions.</a>"
+msgstr "<strong> Note: </strong> votre fournisseur d'hébergement peut limiter le nombre de courriels que vous pouvez envoyer dans un délai de 24 heures. Les plug-ins sont disponibles que <a href = \\ \" %s \\ \"target = \" _blank \\ \"> travail autour de ces restrictions. </a>"
+
+#: ../admin/includes/form-customiser.php:170
+#: ../admin/includes/form-customiser.php:1354
+#: ../admin/includes/form-customiser.php:1396
+msgid "First Name"
+msgstr "Prénom"
+
+#: ../admin/includes/form-customiser.php:171
+#: ../admin/includes/form-customiser.php:1364
+#: ../admin/includes/form-customiser.php:1407
+msgid "Last Name"
+msgstr "Nom"
+
+#: ../admin/includes/form-customiser.php:179
+msgid "Create an account (optional)"
+msgstr "Créer un compte (facultatif)"
+
+#: ../admin/includes/form-customiser.php:267
+msgid "You have already made a booking for this event."
+msgstr "Vous avez déjà fait une réservation pour cet événement."
+
+#: ../admin/includes/form-customiser.php:281
+#, php-format
+msgid "You are logged in as <strong>%s</strong>. <a href=\"%s\">Not you?</a>"
+msgstr "Vous êtes connecté en tant <strong>%s</strong>. <a href = \"%s\">Pas vous?</a>"
+
+#: ../admin/includes/form-customiser.php:440
+msgid "Book"
+msgstr "Réserver"
+
+#: ../admin/includes/form-customiser.php:506
+#: ../admin/includes/form-customiser.php:570
+#: ../admin/includes/form-customiser.php:1043
+#: ../admin/includes/form-customiser.php:1686
+msgid "Label"
+msgstr "Étiquette"
+
+#: ../admin/includes/form-customiser.php:525
+msgid "Time"
+msgstr "Temps"
+
+#: ../admin/includes/form-customiser.php:546
+msgid "Your terms & conditions"
+msgstr "Vos termes et conditions"
+
+#: ../admin/includes/form-customiser.php:547
+msgid " I have read and agree to the terms and conditions detailed above."
+msgstr " J'ai lu et j'accepte les termes et conditions décrites ci-dessus."
+
+#: ../admin/includes/form-customiser.php:551
+msgid "Section"
+msgstr "Section"
+
+#: ../admin/includes/form-customiser.php:554
+msgid "AIM"
+msgstr "AIM"
+
+#: ../admin/includes/form-customiser.php:557
+msgid "Yahoo IM"
+msgstr "Yahoo IM :"
+
+#: ../admin/includes/form-customiser.php:560
+msgid "Jabber / Google Talk"
+msgstr "Jabber / Google Talk"
+
+#: ../admin/includes/form-customiser.php:563
+msgid "Bio"
+msgstr "Bio:"
+
+#: ../admin/includes/form-customiser.php:566
+#: ../admin/includes/venues.php:177
+msgid "Name"
+msgstr "Nom"
+
+#: ../admin/includes/form-customiser.php:642
+#, php-format
+msgid "%s - ID: %s"
+msgstr "%s - ID: %s"
+
+#: ../admin/includes/form-customiser.php:764
+msgid "Format"
+msgstr "Format"
+
+#: ../admin/includes/form-customiser.php:775
+msgid "24 Hour"
+msgstr "24 Heures"
+
+#: ../admin/includes/form-customiser.php:790
+msgid "Range"
+msgstr "Gamme"
+
+#: ../admin/includes/form-customiser.php:791
+msgid "Min"
+msgstr "Min"
+
+#: ../admin/includes/form-customiser.php:793
+msgid "Max"
+msgstr "Max."
+
+#: ../admin/includes/form-customiser.php:963
+msgid "This form element allows you to enter any HTML, to be displayed on the form"
+msgstr "Cet élément de formulaire vous permet de saisir un code HTML qui sera affiché sur le formulaire"
+
+#: ../admin/includes/form-customiser.php:1063
+#: ../admin/includes/form-customiser.php:1098
+#, php-format
+msgid "What is %d + %d?"
+msgstr "Que font %d + %d ?"
+
+#: ../admin/includes/form-customiser.php:1097
+msgid "This form element asks the user a simple random maths question in order to help prevent spam"
+msgstr "Cet élément de formulaire pose une simple question de mathématiques aléatoire à l'utilisateur afin d'aider à prévenir le spam"
+
+#: ../admin/includes/form-customiser.php:1125
+#: ../admin/includes/form-customiser.php:1227
+msgid "Street address"
+msgstr "Adresse (rue):"
+
+#: ../admin/includes/form-customiser.php:1129
+#: ../admin/includes/form-customiser.php:1232
+msgid "Street Address"
+msgstr "Adresse (rue):"
+
+#: ../admin/includes/form-customiser.php:1143
+#: ../admin/includes/form-customiser.php:1247
+msgid "Address Line 2"
+msgstr "Adresse - ligne 2"
+
+#: ../admin/includes/form-customiser.php:1170
+#: ../admin/includes/form-customiser.php:1275
+msgid "State/Province"
+msgstr "État /Province"
+
+#: ../admin/includes/form-customiser.php:1175
+#: ../admin/includes/form-customiser.php:1280
+msgid "State /Province"
+msgstr "État / Province"
+
+#: ../admin/includes/form-customiser.php:1182
+#: ../admin/includes/form-customiser.php:1187
+#: ../admin/includes/form-customiser.php:1287
+#: ../admin/includes/form-customiser.php:1292
+msgid "Post Code"
+msgstr "Code postal"
+
+#: ../admin/includes/form-customiser.php:1317
+msgid "Address Includes"
+msgstr "Adresse Comprend"
+
+#: ../admin/includes/form-customiser.php:1422
+msgid "Include"
+msgstr "< include ></ include >"
+
+#: ../admin/includes/form-customiser.php:1698
+msgid "Checkbox label"
+msgstr "Étiquette de case à cocher"
+
+#: ../admin/includes/form-customiser.php:1712
+msgid "Options"
+msgstr "Options"
+
+#: ../admin/includes/form-customiser.php:1762
+msgid "Required"
+msgstr "Requis"
+
+#: ../admin/includes/form-customiser.php:1775
+msgid "Delete Element"
+msgstr "Supprimer l'élément"
+
+#: ../admin/includes/form-customiser.php:1776
+msgid "Delete this element"
+msgstr "Supprimer cet élément"
+
+#: ../admin/includes/form-customiser.php:1786
+msgid "Placeholder"
+msgstr "Emplacement"
+
+#: ../admin/includes/form-customiser.php:1798
+msgid "Description"
+msgstr "Description"
+
+#: ../admin/includes/form-customiser.php:1876
+msgid "<strong>ERROR</strong>: Please fill in all required fields"
+msgstr "<strong> ERREUR </strong>: Remplissez tous les champs obligatoires s'il vous plaît"
+
+#: ../admin/includes/form-customiser.php:1885
+msgid "<strong>ERROR</strong>: Some fields are not valid"
+msgstr "<strong> ERREUR </strong>: Certains champs ne sont pas valides"
+
+#: ../admin/includes/event_ticket_table.php:25
+msgid "No tickets"
+msgstr "Pas de billet"
+
+#: ../admin/includes/event_ticket_table.php:35
+msgid "Availablity"
+msgstr "Disponibilité"
+
+#: ../admin/includes/event_ticket_table.php:140
+msgid "+ Add Tickets"
+msgstr "+ Ajouter Billets"
+
+#: ../admin/includes/event_ticket_table.php:230
+msgid "Select All"
+msgstr "Sélectionner tout"
+
+#: ../admin/includes/event_ticket_table.php:351
+msgid "Ticket Reference"
+msgstr "Référence de billet"
+
+#: ../admin/includes/event_ticket_table.php:391
+msgid "Remove"
+msgstr "Retirer"
+
+#: ../admin/includes/venues.php:10
+msgid "Custom Fields"
+msgstr "Champs personnalisés"
+
+#: ../admin/includes/venues.php:11
+msgid "Featured Image"
+msgstr "Photo descriptive"
+
+#: ../admin/includes/venues.php:117
+msgid "Add New Custom Field:"
+msgstr "Ajouter un nouveau champ personnalisé:"
+
+#: ../admin/includes/venues.php:122
+#: ../admin/includes/venues.php:178
+#: ../admin/includes/venues.php:196
+#: ../admin/includes/venues.php:270
+msgid "Value"
+msgstr "Valeur"
+
+#: ../admin/includes/venues.php:130
+msgid "&mdash; Select &mdash;"
+msgstr "--- Sélectionner ---"
+
+#: ../admin/includes/venues.php:140
+msgid "Enter new"
+msgstr "Entrez le nouveau"
+
+#: ../admin/includes/venues.php:151
+msgid "Add Custom Field"
+msgstr "Ajouter un champ personnalisé"
+
+#: ../admin/includes/venues.php:265
+msgid "Key"
+msgstr "Touche"
+
+#: ../admin/includes/venues.php:267
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../admin/includes/venues.php:314
+#: ../admin/includes/venues.php:315
+msgid "Set featured image"
+msgstr "Réglez l'image en vedette"
+
+#: ../admin/includes/venues.php:326
+msgid "Remove featured image"
+msgstr "Supprimer l'image en vedette"
+
+#: ../templates/eo-email-template-event-organiser.php:31
+msgid "Powered by"
+msgstr "Propulsé par"
+
+#: ../templates/event-booking-history.php:12
+msgid "Booking ref"
+msgstr "Référence de réservation"
+
+#: ../templates/event-booking-history.php:95
+msgid "You have not made any bookings"
+msgstr "Vous n'avez pas fait de réservation"
+
+#: ../templates/user-attending-widget-event-list.php:41
+#: ../includes/shortcodes.php:380
+msgid "on"
+msgstr "actif"
+
+#: ../templates/user-attending-widget-event-list.php:49
+msgid "You are not currently registered for any events"
+msgstr "Vous êtes enregistré à aucun événement"
+
+#: ../includes/functions.php:122
+msgid "Thank you for your booking. You shall recieve an e-mail containing your tickets once we have confirmed payment"
+msgstr "Je vous remercie de votre réservation. Vous ne recevrez un e-mail contenant vos billets une fois que nous aurons confirmé votre réservation"
+
+#: ../includes/functions.php:123
+msgid "Thank you for your booking. You shall recieve an e-mail containing your tickets shortly"
+msgstr "Je vous remercie de votre réservation. Vous ne recevrez bientôt un e-mail contenant vos billets"
+
+#: ../includes/functions.php:124
+msgid "Thank you for registering"
+msgstr "Merci pour votre enregistrement"
+
+#: ../includes/booking-form-handler.php:53
+msgid "Bookings are no longer available for this event."
+msgstr "Réservations ne sont plus disponibles pour cet événement."
+
+#: ../includes/booking-form-handler.php:61
+msgid "This event has sold out."
+msgstr "Cet événement est complet."
+
+#: ../includes/booking-form-handler.php:74
+msgid "Only logged in users can place bookings"
+msgstr "Seuls les utilisateurs enregistrés peuvent placer des réservations"
+
+#: ../includes/booking-form-handler.php:77
+#: ../includes/booking-form-handler.php:86
+msgid "Username / Email"
+msgstr "Nom d'utilisateur (e-mail)"
+
+#: ../includes/booking-form-handler.php:122
+msgid "Already registered?"
+msgstr "Déjà inscrit ?"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Password Lost and Found"
+msgstr "Mot de passe Perdu et Trouvé"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Lost your password?"
+msgstr "Vous avez perdu votre mot de passe ?"
+
+#: ../includes/shortcodes.php:137
+msgid "All categories"
+msgstr "Toutes les catégories"
+
+#: ../includes/shortcodes.php:158
+msgid "All venues"
+msgstr "Tous les lieux"
+
+#: ../includes/shortcodes.php:178
+msgid "All cities"
+msgstr "Toutes les villes"
+
+#: ../includes/shortcodes.php:199
+msgid "All states"
+msgstr "Tous les états"
+
+#: ../includes/shortcodes.php:220
+msgid "All countries"
+msgstr "Tous les pays"
+
+#: ../includes/shortcodes.php:240
+msgid "Select dates"
+msgstr "Choisissez la date"
+
+#: ../includes/shortcodes.php:245
+msgid "To"
+msgstr "Pour"
+
+#: ../includes/shortcodes.php:262
+msgid "Search"
+msgstr "Chercher"
+
+#: ../includes/register.php:30
+#: ../includes/register.php:75
+msgid "Add New"
+msgstr "Ajouter nouveau"
+
+#: ../includes/register.php:31
+msgid "Add New Booking"
+msgstr "Ajouter une nouvelle réservation"
+
+#: ../includes/register.php:32
+msgid "Edit Bookings"
+msgstr "Modifier les Réservations"
+
+#: ../includes/register.php:33
+msgid "New Bookings"
+msgstr "Nouvelles réservations"
+
+#: ../includes/register.php:35
+msgid "View Booking"
+msgstr "Voir réservation"
+
+#: ../includes/register.php:36
+msgid "Search Bookings"
+msgstr "Rechercher des Réservations"
+
+#: ../includes/register.php:37
+msgid "No Bookings found"
+msgstr "Pas de réservation trouvé"
+
+#: ../includes/register.php:38
+msgid "No Bookings found in Trash"
+msgstr "Pas de réservation trouvée dans la corbeille"
+
+#: ../includes/register.php:76
+msgid "Add New Booking Form"
+msgstr "Ajouter un nouveau formulaire de réservation"
+
+#: ../includes/register.php:77
+msgid "Edit Booking Forms"
+msgstr "Modifier formulaires de réservation"
+
+#: ../includes/register.php:78
+msgid "New Booking Forms"
+msgstr "Nouveaux formulaires de réservation"
+
+#: ../includes/register.php:79
+#: ../includes/register.php:84
+msgid "Booking Forms"
+msgstr "Formulaires de réservation"
+
+#: ../includes/register.php:80
+msgid "View Booking Form"
+msgstr "Voir le formulaire de réservation"
+
+#: ../includes/register.php:81
+msgid "Search Booking Forms"
+msgstr "Recherche formulaires de réservation"
+
+#: ../includes/register.php:82
+msgid "No Booking Forms found"
+msgstr "Pas de formulaire de réservation trouvé"
+
+#: ../includes/register.php:83
+msgid "No Booking Forms found in Trash"
+msgstr "Pas de formulaire de réservation trouvé dans la corbeille"
+
+#: ../includes/register.php:155
+msgid "View all countries"
+msgstr "Voir tous les pays"
+
+#: ../includes/register.php:156
+msgid "View all states"
+msgstr "Voir tous les états"
+
+#: ../includes/register.php:157
+msgid "View all cities"
+msgstr "Voir toutes les villes"
+
+#: ../includes/register.php:308
+msgid "Settings"
+msgstr "Réglages"
+
+#: ../includes/register.php:331
+msgid "There has been an error with Event Organiser Pro. The <code>eo_booking_tickets</code> table is missing. Please try re-installing the plugin."
+msgstr "Il ya eu une erreur avec l'événement Organisateur Pro. La table<code>eo_booking_tickets</code> est manquante. S'il vous plaît essayez de réinstaller le plugin."
+
+#: ../includes/class-eo-user-attending-widget.php:14
+msgid "Displays a list of events a user is attending"
+msgstr "Afficher une liste d'événements auxquels participe l'utilisateur"
+
+#: ../includes/class-eo-user-attending-widget.php:15
+msgid "Events user is attending"
+msgstr "Evènements auquels participe l'utilisateur"
+
+#: ../includes/class-eo-user-attending-widget.php:23
+msgid "Title"
+msgstr "Titre"
+
+#: ../includes/class-eo-user-attending-widget.php:27
+msgid "Number of events"
+msgstr "Nombre d'événements"
+
+#: ../includes/email.php:356
+msgid "Ref."
+msgstr "Ref."
+
+#: ../includes/addon.php:66
+#, php-format
+msgid "<strong>Event Organiser Pro</strong> has been deactivated as it requires %1$s (version %2$s or higher). Please <a href=\"%3$s\"> install %1$s</a>."
+msgstr "<strong> Event Organizer Pro </strong> a été désactivé car il nécessite %1$s (version %2$s ou plus). S'il vous plaît <a href = \\ \" %3$s \\ \"> installer %1$s </a>."
+
+#: ../includes/addon.php:80
+#, php-format
+msgid "You are running version <strong>%1$s</strong> of %2$s. <strong>Event Organiser Pro</strong> requires version <strong>%3$s</strong> or higher to function correctly. <a href=\"%4$s\">Update %2$s</a>."
+msgstr "Vous exécutez la version <strong> %1$s </strong> de %2$s . <strong> d'Event Organizer Pro </strong> nécessite la version <strong> %3$s </strong> ou supérieure pour fonctionner correctement. <A href = \\ \" %4$s \\ \"> Mise à jour %2$s </a>."
+
+#: ../includes/addon.php:95
+#, php-format
+msgid "<strong>Event Organiser Pro</strong> requires %1$s to function correctly. Click to <a href=\"%2$s\" title=\"%3$s\" >activate %1$s</a>"
+msgstr "<strong> organisateur d'événement Pro </strong> requiert %1$s pour fonctionner correctement. Cliquez sur <a href = \\ \" %2$s \\ \"title = \" %3$s \\ \"> activer %1$s </a>"
+
+#: ../includes/addon.php:98
+msgid "Activate this plugin"
+msgstr "Activez ce plugin"
+
+#: ../includes/addon.php:379
+#, php-format
+msgid "or entered a valid license key <a href=\"%s\">here</a>"
+msgstr "ou entrez une clé de licence valide <a href = \\ \" %s \\ \"> ici </a>"
+
+#: ../includes/booking-actions.php:45
+msgid "New event booking"
+msgstr "Nouvelle réservation d'événements"
+
+#: ../includes/booking-actions.php:48
+#, php-format
+msgid "A new booking has been made on your site %s:"
+msgstr "Une nouvelle réservation a été faite sur votre site %s :"
+
+#: ../includes/booking-actions.php:69
+#: ../includes/booking-actions.php:198
+#, php-format
+msgid "You can view the <a href=\"%s\">booking here</a>"
+msgstr "Vous pouvez consulter la <a href = \\ \" %s \\ \"> Réservation ici </a>"
+
+#: ../includes/booking-actions.php:75
+#, php-format
+msgid "[%s] New Event Booking for %s"
+msgstr "[ %s ] Nouvelle réservation pour %s"
+
+#: ../includes/booking-actions.php:172
+msgid "Booking Confirmed"
+msgstr "Réservation confirmée"
+
+#: ../includes/booking-actions.php:175
+#, php-format
+msgid "A new booking has been confirmed on your site %s:"
+msgstr "Une nouvelle réservation a été confirmée sur votre site %s :"
+
+#: ../includes/booking-actions.php:191
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: ../includes/booking-actions.php:204
+#, php-format
+msgid "[%s] Confirmed Event Booking for %s"
+msgstr "[ %s ] Réservation confirmée pour %s"
+
+#: ../includes/booking-actions.php:260
+msgid "Please select an event."
+msgstr "S'il vous plaît sélectionner un événement."
+
+#: ../includes/booking-actions.php:271
+msgid "Please provide a name."
+msgstr "Merci de fournir un nom."
+
+#: ../includes/booking-actions.php:275
+msgid "Please provide a valid email address."
+msgstr "Veuillez fournir une adresse email valide."
+
+#: ../includes/booking-actions.php:279
+msgid "This email is already registered, please choose another one or log-in with that account"
+msgstr "Cet e-mail est déjà enregistré, en choisir un autre ou connectez-vous avec ce compte s'il vous plaît"
+
+#: ../includes/booking-actions.php:284
+msgid "You must be logged in to place a booking"
+msgstr "Vous devez être connecté pour placer une réservation"
+
+#: ../includes/booking-actions.php:338
+msgid "The tickets you have selected are no longer available."
+msgstr "Les billets que vous avez choisis ne sont plus disponibles."
+
+#: ../includes/booking-actions.php:342
+msgid "Please select a ticket."
+msgstr "Sélectionnez un billet s'il-vous plaît."
+
+#: ../includes/booking-actions.php:346
+#: ../includes/booking-actions.php:356
+msgid "Sorry, but the requested number of tickets is unavailable."
+msgstr "Désolé, mais le nombre requis de billets est indisponible."
+
+#: ../includes/booking-actions.php:363
+msgid "The payment gateway you have chosen is invalid"
+msgstr "La passerelle de paiement que vous avez choisi n'est pas valide"
+
+#: ../includes/booking-actions.php:399
+#, php-format
+msgid "Registration failed. Please contact an <a href=\"mailto:%s\">administrator</a>."
+msgstr "Echec de l'enregistrement. S'il vous plaît contacter un <a href = \\ \"mailto: %s \\ \"> Administrateur </a>."
+
+#: ../includes/import_export_csv.php:153
+msgid "Ticket Quantity"
+msgstr "Quantité de Billets"
+
+#: ../includes/import_export_csv.php:154
+msgid "Total Price"
+msgstr "Prix total"
+
+#: ../includes/import_export_csv.php:156
+#: ../includes/import_export_csv.php:274
+msgid "Booking Date (UTC)"
+msgstr "Date de Réservation (UTC)"
+
+#: ../includes/import_export_csv.php:157
+#: ../includes/import_export_csv.php:275
+msgid "Booking Status"
+msgstr "Statut de réservation"
+
+#: ../includes/import_export_csv.php:273
+msgid "Ticket Price"
+msgstr "Prix ​​des billets"
+
+#~ msgid "License"
+#~ msgstr "Licence"

@@ -1,0 +1,161 @@
+/*csslint important: true*/
+/* Controller */
+#eo-bfc-manage-forms{ 
+	background: white; 
+	margin-bottom: 20px; 
+	border: 1px solid #DEDEDE;
+	-webkit-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	overflow: hidden;
+}
+
+/* Form */
+#eo-bfc-form{ position: relative; background:white;}
+#eo-bfc-header,#eo-bfc-footer{
+padding:10px 5px 0 5px;
+background: #F5F5F5;
+}
+#eo-bfc-footer{ padding-bottom: 10px; }
+
+#eo-bfc-form-tabs{ margin: 10px 5px 0 5px;}
+#eo-bfc-form-tabs li{ padding: 0;display:inline-block;margin-bottom:0;min-width:120px;text-align:center;margin-right: 1px;margin-left: 1px;}
+#eo-bfc-form-tabs a{display: block;padding: 5px 5px 5px 12px;line-height: 18px;text-decoration: none;font-weight: bold;color: #888;}
+#eo-bfc-form-tabs .active {border-width: 1px 1px 0 1px;border-style: solid;border-color: #ccc;margin:0;}
+#eo-bfc-form-tabs .active,
+#eo-bfc-form-tabs .active a{
+	background: #fff;
+	color: #333;
+}
+#eo-bfc-form-tabs .active a:hover,
+#eo-bfc-form-tabs a:hover{
+	color: #0074A2;
+}
+
+.eo-bfc-element-list,
+#eo-bfc-form .submit{ margin-left: 30px; }
+.eo-bfc-element-list .postbox{width:500px;}
+.eo-bfc-element-list .eo-bfc-placeholder{width:auto;min-height:90px;margin:5px;	border-width: 1px;border-style: dashed;margin-bottom: 20px;border-color: #bbb;background-color: #f5f5f5;}
+.eo-bfc-element-list .eo-bfc-placeholder-error{background-color: #fbe3e4;;}
+
+.eo-bfc-element > ul{ margin-left: 40px;}
+
+.eo-bfc-settings th,
+.eo-bfc-settings td{
+	padding-left:20px;
+}
+.eo-bfc-settings{ display: none; }
+.eo-bfc-settings .form-table td,
+.eo-bfc-settings .form-table th{ border: none; padding: 10px 10px 10px 0; vertical-align: top; }
+
+
+/* Buttons */
+.eo-dashicon-delete-form{ color: #A00; }
+.eo-dashicon-delete-form:hover{ color: #F00; }
+.eo-bfc-add-form-btn{ line-height: 30px; }
+.eo-bfc-edit-form-btn,.eo-bfc-edit-form{float: right;}
+
+
+/* Misc */
+.eo-bfc-ajax-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	color: black;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+a.eo-bfc-inline-help img {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	text-decoration: none;
+	margin-left: 3px;
+	margin-bottom: -3px;
+}
+
+/* Form elements */
+.eo-bfc-element-list .required{color:red;font-weight:700;}
+.eo-bfc-example label{font-weight:700}
+.eo-bfc-element-list .postbox:hover .eo-form-drag-icon {
+	background-image: url('../../images/move.png');
+	height:20px;
+	width:20px;
+	position:absolute;
+	right:5px;
+	top: 5px;
+	}	
+.eo-bfc-settings-toggle{
+	color: #0074A2;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	visibility:hidden;
+	cursor:pointer;
+}
+.eo-bfc-element-list .postbox:hover .eo-bfc-settings-toggle{
+	visibility:visible;
+}
+
+.eo-bfc-element-list fieldset{border: 2px groove threedface;padding: 10px;border-bottom-style: none;}
+.eo-bfc-terms-conditions-example-terms{
+	margin: 10px 0 15px 0;
+	padding: 2px;
+	height: 150px;
+	overflow-y: scroll;
+	border: 2px solid #E5E5E5;
+	background: #FBFBFB;
+	box-sizing: border-box;
+}
+
+/* Element bins */
+#eventorganiser-form-fixed-mb .eventorganiser-field-bin li {margin:5px 6px}
+
+/* Dashicons */
+.eo-dashicon:before{
+	font: normal 20px/1 'dashicons';
+	speak: none;
+	vertical-align: top;
+	width: 20px;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-o-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+.eo-dashicon-form:before{content: '\f175';}
+.eo-dashicon-settings:before{content: '\f108';}
+.eo-dashicon-notifications:before{content: "\f101";}
+.eo-dashicon-add-form:before{content: '\f132';vertical-align: middle;}
+.eo-dashicon-delete-form:before{content: '\f182';vertical-align: middle;}
+
+
+.eo-bfc-add-btn,
+.eo-bfc-remove-btn{
+	display: inline-block;
+	width: 25px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	font-size: 17px;
+	background: #F7F7F7;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: inset 0 1px 0 #FFF, 0 1px 0 rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: inset 0 1px 0 #FFF, 0 1px 0 rgba(0, 0, 0, 0.08);
+	box-shadow: inset 0 1px 0 #FFF, 0 1px 0 rgba(0, 0, 0, 0.08);
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

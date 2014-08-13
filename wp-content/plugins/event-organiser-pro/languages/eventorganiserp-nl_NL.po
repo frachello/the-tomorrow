@@ -1,0 +1,1685 @@
+msgid ""
+msgstr "Project-Id-Version: Event Organiser Pro\n"
+"Report-Msgid-Bugs-To: stephenh1988@gmail.com\n"
+"POT-Creation-Date: 2008-09-01 09:37+0000\n"
+"PO-Revision-Date: 2013-12-11 04:38:42+0000\n"
+"Last-Translator: Randy <randy.schilling@webbitat.nl>\n"
+"Language-Team: \n"
+"Language: Dutch; Flemish (Netherlands)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+#: ../admin/includes/form-customiser.php:547
+msgid " I have read and agree to the terms and conditions detailed above."
+msgstr " Ik heb gelezen en ga akkoord met de algemene voorwaarden hierboven "
+"beschreven."
+
+#: ../admin/bookings.php:254
+msgid "%d bookees emailed"
+msgstr "%d bookees gemaild"
+
+#: ../admin/bookings.php:263
+msgid "%d bookings cancelled"
+msgstr "%d boekingen geannuleerd"
+
+#: ../admin/includes/form-customiser.php:642
+msgid "%s - ID: %s"
+msgstr "%s - ID: %s"
+
+#: ../admin/includes/event_booking_table.php:124
+msgid "%s ago"
+msgstr "%s geleden"
+
+#: ../admin/includes/event_booking_table.php:369
+msgid "%s bookings"
+msgstr "%s boekingen"
+
+#: ../admin/includes/event_booking_table.php:354
+msgid "%s confirmed attendees"
+msgstr "%s bevestigde aanwezigen"
+
+#: ../admin/includes/venues.php:130
+msgid "&mdash; Select &mdash;"
+msgstr "Selecteren ..."
+
+#: ../admin/includes/event_ticket_table.php:140
+msgid "+ Add Tickets"
+msgstr "+ Tickets toevoegen"
+
+#: ../admin/bookings.php:252
+msgid "1 bookee emailed"
+msgstr "1 bookee gemaild"
+
+#: ../admin/includes/event_booking_table.php:366
+msgid "1 booking"
+msgstr "1 maal"
+
+#: ../admin/bookings.php:261
+msgid "1 booking cancelled"
+msgstr "1 reservering geannuleerd"
+
+#: ../admin/includes/event_booking_table.php:351
+msgid "1 confirmed attendee"
+msgstr "1 bevestigde deelnemer"
+
+#: ../admin/includes/form-customiser.php:775
+msgid "24 Hour"
+msgstr "24 uur"
+
+#: ../admin/includes/form-customiser.php:1876
+msgid "<strong>ERROR</strong>: Please fill in all required fields"
+msgstr "<strong> FOUT </strong>: Gelieve alle verplichte velden in te vullen"
+
+#: ../admin/includes/form-customiser.php:1885
+msgid "<strong>ERROR</strong>: Some fields are not valid"
+msgstr "<strong> FOUT </strong>: Sommige velden zijn niet geldig"
+
+#: ../includes/addon.php:66
+msgid "<strong>Event Organiser Pro</strong> has been deactivated as it requires "
+"%1$s (version %2$s or higher). Please <a href=\"%3$s\"> install %1$s</a>."
+msgstr "<strong> Evenement Organisator Pro </strong> is gedeactiveerd als het "
+"vereist %1$s (versie %2$s of hoger). Gelieve <a href = \" %3$s \"> "
+"installeren %1$s </a>."
+
+#: ../includes/addon.php:95
+msgid "<strong>Event Organiser Pro</strong> requires %1$s to function correctly. "
+"Click to <a href=\"%2$s\" title=\"%3$s\" >activate %1$s</a>"
+msgstr "<strong> Evenement Organisator Pro </strong> vereist %1$s te kunnen "
+"functioneren. Klik op <a href = \" %2$s \"title = \" %3$s \"> activeren %1$s "
+"</a>"
+
+#: ../admin/includes/event_booking_table.php:545
+msgid "<strong>Note:</strong> your hosting provider may limit the number of e-mails "
+"you can send in a 24 hour period. Plug-ins are available that <a href=\"%s\" "
+"target=\"_blank\">work around these restrictions.</a>"
+msgstr "<strong> Opmerking: </strong> uw hosting provider kan het aantal e-mails "
+"kunt u in een periode van 24 uur te verzenden beperken. Plug-ins beschikbaar "
+"die <a href = \" %s \"target = \" _blank \"> werk rond deze beperkingen. </ "
+"a>"
+
+#: ../admin/settings.php:133
+msgid "A booking is confirmed"
+msgstr "Een boeking is bevestigd"
+
+#: ../includes/booking-actions.php:175
+msgid "A new booking has been confirmed on your site %s:"
+msgstr "Een nieuwe boeking is bevestigd op uw site %s :"
+
+#: ../includes/booking-actions.php:48
+msgid "A new booking has been made on your site %s:"
+msgstr "Een nieuwe boeking is gemaakt op uw site %s :"
+
+#: ../admin/settings.php:132
+msgid "A new booking is made"
+msgstr "Een nieuwe boeking gemaakt"
+
+#: ../includes/addon.php:98
+msgid "Activate this plugin"
+msgstr "Activeer deze plugin"
+
+#: ../admin/includes/venues.php:151
+msgid "Add Custom Field"
+msgstr "Voeg aangepast veld toe"
+
+#: ../includes/register.php:30
+#: ../includes/register.php:75
+msgid "Add New"
+msgstr "Voeg nieuwe toe"
+
+#: ../includes/register.php:31
+msgid "Add New Booking"
+msgstr "Voeg een nieuwe boeking"
+
+#: ../includes/register.php:76
+msgid "Add New Booking Form"
+msgstr "Toevoegen nieuwe Boekingsformulier"
+
+#: ../admin/includes/venues.php:117
+msgid "Add New Custom Field:"
+msgstr "Toevoegen nieuwe Custom Field:"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:541
+msgid "Address"
+msgstr "Adres"
+
+#: ../admin/includes/form-customiser.php:1317
+msgid "Address Includes"
+msgstr "Adres Inclusief"
+
+#: ../admin/includes/form-customiser.php:1143
+#: ../admin/includes/form-customiser.php:1247
+msgid "Address Line 2"
+msgstr "Adres regel 2"
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Advanced Fields"
+msgstr "Geavanceerde Fields"
+
+#: ../admin/settings.php:94
+msgid "After"
+msgstr "Na"
+
+#: ../admin/includes/form-customiser.php:554
+msgid "AIM"
+msgstr "AIM"
+
+#: ../admin/includes/event_booking_table.php:222
+msgid "All"
+msgstr "Totaal"
+
+#: ../includes/shortcodes.php:142
+msgid "All categories"
+msgstr "Alle categorieën"
+
+#: ../includes/shortcodes.php:183
+msgid "All cities"
+msgstr "Alle steden"
+
+#: ../includes/shortcodes.php:225
+msgid "All countries"
+msgstr "Alle landen"
+
+#: ../includes/shortcodes.php:204
+msgid "All states"
+msgstr "Alle staten"
+
+#: ../includes/shortcodes.php:163
+msgid "All venues"
+msgstr "Alle locaties"
+
+#: ../admin/settings.php:114
+msgid "Allow Logged-out Users to place bookings?"
+msgstr "Mogen uitgelogde gebruikers kaartjes reserveren?"
+
+#: ../admin/includes/shortcode_popup.php:133
+msgid "Allow your users to search events. Select which filters they can use."
+msgstr "Je gebruikers de mogelijkheid om te zoeken gebeurtenissen. Selecteer welke "
+"filters ze kunnen gebruiken."
+
+#: ../includes/booking-form-handler.php:122
+msgid "Already registered?"
+msgstr "Al geregistreerd?"
+
+#: ../admin/bookings.php:575
+#: ../admin/calendar.php:101
+msgid "Amount"
+msgstr "Bedrag"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+msgid "Antispam maths question"
+msgstr "Antispam wiskunde vraag"
+
+#: ../admin/calendar.php:56
+msgid "Attending"
+msgstr "Bijwonen"
+
+#: ../admin/settings.php:174
+msgid "Australia"
+msgstr "Australië"
+
+#: ../admin/settings.php:175
+msgid "Austria"
+msgstr "Oostenrijk"
+
+#: ../admin/includes/event_ticket_table.php:35
+msgid "Availablity"
+msgstr "Beschikbaarheid"
+
+#: ../admin/bookings.php:390
+msgid "Back to table view"
+msgstr "Terug naar tabelweergave"
+
+#: ../admin/settings.php:93
+msgid "Before"
+msgstr "Voor"
+
+#: ../admin/settings.php:176
+msgid "Belgium"
+msgstr "België"
+
+#: ../admin/includes/form-customiser.php:563
+msgid "Bio"
+msgstr "Bio"
+
+#: ../admin/includes/form-customiser.php:440
+msgid "Book"
+msgstr "Reserveer"
+
+#: ../admin/bookings.php:234
+#: ../admin/bookings.php:471
+#: ../admin/calendar.php:99
+msgid "Bookee"
+msgstr "Bookee"
+
+#: ../admin/bookings.php:233
+#: ../admin/bookings.php:349
+#: ../admin/calendar.php:98
+msgid "Booking"
+msgstr "Boeken"
+
+#: ../admin/bookings.php:364
+msgid "Booking (#%d)"
+msgstr "Reservering (# %d )"
+
+#: ../includes/booking-actions.php:172
+msgid "Booking Confirmed"
+msgstr "Reservering bevestigd"
+
+#: ../admin/bookings.php:530
+msgid "Booking Date"
+msgstr "Boeken Datum"
+
+#: ../includes/import_export_csv.php:156
+#: ../includes/import_export_csv.php:274
+msgid "Booking Date (UTC)"
+msgstr "Reservering Datum (UTC)"
+
+#: ../admin/bookings.php:348
+msgid "Booking Details"
+msgstr "Boeken Details"
+
+#: ../admin/settings.php:236
+msgid "Booking email"
+msgstr "Boeken van e-mail"
+
+#: ../admin/settings.php:10
+msgid "Booking Form"
+msgstr "Reserveringsformulier"
+
+#: ../includes/register.php:79
+#: ../includes/register.php:84
+msgid "Booking Forms"
+msgstr "Reservering Formulieren"
+
+#: ../admin/bookings.php:605
+msgid "Booking Meta"
+msgstr "Boeken Meta"
+
+#: ../admin/bookings.php:596
+msgid "Booking Notes"
+msgstr "Boeken Notes"
+
+#: ../templates/event-booking-history.php:12
+msgid "Booking ref"
+msgstr ""
+
+#: ../admin/bookings.php:536
+msgid "Booking Reference"
+msgstr "Boeking Reference"
+
+#: ../includes/import_export_csv.php:157
+#: ../includes/import_export_csv.php:275
+msgid "Booking Status"
+msgstr "Reservering Status"
+
+#: ../admin/bookings.php:268
+msgid "Booking updated"
+msgstr "Reservatie bijgewerkt"
+
+#: ../admin/settings.php:9
+#: ../admin/settings.php:97
+#: ../admin/bookings.php:23
+#: ../admin/bookings.php:26
+#: ../admin/bookings.php:212
+#: ../admin/calendar.php:11
+msgid "Bookings"
+msgstr "Reserveringen"
+
+#: ../includes/booking-form-handler.php:53
+msgid "Bookings are no longer available for this event."
+msgstr "Boekingen zijn niet meer beschikbaar voor dit evenement."
+
+#: ../admin/bookings.php:696
+msgid "Bookings for event &#8220;%s&#8221;"
+msgstr "Boekingen voor het evenement \" %s s \""
+
+#: ../admin/bookings.php:691
+msgid "Bookings for event &#8220;%s&#8221; (%s)"
+msgstr "Boekingen voor het evenement \" %s s \"( %s )"
+
+#: ../admin/bookings.php:700
+msgid "Bookings for user &#8220;%s&#8221;"
+msgstr "Boekingen voor de gebruiker \" %s s \""
+
+#: ../admin/edit.php:80
+msgid "Bookings will be closed when an occurrences starts."
+msgstr "Boekingen zal worden gesloten wanneer een voorvallen begint."
+
+#: ../admin/includes/shortcode_popup.php:9
+msgid "Calendar"
+msgstr "Agenda"
+
+#: ../admin/settings.php:177
+msgid "Canada"
+msgstr "Canada"
+
+#: ../admin/includes/event_booking_table.php:498
+#: ../admin/includes/event_booking_table.php:557
+#: ../admin/includes/venues.php:141
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../admin/bookings.php:437
+#: ../admin/includes/event_booking_table.php:50
+msgid "Cancel Booking"
+msgstr "Annuleren boeking"
+
+#: ../admin/includes/event_booking_table.php:447
+msgid "Cancel Bookings"
+msgstr "Annuleren Boekingen"
+
+#: ../admin/includes/event_booking_table.php:48
+msgid "Cancel this booking permanently"
+msgstr "Annuleer deze reservering definitief"
+
+#: ../admin/edit.php:132
+msgid "Cap booking at %s places"
+msgstr "Cap reservering bij %s plaatsen"
+
+#: ../admin/calendar.php:118
+msgid "Capacity"
+msgstr "Hoedanigheid"
+
+#: ../admin/includes/shortcode_popup.php:136
+msgid "Category"
+msgstr "Categorie"
+
+#: ../admin/bookings.php:550
+msgid "Change"
+msgstr "Veranderen"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: ../admin/includes/form-customiser.php:1698
+msgid "Checkbox label"
+msgstr "Checkbox label"
+
+#: ../admin/settings.php:178
+msgid "China"
+msgstr "China"
+
+#: ../admin/includes/shortcode_popup.php:144
+#: ../admin/includes/form-customiser.php:1153
+#: ../admin/includes/form-customiser.php:1157
+#: ../admin/includes/form-customiser.php:1257
+#: ../admin/includes/form-customiser.php:1262
+msgid "City"
+msgstr "Stad"
+
+#: ../admin/edit.php:33
+msgid "Concession"
+msgstr "Concessie"
+
+#: ../admin/bookings.php:411
+#: ../admin/calendar.php:112
+#: ../admin/includes/event_booking_table.php:150
+#: ../admin/includes/event_booking_table.php:226
+msgid "Confirmed"
+msgstr "Bevestigd"
+
+#: ../admin/includes/shortcode_popup.php:152
+#: ../admin/includes/form-customiser.php:1197
+#: ../admin/includes/form-customiser.php:1201
+#: ../admin/includes/form-customiser.php:1302
+#: ../admin/includes/form-customiser.php:1306
+msgid "Country"
+msgstr "Land"
+
+#: ../admin/includes/form-customiser.php:179
+msgid "Create an account (optional)"
+msgstr "Maak een account (optioneel)"
+
+#: ../admin/edit.php:111
+msgid "Create Tickets"
+msgstr "Maak Tickets"
+
+#: ../admin/settings.php:79
+msgid "Currency"
+msgstr "Valuta"
+
+#: ../admin/settings.php:87
+msgid "Currency Position"
+msgstr "Plaats van valutateken"
+
+#: ../admin/includes/event_booking_table.php:405
+msgid "Current page"
+msgstr "Huidige pagina"
+
+#: ../admin/includes/venues.php:10
+msgid "Custom Fields"
+msgstr "Aangepaste velden"
+
+#: ../admin/settings.php:223
+msgid "Custom Templates"
+msgstr "Aangepaste sjablonen"
+
+#: ../admin/bookings.php:238
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:514
+msgid "Date"
+msgstr "Datum"
+
+#: ../admin/includes/shortcode_popup.php:156
+msgid "Date range"
+msgstr "Datumbereik"
+
+#: ../admin/includes/shortcode_popup.php:68
+msgid "Day"
+msgstr "Dag"
+
+#: ../admin/includes/venues.php:267
+msgid "Delete"
+msgstr "Verwijder"
+
+#: ../admin/includes/form-customiser.php:1775
+msgid "Delete Element"
+msgstr "Delete Element"
+
+#: ../admin/includes/form-customiser.php:1776
+msgid "Delete this element"
+msgstr "Verwijder dit element"
+
+#: ../admin/includes/form-customiser.php:1798
+msgid "Description"
+msgstr "Omschrijving"
+
+#: ../admin/edit.php:104
+msgid "Deselect all"
+msgstr "Hef de selectie van alle"
+
+#: ../admin/includes/shortcode_popup.php:122
+msgid "Dimensions"
+msgstr "Afmetingen"
+
+#: ../admin/settings.php:145
+#: ../admin/settings.php:201
+msgid "Disable"
+msgstr "Uitschakelen"
+
+#: ../admin/includes/shortcode_popup.php:61
+msgid "Display a calendar of events, similar to the admin calendar."
+msgstr "Toon een kalender van evenementen, vergelijkbaar met de admin kalender."
+
+#: ../admin/includes/shortcode_popup.php:106
+msgid "Display a Google map of venue or venues"
+msgstr "Geef een Google kaart van locatie of locaties"
+
+#: ../admin/includes/shortcode_popup.php:16
+msgid "Display a list of events"
+msgstr "Toon een lijst van evenementen"
+
+#: ../includes/class-eo-user-attending-widget.php:14
+msgid "Displays a list of events a user is attending"
+msgstr ""
+
+#: ../admin/includes/event_booking_table.php:499
+msgid "Download"
+msgstr "Opslaan"
+
+#: ../admin/includes/event_booking_table.php:271
+msgid "Download bookings"
+msgstr "Download boekingen"
+
+#: ../admin/includes/event_booking_table.php:277
+msgid "Download tickets"
+msgstr "Download tickets"
+
+#: ../admin/settings.php:25
+#: ../admin/includes/form-customiser.php:172
+msgid "E-mail"
+msgstr "Email"
+
+#: ../admin/settings.php:216
+msgid "E-mail template"
+msgstr "E-mail template"
+
+#: ../admin/settings.php:244
+#: ../admin/includes/event_booking_table.php:532
+msgid "E-mailing Bookees"
+msgstr "E-mailing Bookees"
+
+#: ../includes/register.php:77
+msgid "Edit Booking Forms"
+msgstr "Bewerk Reservering Formulieren"
+
+#: ../includes/register.php:32
+msgid "Edit Bookings"
+msgstr "Bewerk Boekingen"
+
+#: ../admin/includes/booking-form-customiser.php:202
+#: ../admin/includes/form-customiser.php:383
+msgid "Edit Form"
+msgstr "Vorm bewerken"
+
+#: ../admin/bookings.php:477
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/event_booking_table.php:558
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:510
+msgid "Email"
+msgstr "E-mailadres"
+
+#: ../admin/includes/event_booking_table.php:448
+#: ../admin/includes/event_booking_table.php:518
+msgid "Email Bookees"
+msgstr "Email Bookees"
+
+#: ../admin/includes/venues.php:140
+msgid "Enter new"
+msgstr "Voer nieuwe"
+
+#: ../admin/settings.php:99
+msgid "Entire series"
+msgstr "Complete serie"
+
+#: ../admin/bookings.php:235
+#: ../admin/bookings.php:567
+msgid "Event"
+msgstr "Evenement"
+
+#: ../admin/edit.php:85
+msgid "Event dates"
+msgstr "Event data"
+
+#: ../admin/includes/shortcode_popup.php:8
+msgid "Event List"
+msgstr "Event List"
+
+#: ../admin/includes/shortcode_popup.php:11
+msgid "Event Search"
+msgstr "Evenement zoeken"
+
+#: ../admin/edit.php:7
+msgid "Event Tickets"
+msgstr "Event Tickets"
+
+#: ../admin/includes/shortcode_popup.php:51
+#: ../admin/includes/shortcode_popup.php:90
+msgid "Events at venues"
+msgstr "Evenementen op locaties"
+
+#: ../admin/includes/shortcode_popup.php:38
+msgid "Events ending before"
+msgstr "Gebeurtenissen die eindigen vóór"
+
+#: ../admin/includes/shortcode_popup.php:45
+#: ../admin/includes/shortcode_popup.php:84
+msgid "Events in categories"
+msgstr "Evenementen in categorieën"
+
+#: ../admin/includes/shortcode_popup.php:19
+#: ../admin/includes/shortcode_popup.php:31
+msgid "Events starting after"
+msgstr "Gebeurtenissen beginnen na"
+
+#: ../admin/includes/shortcode_popup.php:25
+msgid "Events starting before"
+msgstr "Events beginnen voor"
+
+#: ../includes/class-eo-user-attending-widget.php:15
+msgid "Events user is attending"
+msgstr ""
+
+#: ../admin/calendar.php:63
+msgid "Export bookings"
+msgstr "Boekingen export"
+
+#: ../admin/includes/venues.php:11
+msgid "Featured Image"
+msgstr "Featured Image"
+
+#: ../admin/includes/form-customiser.php:170
+#: ../admin/includes/form-customiser.php:1354
+#: ../admin/includes/form-customiser.php:1396
+msgid "First Name"
+msgstr "Voornaam"
+
+#: ../admin/includes/booking-form-customiser.php:215
+#: ../admin/includes/form-customiser.php:396
+msgid "Form name"
+msgstr "Formulier naam"
+
+#: ../admin/includes/form-customiser.php:764
+msgid "Format"
+msgstr "Formaat"
+
+#: ../admin/settings.php:179
+msgid "France"
+msgstr "Frankrijk"
+
+#: ../admin/edit.php:75
+msgid "From"
+msgstr "Van"
+
+#: ../admin/includes/booking-form-customiser.php:62
+#: ../admin/includes/form-customiser.php:62
+msgid "Gateway picker"
+msgstr "Gateway picker"
+
+#: ../admin/bookings.php:652
+msgid "Gateway Response"
+msgstr "Gateway Response"
+
+#: ../admin/settings.php:22
+msgid "General"
+msgstr "Algemeen"
+
+#: ../admin/settings.php:180
+msgid "Germany"
+msgstr "Duitsland"
+
+#: ../admin/includes/event_booking_table.php:389
+msgid "Go to the first page"
+msgstr "Ga naar de eerste resultaat pagina"
+
+#: ../admin/includes/event_booking_table.php:423
+msgid "Go to the last page"
+msgstr "Ga naar de laatste resultaat pagina"
+
+#: ../admin/includes/event_booking_table.php:416
+msgid "Go to the next page"
+msgstr "Ga naar de volgende resultaat pagina"
+
+#: ../admin/includes/event_booking_table.php:396
+msgid "Go to the previous page"
+msgstr "Ga naar de vorige resultaat pagina"
+
+#: ../admin/includes/shortcode_popup.php:124
+msgid "Height:"
+msgstr "Hoogte:"
+
+#: ../admin/bookings.php:665
+msgid "Hide gateway response"
+msgstr "Verberg gateway reactie"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "HTML"
+msgstr "HTML äëïöü"
+
+#: ../admin/bookings.php:302
+msgid "I want to confirm anyway"
+msgstr "Ik wil hoe dan ook te bevestigen"
+
+#: ../admin/edit.php:17
+msgid "If you edit the event's dates you will need to update any event tickets. "
+"Editing event dates will lose existing bookings for this event"
+msgstr "Als je data van het evenement te bewerken, moet u elk evenement tickets "
+"updaten. Event data bewerken zal de bestaande boekingen voor dit evenement "
+"te verliezen"
+
+#: ../admin/settings.php:61
+msgid "If you have a entered valid license which does not seem to work, please <a "
+"href=\"%s\">contact suppport</a>."
+msgstr "Als u een ingevoerd geldige licentie die niet lijkt te werken, kunt u <a "
+"href = \" %s \"> contact suppport </a>."
+
+#: ../admin/includes/event_booking_table.php:533
+msgid "In the e-mail subject & body you can use the following tags"
+msgstr "In de e-mail onderwerp & body kun je de volgende tags gebruiken"
+
+#: ../admin/settings.php:242
+msgid "In the e-mail template you can use booking information placeholders"
+msgstr "In de e-mail template die je kunt gebruiken boekingsinformatie placeholders"
+
+#: ../admin/includes/form-customiser.php:1422
+msgid "Include"
+msgstr "Inclusief"
+
+#: ../admin/includes/shortcode_popup.php:78
+#: ../admin/includes/shortcode_popup.php:116
+msgid "Include tooltip"
+msgstr "Onder tooltip"
+
+#: ../admin/settings.php:54
+msgid "Invalid license key"
+msgstr "Ongeldige licentie code."
+
+#: ../admin/settings.php:181
+msgid "Italy"
+msgstr "Italië"
+
+#: ../admin/includes/form-customiser.php:560
+msgid "Jabber / Google Talk"
+msgstr "Jabber / Google Talk"
+
+#: ../admin/includes/venues.php:265
+msgid "Key"
+msgstr "Sleutel"
+
+#: ../admin/includes/form-customiser.php:506
+#: ../admin/includes/form-customiser.php:570
+#: ../admin/includes/form-customiser.php:1043
+#: ../admin/includes/form-customiser.php:1686
+msgid "Label"
+msgstr "Label"
+
+#: ../admin/includes/form-customiser.php:171
+#: ../admin/includes/form-customiser.php:1364
+#: ../admin/includes/form-customiser.php:1407
+msgid "Last Name"
+msgstr "Achternaam"
+
+#: ../admin/includes/shortcode_popup.php:112
+msgid "Leave blank for venue of current event (if this is being used on an event's "
+"page"
+msgstr "Laat leeg voor de locatie van de huidige gebeurtenis (als deze wordt "
+"gebruikt op pagina een evenement's"
+
+#: ../admin/settings.php:36
+msgid "License"
+msgstr "Licentie"
+
+#: ../admin/settings.php:143
+#: ../admin/settings.php:200
+msgid "Live"
+msgstr "Wonen"
+
+#: ../admin/settings.php:138
+#: ../admin/settings.php:197
+msgid "Live Switch"
+msgstr "Wonen Schakelaar"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Lost your password?"
+msgstr "Je wachtwoord vergeten?"
+
+#: ../admin/includes/form-customiser.php:793
+msgid "Max"
+msgstr "Max"
+
+#: ../admin/includes/event_booking_table.php:529
+msgid "Message"
+msgstr "Bericht"
+
+#: ../admin/settings.php:182
+msgid "Mexico"
+msgstr "Mexico"
+
+#: ../admin/includes/form-customiser.php:791
+msgid "Min"
+msgstr "Min"
+
+#: ../admin/includes/shortcode_popup.php:66
+msgid "Month"
+msgstr "Maand"
+
+#: ../admin/includes/booking-form-customiser.php:53
+#: ../admin/includes/form-customiser.php:53
+msgid "Multiselect"
+msgstr "Multiselect"
+
+#: ../admin/includes/form-customiser.php:566
+#: ../admin/includes/venues.php:177
+msgid "Name"
+msgstr "Naam"
+
+#: ../admin/settings.php:183
+msgid "Netherlands"
+msgstr "Nederland"
+
+#: ../includes/register.php:78
+msgid "New Booking Forms"
+msgstr "Nieuwe boeking Formulieren"
+
+#: ../includes/register.php:33
+msgid "New Bookings"
+msgstr "Nieuwe Boekingen"
+
+#: ../includes/booking-actions.php:45
+msgid "New event booking"
+msgstr "Nieuw evenement boeken"
+
+#: ../admin/settings.php:117
+msgid "No"
+msgstr "Nee"
+
+#: ../admin/bookings.php:465
+msgid "No account"
+msgstr "Nog geen account"
+
+#: ../includes/register.php:82
+msgid "No Booking Forms found"
+msgstr "Geen Reservering Formulieren gevonden"
+
+#: ../includes/register.php:83
+msgid "No Booking Forms found in Trash"
+msgstr "Geen Reservering Formulieren gevonden in prullenbak"
+
+#: ../admin/includes/event_booking_table.php:363
+msgid "No bookings"
+msgstr "Geen boekingen"
+
+#: ../includes/register.php:37
+msgid "No Bookings found"
+msgstr "Geen Boekingen gevonden"
+
+#: ../includes/register.php:38
+msgid "No Bookings found in Trash"
+msgstr "Geen Boekingen gevonden in prullenbak"
+
+#: ../admin/includes/event_booking_table.php:30
+msgid "No bookings found."
+msgstr "Geen boekingen gevonden."
+
+#: ../admin/includes/event_booking_table.php:348
+msgid "No confirmed attendees"
+msgstr "Geen bevestigde aanwezigen"
+
+#: ../admin/includes/event_ticket_table.php:25
+msgid "No tickets"
+msgstr "Geen tickets"
+
+#: ../admin/settings.php:126
+msgid "Notify me when"
+msgstr "Laat me weten wanneer"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+#: ../admin/includes/form-customiser.php:520
+msgid "Number"
+msgstr "Aantal"
+
+#: ../includes/class-eo-user-attending-widget.php:27
+msgid "Number of events"
+msgstr "Aantal evenementen"
+
+#: ../admin/settings.php:24
+msgid "Offline Payment"
+msgstr "Bankoverschrijving"
+
+#: ../admin/settings.php:207
+msgid "Offline Payment Instructions"
+msgstr "Offline betaling Instructions"
+
+#: ../templates/user-attending-widget-event-list.php:41
+msgid "on"
+msgstr ""
+
+#: ../includes/booking-form-handler.php:74
+msgid "Only logged in users can place bookings"
+msgstr "Alleen ingelogde gebruikers kunnen boekingen plaatsen"
+
+#: ../admin/includes/form-customiser.php:1712
+msgid "Options"
+msgstr "Opties"
+
+#: ../includes/addon.php:379
+msgid "or entered a valid license key <a href=\"%s\">here</a>"
+msgstr "of ging een geldige licentiesleutel <a href = \" %s \"> hier </a>"
+
+#: ../admin/bookings.php:557
+#: ../admin/bookings.php:560
+msgid "Orphaned booking"
+msgstr "Verweesde boeken"
+
+#: ../admin/bookings.php:492
+msgid "Other Recent bookings"
+msgstr ""
+
+#: ../admin/settings.php:99
+msgid "Particular Occurrence"
+msgstr "Eén gebeurtenis"
+
+#: ../includes/booking-form-handler.php:137
+msgid "Password Lost and Found"
+msgstr "Wachtwoord kwijt en gevonden"
+
+#: ../admin/bookings.php:583
+msgid "Payment Gateway"
+msgstr "Payment Gateway"
+
+#: ../admin/settings.php:23
+msgid "PayPal"
+msgstr "PayPal"
+
+#: ../admin/settings.php:165
+msgid "PayPal allows you to tailor the booking payment page to you site. For more "
+"information, <a href=\"%s\" target=\"_blank\">see this tutorial</a>"
+msgstr "PayPal stelt u in staat om de pagina betaling boeking aan u ter plaatse op "
+"maat. Voor meer informatie, <a href = \" %s \"target = \" _blank \"> zie "
+"deze tutorial </a>"
+
+#: ../admin/settings.php:150
+msgid "PayPal Email"
+msgstr "PayPal Email"
+
+#: ../admin/settings.php:171
+msgid "PayPal Local Site"
+msgstr "PayPal lokale site"
+
+#: ../admin/settings.php:157
+msgid "PayPal page style"
+msgstr "PayPal pagina stijl"
+
+#: ../admin/bookings.php:410
+#: ../admin/calendar.php:114
+#: ../admin/includes/event_booking_table.php:152
+#: ../admin/includes/event_booking_table.php:229
+msgid "Pending"
+msgstr "In de wacht"
+
+#: ../admin/settings.php:184
+msgid "Philippines"
+msgstr "Filippijnen"
+
+#: ../admin/includes/booking-form-customiser.php:57
+#: ../admin/includes/form-customiser.php:57
+#: ../admin/includes/form-customiser.php:538
+msgid "Phone"
+msgstr "Telefoon"
+
+#: ../admin/includes/form-customiser.php:1786
+msgid "Placeholder"
+msgstr "Placeholder"
+
+#: ../admin/includes/ajax-actions.php:153
+msgid "Please provide a custom field name."
+msgstr "Geef een aangepaste veldnaam."
+
+#: ../admin/includes/ajax-actions.php:130
+#: ../admin/includes/ajax-actions.php:155
+msgid "Please provide a custom field value."
+msgstr "Geef een aangepast veld waarde."
+
+#: ../includes/booking-actions.php:271
+msgid "Please provide a name."
+msgstr "Geef een naam."
+
+#: ../includes/booking-actions.php:275
+msgid "Please provide a valid email address."
+msgstr "Geef een geldig e-mailadres."
+
+#: ../admin/includes/booking-form-customiser.php:372
+#: ../admin/includes/form-customiser.php:1547
+msgid "Please select a date"
+msgstr "Selecteer een datum"
+
+#: ../includes/booking-actions.php:342
+msgid "Please select a ticket."
+msgstr "Selecteer een ticket."
+
+#: ../includes/booking-actions.php:260
+msgid "Please select an event."
+msgstr "Selecteer een evenement."
+
+#: ../admin/settings.php:185
+msgid "Poland"
+msgstr "Polen"
+
+#: ../admin/includes/form-customiser.php:1182
+#: ../admin/includes/form-customiser.php:1187
+#: ../admin/includes/form-customiser.php:1287
+#: ../admin/includes/form-customiser.php:1292
+msgid "Post Code"
+msgstr "Bericht Code"
+
+#: ../templates/eo-email-template-event-organiser.php:31
+msgid "Powered by"
+msgstr "Mogelijk gemaakt door "
+
+#: ../admin/settings.php:232
+msgid "Preview E-mail"
+msgstr "Voorbeeld E-mail"
+
+#: ../admin/settings.php:274
+msgid "Preview Email"
+msgstr "Voorbeeld E-mail"
+
+#: ../admin/edit.php:37
+#: ../admin/bookings.php:237
+#: ../admin/includes/booking-form-customiser.php:354
+#: ../admin/includes/form-customiser.php:1529
+#: ../admin/includes/event_ticket_table.php:34
+#: ../admin/includes/event_ticket_table.php:353
+msgid "Price"
+msgstr "Prijs"
+
+#: ../admin/settings.php:52
+#: ../admin/settings.php:57
+msgid "Purchase a license key"
+msgstr "Koop een licentie code."
+
+#: ../admin/includes/booking-form-customiser.php:355
+#: ../admin/includes/form-customiser.php:1530
+msgid "Quantity"
+msgstr "Aantal"
+
+#: ../admin/includes/booking-form-customiser.php:52
+#: ../admin/includes/form-customiser.php:52
+msgid "Radio Buttons"
+msgstr "Radio Knoppen"
+
+#: ../admin/includes/form-customiser.php:790
+msgid "Range"
+msgstr "Bereik"
+
+#: ../includes/email.php:356
+msgid "Ref."
+msgstr "Ref."
+
+#: ../includes/booking-actions.php:399
+msgid "Registration failed. Please contact an <a "
+"href=\"mailto:%s\">administrator</a>."
+msgstr "Registratie is mislukt. Neem dan contact op met een <a href = \"mailto: %s "
+"\"> administrator </a>."
+
+#: ../admin/includes/event_ticket_table.php:391
+msgid "Remove"
+msgstr "Verwijder"
+
+#: ../admin/includes/venues.php:326
+msgid "Remove featured image"
+msgstr "Gekenmerkte afbeelding verwijderen"
+
+#: ../admin/includes/form-customiser.php:1762
+msgid "Required"
+msgstr "Vereist"
+
+#: ../admin/bookings.php:425
+msgid "Resend tickets to bookee"
+msgstr "Opnieuw verzenden tickets naar bookee"
+
+#: ../admin/settings.php:106
+msgid "Reserve Pending Tickets"
+msgstr "Reserveer voorlopige kaartjes"
+
+#: ../admin/settings.php:144
+msgid "Sandbox Mode"
+msgstr "Sandbox Mode"
+
+#: ../admin/includes/booking-form-customiser.php:153
+#: ../admin/includes/form-customiser.php:334
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan?"
+
+#: ../includes/shortcodes.php:267
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../includes/register.php:81
+msgid "Search Booking Forms"
+msgstr "Zoeken Reservering Formulieren"
+
+#: ../includes/register.php:36
+msgid "Search Bookings"
+msgstr "Zoek Boekingen"
+
+#: ../admin/includes/form-customiser.php:551
+msgid "Section"
+msgstr "Afdeling"
+
+#: ../admin/includes/booking-form-customiser.php:56
+#: ../admin/includes/form-customiser.php:56
+msgid "Section Break"
+msgstr "Sectie Break"
+
+#: ../admin/settings.php:255
+#: ../admin/includes/event_booking_table.php:543
+msgid "See full list"
+msgstr "Zie de volledige lijst"
+
+#: ../admin/edit.php:53
+#: ../admin/edit.php:70
+#: ../admin/edit.php:96
+msgid "See this page for more details"
+msgstr "Zie deze pagina voor meer details"
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Select"
+msgstr "Selecteren"
+
+#: ../admin/edit.php:146
+msgid "Select a booking form:"
+msgstr "Selecteer een boekingsformulier:"
+
+#: ../admin/includes/booking-form-customiser.php:102
+#: ../admin/includes/form-customiser.php:102
+msgid "Select a payment gateway"
+msgstr "Selecteer een payment gateway"
+
+#: ../admin/edit.php:102
+msgid "Select all"
+msgstr "Selecteer alles"
+
+#: ../admin/includes/event_ticket_table.php:230
+msgid "Select All"
+msgstr "Alles Selecteren"
+
+#: ../admin/includes/event_booking_table.php:492
+msgid "Select booking fields to be included in export"
+msgstr "Selecteer reservering velden die moeten worden opgenomen in de export"
+
+#: ../admin/bookings.php:558
+msgid "Select date"
+msgstr "Selecteer een datum"
+
+#: ../includes/shortcodes.php:245
+msgid "Select dates"
+msgstr "Kies een datum"
+
+#: ../admin/edit.php:89
+msgid "Select the dates of the event for which you want this ticket to be sold. "
+"(Default: all dates)"
+msgstr "Selecteer de data van het evenement waarvoor u dit ticket worden verkocht. "
+"(Standaard: alle data)"
+
+#: ../admin/includes/venues.php:314
+#: ../admin/includes/venues.php:315
+msgid "Set featured image"
+msgstr "Instellen Featured afbeelding"
+
+#: ../includes/register.php:307
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../admin/bookings.php:664
+msgid "Show gateway response"
+msgstr "Toon gateway reactie"
+
+#: ../admin/includes/shortcode_popup.php:97
+msgid "Show only events current user is attending"
+msgstr ""
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Single Line Text"
+msgstr "Single Line Text"
+
+#: ../includes/booking-actions.php:346
+#: ../includes/booking-actions.php:356
+msgid "Sorry, but the requested number of tickets is unavailable."
+msgstr "Sorry, maar het gevraagde aantal tickets is niet beschikbaar."
+
+#: ../admin/edit.php:44
+#: ../admin/edit.php:48
+#: ../admin/includes/event_ticket_table.php:33
+msgid "Spaces"
+msgstr "Spaces"
+
+#: ../admin/settings.php:186
+msgid "Spain"
+msgstr "Spanje"
+
+#: ../admin/edit.php:63
+msgid "Specify when this ticket will be available for purchase."
+msgstr "Geef aan wanneer dit ticket verkrijgbaar zal zijn."
+
+#: ../admin/includes/booking-form-customiser.php:67
+#: ../admin/includes/form-customiser.php:67
+msgid "Standard Fields"
+msgstr "Standaard velden"
+
+#: ../admin/includes/shortcode_popup.php:148
+msgid "State"
+msgstr "Provincie"
+
+#: ../admin/includes/form-customiser.php:1175
+#: ../admin/includes/form-customiser.php:1280
+msgid "State /Province"
+msgstr "Provincie"
+
+#: ../admin/includes/form-customiser.php:1170
+#: ../admin/includes/form-customiser.php:1275
+msgid "State/Province"
+msgstr "Provincie"
+
+#: ../admin/bookings.php:239
+#: ../admin/bookings.php:405
+#: ../admin/calendar.php:102
+msgid "Status"
+msgstr "Status"
+
+#: ../admin/includes/form-customiser.php:1125
+#: ../admin/includes/form-customiser.php:1227
+msgid "Street address"
+msgstr "Adres"
+
+#: ../admin/includes/form-customiser.php:1129
+#: ../admin/includes/form-customiser.php:1232
+msgid "Street Address"
+msgstr "Straat en huisnummer"
+
+#: ../admin/settings.php:163
+msgid "Style your PayPal payment page"
+msgstr "Style uw PayPal-betaalpagina"
+
+#: ../admin/includes/event_booking_table.php:526
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: ../admin/settings.php:187
+msgid "Switzerland"
+msgstr "Zwitserland"
+
+#: ../admin/includes/booking-form-customiser.php:59
+#: ../admin/includes/form-customiser.php:59
+#: ../admin/includes/form-customiser.php:545
+#: ../admin/includes/form-customiser.php:1010
+msgid "Terms & Conditions"
+msgstr "Algemene voorwaarden"
+
+#: ../admin/includes/booking-form-customiser.php:51
+#: ../admin/includes/form-customiser.php:51
+msgid "Textarea"
+msgstr "Textarea"
+
+#: ../includes/functions.php:124
+msgid "Thank you for registering"
+msgstr "Bedankt voor het registreren"
+
+#: ../admin/bookings.php:135
+msgid "Thank you for your booking"
+msgstr "Dank u voor uw boeking"
+
+#: ../includes/functions.php:122
+msgid "Thank you for your booking. You shall recieve an e-mail containing your "
+"tickets once we have confirmed payment"
+msgstr "Dank u voor uw reservering. Je zal een e-mail ontvangen met daarin uw "
+"tickets zodra wij de betaling hebben bevestigd"
+
+#: ../includes/functions.php:123
+msgid "Thank you for your booking. You shall recieve an e-mail containing your "
+"tickets shortly"
+msgstr "Dank u voor uw reservering. Je zal een e-mail ontvangen met daarin uw "
+"tickets binnenkort"
+
+#: ../admin/settings.php:393
+msgid "The data submitted using these fields is stored alongside the booking."
+msgstr "De ingediend via deze velden gegevens wordt naast de boeking opgeslagen."
+
+#: ../admin/bookings.php:280
+msgid "The event associated with this booking could not be found. It may have been "
+"deleted."
+msgstr "Het evenement in verband met deze boeking kan niet worden gevonden. Het kan "
+"zijn verwijderd."
+
+#: ../admin/settings.php:51
+msgid "The license key you have entered is invalid."
+msgstr "De licentie code die u invoerde is niet geldig."
+
+#: ../admin/bookings.php:282
+msgid "The occurrence date for which this booking was made no longer exists."
+msgstr "Het optreden tijdstip waarvoor deze was geboekt bestaat niet meer."
+
+#: ../includes/booking-actions.php:363
+msgid "The payment gateway you have chosen is invalid"
+msgstr "De betaling gateway die u hebt gekozen is ongeldig"
+
+#: ../includes/booking-actions.php:338
+msgid "The tickets you have selected are no longer available."
+msgstr "De door u geselecteerde tickets zijn niet meer beschikbaar."
+
+#: ../includes/register.php:330
+msgid "There has been an error with Event Organiser Pro. The "
+"<code>eo_booking_tickets</code> table is missing. Please try re-installing "
+"the plugin."
+msgstr "Er is een fout met de Event Organizer Pro geweest. De <code> "
+"eo_booking_tickets </code> tafel ontbreekt. Probeer het opnieuw installeren "
+"van de plugin te behagen."
+
+#: ../admin/bookings.php:290
+msgid "This booking could not be confirmed for the following reasons"
+msgstr "Deze boeking kan niet worden bevestigd om de volgende redenen"
+
+#: ../includes/booking-actions.php:279
+msgid "This email is already registered, please choose another one or log-in with "
+"that account"
+msgstr "Dit e-mail is al geregistreerd, kies een andere e-mail adres of login met "
+"dit account"
+
+#: ../includes/booking-form-handler.php:61
+msgid "This event has sold out."
+msgstr "Dit evenement is uitverkocht."
+
+#: ../admin/includes/booking-form-customiser.php:448
+#: ../admin/includes/form-customiser.php:1623
+msgid "This form element allows the user to select their ticket(s). It cannot be "
+"removed but can be placed anywhere in the booking form."
+msgstr "Deze vorm element kan de gebruiker om hun ticket (s) te selecteren. Het kan "
+"niet worden verwijderd, maar kan overal op het boekingsformulier worden "
+"geplaatst."
+
+#: ../admin/includes/form-customiser.php:963
+msgid "This form element allows you to enter any HTML, to be displayed on the form"
+msgstr "Dit formulier element kunt u alle HTML, worden weergegeven op het formulier "
+"in te voeren"
+
+#: ../admin/includes/form-customiser.php:1097
+msgid "This form element asks the user a simple random maths question in order to "
+"help prevent spam"
+msgstr "Deze vorm element vraagt ​​de gebruiker een eenvoudige aselecte wiskunde "
+"vraag om te helpen spam te voorkomen"
+
+#: ../admin/includes/booking-form-customiser.php:436
+#: ../admin/includes/form-customiser.php:1611
+msgid "This form element only appears if there there are multiple gateways enabled. "
+"It cannot be removed but can be placed anywhere in the booking form."
+msgstr "Deze vorm element verschijnt alleen als er er meerdere gateways "
+"ingeschakeld. Het kan niet worden verwijderd, maar kan overal op het "
+"boekingsformulier worden geplaatst."
+
+#: ../admin/edit.php:49
+msgid "This indicates the quanity available of this ticket type. If you are selling "
+"tickets for individual occurrences, then this limit applies to each "
+"occurrence."
+msgstr "Dit geeft aan de hoeveelheid die beschikbaar is van dit ticket type. Als u "
+"tickets verkoopt voor individuele gebeurtenissen, dan is deze limiet geldt "
+"voor elk optreden."
+
+#: ../admin/settings.php:211
+msgid "This will appear on the booking form, informing the bookee on how to make "
+"payment."
+msgstr "Deze zal verschijnen op het boekingsformulier, het informeren van de bookee "
+"over hoe te betalen."
+
+#: ../admin/includes/booking-form-customiser.php:353
+#: ../admin/includes/form-customiser.php:1528
+#: ../admin/includes/event_ticket_table.php:32
+#: ../admin/includes/event_ticket_table.php:352
+msgid "Ticket"
+msgstr "Ticket"
+
+#: ../admin/edit.php:65
+msgid "Ticket availability"
+msgstr "Beschikbaarheid van tickets"
+
+#: ../admin/edit.php:91
+msgid "Ticket dates"
+msgstr "Ticket data"
+
+#: ../admin/edit.php:31
+msgid "Ticket name"
+msgstr "Ticket naam"
+
+#: ../admin/includes/booking-form-customiser.php:63
+#: ../admin/includes/form-customiser.php:63
+msgid "Ticket picker"
+msgstr "Ticket picker"
+
+#: ../includes/import_export_csv.php:273
+msgid "Ticket Price"
+msgstr "Ticket Prijs"
+
+#: ../includes/import_export_csv.php:153
+msgid "Ticket Quantity"
+msgstr "Ticket Hoeveelheid"
+
+#: ../admin/includes/event_ticket_table.php:351
+msgid "Ticket Reference"
+msgstr "Ticket-Referentie #:"
+
+#: ../admin/bookings.php:236
+#: ../admin/bookings.php:590
+#: ../admin/calendar.php:100
+msgid "Tickets"
+msgstr "Tickets"
+
+#: ../admin/edit.php:106
+msgid "Tickets are for the entire series."
+msgstr "Tickets zijn voor de gehele serie."
+
+#: ../admin/edit.php:60
+msgid "Tickets on sale"
+msgstr "Tickets te koop"
+
+#: ../admin/includes/form-customiser.php:525
+msgid "Time"
+msgstr "Tijd"
+
+#: ../admin/includes/shortcode_popup.php:72
+msgid "Time format"
+msgstr "Tijdnotatie"
+
+#: ../includes/class-eo-user-attending-widget.php:23
+msgid "Title"
+msgstr "Titel"
+
+#: ../includes/shortcodes.php:250
+msgid "To"
+msgstr "Aan:"
+
+#: ../admin/calendar.php:116
+#: ../admin/includes/booking-form-customiser.php:423
+#: ../admin/includes/form-customiser.php:1598
+msgid "Total"
+msgstr "Totaal"
+
+#: ../includes/import_export_csv.php:154
+msgid "Total Price"
+msgstr "Totale Prijs"
+
+#: ../admin/settings.php:188
+msgid "United Kingdom"
+msgstr "Engeland"
+
+#: ../admin/settings.php:189
+msgid "United States"
+msgstr "Verenigde Staten"
+
+#: ../admin/includes/event_booking_table.php:114
+msgid "Unpublished"
+msgstr "Niet gepubliceerd"
+
+#: ../admin/edit.php:77
+msgid "Until"
+msgstr "Tot"
+
+#: ../admin/bookings.php:442
+#: ../admin/includes/venues.php:268
+msgid "Update"
+msgstr "Update"
+
+#: ../admin/bookings.php:461
+msgid "User not found"
+msgstr "Gebruiker niet gevonden"
+
+#: ../includes/booking-actions.php:191
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: ../includes/booking-form-handler.php:77
+#: ../includes/booking-form-handler.php:86
+msgid "Username / Email"
+msgstr "Gebruikersnaam / E-mail"
+
+#: ../admin/includes/venues.php:122
+#: ../admin/includes/venues.php:178
+#: ../admin/includes/venues.php:196
+#: ../admin/includes/venues.php:270
+msgid "Value"
+msgstr "Waarde"
+
+#: ../admin/includes/shortcode_popup.php:140
+msgid "Venue"
+msgstr "Plaats"
+
+#: ../admin/includes/shortcode_popup.php:10
+msgid "Venue Map"
+msgstr "Locatie Plattegrond"
+
+#: ../admin/includes/shortcode_popup.php:109
+msgid "Venues"
+msgstr "Locaties"
+
+#: ../admin/includes/shortcode_popup.php:64
+#: ../admin/includes/event_booking_table.php:46
+msgid "View"
+msgstr "Weergeven"
+
+#: ../includes/register.php:156
+msgid "View all cities"
+msgstr ""
+
+#: ../includes/register.php:154
+msgid "View all countries"
+msgstr ""
+
+#: ../includes/register.php:155
+msgid "View all states"
+msgstr ""
+
+#: ../includes/register.php:35
+msgid "View Booking"
+msgstr "Bekijk Booking"
+
+#: ../includes/register.php:80
+msgid "View Booking Form"
+msgstr "Bekijk Boekingsformulier"
+
+#: ../admin/calendar.php:61
+msgid "View bookings"
+msgstr "Bekijk boekingen"
+
+#: ../admin/includes/booking-form-customiser.php:58
+#: ../admin/includes/form-customiser.php:58
+#: ../admin/includes/form-customiser.php:533
+msgid "Website"
+msgstr "Website"
+
+#: ../admin/includes/shortcode_popup.php:67
+msgid "Week"
+msgstr "Week"
+
+#: ../admin/includes/form-customiser.php:1063
+#: ../admin/includes/form-customiser.php:1098
+msgid "What is %d + %d?"
+msgstr "Wat is %d + %d ?"
+
+#: ../admin/includes/shortcode_popup.php:126
+msgid "Width:"
+msgstr "Dikte:"
+
+#: ../admin/settings.php:56
+msgid "Without a valid license key you will not be eligable for automatic updates, "
+"priority support or unrestricted access to tutorials."
+msgstr "Zonder een geldige licentiesleutel kunt u niet eligable voor automatische "
+"updates, prioriteit support of onbeperkte toegang tot tutorials."
+
+#: ../admin/includes/event_booking_table.php:126
+msgid "Y/m/d"
+msgstr "Y / m / d"
+
+#: ../admin/includes/event_booking_table.php:117
+msgid "Y/m/d g:i:s A"
+msgstr "Y / m / dg: i: s A"
+
+#: ../admin/includes/form-customiser.php:557
+msgid "Yahoo IM"
+msgstr "Yahoo IM"
+
+#: ../admin/settings.php:118
+msgid "Yes but register an account for them"
+msgstr "Ja maar een account registreren voor hen"
+
+#: ../admin/settings.php:119
+msgid "Yes, account is optional"
+msgstr "Ja, rekening facultatief"
+
+#: ../admin/includes/form-customiser.php:281
+msgid "You are logged in as <strong>%s</strong>. <a href=\"%s\">Not you?</a>"
+msgstr "U bent ingelogd als <strong> %s </strong>. <A href = \"%s\"> Jij niet? </a>"
+
+#: ../templates/user-attending-widget-event-list.php:49
+msgid "You are not currently registered for any events"
+msgstr "Je hebt je voor geen enkele evenement geregistreerd"
+
+#: ../includes/addon.php:80
+msgid "You are running version <strong>%1$s</strong> of %2$s. <strong>Event "
+"Organiser Pro</strong> requires version <strong>%3$s</strong> or higher to "
+"function correctly. <a href=\"%4$s\">Update %2$s</a>."
+msgstr "U version <strong> %1$s </strong> van %2$s . <strong> Evenement Organisator "
+"Pro </strong> vereist versie <strong> %3$s </strong> of hoger te kunnen "
+"functioneren. <A href = \" %4$s \"> update %2$s </a>."
+
+#: ../admin/settings.php:225
+msgid "You can <a href=\"%s\" target=\"_blank\">create your own e-mail "
+"templates</a> and add them to your theme."
+msgstr "U kunt <a href = \" %s \"target = \" _blank \"> maak uw eigen e-mail "
+"templates </a> en voeg ze toe aan uw thema."
+
+#: ../admin/settings.php:392
+msgid "You can add additional fields to your booking form using the buttons to the "
+"right, and then arrange them by dragging the fields. Click the added form "
+"field to reveal its options "
+msgstr "U kunt extra velden toe te voegen aan uw boekingsformulier behulp van de "
+"knoppen rechts, en schik ze door de velden te slepen dan. Klik op het "
+"toegevoegde formulier veld om de opties te onthullen "
+
+#: ../admin/settings.php:103
+msgid "You can either sell tickets for individual dates of an event, or sell "
+"tickets for the entire series - for example, places on a course"
+msgstr "U kunt kaartjes verkopen voor aparte data van een evenement of voor een "
+"complete serie. B.v. stoelen in een stadion."
+
+#: ../admin/edit.php:66
+msgid "You can specify a date when this ticket will go on sale, and when it is no "
+"longer available for purchase. Leave blank for no restriction. Tickets will "
+"automatically come off sale when the event starts"
+msgstr "U kunt een datum opgeven wanneer dit ticket zal gaan over de verkoop, en als "
+"het niet langer beschikbaar voor aankoop. Laat leeg voor geen beperking. "
+"Tickets automatisch loskomen verkoop wanneer het evenement begint"
+
+#: ../admin/includes/shortcode_popup.php:41
+msgid "You can use relative dates, e.g. 'now', 'next Tuesday'"
+msgstr "U kunt 'nu' te gebruiken relatieve data, bijvoorbeeld, 'volgende week "
+"dinsdag'"
+
+#: ../admin/settings.php:245
+msgid "You can use the following placeholders"
+msgstr "U kunt de volgende tijdelijke aanduidingen te gebruiken"
+
+#: ../includes/booking-actions.php:69
+#: ../includes/booking-actions.php:198
+msgid "You can view the <a href=\"%s\">booking here</a>"
+msgstr "U kunt uw reservering <a href = \" %s \"> hier bekijken </a>"
+
+#: ../admin/includes/shortcode_popup.php:164
+msgid "You can view the full range of attributes for these shortcodes on the <a "
+"href=\"%s\" target=\"_blank\">plug-in website</a>"
+msgstr "U kunt het volledige scala van attributen bekijken van deze shortcodes op de "
+"<a href = \" %s \"target = \" _blank \"> plug-in website </a>"
+
+#: ../admin/includes/form-customiser.php:267
+msgid "You have already made a booking for this event."
+msgstr "Je hebt al een boeking voor dit evenement gemaakt."
+
+#: ../templates/event-booking-history.php:95
+msgid "You have not made any bookings"
+msgstr ""
+
+#: ../admin/edit.php:92
+msgid "You have the option of selling tickets for only specific dates, for instance "
+"you may wish to make a cheaper tickets available for only the first "
+"occurrence."
+msgstr "U hebt de mogelijkheid van verkoop van tickets voor slechts een specifieke "
+"periode, bijvoorbeeld u kunt wensen om een ​​goedkopere tickets beschikbaar "
+"maken voor alleen het eerste exemplaar."
+
+#: ../includes/booking-actions.php:284
+msgid "You must be logged in to place a booking"
+msgstr "Je moet ingelogd zijn om een ​​boeking te kunnen plaatsen"
+
+#: ../admin/includes/form-customiser.php:546
+msgid "Your terms & conditions"
+msgstr "Uw algemene voorwaarden"
+
+#: ../includes/booking-actions.php:204
+msgid "[%s] Confirmed Event Booking for %s"
+msgstr "[ %s ] Bevestigd Event Booking voor %s"
+
+#: ../includes/booking-actions.php:75
+msgid "[%s] New Event Booking for %s"
+msgstr "[ %s ] Nieuwe gebeurtenis Booking voor %s"
+
