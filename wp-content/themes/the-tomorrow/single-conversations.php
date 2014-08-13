@@ -62,7 +62,7 @@
 			<div class="li prev_letter"><a href="#">previous</a></div>
 			<div class="li next_letter"><a href="#">next</a></div>
 			
-			<div class="addthis">
+			<div class="addthis_col">
 			    <p>share</p>
 			    <div class="addthis_toolbox addthis_default_style ">		    
 

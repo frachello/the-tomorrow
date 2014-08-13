@@ -315,7 +315,9 @@ nav#megamenu{
         height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
         p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
           &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
-          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; }
+          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right;
+            a { color: $primary_color; font-weight: 700; }
+          }
         }
       } 
     }

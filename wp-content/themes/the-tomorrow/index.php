@@ -131,16 +131,48 @@
 								// get this conversation themes
 								$themes = "";
 								$arr_themes = "";
+								$arr_theme_slugs = "";
 								$conversation_themes = "";
-								$themes = wp_get_post_terms($post->ID, "themes", array("fields" => "all"));
-								if ( !empty( $themes ) && !is_wp_error( $themes ) ){
-									
-									foreach ( $themes as $theme ) {
-										$arr_themes[] = $theme->name;
-									}
-									$conversation_themes = implode(', ', $arr_themes);
-									
+								$conversation_theme_slugs = "";
+							
+								// print the post time of the last letter of this conversation
+								$conversation_id = "";
+								$conversation_id = $post->ID;
+								$this_conv_letters_last_args = array(
+									'post_type' => 'letters',
+								//	'posts_per_page' => 1,
+									'tax_query' => array (
+								      array (
+								         'taxonomy' => 'conversations',
+								         'field' => 'ID',
+								         'terms' => $conversation_id,
+								         'operator' => 'IN'
+								      )
+								   )
+								);
+								$this_conv_letters = new WP_Query($this_conv_letters_last_args);
+								if( $this_conv_letters->have_posts() ){
+									$i = 0;
+									$letters_num = $this_conv_letters->post_count;
+									while( $this_conv_letters->have_posts() ): $this_conv_letters->the_post();
+									$i++;
+										if ($i == $letters_num):
+										$themes = wp_get_post_terms($post->ID, "themes", array("fields" => "all"));
+										if ( !empty( $themes ) && !is_wp_error( $themes ) ){
+											
+											foreach ( $themes as $theme ) {
+												$arr_themes[] = $theme->name;
+												$arr_theme_slugs[] = $theme->slug;
+											}
+											$conversation_themes = implode(', ', $arr_themes);
+											$conversation_theme_slugs = implode(', ', $arr_theme_slugs);
+											
+										}
+										endif;
+									endwhile;
 								}
+								wp_reset_postdata();
+								
 							?>
 
 						</p>
@@ -185,9 +217,9 @@
 
 								<strong>
 									<?php echo $letters_num; ?>
-								</strong> letters
+								</strong> <?php print ' letter' . ($letters_num  == 1 ? '' : 's') ?>
 								<?php if($conversation_themes!==''): ?>
-								on <strong><?php echo $conversation_themes; ?></strong>
+								on <a href="<?php bloginfo('url'); ?>/themes/<?php echo $term->slug; ?><?php echo $conversation_theme_slugs; ?>"><?php echo $conversation_themes; ?></strong>
 								<?php endif; ?>
 							</p>
 

@@ -1067,6 +1067,10 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
 }
+#home_grid .home_box.conversations .bottom p.count-theme a {
+  color: #191919;
+  font-weight: 700;
+}
 body.internal-page h2 {
   font-weight: 700;
   font-size: 40px;

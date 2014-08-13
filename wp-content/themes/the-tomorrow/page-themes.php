@@ -17,7 +17,7 @@ Template Name: Conversation Themes archive
 	<?php
 
 		$row_count = 1; $col_count = 1; $col_number = 3;
-		$terms = get_terms("themes");
+		$terms = get_terms($curr_page_term_name);
 		if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 			echo '<ul class="themes-boxes">';
 			foreach ( $terms as $term ) {
@@ -26,7 +26,7 @@ Template Name: Conversation Themes archive
 				//	'posts_per_page' => 1,
 					'tax_query' => array (
 				      array (
-				         'taxonomy' => 'themes',
+				         'taxonomy' => $curr_page_term_name,
 				         'field' => 'slug',
 				         'terms' => $term->slug
 				      )
