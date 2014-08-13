@@ -10,13 +10,13 @@
 		echo '<!-- results for ' . implode(', ', $cpts) . ' -->';
 	 	$home_boxes_array = array(
 	 		'post_type'=>$cpts,
-	 		'posts_per_page'=>10, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+	 		'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 	 		'paged' => $paged
 	 	);
 	}else{
 		$home_boxes_array = array(
 			'post_type'=>array('event','conversations'),
-			'posts_per_page'=>10, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 			'paged' => $paged
 	 	);
 	}
@@ -205,8 +205,8 @@
 
 			<div class="pagination">
 
-				<!-- <span class="prev"> --> <?php next_posts_link('&laquo; previous') ?> <!-- </span> -->
-				<!-- <span class="next"> --> <?php previous_posts_link('next &raquo;') ?> <!-- </span> -->
+				<span class="prev"><?php next_posts_link('&laquo; previous') ?></span>
+				<span class="next"><?php previous_posts_link('next &raquo;') ?></span>
 
 			</div>
 

@@ -5,15 +5,16 @@ Template Name: Conversations Archive
 ?>
 
 <?php get_header(); ?>
-<?php $curr_page_term_name = get_queried_object()->name;  ?>
+<?php $curr_page_term_name = get_queried_object()->name; ?>
 
 <!-- content -->
 <div id="content">
 
 	<div class="page-content">
 
-	<h2><?php echo $curr_page_term_name; ?></h2>
-	<p class="rules-link"><a href="/rules/">how does it work?</a></p>
+	<h2><?php echo get_queried_object()->label; ?></h2>
+	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
+
 
 	<?php $rows_count = 1; ?>
 
@@ -57,7 +58,8 @@ Template Name: Conversations Archive
 			while( $this_conv_letters->have_posts() ): $this_conv_letters->the_post();
 			$i++;
 				if ($i == $letters_num):
-				$conversation_display_date = date_ago(); 
+				$conversation_display_date = date_ago();
+				$post_month = get_the_time('F Y');
 				endif;
 			endwhile;
 		}
@@ -65,7 +67,7 @@ Template Name: Conversations Archive
 		?>
 
 		<?php
-			$post_month = get_the_date('F Y');
+			
 		    if ( $post_month != $current_month ) {
 		        $current_month = $post_month;
 		        echo "<h3>$current_month</h3>";

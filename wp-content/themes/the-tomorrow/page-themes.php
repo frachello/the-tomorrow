@@ -12,18 +12,17 @@ Template Name: Conversation Themes archive
 
 	<div class="page-content">
 
-	<h2><?php echo $curr_page_term_name; ?></h2>
+	<h2><?php echo get_queried_object()->label; ?></h2>
 
 	<?php
 
 		$row_count = 1; $col_count = 1; $col_number = 3;
 		$terms = get_terms("themes");
-	//	print_r($terms);
 		if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 			echo '<ul class="themes-boxes">';
 			foreach ( $terms as $term ) {
 				$get_conversations_by_cpt_item = array(
-					'post_type' => 'conversations',
+					'post_type' => 'letters',
 				//	'posts_per_page' => 1,
 					'tax_query' => array (
 				      array (
@@ -42,7 +41,7 @@ Template Name: Conversation Themes archive
 
 		    	<li class="col_<?php echo $col_count ; ?> <?php if ($row_count<4) { echo 'first_row'; } ?>">
 		    		<a href="<?php bloginfo('url'); ?>/<?php echo $curr_page_term_name; ?>/<?php echo $term->slug; ?>">
-		    		<?php echo $term->name; ?> <span><?php print $letters_num . ' conversation' . ($letters_num == 1 ? '' : 's') ?></span>
+		    		<?php echo $term->name; ?> <span><?php print $term->count . ' letter' . ($term->count  == 1 ? '' : 's') ?></span>
 		    		</a>
 		    	</li>
 		    	<?php

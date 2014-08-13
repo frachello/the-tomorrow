@@ -12,7 +12,7 @@ Template Name: Authors Archive
 
 	<div class="page-content">
 
-	<h2><?php echo $curr_page_term_name; ?></h2>
+	<h2><?php echo get_queried_object()->label; ?></h2>
 
 
 	<?php $row_count = 1; $col_count = 1; $cols_number = 4; ?>
@@ -59,7 +59,6 @@ Template Name: Authors Archive
 		?>
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $col_count; ?>">
-
 			
 				<?php if ( has_post_thumbnail() ) { // controlla se il post ha un'immagine in evidenza assegnata. ?>
 				<a class="img" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">

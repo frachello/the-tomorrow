@@ -12,8 +12,8 @@ Template Name: Letters Archive
 
 	<div class="page-content">
 
-	<h2><?php echo $curr_page_term_name; ?></h2>
-	<p class="rules-link"><a href="/rules/">how does it work?</a></p>
+	<h2><?php echo get_queried_object()->label; ?></h2>
+	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
 
 	<?php $rows_count = 1; ?>
 
@@ -21,7 +21,7 @@ Template Name: Letters Archive
 	<?php
 	$wp_query_array = array(
 		'post_type'=>$curr_page_term_name,
-		'posts_per_page'=>-1,
+		'posts_per_page'=>20,
 		'paged' => $paged
 	);
 
@@ -64,8 +64,14 @@ Template Name: Letters Archive
 		$rows_count=0;
 	}
 	$rows_count++;
+
 	endwhile;
 	?>
+
+	<div class="pagination">
+		<span class="prev"><?php next_posts_link('&laquo; previous') ?></span>
+		<span class="next"><?php previous_posts_link('next &raquo;') ?></span>
+	</div>
 
 	</div>
 

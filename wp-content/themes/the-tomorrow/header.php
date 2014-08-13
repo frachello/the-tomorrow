@@ -105,8 +105,8 @@
 
 				<div class="inner">
 
-				<form method="get" action="#" id="search_venues_map">
-					<input class="text" type="text" value="" />
+				<form method="get" action="/places/" id="search_venues_map">
+					<input class="text" type="text" name="city" value="" />
 					<input class="submit" type="submit" />
 				</form>
 				

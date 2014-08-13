@@ -239,14 +239,14 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	$('#home_grid .home_box.event .top .cat a').each(function() {
 //		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
 //	});
-//	$('#home_grid .home_box.event').bind({
-//	  mouseenter: function() {
-//		$(this).children('.top').toggleClass( "over" );
-//	  },
-//	  mouseleave: function() {
-//		$(this).children('.top').toggleClass( "over" );
-//	  }
-//	});
+	$('#home_grid .home_box.event').bind({
+	  mouseenter: function() {
+		$(this).children('.top').toggleClass( "over" );
+	  },
+	  mouseleave: function() {
+		$(this).children('.top').toggleClass( "over" );
+	  }
+	});
 
 
 });

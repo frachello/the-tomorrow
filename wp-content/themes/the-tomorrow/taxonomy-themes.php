@@ -6,6 +6,7 @@ Template Name: Conversations Archive by theme
 
 <?php get_header(); ?>
 <?php $curr_page_term_name = get_queried_object()->name;  ?>
+<?php $curr_page_term_count = get_queried_object()->count;  ?>
 
 <!-- content -->
 <div id="content">
@@ -13,7 +14,7 @@ Template Name: Conversations Archive by theme
 	<div class="page-content">
 
 	<h2><?php echo $curr_page_term_name; ?></h2>
-	<p class="rules-link"><a href="/rules/">how does it work?</a></p>
+	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
 
 	<?php $rows_count = 1; ?>
 
@@ -22,35 +23,6 @@ Template Name: Conversations Archive by theme
 	<div class="archive-boxes">
 	<?php $current_month = ''; ?>
 	<?php while (have_posts()) : the_post(); ?>
-
-		<?php
-		
-		$curr_page_term_slug = "";
-		$curr_page_term_slug = get_queried_object()->slug;
-		$this_term_posts_last_args = array(
-			'post_type' => 'conversations',
-		//	'posts_per_page' => 1,
-			'tax_query' => array (
-		      array (
-		         'taxonomy' => 'themes',
-		         'field' => 'slug',
-		         'terms' => $curr_page_term_slug
-		      )
-		   )
-		);
-		$this_term_posts = new WP_Query($this_term_posts_last_args);
-		if( $this_term_posts->have_posts() ){
-			$i = 0;
-			$letters_num = $this_term_posts->post_count;
-			while( $this_term_posts->have_posts() ): $this_term_posts->the_post();
-			$i++;
-				if ($i == $letters_num):
-				$conversation_display_date = date_ago(); 
-				endif;
-			endwhile;
-		}
-		wp_reset_postdata();
-		?>
 
 		<?php
 			$post_month = get_the_date('F Y');
@@ -63,14 +35,14 @@ Template Name: Conversations Archive by theme
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
 
-			<h4><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+			<h4><a href="<?php echo $hash_permalink; ?>" title="<?php the_title(); ?>">
 				<?php the_title() ?>
 			</a></h4>
 			<div class="entry">
 			  <?php the_excerpt('[leggi tutto]'); ?>
 			</div>
 			<div class="bottom">
-				<p class="date"><?php echo $conversation_display_date; ?></p>
+				<p class="date"><?php echo date_ago(); ?></p>
 			</div>
 
 		</div>
@@ -79,8 +51,14 @@ Template Name: Conversations Archive by theme
 		$rows_count=0;
 	}
 	$rows_count++;
+
 	endwhile;
 	?>
+
+	<div class="pagination">
+		<span class="prev"><?php next_posts_link('&laquo; previous') ?></span>
+		<span class="next"><?php previous_posts_link('next &raquo;') ?></span>
+	</div>
 
 	</div>
 
