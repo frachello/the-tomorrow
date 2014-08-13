@@ -445,6 +445,18 @@ body.internal-page{
             margin-top: 23px; float: left;
             p, li { font-size: 19px; }
             p{ margin-bottom: 1em; }
+
+           .jcarousel { position: relative; overflow: hidden; height: 440px; width: 732px;
+              ul { width: 20000em; position: absolute; list-style: none; margin: 0; padding: 0; 
+                li { float: left; width:732px;
+                  figure{ height: 440px; width: 732px; background: $primary_color; text-align: center; }
+                }
+              }
+              .jcarousel-controls { height: 440px; width: 732px; position: absolute; top: 0; left: 0;
+                a{ height: 440px; width: 366px; float: left; @include ir; }
+              }
+            }
+
           }
         }
         

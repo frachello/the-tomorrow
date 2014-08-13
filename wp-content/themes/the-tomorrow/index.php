@@ -219,7 +219,7 @@
 									<?php echo $letters_num; ?>
 								</strong> <?php print ' letter' . ($letters_num  == 1 ? '' : 's') ?>
 								<?php if($conversation_themes!==''): ?>
-								on <a href="<?php bloginfo('url'); ?>/themes/<?php echo $term->slug; ?><?php echo $conversation_theme_slugs; ?>"><?php echo $conversation_themes; ?></strong>
+								on <a href="<?php bloginfo('url'); ?>/themes/<?php echo $term->slug; ?><?php echo $conversation_theme_slugs; ?>"><?php echo $conversation_themes; ?></a>
 								<?php endif; ?>
 							</p>
 

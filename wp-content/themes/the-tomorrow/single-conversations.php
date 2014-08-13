@@ -104,7 +104,62 @@
 					</div>
 					
 					<div class="entry">
+
 					  <?php the_content('[leggi tutto]'); ?>
+
+                        <?php
+                            $args = array(
+                                'post_type' => 'attachment',
+                                'numberposts' => -1,
+                                'post_status' => null,
+                                'orderby' => 'menu_order',
+                                'order' => 'ASC',
+                                'post_parent' => $post->ID
+							);
+							$attachments = get_posts( $args );
+						//	print_r($attachments);
+							if ( $attachments ) :
+
+                        ?>
+
+                        <div class="slides-wrapper jcarousel">
+
+	                        <ul>
+	                        <?php
+	                                foreach ( $attachments as $attachment ) {
+	                                    $image_attributes = wp_get_attachment_image_src( $attachment->ID,'letters-in-page-slider' );
+	                                //	$attachment_meta = wp_get_attachment($attachment->ID);
+	                                //	$attachment_mime_type = get_post_mime_type($attachment->ID);
+	                                	$slideClass = "slide-type-image";
+									//	if ( $attachment_meta['description'] === 'virtual' ) {
+									//	    $slideClass = 'slide-type-virtual';
+									//	}
+									//	if ( $attachment_meta['description'] === 'video' ) {
+									//	    $slideClass = 'slide-type-video';
+									//	}
+									//	if ( $attachment_meta['description'] === 'mobile' ) {
+									//	    $slideClass = 'slide-type-mobile';
+									//	}
+									//	if ( ( $attachment_mime_type === 'application/pdf' ) || ( $attachment_meta['description'] === 'mobile' ) ) {
+									//	}else{
+	                        ?>
+	                            <li class="slide-item cf slide-item-<?php echo $attachment->ID; ?> <?php echo $slideClass; ?>">
+	                                <figure class="slide-figure">
+	                                    <img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters( 'the_title', $attachment->post_title ); ?>" title="<?php echo apply_filters( 'the_title', $attachment->post_title ); ?>" data-type="<?php echo $attachment_meta['description']; ?>" data-uri="<?php echo $attachment_meta['caption']; ?>" class="slide-image">
+	                                </figure>
+	                            </li>
+	                        <?php } // end foreach ?>
+	                        </ul>
+							<p class="jcarousel-controls">
+								<a title="previous image" href="#" class="jcarousel-control-prev">&lsaquo;</a>
+								<a title="next image" href="#" class="jcarousel-control-next">&rsaquo;</a>
+							</p>
+                    	</div>
+						<?php
+						endif;
+                        wp_reset_postdata();
+                        ?>
+
 					</div>
 
 					<br class="clear" />

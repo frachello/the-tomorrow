@@ -1304,6 +1304,44 @@ body.internal-page.single-conversations #content .content_col article .entry p, 
 body.internal-page.single-conversations #content .content_col article .entry p {
   margin-bottom: 1em;
 }
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel {
+  position: relative;
+  overflow: hidden;
+  height: 440px;
+  width: 732px;
+}
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel ul {
+  width: 20000em;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel ul li {
+  float: left;
+  width: 732px;
+}
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel ul li figure {
+  height: 440px;
+  width: 732px;
+  background: #191919;
+  text-align: center;
+}
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel .jcarousel-controls {
+  height: 440px;
+  width: 732px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body.internal-page.single-conversations #content .content_col article .entry .jcarousel .jcarousel-controls a {
+  height: 440px;
+  width: 366px;
+  float: left;
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+}
 body.internal-page.single-conversations #content .content_col p.show_comments {
   text-transform: uppercase;
   margin: 30px 0 40px 0;

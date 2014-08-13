@@ -5,6 +5,9 @@
 //	function my_excerpt_length($length) {
 //	return 30; }
 
+	/* image sizes */
+	add_image_size( 'letters-in-page-slider', 732, 440, array( 'center', 'center' ) );
+
 	/* excerpt */
 	function custom_excerpt_length( $length ) {
 		return 15;

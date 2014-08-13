@@ -32,6 +32,54 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 	if($('body.single-conversations').length){
 
+
+		// jcarousel
+
+		$('.jcarousel').jcarousel();
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
+
+
+        // jcarousel swipe
+
+//		var carousel = $('.jcarousel');
+//	    carousel.swipe({
+//	        swipeLeft: function(event, direction, distance, duration, fingerCount) {   
+//	            carousel.jcarousel('scroll', '+=1');
+//	        },
+//	        swipeRight: function(event, direction, distance, duration, fingerCount) {
+//	            carousel.jcarousel('scroll', '-=1');
+//	        }
+//	    })
+
+
+
 		// expand collapse letters
 		if (!current_url_hash){		
 			current_url_hash = $('article.letter:first-child').attr('id');
