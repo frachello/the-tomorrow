@@ -29,10 +29,9 @@ Template Name: Generic page
 
 			    </div>
 			</div>
-			<div class="li contact_us"><a href="#">contact us</a></div>
-			<div class="li credits"><a href="#">credits</a></div>
+			<div class="li contact_us"><a href="<?php bloginfo('url'); ?>/contacts/">contact us</a></div>
+			<div class="li credits"><a href="<?php bloginfo('url'); ?>/credits/">credits</a></div>
 		
-
 		</div>
 
 		<div class="col content_col">
