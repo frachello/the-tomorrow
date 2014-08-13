@@ -5,6 +5,8 @@
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
+	stick_footer();
+
 	places_map_height();
 	if($('.entry-map .current-city').length){
 		current_city = $('.entry-map .current-city').html();
@@ -316,6 +318,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 // decrease header height on scroll
 $(window).scroll(function () {
+	stick_footer();
 	resize_header();
 	if($('#rightcol').length){ fix_rightcol_pos(); }
 });
@@ -328,6 +331,7 @@ $(window).load(function() {
 */
 
 $(window).resize(function() {
+	stick_footer();
 	places_map_height()	;
 });
 
@@ -378,6 +382,36 @@ function fix_rightcol_pos() {
 	}
 
 }
+
+/* ----------------------------------------------------------------------------------------------------------------
+stick footer
+*/
+
+function stick_footer(){
+	if ( $('#content').length ){
+		win_h = $( window ).height();
+		content_h = $('#content').height();
+		console.log(content_h);
+		footer_h = $('#content').height();
+		console.log(footer_h);
+		content_margin_top = $('#content').css('padding-top');
+		console.log(content_margin_top);
+		content_offset = $('#content').offset();
+		console.log(content_offset.top);
+		content_h_total = content_offset.top + content_h;
+		console.log(content_h_total);
+		if( (footer_h + content_offset.top + content_offset.top + content_h + 10) < win_h ){
+			$('footer').addClass('sticky');
+		}else{
+			$('footer').removeClass('sticky');
+		}
+	//	console.log(win_h);
+		$('.entry-map').css('height',win_h)
+		$('.eo-venue-map').css('height',win_h)
+	}
+}
+
+
 
 /* ----------------------------------------------------------------------------------------------------------------
 places map
