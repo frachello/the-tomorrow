@@ -6,6 +6,19 @@
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 	places_map_height();
+	if($('.entry-map .current-city').length){
+		current_city = $('.entry-map .current-city').html();
+		$('.entry-map .current-city').hide();
+	//	console.log(current_city);
+		$('form#search_venues_map input.text').attr('value',current_city);
+	}
+	if($('.entry-map .no-results').length){
+		no_results_msg = $('.entry-map .no-results').html();
+		$('.entry-map .no-results').hide();
+	//	console.log(no_results_msg);
+		$('form#search_venues_map').addClass('larger');
+		$('form#search_venues_map input.text').attr('value',no_results_msg);
+	}
 
 	// fix rightcol top position after scrolling
 	if($('#rightcol').length){ fix_rightcol_pos(); }
@@ -49,16 +62,16 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 			}
 
 			var letters_count = $(".letter").length;
-			console.log('letters_count='+letters_count);
+		//	console.log('letters_count='+letters_count);
 			var closed_letters_count = $(".letter.closed").length;
-			console.log('closed_letters_count='+closed_letters_count);
+		//	console.log('closed_letters_count='+closed_letters_count);
 			if (closed_letters_count){
-				console.log('at least one letter is closed');
+			//	console.log('at least one letter is closed');
 				$('#rightcol .toggle_letters').addClass('expand');
 				$('#rightcol .toggle_letters').removeClass('collapse');
 				$('#rightcol .toggle_letters a').html('expand all');
 			}else{
-				console.log('all letters are open');
+			//	console.log('all letters are open');
 				$('#rightcol .toggle_letters').removeClass('expand');
 				$('#rightcol .toggle_letters').addClass('collapse');
 				$('#rightcol .toggle_letters a').html('collapse all');
@@ -84,7 +97,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		$('#rightcol .next_letter a').bind( "click", function(e){
 			e.preventDefault();
 			var next_letter = '#'+$('.letter.active').next().attr('id');
-			console.log(next_letter);
+		//	console.log(next_letter);
 			if(next_letter !== '#undefined'){ // se è l'ultima lettera della conversazione
 				console.log('go to '+next_letter);
 			    $('html, body').animate({
@@ -99,9 +112,9 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		$('#rightcol .prev_letter a').bind( "click", function(e){
 			e.preventDefault();
 			var prev_letter = '#'+$('.letter.active').prev().attr('id');
-			console.log(prev_letter);
+		//	console.log(prev_letter);
 			if(prev_letter !== '#undefined'){ // se è la prima lettera della conversazione
-				console.log('go to '+prev_letter);
+		//		console.log('go to '+prev_letter);
 			    $('html, body').animate({
 			        scrollTop: $(prev_letter).offset().top-100
 			    }, 500);
@@ -319,10 +332,9 @@ places map
 function places_map_height(){
 	if ( $('.entry-map').length ){
 		win_h = $( window ).height()+'px';
-		console.log(win_h);
+	//	console.log(win_h);
 		$('.entry-map').css('height',win_h)
 		$('.eo-venue-map').css('height',win_h)
-		
 	}
 }
 

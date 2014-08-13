@@ -201,7 +201,58 @@
 
 	*/
 
+	/**
+	 * https://gist.github.com/stephenharris/4988307
+	 * Adds upcoming events to the venue tooltip in Event Organiser. 
+	 *
+	 * Uses the eventorganiser_venue_tooltip filter to append content to the venue tooltip. This tooltip appears when
+	 * clicking a venue on a map (if tooltips are enabled).
+	 * @uses eventorganiser_venue_tooltip.
+	 *
+	 * The filter passes 2 objects: the content of the toolip, the venue (term) ID
+	 *
+	 * @requires Event Organiser 1.6+
+	*/
+	 
+	add_filter('eventorganiser_venue_tooltip','my_venue_tooltip_content',10,2);
+	function my_venue_tooltip_content( $description, $venue_id ){
+	 
+	         /* Get events that have not finished yet, at this venue */
+		$events = eo_get_events(array(
+			'showpastevents'=> true,
+			'event_end_after'=> 'today',
+			'tax_query'=>array(
+	          		array(
+	               			'taxonomy'=>'event-venue',
+	               			'field'=>'id',
+					'terms'=>array($venue_id),
+	          		),
+	      		),
+		));
 
+		$venue_name = eo_get_venue_name();
+		$venue_url = eo_get_venue_link();
+	 
+		$description .= '</br></br>';
+		$description .= sprintf('<p><a href="%s"> Visit the venue page »</a> </p>', eo_get_venue_link($venue_id));
+
+	        /* Append the upcoming events to the tooltip content */
+		$description .= '</br>';
+		$description .= '<strong> Upcoming Events </strong>';
+	 
+		if( $events ){
+			$description .= '<ul>';
+	                /* We have some events, so list them and their date */
+			foreach( $events as $event ){
+				$description .= '<li> <a href="'.get_the_permalink( $event->ID ).'">'.get_the_title($event->ID).'</a> '.eo_get_the_start('jS M',$event->ID,null,$event->occurrence_id).'</li>';		
+			}
+			$description .= '</ul>';
+		}else{
+	                /* No upcoming / running events for this venue */
+			$description .= 'No upcoming events';
+		}
+		return $description;
+	}
 
 
 ?>

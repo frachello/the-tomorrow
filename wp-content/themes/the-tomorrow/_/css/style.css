@@ -1534,6 +1534,12 @@ body.internal-page.page-template-page-venues-php form#search_venues_map input.su
   border: none;
   margin: 8px 8px 0 0;
 }
+body.internal-page.page-template-page-venues-php form#search_venues_map.larger {
+  width: 440px;
+}
+body.internal-page.page-template-page-venues-php form#search_venues_map.larger input.text {
+  width: 400px;
+}
 body.internal-page.page-template-page-venues-php header.main {
   background: transparent;
   z-index: 2;

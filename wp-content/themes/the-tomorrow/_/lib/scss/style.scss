@@ -544,6 +544,9 @@ body.internal-page{
       box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
       input.text { width: 200px; height: 40px; text-indent: 3px; margin: 0; padding: 0; border: none; }
       input.submit { @include ir; background: transparent url('../i/ico_nav_menu_000.png') no-repeat 0 0; width: 23px; height: 23px; float: right; border: none; margin: 8px 8px 0 0; }
+      &.larger{ width: 440px;
+        input.text { width: 400px; }
+      }
     }
     header.main { background: transparent; z-index: 2; }
     .nav_menu_search { display: none; }

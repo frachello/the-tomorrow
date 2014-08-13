@@ -3,7 +3,7 @@
 <div id="content">
 
 	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
-	<?php $cpts = $_GET['type']; ?>
+	<?php if (isset($_GET['type']) ){ $cpts = $_GET['type']; } ?>
 	
 	<?php
 	if(isset($cpts)){
