@@ -105,7 +105,7 @@
 
 				<div class="inner">
 
-				<form method="get" action="/places/" id="search_venues_map">
+				<form method="get" action="<?php bloginfo('url'); ?>/places/" id="search_venues_map">
 					<input class="text" type="text" name="city" value="" />
 					<input class="submit" type="submit" />
 				</form>

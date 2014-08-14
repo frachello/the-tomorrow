@@ -388,7 +388,7 @@ stick footer
 */
 
 function stick_footer(){
-	if ( $('#content').length ){
+	if ( $('#content').length && $('.internal-page').length ){
 		win_h = $( window ).height();
 		content_h = $('#content').height();
 		console.log(content_h);
