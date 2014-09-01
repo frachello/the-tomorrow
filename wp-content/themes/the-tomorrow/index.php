@@ -46,21 +46,22 @@
 					$address_details = eo_get_venue_address($venue_id);
 				?>
 
+				<?php if( eo_is_all_day() ){ // Choose a different date format depending on whether we want to include time
+					$date_format = 'j F Y'; 
+				}else{
+					$date_format = 'j F Y ' . get_option('time_format'); 
+				} ?>
+				<!-- Is event recurring or a single event -->
+				<?php // if( eo_reoccurs() ):?>
+					<!-- Event reoccurs - is there a next occurrence? -->
+					<?php $next =   eo_get_next_occurrence($date_format);?>
+
+					<?php if($next): ?>
+
 				<div class="home_box event">
 
 					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; " data-color="<?php echo eo_get_event_color(); ?>">
 
-						<?php if( eo_is_all_day() ){ // Choose a different date format depending on whether we want to include time
-							$date_format = 'j F Y'; 
-						}else{
-							$date_format = 'j F Y ' . get_option('time_format'); 
-						} ?>
-						<!-- Is event recurring or a single event -->
-						<?php // if( eo_reoccurs() ):?>
-							<!-- Event reoccurs - is there a next occurrence? -->
-							<?php $next =   eo_get_next_occurrence($date_format);?>
-
-							<?php if($next): ?>
 								<!-- If the event is occurring again in the future, display the date -->
 								<?php
 									$day = eo_get_schedule_start('d');
@@ -71,11 +72,7 @@
 									<span class="day"><?php echo $day; ?></span>
 									<span class="ordinal-month"><?php echo $ordinal; ?>, <?php echo $month; ?></span>
 								</p>
-							<?php else: ?>
-								<!-- Otherwise the event has finished (no more occurrences) -->
-								<?php printf('<p class="date">'.__('This event finished on %s').'.</p>', eo_get_schedule_last('d F Y',''));?>
-							<?php endif; ?>
-						<?php // endif; ?>
+
 
 						<?php $categories_list = get_the_term_list( $post->ID, 'event-category', '', ', ',''); ?>
 						<p class="cat" data-color="<?php echo eo_get_event_color(); ?>">
@@ -99,6 +96,15 @@
 					</div>
 
 				</div>
+
+					<?php else: ?>
+						<?php
+						// The event has finished (no more occurrences)
+						// printf('<p class="date">'.__('This event finished on %s').'.</p>', eo_get_schedule_last('d F Y',''));
+						?>
+					<?php endif; ?>
+
+				<?php // endif; ?>
 
 				<?php elseif($cur_post_type=='conversations'):					
 				/* ############################## conversation ############################## */
