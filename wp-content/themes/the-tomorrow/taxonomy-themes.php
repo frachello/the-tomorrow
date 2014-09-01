@@ -7,22 +7,34 @@ Template Name: Conversations Archive by theme
 <?php get_header(); ?>
 <?php $curr_page_term_name = get_queried_object()->name;  ?>
 <?php $curr_page_term_count = get_queried_object()->count;  ?>
+<?php $curr_page_term_slug = get_queried_object()->slug;  ?>
 
 <!-- content -->
 <div id="content">
 
 	<div class="page-content">
 
-	<h2><?php echo $curr_page_term_name; ?></h2>
+	<h2><span>Letters on</span> <?php echo $curr_page_term_name; ?></h2>
 	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
 
 	<?php $rows_count = 1; ?>
+	<?php // $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
+	<?php
+		$main_query_array = array(
+			'post_type'=>'letters',
+			'posts_per_page'=>12,
+			'themes'=>$curr_page_term_slug
+	 	);
+		$wp_query = new WP_Query($main_query_array);
+	?>
 
-	<?php if (have_posts()) : ?>
+	<?php
+	if ($wp_query->have_posts()) :
+	?>
 
 	<div class="archive-boxes">
 	<?php $current_month = ''; ?>
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
 		<?php
 			$post_month = get_the_date('F Y');

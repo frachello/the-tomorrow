@@ -16,7 +16,7 @@
 	}else{
 		$home_boxes_array = array(
 			'post_type'=>array('event','conversations'),
-			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 			'paged' => $paged
 	 	);
 	}
@@ -51,9 +51,10 @@
 				}else{
 					$date_format = 'j F Y ' . get_option('time_format'); 
 				} ?>
-				<!-- Is event recurring or a single event -->
-				<?php // if( eo_reoccurs() ):?>
-					<!-- Event reoccurs - is there a next occurrence? -->
+				<?php // Is event recurring or a single event ?>
+				<?php // if( eo_reoccurs() ): ?>
+
+					<?php // Event reoccurs - is there a next occurrence? ?>
 					<?php $next =   eo_get_next_occurrence($date_format);?>
 
 					<?php if($next): ?>
@@ -62,8 +63,9 @@
 
 					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; " data-color="<?php echo eo_get_event_color(); ?>">
 
-								<!-- If the event is occurring again in the future, display the date -->
+								
 								<?php
+								//	If the event is occurring again in the future, display the date
 									$day = eo_get_schedule_start('d');
 									$ordinal = eo_get_schedule_start('S');
 									$month = eo_get_schedule_start('M');
