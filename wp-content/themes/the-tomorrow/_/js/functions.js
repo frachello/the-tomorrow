@@ -281,14 +281,30 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 				$(this).css('color',box_top_color);
 			});
 
-	//		$('#home_grid .home_box.event').bind({
-	//		  mouseenter: function() {
-	//			$(this).children('.top').toggleClass( "over" );
-	//		  },
-	//		  mouseleave: function() {
-	//			$(this).children('.top').toggleClass( "over" );
-	//		  }
-	//		});
+			$('#home_grid .home_box.event').bind({
+			  mouseenter: function() {
+				$(this).children('.top').addClass( "over" );
+			  },
+			  mouseleave: function() {
+				$(this).children('.top').removeClass( "over" );
+			  }
+			});
+
+			// cycle from / to
+			$('.bottom ul.authors', $newElems).each(function() {
+				var $elem = $(this).children('li'), l = $elem.length, i = 0;
+				function go() {
+				    $elem.eq(i % l).animate({ opacity: "0", top: "11" }, 400, "easeInQuad", function() {
+				    	$(this).css('z-index',1);
+						$elem.eq(i % l).delay(1000).animate({ opacity: "0", top: "-11" }, 0, "easeInQuad", function(){
+							$(this).css('z-index',2);
+				        	$(this).animate({ opacity: "1", top: "0" }, 400, "easeOutQuad", go);
+						})
+				        i++;
+				    })
+				}
+				go();
+			});
 
 	    });
 
@@ -305,15 +321,32 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	});
 	$('#home_grid .home_box.event').bind({
 	  mouseenter: function() {
-		$(this).children('.top').toggleClass( "over" );
+		$(this).children('.top').addClass( "over" );
 	  },
 	  mouseleave: function() {
-		$(this).children('.top').toggleClass( "over" );
+		$(this).children('.top').removeClass( "over" );
 	  }
 	});
 
+	// cycle from / to
+	$('#home_grid .home_box.conversations .bottom ul.authors').each(function() {
+		var $elem = $(this).children('li'), l = $elem.length, i = 0;
+		function go() {
+		    $elem.eq(i % l).animate({ opacity: "0", top: "11" }, 400, "easeInQuad", function() {
+		    	$(this).css('z-index',1);
+				$elem.eq(i % l).delay(1000).animate({ opacity: "0", top: "-11" }, 0, "easeInQuad", function(){
+					$(this).css('z-index',2);
+		        	$(this).animate({ opacity: "1", top: "0" }, 400, "easeOutQuad", go);
+				})
+		        i++;
+		    })
+		}
+		go();
+	});
 
 });
+
+
 
 
 // decrease header height on scroll
