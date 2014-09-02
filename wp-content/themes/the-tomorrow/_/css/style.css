@@ -1071,27 +1071,6 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   color: #191919;
   font-weight: 700;
 }
-#home_grid .home_box.conversations .bottom ul.authors {
-  width: 210px;
-  position: absolute;
-  bottom: 0;
-  left: 110px;
-  height: 11px;
-  overflow: hidden;
-}
-#home_grid .home_box.conversations .bottom ul.authors li {
-  background: #fff;
-  width: 210px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "adelle-sans";
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 11px;
-  height: 11px;
-  line-height: 11px;
-}
 body.internal-page {
   /************************************************
 *	Footer      								*
@@ -1104,9 +1083,6 @@ body.internal-page h2 {
   margin: 0 0 0 0;
   font-family: "adelle-sans";
   font-weight: 700;
-}
-body.internal-page h2 span {
-  font-weight: 300;
 }
 body.internal-page .archive-box {
   position: relative;

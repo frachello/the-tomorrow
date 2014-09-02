@@ -1,11 +1,6 @@
-
-
-
 <?php get_header(); ?>
 <!-- content -->
 <div id="content">
-
-		<div id="home_grid">
 
 	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
 	<?php if (isset($_GET['type']) ){ $cpts = $_GET['type']; } ?>
@@ -15,59 +10,23 @@
 		echo '<!-- results for ' . implode(', ', $cpts) . ' -->';
 	 	$home_boxes_array = array(
 	 		'post_type'=>$cpts,
-	 		'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+	 		'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 	 		'paged' => $paged
 	 	);
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
 	}else{
-	?>
-
-	<?php
 		$home_boxes_array = array(
 			'post_type'=>array('event','conversations'),
-		//	'post_type'=>array('event'),
 			'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 			'paged' => $paged
-
 	 	);
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
-	?>
+	}
+	$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
 
-	<?php /*
-
-			$events_array = array(
-				'post_type'=>'event',
-				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-				'paged' => $paged,
-	//			'post_status' => 'future'
-		 	);
-			$conversations_array = array(
-				'post_type'=>'conversations',
-				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-				'paged' => $paged,
-	//			'post_status' => 'future'
-		 	);
-			$events_query = new WP_Query( $events_array );
-			$conversations_query = new WP_Query( $conversations_array );
-			$wp_query = new WP_Query();
-
-			// start putting the contents in the new object
-			$wp_query->posts = array_merge( $events_query->posts, $conversations_query->posts );
-
-			// here you might wanna apply some sort of sorting on $result->posts
-
-			// we also need to set post count correctly so as to enable the looping
-			$wp_query->post_count = count( $wp_query->posts );
-
-	*/ ?>
-
-	<?php } ?>
-
-	<?php if( $wp_query->have_posts() ): ?>
-
+	if( $wp_query->have_posts() ): ?>
 
 	<!-- <?php echo 'paged: ' . $paged; ?> -->
 
+		<div id="home_grid">
 
 			<?php
 			while( $wp_query->have_posts() ): $wp_query->the_post();
@@ -228,7 +187,7 @@
 
 						<div class="bottom">
 
-							<p class="date"><?php echo date_ago(); ?></p>
+							<p class="date">
 
 							<?php
 							// print the post time of the last letter of this conversation
@@ -236,7 +195,7 @@
 							$conversation_id = $post->ID;
 							$this_conv_letters_last_args = array(
 								'post_type' => 'letters',
-								'posts_per_page' => 999,
+							//	'posts_per_page' => 1,
 								'tax_query' => array (
 							      array (
 							         'taxonomy' => 'conversations',
@@ -252,21 +211,15 @@
 								$letters_num = $this_conv_letters->post_count;
 								while( $this_conv_letters->have_posts() ): $this_conv_letters->the_post();
 								$i++;
-									if ($i == $letters_num): ?>
-
-								<?php if(get_field("author_from")||get_field("author_to")): ?>
-								<ul class="authors">
-									<li>to <strong><?php echo get_field( "author_to" ); ?></strong></li>
-									<li>from <strong><?php echo get_field( "author_from" ); ?></strong></li>
-								</ul> 
-								<?php endif; ?>
-							
-							<?php
+									if ($i == $letters_num):
+									echo date_ago(); 
 									endif;
 								endwhile;
 							}
 							wp_reset_postdata();
 							?>
+
+							</p>
 
 							<p class="count-theme">
 
@@ -274,7 +227,7 @@
 									<?php echo $letters_num; ?>
 								</strong> <?php print ' letter' . ($letters_num  == 1 ? '' : 's') ?>
 								<?php if($conversation_themes!==''): ?>
-								on <strong><?php echo $conversation_themes; ?></strong>
+								on <a href="<?php bloginfo('url'); ?>/themes/<?php echo $term->slug; ?><?php echo $conversation_theme_slugs; ?>"><?php echo $conversation_themes; ?></a>
 								<?php endif; ?>
 							</p>
 

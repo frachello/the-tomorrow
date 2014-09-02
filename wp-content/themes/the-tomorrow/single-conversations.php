@@ -13,7 +13,6 @@
 		$this_conv_letters_last_args = array(
 			'post_type' => 'letters',
 			'order' => 'ASC',
-			'posts_per_page' => 999,
 			'tax_query' => array (
 		      array (
 		         'taxonomy' => 'conversations',
@@ -51,7 +50,7 @@
 				
 			}
 		?>
-		<p class="count-theme"><strong><?php echo $letters_num; ?></strong> letter<?php if($letters_num>1){ ?>s<?php } ?>
+		<p class="count-theme"><strong><?php echo $letters_num; ?></strong> letters
 		<?php if($conversation_themes!==''): ?> on <strong><?php echo $conversation_themes; ?></strong><?php endif; ?>
 		</p>
 
@@ -101,7 +100,7 @@
 								<strong><?php echo get_field( "author_from" ); ?></strong> to <strong><?php echo get_field( "author_to" ); ?></strong>
 							<?php endif; ?>
 						</h3>
-						<p class="date"><?php echo date_ago(); ?></p>
+						<p class="date"><?php the_time('j F Y') ?></p>
 					</div>
 					
 					<div class="entry">

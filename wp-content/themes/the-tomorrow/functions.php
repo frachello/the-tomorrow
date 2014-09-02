@@ -257,12 +257,5 @@
 		return $description;
 	}
 
-	add_action('pre_get_posts','wpse50761_alter_query',15);
-	function wpse50761_alter_query($query){
-		if( $query->is_main_query() && is_category('events') ){
-			$query->set('orderby','eventstart');
-			$query->set('order','desc');
-		}
-	}
 
 ?>
