@@ -135,7 +135,28 @@
 
 					<div class="bottom">
 						<p class="address"><?php echo $address_details['state']; ?>, <?php echo $address_details['country']; ?></p>
-						<a class="share" href="#">share</a>
+						<div class="share_wrap">
+							
+							<a class="share" href="#">share</a>
+
+							<div class="share_baloon hide">
+
+							    <div class="addthis_toolbox addthis_default_style ">		    
+
+								    <a class="addthis_button_facebook" title="Facebook" href="#">
+								    	Share on facebook</a>
+
+								    <a class="addthis_button_twitter" title="Tweet" href="#">
+										Share on twitter</a>
+
+								    <a class="addthis_button_email" title="Email" href="#">
+								    	Share on email</a>
+
+							    </div>
+
+							</div>
+
+						</div>
 					</div>
 
 				</div>
@@ -156,7 +177,11 @@
 
 				<div class="home_box conversations">
 
-					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; ">					
+					<a class="more" href="<?php the_permalink() ?>" title="<?php echo $conversation_title; ?>">
+						<?php echo $conversation_title; ?>
+					</a>
+
+					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; ">
 						<p class="title">
 							<a href="<?php the_permalink() ?>" title="<?php echo $conversation_title; ?>"><?php echo $conversation_title; ?></a>
 							<?php

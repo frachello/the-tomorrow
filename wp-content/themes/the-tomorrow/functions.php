@@ -160,7 +160,7 @@
 
 	function date_ago() {  
 		$difference = round((strtotime(date("r")) - strtotime(get_the_time('r')))/(24*60*60),0);
-		if ($difference > 3) { return get_the_date('j F Y');
+		if ($difference > 3) { return get_the_date('j M Y');
 		}else{ return human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; }
 	}
 
@@ -257,12 +257,5 @@
 		return $description;
 	}
 
-	add_action('pre_get_posts','wpse50761_alter_query',15);
-	function wpse50761_alter_query($query){
-		if( $query->is_main_query() && is_category('events') ){
-			$query->set('orderby','eventstart');
-			$query->set('order','desc');
-		}
-	}
 
 ?>

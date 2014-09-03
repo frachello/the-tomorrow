@@ -42,7 +42,19 @@
 
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('template_directory') ?>/_/js/classie.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/_/js/retina.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/_/js/functions.js"></script>
+
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+<script type="text/javascript">
+var addthis_config = {
+  pubid: "ra-53fc91b61d96150f"
+}
+addthis.layers({
+  'recommended' : false   
+});
+</script>             
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

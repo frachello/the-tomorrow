@@ -379,8 +379,22 @@ body.home header.main {
 body.home header.main .nav_menu li a {
   background-image: url('../i/ico_nav_menu_fff.png');
 }
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.home header.main .nav_menu li a {
+    background-image: url('../i/ico_nav_menu_fff@2x.png');
+    -webkit-background-size: 72px 23px;
+  }
+}
 body.home header.main .inner h1 a {
-  background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0;
+  background-image: url('../i/the_tomorrow_logo_fff.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.home header.main .inner h1 a {
+    background-image: url('../i/the_tomorrow_logo_fff@2x.png');
+    -webkit-background-size: 279px 33px;
+  }
 }
 body.scrolled header.main {
   height: 90px;
@@ -397,7 +411,15 @@ body.scrolled header.main .inner h1 a {
   display: block;
   width: 70px;
   height: 35px;
-  background: url(../i/the_tomorrow_logotipo_000.png) no-repeat 0 0;
+  background-image: url('../i/the_tomorrow_logotipo_000.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.scrolled header.main .inner h1 a {
+    background-image: url('../i/the_tomorrow_logotipo_000@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
 }
 body.scrolled header.main .inner h2 {
   display: none;
@@ -407,7 +429,15 @@ body.scrolled header.main .nav_menu {
   top: 34px;
 }
 body.home.scrolled header.main .inner h1 a {
-  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
+  background-image: url('../i/the_tomorrow_logotipo_fff.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.home.scrolled header.main .inner h1 a {
+    background-image: url('../i/the_tomorrow_logotipo_fff@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
 }
 body.home header.main {
   background: #606a70;
@@ -775,8 +805,16 @@ nav#megamenu .megahead .logotipo {
   display: block;
   width: 70px;
   height: 35px;
-  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0;
+  background-image: url('../i/the_tomorrow_logotipo_fff.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
   float: left;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  nav#megamenu .megahead .logotipo {
+    background-image: url('../i/the_tomorrow_logotipo_fff@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
 }
 nav#megamenu .megahead .close {
   font-size: 0;
@@ -1019,12 +1057,78 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   height: 11px;
   float: right;
 }
+#home_grid .home_box.event .share_baloon {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  width: 40px;
+  height: 92px;
+  background-image: url('../i/ico_share_baloon.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  #home_grid .home_box.event .share_baloon {
+    background-image: url('../i/ico_share_baloon@2x.png');
+    -webkit-background-size: 80px 92px;
+  }
+}
+#home_grid .home_box.event .share_baloon .addthis_toolbox a {
+  width: 40px;
+  height: 28px;
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding: 0;
+  margin: 0;
+}
+#home_grid .home_box.event .share_baloon .addthis_toolbox a:hover {
+  background-image: url('../i/ico_share_baloon.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  #home_grid .home_box.event .share_baloon .addthis_toolbox a:hover {
+    background-image: url('../i/ico_share_baloon@2x.png');
+    -webkit-background-size: 80px 92px;
+  }
+}
+#home_grid .home_box.event .share_baloon .addthis_toolbox a:hover.addthis_button_facebook {
+  background-position: -40px 0;
+}
+#home_grid .home_box.event .share_baloon .addthis_toolbox a:hover.addthis_button_twitter {
+  background-position: -40px -28px;
+}
+#home_grid .home_box.event .share_baloon .addthis_toolbox a:hover.addthis_button_email {
+  background-position: -40px -56px;
+  height: 25px;
+}
+#home_grid .home_box.event .share_baloon .at15t, #home_grid .home_box.event .share_baloon .at16nc, #home_grid .home_box.event .share_baloon .at300bs {
+  background: none;
+}
 #home_grid .home_box p {
   margin-top: 0;
 }
 #home_grid .home_box.conversations {
   width: 479px;
   text-align: left;
+  position: relative;
+  z-index: 1;
+}
+#home_grid .home_box.conversations .more {
+  width: 479px;
+  height: 239px;
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: url(../i/ico_mega_letter_hover.png) no-repeat 0 0;
+  display: none;
 }
 #home_grid .home_box.conversations .top {
   width: 94%;
@@ -1066,22 +1170,23 @@ nav#megamenu .megamenu-footer p.disclaimer a {
 #home_grid .home_box.conversations .bottom p.count-theme {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
+  padding-left: 17px;
 }
 #home_grid .home_box.conversations .bottom p.count-theme a {
   color: #191919;
   font-weight: 700;
 }
 #home_grid .home_box.conversations .bottom ul.authors {
-  width: 210px;
+  width: 190px;
   position: absolute;
   bottom: 0;
-  left: 110px;
-  /* overflow: hidden; */
+  left: 100px;
   height: 11px;
+  overflow: hidden;
 }
 #home_grid .home_box.conversations .bottom ul.authors li {
   background: #fff;
-  width: 210px;
+  width: 190px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1384,7 +1489,15 @@ body.internal-page.tax-event-venue.scrolled header.main .nav_menu li a, body.int
   background-image: url('../i/ico_nav_menu_000.png');
 }
 body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a {
-  background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0;
+  background-image: url('../i/the_tomorrow_logotipo_000.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a {
+    background-image: url('../i/the_tomorrow_logotipo_000@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
 }
 body.internal-page.tax-event-venue.scrolled #main_search, body.internal-page.single-authors.scrolled #main_search {
   top: 90px;
@@ -1551,6 +1664,7 @@ body.internal-page.post-type-archive-letters .archive-box .bottom p.date, body.i
 body.internal-page.post-type-archive-letters .archive-box .bottom p.count-theme, body.internal-page.post-type-archive-conversations .archive-box .bottom p.count-theme, body.internal-page.single-authors .archive-box .bottom p.count-theme, body.internal-page.tax-themes .archive-box .bottom p.count-theme {
   background: url(../i/ico_hp_box_letter.png) no-repeat center left;
   float: right;
+  padding-left: 17px;
 }
 body.internal-page.post-type-archive-authors h3 {
   float: left;

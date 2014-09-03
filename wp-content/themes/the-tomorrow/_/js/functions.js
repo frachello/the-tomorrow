@@ -5,6 +5,8 @@
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
+	toggle_share_hp_events();
+
 	stick_footer();
 
 	places_map_height();
@@ -281,14 +283,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 				$(this).css('color',box_top_color);
 			});
 
-			$('#home_grid .home_box.event').bind({
-			  mouseenter: function() {
-				$(this).children('.top').addClass( "over" );
-			  },
-			  mouseleave: function() {
-				$(this).children('.top').removeClass( "over" );
-			  }
-			});
+			toggle_over_class_hp_events();
 
 			// cycle from / to
 			$('.bottom ul.authors', $newElems).each(function() {
@@ -306,6 +301,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 				go();
 			});
 
+			toggle_share_hp_events();
+
 	    });
 
 	}
@@ -319,14 +316,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	$('#home_grid .home_box.event .top .cat a').each(function() {
 //		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
 //	});
-	$('#home_grid .home_box.event').bind({
-	  mouseenter: function() {
-		$(this).children('.top').addClass( "over" );
-	  },
-	  mouseleave: function() {
-		$(this).children('.top').removeClass( "over" );
-	  }
-	});
+	
+	toggle_over_class_hp_events();
 
 	// cycle from / to
 	$('#home_grid .home_box.conversations .bottom ul.authors').each(function() {
@@ -342,7 +333,20 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		    })
 		}
 		go();
+
 	});
+
+	$('.conversations').children('.more').hide();
+	$('.conversations').bind({
+	  mouseenter: function() {
+		$(this).children('.more').stop().fadeIn(300,'easeInQuad');
+	  },
+	  mouseleave: function() {
+		$(this).children('.more').stop().fadeOut(300,'easeOutQuad');
+	  }
+	});
+
+
 
 });
 
@@ -479,4 +483,43 @@ function debounce( fn, threshold ) {
 }
 
 
+/* ----------------------------------------------------------------------------------------------------------------
+toggle_share_hp_events */
 
+function toggle_share_hp_events(){
+	if( $('#home_grid .home_box.event').length ){
+		$('#home_grid .home_box.event').each(function(){
+
+//			debounce(function() {
+			
+				$(this).find('.share_wrap').bind({
+				  mouseenter: function() {
+				  	console.log('mouseenter');
+					$(this).children('.share_baloon').stop().fadeIn(200,'easeInQuad');
+				  },
+				  mouseleave: function() {
+				  	console.log('mouseenter');
+					$(this).children('.share_baloon').stop().fadeOut(200,'easeOutQuad');
+				  }
+				})
+
+//			}, 1000 )
+
+		});
+	}
+}	
+
+
+/* ----------------------------------------------------------------------------------------------------------------
+toggle_over_class_hp_events */
+
+function toggle_over_class_hp_events(){
+	$('#home_grid .home_box.event').bind({
+	  mouseenter: function() {
+		$(this).children('.top').addClass( "over" );
+	  },
+	  mouseleave: function() {
+		$(this).children('.top').removeClass( "over" );
+	  }
+	});
+}

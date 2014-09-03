@@ -1,7 +1,6 @@
 $wrap-width-desktop	: 1105px;
 $primary-color: #191919;
 
-
 @mixin ir() { font-size: 0; text-indent: -999999px; display: block; }
 
 @mixin border-radius($radius) {
@@ -17,6 +16,17 @@ $primary-color: #191919;
   -o-transition: $val;   
   -ms-transition: $val;          
   transition: $val;
+}
+
+@mixin at2x($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+ 
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+    }
+  }
 }
 
 @import 'reset';
@@ -122,8 +132,14 @@ header.main{
 }
 body.home {
   header.main { background: #606A70; 
-    .nav_menu li a { background-image: url('../i/ico_nav_menu_fff.png');  }
-    .inner h1 a { background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0; }
+    .nav_menu li a {
+      @include at2x('../i/ico_nav_menu_fff', 'png', 72px, 23px);
+    }
+    .inner h1 a {
+      @include at2x('../i/the_tomorrow_logo_fff', 'png', 279px, 33px);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 }
 
@@ -138,13 +154,13 @@ body.internal-page{
 body.scrolled header.main{ height: 90px;
   .inner{ height: 90px;
     h1 { padding-top: 28px;
-      a { @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_000.png) no-repeat 0 0; } 
+      a { @include ir; width: 70px; height: 35px; @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; } 
     }
     h2 { display: none; margin-top: 35px; }
   }
   .nav_menu { top: 34px; }
 }
-body.home.scrolled header.main .inner h1 a {  background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; }
+body.home.scrolled header.main .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
   
 body.home header.main{ background: #606A70; }
 
@@ -212,7 +228,7 @@ nav#megamenu{
   .inner{ width: 988px; margin: 0 auto; text-align: left; }
 
   .megahead{ height: 35px; padding: 50px 0 80px 0;
-    .logotipo{ @include ir; width: 70px; height: 35px; background: url(../i/the_tomorrow_logotipo_fff.png) no-repeat 0 0; float: left; }
+    .logotipo{ @include ir; width: 70px; height: 35px; @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; float: left; }
     .close{ @include ir; width: 20px; height: 20px; background: url(../i/ico_megamenu_close.png) no-repeat 0 0; float: right; margin-top: 7px; }
   }
 
@@ -296,15 +312,35 @@ nav#megamenu{
         .address{
           background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
         }
-        .share{
-          @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right;
-        }      
+        .share_wrap{
+          padding: 4px 4px 0 4px; overflow: hidden; @include transition(all 0.4s ease); width: 40px; height: 108px; position: absolute; bottom: -4px; left: 176px; background: url(../i/ico_hp_box_share.png); background-repeat: no-repeat; background-position: 20px bottom; height: 11px; float: right; cursor: pointer;
+          &:hover { width: 40px; height: 108px; }
+          .share{ @include ir; }
+          .share_baloon{ display: none; position: absolute; top: 4px; left: 5px; width: 40px; height: 92px; @include at2x('../i/ico_share_baloon','png',80px,92px); background-repeat: no-repeat; background-position: 0 0;
+            .addthis_toolbox { 
+              a { width: 40px; height: 28px; @include ir; background-position: center center; background-repeat: no-repeat; background-position: 0 0; padding: 0; margin: 0;
+                &:hover{
+                  @include at2x('../i/ico_share_baloon','png',80px,92px);
+                  &.addthis_button_facebook { background-position: -40px 0 }
+                  &.addthis_button_twitter  { background-position: -40px -28px }
+                  &.addthis_button_email    { background-position: -40px -56px; height: 25px; }
+                }
+              }
+            }
+            .at15t, .at16nc, .at300bs { background: none }
+          }
+
+        }
       }
+
     }
     p{
       margin-top: 0;
     }
-    &.conversations{ width: 479px; text-align: left;
+    &.conversations{ width: 479px; text-align: left; position: relative; z-index: 1;
+      
+      .more{ width: 479px; height: 239px; @include ir; position: absolute; top: 0; left: 0; z-index: 999; background: url(../i/ico_mega_letter_hover.png) no-repeat 0 0; display: none; }
+      
       .top{
         width: 94%; padding: 3%; float: left;
         .title{ font-family: "adelle"; font-weight: 300; font-size: 36px; font-style: normal; float: left; line-height: 41px;
@@ -315,17 +351,18 @@ nav#megamenu{
         height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
         p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
           &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
-          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right;
+          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; padding-left: 17px;
             a { color: $primary_color; font-weight: 700; }
           }
         }
         ul.authors {
-          width: 210px; position: absolute; bottom: 0; left: 110px; height: 11px; overflow: hidden;
-          li { background: #fff; width: 210px; position: absolute; top: 0; left: 0; font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px;
+          width: 190px; position: absolute; bottom: 0; left: 100px; height: 11px; overflow: hidden;
+          li { background: #fff; width: 190px; position: absolute; top: 0; left: 0; font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px;
             &.to {  }
           }
         }
-      } 
+      }
+
     }
   }
 }
@@ -463,7 +500,7 @@ body.internal-page{
       header.main{
         background-color: #fff; background-image: none !important; height: 90px;
         .nav_menu li a { background-image: url('../i/ico_nav_menu_000.png'); }
-        .inner h1 a { background: url('../i/the_tomorrow_logotipo_000.png') no-repeat 0 0; }
+        .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
       }
       #main_search{
         top: 90px;
@@ -539,7 +576,7 @@ body.internal-page{
         height: 11px; position: absolute; left: 0; bottom: 0; width: 100%;
         p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
           &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
-          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; }
+          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; padding-left: 17px; }
         }
       } 
     }
@@ -588,7 +625,7 @@ body.internal-page{
             a, strong a { color: #191919; }
           }
           .address{ margin-top: 35px; width: 100%; font-size: 14px; text-transform: uppercase; background: url(../i/ico_marker_000_medium.png) no-repeat center left; text-indent: 12px; float: left; height: 14px; line-height: 14px; }
-          .share{ @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right; }      
+          .share{ @include ir; background: url(../i/ico_hp_box_share.png) no-repeat center left; width: 11px; height: 11px; float: right; }
           .addthis_col { float: right; margin-top: 30px; }
         }
       }
