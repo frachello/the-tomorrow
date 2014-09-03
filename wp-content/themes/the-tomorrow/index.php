@@ -132,31 +132,33 @@
 						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
 					</p>
 					
+					<a class="venue-more" href="<?php echo $venue_url; ?>">enter venue</a>
 
 					<div class="bottom">
 						<p class="address"><?php echo $address_details['state']; ?>, <?php echo $address_details['country']; ?></p>
-						<div class="share_wrap">
-							
-							<a class="share" href="#">share</a>
+					</div>
 
-							<div class="share_baloon hide">
+					<div class="share_wrap">
+						
+						<a class="share" href="#">share</a>
 
-							    <div class="addthis_toolbox addthis_default_style ">		    
+						<div class="share_baloon hide">
 
-								    <a class="addthis_button_facebook" title="Facebook" href="#">
-								    	Share on facebook</a>
+						    <div class="addthis_toolbox addthis_default_style ">		    
 
-								    <a class="addthis_button_twitter" title="Tweet" href="#">
-										Share on twitter</a>
+							    <a class="addthis_button_facebook" title="Facebook" href="#">
+							    	Share on facebook</a>
 
-								    <a class="addthis_button_email" title="Email" href="#">
-								    	Share on email</a>
+							    <a class="addthis_button_twitter" title="Tweet" href="#">
+									Share on twitter</a>
 
-							    </div>
+							    <a class="addthis_button_email" title="Email" href="#">
+							    	Share on email</a>
 
-							</div>
+						    </div>
 
 						</div>
+
 					</div>
 
 				</div>

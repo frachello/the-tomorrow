@@ -307,29 +307,34 @@ nav#megamenu{
         strong{ font-weight: 700; }
         a, strong a { color: #191919; }
       }
+
+      .venue-more{ width: 239px; height: 239px; @include ir; position: absolute; z-index: 2; background: transparent;
+//      &:hover { background: #eee; }
+      }
+      
       .bottom{
         height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
         .address{
           background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
         }
-        .share_wrap{
-          padding: 4px 4px 0 4px; overflow: hidden; @include transition(all 0.4s ease); width: 40px; height: 108px; position: absolute; bottom: -4px; left: 176px; background: url(../i/ico_hp_box_share.png); background-repeat: no-repeat; background-position: 20px bottom; height: 11px; float: right; cursor: pointer;
-          &:hover { width: 40px; height: 108px; }
-          .share{ @include ir; }
-          .share_baloon{ display: none; position: absolute; top: 4px; left: 5px; width: 40px; height: 92px; @include at2x('../i/ico_share_baloon','png',80px,92px); background-repeat: no-repeat; background-position: 0 0;
-            .addthis_toolbox { 
-              a { width: 40px; height: 28px; @include ir; background-position: center center; background-repeat: no-repeat; background-position: 0 0; padding: 0; margin: 0;
-                &:hover{
-                  @include at2x('../i/ico_share_baloon','png',80px,92px);
-                  &.addthis_button_facebook { background-position: -40px 0 }
-                  &.addthis_button_twitter  { background-position: -40px -28px }
-                  &.addthis_button_email    { background-position: -40px -56px; height: 25px; }
-                }
+      }
+
+      .share_wrap{
+        z-index: 3; padding: 4px 4px 0 4px; overflow: hidden; @include transition(all 0.4s ease); width: 40px; height: 108px; position: absolute; bottom: 6%; right: 0; background: url(../i/ico_hp_box_share.png); background-repeat: no-repeat; background-position: 20px bottom; height: 11px; cursor: pointer;
+        &:hover { width: 40px; height: 108px; }
+        .share{ @include ir; }
+        .share_baloon{ display: none; position: absolute; top: 4px; left: 5px; width: 40px; height: 92px; @include at2x('../i/ico_share_baloon','png',80px,92px); background-repeat: no-repeat; background-position: 0 0;
+          .addthis_toolbox { 
+            a { width: 40px; height: 28px; @include ir; background-position: center center; background-repeat: no-repeat; background-position: 0 0; padding: 0; margin: 0;
+              &:hover{
+                @include at2x('../i/ico_share_baloon','png',80px,92px);
+                &.addthis_button_facebook { background-position: -40px 0 }
+                &.addthis_button_twitter  { background-position: -40px -28px }
+                &.addthis_button_email    { background-position: -40px -56px; height: 25px; }
               }
             }
-            .at15t, .at16nc, .at300bs { background: none }
           }
-
+          .at15t, .at16nc, .at300bs { background: none }
         }
       }
 
