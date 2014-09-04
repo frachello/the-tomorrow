@@ -28,6 +28,7 @@ Template Name: Single Author
 	$author_id = $post->ID;
 	$authors_args = array(
 		'post_type' => 'letters',
+		'posts_per_page' => -1,
 		'tax_query' => array (
 	      array (
 	         'taxonomy' => 'authors',

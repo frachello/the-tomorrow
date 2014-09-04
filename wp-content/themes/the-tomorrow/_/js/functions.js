@@ -252,6 +252,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		$iso_container.isotope({
 			itemSelector: '.home_box',
 			layoutMode:'masonry',
+			sortBy : 'random',
 			masonry: {
 				columnWidth: 240
 			}
@@ -275,6 +276,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	        $newElems.imagesLoaded(function(){
 	            $newElems.fadeIn();
 	            $iso_container.isotope( 'appended', $newElems );
+//	            $iso_container.isotope({sortBy: 'random'});
 //	        });
 
 			// apply colors to event boxes
@@ -381,21 +383,102 @@ resize header
 
 function resize_header() {
     
-	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    shrinkOn = 10,
-    header = document.querySelector("header"),
-    body = document.querySelector("body");
-	if (distanceY > shrinkOn) {
-	    classie.add(body,"scrolled");
-	    classie.add(header,"smaller");
-	} else {
-	    if (classie.has(header,"smaller")) {
-	    	classie.remove(body,"scrolled");
-	        classie.remove(header,"smaller");
+	if( $('body.tax-event-venue').length || $('body.single-authors').length ){
+
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+		open_header_h = 520;
+	    shrinkOn = 10,
+	    header = document.querySelector("header"),
+	    body = document.querySelector("body");
+	    new_header_height = open_header_h - distanceY;
+//	    console.log('new_header_height: '+new_header_height);
+//	    console.log('distanceY: '+distanceY);
+	    if(new_header_height<90){
+//			classie.add(header,"smaller");
+//			classie.add(body,"scrolled");
+	    }else{
+//			classie.remove(header,"smaller");
+//			classie.remove(body,"scrolled");
 	    }
+//		if(new_header_height>90){
+		if(new_header_height>140){
+			$('header.main').css('height',new_header_height+'px');
+//			$('header.main').removeClass("smaller");
+//			$('body').removeClass("scrolled");
+	    }else{
+//			$('header.main').addClass("smaller");
+//			$('body').addClass("scrolled");
+//			$('body').addClass("scrolled");
+//			if (distanceY > shrinkOn) {
+//			    classie.add(body,"scrolled");
+//			    classie.add(header,"smaller");
+//			} else {
+//			    if (classie.has(header,"smaller")) {
+//			    	classie.remove(body,"scrolled");
+//			        classie.remove(header,"smaller");
+//
+//			    }
+//			}
+	    }
+
+	//	var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	//    shrinkOn = 10,
+	//    header = document.querySelector("header"),
+	//    body = document.querySelector("body");
+	//	if (distanceY > shrinkOn) {
+	//	    classie.add(body,"scrolled");
+	//	    classie.add(header,"smaller");
+	//	} else {
+	//	    if (classie.has(header,"smaller")) {
+	//	    	classie.remove(body,"scrolled");
+	//	        classie.remove(header,"smaller");
+	//	    }
+	//	}
+
+	//	$(window).scroll(function(){
+	//	    if($(document).scrollTop() > 0)
+	//	    {
+	//	        if($('header').data('size') == 'big')
+	//	        {
+	//	            $('header').data('size','small');
+	//	            $('header').stop().animate({
+	//	                height:'40px'
+	//	            },600);
+	//	        }
+	//	    }
+	//	    else
+	//	    {
+	//	        if($('header').data('size') == 'small')
+	//	        {
+	//	            $('header').data('size','big');
+	//	            $('header').stop().animate({
+	//	                height:'100px'
+	//	            },600);
+	//	        }  
+	//	    }
+	//	});
+
+	}else{
+
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+	    shrinkOn = 10,
+	    header = document.querySelector("header"),
+	    body = document.querySelector("body");
+		if (distanceY > shrinkOn) {
+		    classie.add(body,"scrolled");
+		    classie.add(header,"smaller");
+		} else {
+		    if (classie.has(header,"smaller")) {
+		    	classie.remove(body,"scrolled");
+		        classie.remove(header,"smaller");
+		    }
+		}
+
 	}
 
 }
+
+
 /* ----------------------------------------------------------------------------------------------------------------
 fix rightcol pos
 */
@@ -428,15 +511,15 @@ function stick_footer(){
 	if ( $('#content').length && $('.internal-page').length ){
 		win_h = $( window ).height();
 		content_h = $('#content').height();
-		console.log(content_h);
+//		console.log(content_h);
 		footer_h = $('#content').height();
-		console.log(footer_h);
+//		console.log(footer_h);
 		content_margin_top = $('#content').css('padding-top');
-		console.log(content_margin_top);
+//		console.log(content_margin_top);
 		content_offset = $('#content').offset();
-		console.log(content_offset.top);
+//		console.log(content_offset.top);
 		content_h_total = content_offset.top + content_h;
-		console.log(content_h_total);
+//		console.log(content_h_total);
 		if( (footer_h + content_offset.top + content_offset.top + content_h + 10) < win_h ){
 			$('footer').addClass('sticky');
 		}else{

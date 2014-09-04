@@ -35,9 +35,9 @@
 <script src="<?php bloginfo('template_directory') ?>/_/js/imagesloaded.pkgd.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/_/js/jquery.jcarousel.min.js"></script>
 <!-- <script src="<?php bloginfo('template_directory') ?>/_/js/jquery.touchSwipe.min.js"></script> -->
-<?php if(is_home()): ?>
+<?php // if( is_home() ): ?>
 <script src="<?php bloginfo('template_directory') ?>/_/js/isotope.pkgd.min.js"></script>
-<?php endif; ?>
+<?php // endif; ?>
 <script src="<?php bloginfo('template_directory') ?>/_/js/jquery.infinitescroll.min.js"></script>
 
 <?php wp_footer(); ?>

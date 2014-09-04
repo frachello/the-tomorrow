@@ -40,7 +40,7 @@ Template Name: Authors Archive
 		$cpt_item_id = $post->ID;
 		$get_letters_by_cpt_item = array(
 			'post_type' => 'letters',
-		//	'posts_per_page' => 1,
+			'posts_per_page' => -1,
 			'tax_query' => array (
 		      array (
 		         'taxonomy' => $curr_page_term_name,
@@ -59,11 +59,61 @@ Template Name: Authors Archive
 		?>
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $col_count; ?>">
-			
+
+				<?php
+				    $args = array(
+				        'post_type' => 'attachment',
+				        'numberposts' => -1,
+				        'post_status' => null,
+				        'orderby' => 'menu_order',
+				        'order' => 'ASC',
+				        'post_parent' => $post->ID
+				    );
+				    $attachments = get_posts( $args );
+				    if ( $attachments ) {
+				?>
+				
+				<?php
+					$thumb_src = "";
+					foreach ( $attachments as $attachment ) {
+					    $image_attributes = wp_get_attachment_image_src( $attachment->ID,'full' );
+					//	$attachment_meta = wp_get_attachment($attachment->ID);
+					//	$attachment_mime_type = get_post_mime_type($attachment->ID);
+					//	$slideClass = "slide-type-image";
+					//	if ( $attachment_meta['description'] === 'virtual' ) {
+					//	    $slideClass = 'slide-type-virtual';
+					//	}
+					//	if ( $attachment_meta['description'] === 'video' ) {
+					//	    $slideClass = 'slide-type-video';
+					//	}
+					//	if ( $attachment_meta['description'] === 'mobile' ) {
+					//	    $slideClass = 'slide-type-mobile';
+					//	}
+					//	if ( ( $attachment_mime_type === 'application/pdf' ) || ( $attachment_meta['description'] === 'mobile' ) ) {
+					//	}else{
+					    
+					//    if ( var_dump(endsWith($image_attributes[0],"small.png")) ){
+					//    	$thumb_src = $image_attributes[0];
+					//    }
+
+						if (strpos($image_attributes[0], "small.png") !== false){
+							$thumb_src = $image_attributes[0];
+						}
+
+					}
+
+					}
+				?>
+				    
 				<?php if ( has_post_thumbnail() ) { // controlla se il post ha un'immagine in evidenza assegnata. ?>
 				<a class="img" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+				<?php if( isset($thumb_src) && $thumb_src != '' ){ ?>
+				<img src="<?php echo $thumb_src; ?>" alt="<?php echo apply_filters( 'the_title', $attachment->post_title ); ?>" title="<?php echo apply_filters( 'the_title', $attachment->post_title ); ?>" data-type="<?php echo $attachment_meta['description']; ?>" data-uri="<?php echo $attachment_meta['caption']; ?>" class="slide-image">
+				<?php }else{ ?>
+				<?php the_post_thumbnail('thumb'); ?>
+				<?php } ?>
+
 				<?php
-				  the_post_thumbnail('thumb');
 				}else{
 					if(is_user_logged_in()){
 						echo '<a href="'.get_edit_post_link().'">';
@@ -79,7 +129,7 @@ Template Name: Authors Archive
 			<h4><a href="<?php echo the_permalink() ?>" title="<?php the_title(); ?>">
 				<?php the_title() ?>
 			</a></h4>
-			<p class="letters_count"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php echo $letters_num; ?> letters</a></p>
+			<p class="letters_count"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php echo $letters_num; ?> letter<?php if($letters_num>1){ echo 's'; } ?></a></p>
 		</div>
 	<?php
 	if($col_count == $cols_number){ $col_count=0; }

@@ -82,7 +82,7 @@ body{ background: #F4F4F0;
 //  }
 }
 
-
+.infscr-loading{ z-index: 999 }
 	
 /************************************************
 *	Header  									*
@@ -93,9 +93,6 @@ header.main{
   form#search_venues_map{ display: none; }
 
   height: 140px; text-align: left; position:fixed; background: #fff; color: #fff; text-align: center; top: 0; left: 0; z-index: 9; width: 100%;
-// -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.8);
-// -moz-box-shadow:    0px 2px 10px 0px rgba(0, 0, 0, 0.8);
-// box-shadow:         0px 2px 10px 0px rgba(0, 0, 0, 0.8);
   @include transition(all 0.5s ease);
   .inner{
     width: 988px; height: 140px; margin: 0 auto; position: relative;
@@ -196,7 +193,7 @@ body.home{
         margin-right: 0;
         p.calendar_date { float: left; margin-right: 23px; }
         label { display: inline-block; margin-right: 3px; }
-        .text { border: none; width: 90px; width: 90px; }
+        .text { border: none; border-bottom: 1px solid #ccc; width: 90px; margin-right: 2px; }
         button { width: 16px; height: 16px; background: #fff url('../i/ico_filter_calendar.png') no-repeat 0 0; font-size: 0; text-indent: -999999px; display: inline-block; border: none; vertical-align: middle; position: relative; left: 4px; top: 1px; }
       }
     }

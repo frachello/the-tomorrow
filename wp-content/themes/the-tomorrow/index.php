@@ -5,13 +5,60 @@
 <!-- content -->
 <div id="content">
 
-		<div id="home_grid">
+	<div id="home_grid">
 
 	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
-	<?php if (isset($_GET['type']) ){ $cpts = $_GET['type']; } ?>
-	
 	<?php
-	if(isset($cpts)){
+
+
+
+	if ( isset($_GET['type']) && ($_GET['type'])!='' ){ $cpts = $_GET['type']; }
+	if ( isset($_GET['city']) && ($_GET['city'])!='' ){ $city = $_GET['city']; }
+	if ( isset($_GET['from_date']) && ($_GET['from_date'])!='' ){ $from_date = $_GET['from_date']; }
+	if ( isset($_GET['to_date']) && ($_GET['to_date'])!='' ){ $to_date = $_GET['to_date']; }
+
+/*
+
+	if( isset($from_date) && isset($to_date) ){
+		$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
+		$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
+	 	$home_boxes_array = array(
+			'post_type' => 'event',
+			'event_start_after'=>$from_date,
+			'event_start_before'=>$to_date,
+			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			'paged' => $paged
+	 	);
+	 	if(isset($city)){
+		 	$city_array = array( 
+			    array(
+			        'key' => '_city',
+			        'value' => $city
+			    )
+			);
+	 	}
+	 	$home_boxes_array['venue_query'] = $city_array;
+		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
+		
+	}elseif(isset($city)){
+
+	//	echo ('<p class="current-city">'.$city.'</p>');
+	 	$home_boxes_array = array(
+			'post_type' => 'event',
+			'venue_query' => array( 
+			    array(
+			        'key' => '_city',
+			        'value' => $city
+			    )
+			),
+			'event_start_after' => 'today',
+			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			'paged' => $paged
+	 	);
+		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
+
+
+	}elseif(isset($cpts)){
 		echo '<!-- results for ' . implode(', ', $cpts) . ' -->';
 	 	$home_boxes_array = array(
 	 		'post_type'=>$cpts,
@@ -20,9 +67,7 @@
 	 	);
 		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
 	}else{
-	?>
 
-	<?php
 		$home_boxes_array = array(
 			'post_type'=>array('event','conversations'),
 		//	'post_type'=>array('event'),
@@ -31,37 +76,109 @@
 
 	 	);
 		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
+
+	}
+*/
+
 	?>
 
-	<?php /*
+	<?php	// merge different queries
+			// http://wordpress.stackexchange.com/questions/71576/combining-queries-with-different-arguments-per-post-type
+
+
+			/* --------------------------------------------------------------------------------
+			events query */
 
 			$events_array = array(
 				'post_type'=>'event',
-				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-				'paged' => $paged,
-	//			'post_status' => 'future'
+			//	'orderby'=>'eventstart' // default
+				'posts_per_page'=>15, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'paged' => $paged
 		 	);
+
+			// filter by city
+		 	if(isset($city)){
+			 	$city_array = array( 
+				    array(
+				        'key' => '_city',
+				        'value' => $city
+				    )
+				);
+		 	}
+		 	$events_array['venue_query'] = $city_array;
+
+		 	// filter by date
+		 	if( isset($from_date) ){
+				$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
+				$events_array['event_start_after'] = $from_date;
+			}
+		 	if( isset($to_date) ){
+				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
+				$events_array['event_start_before'] = $to_date;
+			}
+
+
+
+			/* --------------------------------------------------------------------------------
+			conversations query */
+
 			$conversations_array = array(
 				'post_type'=>'conversations',
-				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-				'paged' => $paged,
-	//			'post_status' => 'future'
+				'posts_per_page'=>5, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'paged' => $paged
 		 	);
+
+			// filter by date
+		 	if( isset($from_date) && isset($to_date) ){
+				$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
+				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
+			 	$date_array = array(  
+			        array(  
+			            'after' => $from_date,  
+			            'before' => $to_date,  
+			        )
+				);
+		 	}
+		 	$conversations_array['date_query'] = $date_array;
+
+
 			$events_query = new WP_Query( $events_array );
 			$conversations_query = new WP_Query( $conversations_array );
-			$wp_query = new WP_Query();
+			$merged_query = new WP_Query();
 
 			// start putting the contents in the new object
-			$wp_query->posts = array_merge( $events_query->posts, $conversations_query->posts );
+			$wp_query->posts = array_merge( $conversations_query->posts, $events_query->posts );
+
+//			print_r($merged_query->posts);
 
 			// here you might wanna apply some sort of sorting on $result->posts
+/*
+			$postids = array();
+			foreach( $merged_query->posts as $item ) {
+				$postids[]=$item->ID; //create a new query only of the post ids
+			}
+			$uniqueposts = array_unique($postids);
 
+//			print_r($postids);
+*/
 			// we also need to set post count correctly so as to enable the looping
 			$wp_query->post_count = count( $wp_query->posts );
-
-	*/ ?>
-
-	<?php } ?>
+/*
+			$wp_query = get_posts(array(
+			    //new query of only the unique post ids on the merged queries from above
+			    'post__in' => $uniqueposts,  
+			    'post_type'=>array('event','conversations'),
+				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'paged' => $paged
+			    ));
+//			foreach( $posts as $post ) :
+//			setup_postdata($post);
+			?>
+			<?php // echo get_the_title(); ?>
+			<?php // echo eo_get_venue_name(); ?>
+*/
+	
+	 // } ?>
 
 	<?php if( $wp_query->have_posts() ): ?>
 
