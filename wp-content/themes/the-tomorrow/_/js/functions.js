@@ -217,6 +217,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
         	$('body').addClass('open-filters');
             $('#filter_nav').slideDown('fast');
             $('#main_search').slideUp('fast');
+            $('#main_search .form input.text').attr('value','');
         };
 	});
 
@@ -227,10 +228,12 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
         if ($('#main_search').is(':visible')) {
         	$('body').removeClass('open-filters');
             $('#main_search').slideUp('fast');
+			$('#main_search .form input.text').blur();
         } else {
             $('body').addClass('open-filters');
             $('#main_search').slideDown('fast');
             $('#filter_nav').slideUp('fast');
+			$('#main_search .form input.text').focus();
         };
 	});
 

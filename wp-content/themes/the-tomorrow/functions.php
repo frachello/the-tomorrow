@@ -5,6 +5,14 @@
 //	function my_excerpt_length($length) {
 //	return 30; }
 
+//	function search_url_rewrite_rule() {
+//		if ( is_search() && !empty($_GET['s'])) {
+//			wp_redirect(home_url("/search/") . urlencode(get_query_var('s')));
+//			exit();
+//		}	
+//	}
+//	add_action('template_redirect', 'search_url_rewrite_rule');
+
 	/* image sizes */
 	add_image_size( 'letters-in-page-slider', 732, 440, array( 'center', 'center' ) );
 

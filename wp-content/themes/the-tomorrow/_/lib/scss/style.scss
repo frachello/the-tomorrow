@@ -73,8 +73,13 @@ body { font: 12px/1.3 'adelle-sans'; color: $primary-color; text-align: center; 
 a, a:hover {text-decoration:none;}
 
 body{ background: #F4F4F0;
-  &.home { background: #fff; }
-  #content { margin-top: 140px; @include transition(all 0.5s ease); position: relative; z-index: 1; }  
+  &.home, &.search { background: #fff; }
+  #content {
+    margin-top: 140px; @include transition(all 0.5s ease); position: relative; z-index: 1;
+//  position: relative; width: 100%; margin: 0; text-align: left; padding: 80px 0 0 0;
+    h2.no-content{ font-family: "adelle-sans"; font-weight: 300; font-size: 16px; height: 80px; line-height: 80px; border-bottom: 1px solid #ccc; }
+  }  
+  &.internal-page.search #content{ position: relative; width: 100%; /* margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0; */ }
   &.open-filters #content { margin-top: 220px; }
 //  &.scrolled{
 //    #content { margin-top: 90px; }
@@ -127,7 +132,7 @@ header.main{
     }
   }
 }
-body.home {
+body.home, body.search {
   header.main { background: #606A70; 
     .nav_menu li a {
       @include at2x('../i/ico_nav_menu_fff', 'png', 72px, 23px);
@@ -157,15 +162,18 @@ body.scrolled header.main{ height: 90px;
   }
   .nav_menu { top: 34px; }
 }
-body.home.scrolled header.main .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
+body.home.scrolled, body.search.scrolled{
+  header.main .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
+}
   
-body.home header.main{ background: #606A70; }
+  
+body.home header.main, body.search header.main{ background: #606A70; }
 
 /* --------------------------------------------------------------------------------
                                     filter navs                                  */
 
 #filter_nav, #main_search { background: #fff; } 
-body.home{
+body.home, body.search{
   #filter_nav, #main_search { background: #f4f4f0; }
 }
 
@@ -184,6 +192,7 @@ body.home{
       label { font-family: "adelle-sans"; font-weight: 700; font-size: 18px; position: relative; top: 4px; }
       input.checkbox { vertical-align: middle }
       &.show{
+        width: 160px;
         label{ margin-right: 18px; }
       }
       &.city{
@@ -384,6 +393,8 @@ body.internal-page{
 
   #content {
 
+    position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
+
     .content_col{ width: 732px; border-top: 1px solid #414042; 
 
       article{
@@ -411,8 +422,6 @@ body.internal-page{
       }
 
     }
-
-    position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
 
     #rightcol{ width: 220px; margin: 0; float: right;
       &.fixed{ position: fixed; top: 100px; left: 50%; margin-left: 274px;
@@ -674,7 +683,7 @@ body.internal-page{
 *	Footer      								*
 ************************************************/
 
-body.home footer { display: none; }
+body.home footer, body.search footer { display: none; }
 // .push { height: 176px; }
 footer { 
   &.sticky { position: fixed; left: 0; bottom: 0; width: 100%;  }

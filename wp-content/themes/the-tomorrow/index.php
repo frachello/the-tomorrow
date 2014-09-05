@@ -10,12 +10,11 @@
 	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;  ?>
 	<?php
 
-
-
 	if ( isset($_GET['type']) && ($_GET['type'])!='' ){ $cpts = $_GET['type']; }
 	if ( isset($_GET['city']) && ($_GET['city'])!='' ){ $city = $_GET['city']; }
 	if ( isset($_GET['from_date']) && ($_GET['from_date'])!='' ){ $from_date = $_GET['from_date']; }
 	if ( isset($_GET['to_date']) && ($_GET['to_date'])!='' ){ $to_date = $_GET['to_date']; }
+	if ( isset($_GET['search']) && ($_GET['search'])!='' ){ $search = $_GET['search']; }
 
 /*
 
@@ -117,6 +116,10 @@
 				$events_array['event_start_before'] = $to_date;
 			}
 
+		 	// filter by search
+			if( isset($search) ){
+				$events_array['s'] = $search;
+			}
 
 
 			/* --------------------------------------------------------------------------------
@@ -128,7 +131,7 @@
 				'paged' => $paged
 		 	);
 
-			// filter by date
+			/* filter by date
 		 	if( isset($from_date) && isset($to_date) ){
 				$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
 				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
@@ -138,16 +141,28 @@
 			            'before' => $to_date,  
 			        )
 				);
-		 	}
-		 	$conversations_array['date_query'] = $date_array;
+			 	$conversations_array['date_query'] = $date_array;
+		 	} */
 
+		 	// filter by search
+			if( isset($search) ){
+				$conversations_array['s'] = $search;
+			}
+
+			/* --------------------------------------------------------------------------------
+			merge queries */
 
 			$events_query = new WP_Query( $events_array );
 			$conversations_query = new WP_Query( $conversations_array );
-			$merged_query = new WP_Query();
 
-			// start putting the contents in the new object
-			$wp_query->posts = array_merge( $conversations_query->posts, $events_query->posts );
+			if( isset($city) || isset($from_date) || isset($to_date) ){
+				$wp_query->posts = $events_query->posts;
+			}else{
+				$merged_query = new WP_Query();
+				// start putting the contents in the new object
+				$wp_query->posts = array_merge( $conversations_query->posts, $events_query->posts );
+			}
+
 
 //			print_r($merged_query->posts);
 
@@ -176,8 +191,7 @@
 			?>
 			<?php // echo get_the_title(); ?>
 			<?php // echo eo_get_venue_name(); ?>
-*/
-	
+*/	
 	 // } ?>
 
 	<?php if( $wp_query->have_posts() ): ?>
@@ -444,7 +458,7 @@
 		</div>
 
 	<?php else: ?>
-		<h2>Sorry, no posts matched your search criteria.</h2>
+		<h2 class="no-content">Sorry, no posts matched your search criteria.</h2>
 	<?php
 	endif;
 	wp_reset_postdata();

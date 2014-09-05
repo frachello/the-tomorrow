@@ -135,7 +135,7 @@
 
 					<div class="filter show">
 						
-						<p class="title">show</p>
+						<p class="title">filter events <br />by location <br />or date range</p>
 <!--
 						<p>
 
@@ -165,14 +165,16 @@
 						
 						<?php
 							$today = date("d/m/Y"); // current date
-							$from_day = $today;
+							if(!isset($from_date)){
+								$from_date = $today;
+							}
 						?>
 
 						<p class="title">set a date</p>
 
 						<p class="calendar_date">
 							<label>from</label>
-							<input name="from_date" class="text from" type="text" value="<?php echo $_GET['from_date']; ?>" />
+							<input name="from_date" class="text from" type="text" value="<?php echo $from_date; ?>" />
 							
 						</p>
 
@@ -184,18 +186,7 @@
 
 					</div>
 
-					<!--
-
-
-
-
-					http://docs.wp-event-organiser.com/querying-events/querying-venues/
-
-
-
-
-					-->
-					<input type="hidden" name="search" value="search" />
+					<?php // http://docs.wp-event-organiser.com/querying-events/querying-venues ?>
 					<input class="submit" type="submit" value="apply" />
 
 				</form>
@@ -204,9 +195,9 @@
 
 			<div id="main_search"><div class="form">
 
-				<form method="get" action="/search.php">
+				<form method="get" action="<?php bloginfo('url'); ?>/">
 
-					<input class="text" type="text" value="" />
+					<input id="header_search" name="search" class="text" type="text" value="" />
 					<input class="submit" type="submit" value="search" />
 
 				</form>
