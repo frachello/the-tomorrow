@@ -583,8 +583,8 @@ body.internal-page{
       &.scrolled_conversation {
         #rightcol { position: fixed; left: 50%; margin-left: 274px; }
         .content_col{  }
-        .title_wrap{ background: #fff; position: fixed; top: 90px; left: 0; width: 100%; text-align: center; z-index: 1;
-          h2 { width: 732px; margin: 0 auto; text-align: left; position: relative; left: -128px; // padding-bottom: 10px;
+        .title_wrap{  @include transition(all .3s ease); border-top: 1px solid #f4f4f0; background: #fff; position: fixed; top: 90px; left: 0; width: 100%; text-align: center; z-index: 1;
+          h2 { border-top: none; width: 732px; margin: 0 auto; text-align: left; position: relative; left: -128px; // padding-bottom: 10px;
           }
         }
       }

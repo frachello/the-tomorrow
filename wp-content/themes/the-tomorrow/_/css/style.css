@@ -1691,6 +1691,12 @@ body.internal-page.single-conversations #content.scrolled_conversation #rightcol
   margin-left: 274px;
 }
 body.internal-page.single-conversations #content.scrolled_conversation .title_wrap {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-top: 1px solid #f4f4f0;
   background: #fff;
   position: fixed;
   top: 90px;
@@ -1700,6 +1706,7 @@ body.internal-page.single-conversations #content.scrolled_conversation .title_wr
   z-index: 1;
 }
 body.internal-page.single-conversations #content.scrolled_conversation .title_wrap h2 {
+  border-top: none;
   width: 732px;
   margin: 0 auto;
   text-align: left;

@@ -399,6 +399,7 @@ function resize_header() {
 	    shrinkOn = 10,
 	    header = document.querySelector("header"),
 	    body = document.querySelector("body");
+	    if(distanceY<0){ distanceY = 0 }
 	    new_header_height = open_header_h - distanceY;
 	//	console.log('new_header_height: '+new_header_height);
 	//	console.log('distanceY: '+distanceY);
@@ -418,7 +419,8 @@ function resize_header() {
 		open_header_h = 140;
 	    shrinkOn = 50,
 	    header = document.querySelector("header"),
-	    body = document.querySelector("body"),
+	    body = document.querySelector("body");
+	    if(distanceY<0){ distanceY = 0 }
 		new_header_height = open_header_h - distanceY;		
 		console.log('new_header_height: '+new_header_height);
 		console.log('distanceY: '+distanceY);
@@ -445,9 +447,9 @@ function resize_header() {
 	}
 
 	if( $('body.single-conversations').length ) {
-		console.log(distanceY);
+//		console.log(distanceY);
 		title_wrap_h = $('.title_wrap').height();
-		rightcol_top = title_wrap_h+90;
+		rightcol_top = title_wrap_h+91;
 		if(distanceY>128){
 			$('#rightcol').css('top',rightcol_top+'px');
 	        $('.content_col').css('padding-top',title_wrap_h+'px');
