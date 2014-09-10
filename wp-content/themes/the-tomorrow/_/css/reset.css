@@ -114,6 +114,9 @@ table {
 a:hover, a:active {
   outline: none;
 }
+textarea:focus, input:focus {
+  outline: 0;
+}
 small {
   font-size: 85%;
 }

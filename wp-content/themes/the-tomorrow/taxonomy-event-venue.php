@@ -48,7 +48,7 @@ get_header(); ?>
 
 		<div id="rightcol" class="col relative">
 			
-			<div class="li map"><a href="#">view on map</a></div>
+			<div class="li map"><a href="<?php bloginfo('url'); ?>/places/">view on map</a></div>
 			
 			<div class="addthis_col">
 			    <p>share</p>
@@ -64,7 +64,7 @@ get_header(); ?>
 				    	Share on email</a>
 
 			    </div>
-			    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-53e1050f71fefa29"></script>
+			    
 			</div>
 
 		</div>
@@ -159,7 +159,8 @@ get_header(); ?>
 		<?php
 			// echo do_shortcode('[eo_fullcalendar]');
 			echo eo_get_event_fullcalendar(array( 
-			    'event-venue' => $venue_name
+			    'event-venue' => $venue_name,
+		//		'showpastevents' => true,
 			));
 		?>
 		</div>

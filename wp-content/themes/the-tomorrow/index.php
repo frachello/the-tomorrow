@@ -91,7 +91,8 @@
 			$events_array = array(
 				'post_type'=>'event',
 			//	'orderby'=>'eventstart' // default
-				'posts_per_page'=>15, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>31, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'showpastevents'=>true,
 				'paged' => $paged
 		 	);
 
@@ -108,8 +109,14 @@
 
 		 	// filter by date
 		 	if( isset($from_date) ){
-				$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
+				$from_date = implode("-", (explode("/", $from_date)) );
 				$events_array['event_start_after'] = $from_date;
+			}else{
+//				$yesterday = date('Y-m-d',strtotime("-1 days"));
+//				echo ('<!-- yesterday: '.$yesterday.' -->');
+//				$events_array['event_start_after'] = $yesterday;
+//				$events_array['event_start_after'] = 'yesterday';
+				$events_array['event_start_after'] = 'today';
 			}
 		 	if( isset($to_date) ){
 				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
@@ -127,7 +134,7 @@
 
 			$conversations_array = array(
 				'post_type'=>'conversations',
-				'posts_per_page'=>5, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>8, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 				'paged' => $paged
 		 	);
 
@@ -233,24 +240,22 @@
 
 				<div class="home_box event">
 
+					<?php $categories_list = get_the_term_list( $post->ID, 'event-category', '', ', ',''); ?>
+					<p class="cat" data-color="<?php echo eo_get_event_color(); ?>">
+						<?php echo $categories_list; ?>
+					</p>
+
 					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; " data-color="<?php echo eo_get_event_color(); ?>">
-
 								
-								<?php
-								//	If the event is occurring again in the future, display the date
-									$day = eo_get_schedule_start('d');
-									$ordinal = eo_get_schedule_start('S');
-									$month = eo_get_schedule_start('M');
-								?>
-								<p class="date">
-									<span class="day"><?php echo $day; ?></span>
-									<span class="ordinal-month"><?php echo $ordinal; ?>, <?php echo $month; ?></span>
-								</p>
-
-
-						<?php $categories_list = get_the_term_list( $post->ID, 'event-category', '', ', ',''); ?>
-						<p class="cat" data-color="<?php echo eo_get_event_color(); ?>">
-							<?php echo $categories_list; ?>
+						<?php
+						//	If the event is occurring again in the future, display the date
+							$day = eo_get_schedule_start('d');
+							$ordinal = eo_get_schedule_start('S');
+							$month = eo_get_schedule_start('M');
+						?>
+						<p class="date">
+							<span class="day"><?php echo $day; ?></span>
+							<span class="ordinal-month"><?php echo $ordinal; ?>, <?php echo $month; ?></span>
 						</p>
 
 						<div class="bg" style="background: <?php echo eo_get_event_color(); ?>"></div>

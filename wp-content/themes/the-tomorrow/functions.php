@@ -14,7 +14,8 @@
 //	add_action('template_redirect', 'search_url_rewrite_rule');
 
 	/* image sizes */
-	add_image_size( 'letters-in-page-slider', 732, 440, array( 'center', 'center' ) );
+//	add_image_size( 'letters-in-page-slider', 732, 440, array( 'center', 'center' ) ); // crop
+	add_image_size( 'letters-in-page-slider', 732, 440); // don't crop
 
 	/* excerpt */
 	function custom_excerpt_length( $length ) {
@@ -295,5 +296,20 @@
 	function endsWith($haystack, $needle)
 	{
 	    return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
+	}
+
+	add_action('pre_get_posts','show_past_events',5);
+
+	// function show_past_events_in_search($query){
+	//     if( $query->is_main_query() && is_search() ){
+	//          $query->set('post_type','event');
+	//          $query->set('showpastevents','true');
+	//     }
+	// }
+	function show_past_events($query){
+//	    if( $query->is_main_query() ){
+	    if( $query->is_home() ){
+	         $query->set('showpastevents','true');
+	    }
 	}
 ?>

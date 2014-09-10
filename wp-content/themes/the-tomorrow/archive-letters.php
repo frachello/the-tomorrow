@@ -34,6 +34,12 @@ Template Name: Letters Archive
 	<?php $current_month = ''; ?>
 	<?php while( $wp_query->have_posts() ): $wp_query->the_post(); ?>
 		<?php
+			$conversation_slugs = wp_get_post_terms($post->ID, 'conversations', array("fields" => "slugs"));
+			$hash_permalink = get_bloginfo('url').'/conversations/'.$conversation_slugs[0].'/#letter-'.$post->ID;
+		
+		if(isset($conversation_slugs[0])){
+		?>
+		<?php
 			$post_month = get_the_date('F Y');
 		    if ( $post_month != $current_month ) {
 		        $current_month = $post_month;
@@ -41,11 +47,6 @@ Template Name: Letters Archive
 				$rows_count = 1;
 		    }
 	    ?>
-		<?php
-			$conversation_slugs = wp_get_post_terms($post->ID, 'conversations', array("fields" => "slugs"));
-			$hash_permalink = get_bloginfo('url').'/conversations/'.$conversation_slugs[0].'/#letter-'.$post->ID;
-		?>
-
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
 
 			<h4><a href="<?php echo $hash_permalink; ?>" title="<?php the_title(); ?>">
@@ -60,6 +61,7 @@ Template Name: Letters Archive
 
 		</div>
 	<?php
+	}
 	if($rows_count==4){
 		$rows_count=0;
 	}

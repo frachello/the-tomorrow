@@ -49,6 +49,7 @@ Template Name: Single Author
 		while( $authors->have_posts() ): $authors->the_post();
 			$conversation_slugs = wp_get_post_terms($post->ID, 'conversations', array("fields" => "slugs"));
 			$hash_permalink = get_bloginfo('url').'/conversations/'.$conversation_slugs[0].'/#letter-'.$post->ID;
+			if(isset($conversation_slugs[0])){
 		?>
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
@@ -66,6 +67,7 @@ Template Name: Single Author
 		</div>
 
 	<?php
+	}
 		endwhile;
 		echo '</div>';
 	}

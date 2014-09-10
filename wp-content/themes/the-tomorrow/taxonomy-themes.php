@@ -34,7 +34,21 @@ Template Name: Conversations Archive by theme
 
 	<div class="archive-boxes">
 	<?php $current_month = ''; ?>
-	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+	<?php
+		while ($wp_query->have_posts()) : $wp_query->the_post();
+		$conversation_slugs = wp_get_post_terms($post->ID, 'conversations', array("fields" => "slugs"));
+	?>
+
+<!--
+	conversation_slugs
+	<?php echo 'post id: '.$post->ID; ?>
+
+
+	<?php print_r($conversation_slugs); ?>	
+-->
+	<?php
+		$hash_permalink = get_bloginfo('url').'/conversations/'.$conversation_slugs[0].'/#letter-'.$post->ID;
+	?>
 
 		<?php
 			$post_month = get_the_date('F Y');

@@ -18,19 +18,19 @@ Template Name: Generic page
 				<p>follow us</p>
 			    <div class="follow_ico">		    
 
-				    <a class="follow_facebook" title="Facebook" href="#">
+				    <a class="follow_facebook" title="Facebook" href="https://www.facebook.com/thetomorrownet">
 				    	Follow on Facebook</a>
 
-				    <a class="follow_twitter" title="Tweet" href="#">
+				    <a class="follow_twitter" title="Tweet" href="https://twitter.com/theTomorrownet">
 						Follow on Twitter</a>
 
-				    <a class="follow_email" title="YouTube" href="#">
+				    <a class="follow_youtube" title="YouTube" href="https://www.youtube.com/channel/UCMJ42flfjUFhcQt199tVMaA">
 				    	Follow on YouTube</a>
 
 			    </div>
 			</div>
-			<div class="li contact_us"><a href="<?php bloginfo('url'); ?>/contacts/">contact us</a></div>
-			<div class="li credits"><a href="<?php bloginfo('url'); ?>/credits/">credits</a></div>
+			<div class="li contact_us"><a href="<?php bloginfo('url'); ?>/contact-us/">contact us</a></div>
+			<div class="li credits"><a href="<?php bloginfo('url'); ?>/get-involved/">get involved</a></div>
 		
 		</div>
 

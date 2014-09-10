@@ -16,7 +16,7 @@
 
     <div class="bottom">
       <p class="address">the Tomorrow, via Donizetti 4 — 20122 Milan, Italy</p>
-      <p class="disclaimer"><a href="#">Some rights reserved - </a></p>
+      <p class="disclaimer"><a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Some rights reserved - </a></p>
     </div>
 
   </div>
@@ -55,24 +55,6 @@ addthis.layers({
   'recommended' : false   
 });
 </script>             
-
-<!-- Asynchronous google analytics; this is the official snippet.
-	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-	 
-<script>
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
--->
   
 </body>
 </html>

@@ -20,12 +20,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>
-	<?php if (is_home () ) { bloginfo('name'); echo " | "; bloginfo('description'); } elseif ( is_category() ) {
-		single_cat_title(); echo " - "; bloginfo('name');
+	<?php bloginfo('name'); ?>
+	<?php if (is_home () ) {
+		echo " | "; bloginfo('description');
+	} elseif ( is_category() ) {
+		echo " - "; single_cat_title();
 	} elseif (is_single() || is_page() ) {
-		single_post_title();
+		echo " - "; single_post_title();
 	} elseif (is_search() ) {
-		bloginfo('name'); echo " Risultati di ricerca per: "; echo wp_specialchars($s);
+		echo " - "; echo " Search results for: "; echo wp_specialchars($s);
 	} else { wp_title('',true); } ?>
 	</title>
 
@@ -33,7 +36,23 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 
 	<meta name="google-site-verification" content="">
-	
+
+	<?php
+		$venue_id = eo_get_venue();
+		$post_type = get_post_type();
+		
+		if ( is_singular( 'authors' ) || is_page( 'about' ) ){
+			if ( has_post_thumbnail() ) {
+				$post_thumbnail_id = get_post_thumbnail_id($post->ID);
+				$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+		?><meta property="og:image" content="<?php echo $post_thumbnail_url; ?>" /><?php
+			}
+		}
+		if( $venue_id && !is_singular() ){
+			$venue_header_img = eo_get_venue_meta($venue_id, '_header_img', true);
+		?><meta property="og:image" content="<?php echo $venue_header_img; ?>" /><?php
+	} ?>	
+
 	<script type="text/javascript" src="//use.typekit.net/isf6qgj.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -47,7 +66,7 @@
 	<?php wp_head(); ?>
 
 	<script type="text/javascript">
-	var disqus_shortname = 'frachello';
+	var disqus_shortname = 'thetomorrow';
 	var disqus_identifier;
 	var disqus_url;
 
@@ -79,6 +98,18 @@
 
 	</script>
 
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-25554902-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
 </head>
 
 <body <?php if(is_home()){ body_class(); }else{ body_class('internal-page'); }?>> 
@@ -88,10 +119,8 @@
 		<div class="header_container">
 
 			<header class="main" <?php
-				$venue_id = eo_get_venue();
-				$post_type = get_post_type();
 				
-				if ( is_singular( 'authors' ) ){
+				if ( is_singular( 'authors' ) || is_page( 'about' ) ){
 					if ( has_post_thumbnail() ) {
 						$post_thumbnail_id = get_post_thumbnail_id($post->ID);
 						$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
@@ -135,7 +164,7 @@
 
 					<div class="filter show">
 						
-						<p class="title">filter events <br />by location <br />or date range</p>
+						<p class="title">filter events <br />by location <br />or date</p>
 <!--
 						<p>
 

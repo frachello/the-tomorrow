@@ -120,6 +120,9 @@ table {
 a:hover, a:active {
   outline: none;
 }
+textarea:focus, input:focus {
+  outline: 0;
+}
 small {
   font-size: 85%;
 }
@@ -261,7 +264,7 @@ a, a:hover {
 body {
   background: #f4f4f0;
 }
-body.home {
+body.home, body.search {
   background: #fff;
 }
 body #content {
@@ -274,6 +277,19 @@ body #content {
   position: relative;
   z-index: 1;
 }
+body #content h2.no-content {
+  font-family: "adelle-sans";
+  font-weight: 300;
+  font-size: 16px;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+body.internal-page.search #content {
+  position: relative;
+  /* margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0; */
+  width: 100%;
+}
 body.open-filters #content {
   margin-top: 220px;
 }
@@ -284,6 +300,11 @@ body.open-filters #content {
 ************************************************/
 }
 header.main {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   height: 140px;
   text-align: left;
   position: fixed;
@@ -294,11 +315,6 @@ header.main {
   left: 0;
   z-index: 9;
   width: 100%;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 header.main form#search_venues_map {
   display: none;
@@ -376,25 +392,25 @@ header.main .nav_menu li.nav_menu_menu {
 header.main .nav_menu li.nav_menu_menu a {
   background-position: -46px 0;
 }
-body.home header.main {
+body.home header.main, body.search header.main {
   background: #606a70;
 }
-body.home header.main .nav_menu li a {
+body.home header.main .nav_menu li a, body.search header.main .nav_menu li a {
   background-image: url('../i/ico_nav_menu_fff.png');
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
-  body.home header.main .nav_menu li a {
+  body.home header.main .nav_menu li a, body.search header.main .nav_menu li a {
     background-image: url('../i/ico_nav_menu_fff@2x.png');
     -webkit-background-size: 72px 23px;
   }
 }
-body.home header.main .inner h1 a {
+body.home header.main .inner h1 a, body.search header.main .inner h1 a {
   background-image: url('../i/the_tomorrow_logo_fff.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
-  body.home header.main .inner h1 a {
+  body.home header.main .inner h1 a, body.search header.main .inner h1 a {
     background-image: url('../i/the_tomorrow_logo_fff@2x.png');
     -webkit-background-size: 279px 33px;
   }
@@ -431,18 +447,62 @@ body.scrolled header.main .inner h2 {
 body.scrolled header.main .nav_menu {
   top: 34px;
 }
-body.home.scrolled header.main .inner h1 a {
+body.home.scrolled header.main .inner h1 a, body.search.scrolled header.main .inner h1 a {
   background-image: url('../i/the_tomorrow_logotipo_fff.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
-  body.home.scrolled header.main .inner h1 a {
+  body.home.scrolled header.main .inner h1 a, body.search.scrolled header.main .inner h1 a {
     background-image: url('../i/the_tomorrow_logotipo_fff@2x.png');
     -webkit-background-size: 40px 35px;
   }
 }
-body.home header.main {
+body.internal-page.page-id-49 header.main.smaller2, body.internal-page.single-authors header.main.smaller2, body.internal-page.tax-event-venue header.main.smaller2, header.main.smaller2 {
+  height: 90px;
+  background-color: #fff;
+  background-image: none !important;
+}
+body.internal-page.page-id-49 header.main.smaller2 .inner, body.internal-page.single-authors header.main.smaller2 .inner, body.internal-page.tax-event-venue header.main.smaller2 .inner, header.main.smaller2 .inner {
+  height: 90px;
+}
+body.internal-page.page-id-49 header.main.smaller2 .inner h1, body.internal-page.single-authors header.main.smaller2 .inner h1, body.internal-page.tax-event-venue header.main.smaller2 .inner h1, header.main.smaller2 .inner h1 {
+  padding-top: 28px;
+}
+body.internal-page.page-id-49 header.main.smaller2 .inner h1 a, body.internal-page.single-authors header.main.smaller2 .inner h1 a, body.internal-page.tax-event-venue header.main.smaller2 .inner h1 a, header.main.smaller2 .inner h1 a {
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  width: 70px;
+  height: 35px;
+  background-image: url('../i/the_tomorrow_logotipo_000.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.internal-page.page-id-49 header.main.smaller2 .inner h1 a, body.internal-page.single-authors header.main.smaller2 .inner h1 a, body.internal-page.tax-event-venue header.main.smaller2 .inner h1 a, header.main.smaller2 .inner h1 a {
+    background-image: url('../i/the_tomorrow_logotipo_000@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
+}
+body.internal-page.page-id-49 header.main.smaller2 .inner h2, body.internal-page.single-authors header.main.smaller2 .inner h2, body.internal-page.tax-event-venue header.main.smaller2 .inner h2, header.main.smaller2 .inner h2 {
+  display: none;
+  margin-top: 35px;
+}
+body.internal-page.page-id-49 header.main.smaller2 .nav_menu, body.internal-page.single-authors header.main.smaller2 .nav_menu, body.internal-page.tax-event-venue header.main.smaller2 .nav_menu, header.main.smaller2 .nav_menu {
+  top: 34px;
+}
+body.internal-page.page-id-49 header.main.smaller2 .nav_menu li a, body.internal-page.single-authors header.main.smaller2 .nav_menu li a, body.internal-page.tax-event-venue header.main.smaller2 .nav_menu li a, header.main.smaller2 .nav_menu li a {
+  background-image: url('../i/ico_nav_menu_000.png');
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  body.internal-page.page-id-49 header.main.smaller2 .nav_menu li a, body.internal-page.single-authors header.main.smaller2 .nav_menu li a, body.internal-page.tax-event-venue header.main.smaller2 .nav_menu li a, header.main.smaller2 .nav_menu li a {
+    background-image: url('../i/ico_nav_menu_000@2x.png');
+    -webkit-background-size: 40px 35px;
+  }
+}
+body.home header.main, body.search header.main {
   background: #606a70;
   /* --------------------------------------------------------------------------------
                                     filter navs                                  */
@@ -450,11 +510,11 @@ body.home header.main {
 #filter_nav, #main_search {
   background: #fff;
 }
-body.home {
+body.home, body.search {
   /* --------------------------------------------------------------------------------
                                     filter nav                                   */
 }
-body.home #filter_nav, body.home #main_search {
+body.home #filter_nav, body.search #filter_nav, body.home #main_search, body.search #main_search {
   background: #f4f4f0;
 }
 #filter_nav {
@@ -507,6 +567,9 @@ body.home #filter_nav, body.home #main_search {
 }
 #filter_nav .form div.filter input.checkbox {
   vertical-align: middle;
+}
+#filter_nav .form div.filter.show {
+  width: 160px;
 }
 #filter_nav .form div.filter.show label {
   margin-right: 18px;
@@ -783,6 +846,7 @@ body.scrolled #main_search {
                                     mega menu                                    */
 }
 nav#megamenu {
+  overflow: scroll;
   background: #606a70;
   width: 100%;
   height: 100%;
@@ -972,6 +1036,20 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   width: 239px;
   text-align: left;
 }
+#home_grid .home_box.event .cat, #home_grid .home_box.event .cat.over {
+  position: absolute;
+  right: 6%;
+  top: 42px;
+  display: block;
+  font-family: "adelle-sans";
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 2;
+}
+#home_grid .home_box.event .cat.over a {
+  color: #fff !important;
+}
 #home_grid .home_box.event .top {
   width: 88%;
   padding: 6%;
@@ -984,7 +1062,6 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: lime;
   width: 100%;
   height: 0;
   position: absolute;
@@ -1018,14 +1095,6 @@ nav#megamenu .megamenu-footer p.disclaimer a {
   font-weight: 300;
   font-style: normal;
   vertical-align: super;
-}
-#home_grid .home_box.event .cat {
-  float: right;
-  display: block;
-  font-family: "adelle-sans";
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 700;
 }
 #home_grid .home_box.event .title {
   font-size: 19px;
@@ -1172,13 +1241,13 @@ nav#megamenu .megamenu-footer p.disclaimer a {
 #home_grid .home_box.conversations .top .title {
   font-family: "adelle";
   font-weight: 300;
-  font-size: 36px;
+  font-size: 42px;
   font-style: normal;
   float: left;
   line-height: 41px;
 }
 #home_grid .home_box.conversations .top .title a {
-  font-weight: 800;
+  font-weight: 300;
   color: #191919;
 }
 #home_grid .home_box.conversations .bottom {
@@ -1236,6 +1305,9 @@ body.internal-page {
 *	Footer      								*
 ************************************************/
 }
+body.internal-page.page-template-page-1-col-php #content .content_col {
+  width: 100%;
+}
 body.internal-page h2 {
   font-weight: 700;
   font-size: 40px;
@@ -1289,18 +1361,97 @@ body.internal-page #content .content_col .entry {
   margin-top: 23px;
   float: left;
 }
+body.internal-page #content .content_col .entry h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+body.internal-page #content .content_col .entry h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "adelle-sans";
+  font-weight: 700;
+  float: left;
+  width: 100%;
+}
 body.internal-page #content .content_col .entry p, body.internal-page #content .content_col .entry li {
   font-size: 19px;
+  line-height: 26px;
 }
 body.internal-page #content .content_col .entry p {
   margin-bottom: 1em;
 }
+body.internal-page #content .content_col .entry p.nota {
+  font-size: 11px;
+}
 body.internal-page #content .content_col .entry ul, body.internal-page #content .content_col .entry ol {
   margin-bottom: 0.5em;
+}
+body.internal-page #content .content_col .entry ul {
+  list-style: circle;
 }
 body.internal-page #content .content_col .entry li {
   margin-left: 1.3em;
   margin-bottom: 0.5em;
+}
+body.internal-page #content .content_col .entry p a, body.internal-page #content .content_col .entry li a {
+  text-decoration: underline;
+  color: #000;
+}
+body.internal-page #content .content_col .entry p a:hover, body.internal-page #content .content_col .entry li a:hover {
+  color: #606a70;
+  text-decoration: none;
+}
+body.internal-page #content .content_col .entry ul.credits-list {
+  width: 570px;
+  list-style: none;
+  margin-bottom: 2em;
+}
+body.internal-page #content .content_col .entry ul.credits-list li {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+body.internal-page #content .content_col .entry ul.credits-list li a.twitter, body.internal-page #content .content_col .entry ul.credits-list li a.email {
+  width: 19px;
+  height: 15px;
+  font-size: 0;
+  text-indent: -999999px;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  float: right;
+}
+body.internal-page #content .content_col .entry ul.credits-list li a.twitter {
+  background: url(../i/ico_rightcol_share_twitter.png);
+}
+body.internal-page #content .content_col .entry ul.credits-list li a.email {
+  background: url(../i/ico_rightcol_share_email.png);
+}
+body.internal-page #content .content_col .entry ul.credits-list li a.youtube {
+  background: url(../i/ico_rightcol_share_youtube.png);
+}
+body.internal-page #content .content_col .entry div.credits-box, body.internal-page #content .content_col .entry div.partner-box {
+  width: 305px;
+  float: left;
+  height: 250px;
+  margin-right: 30px;
+}
+body.internal-page #content .content_col .entry div.credits-box.last, body.internal-page #content .content_col .entry div.partner-box.last {
+  margin-right: 0;
+}
+body.internal-page #content .content_col .entry div.credits-box img, body.internal-page #content .content_col .entry div.partner-box img {
+  border-bottom: 1px solid #1a1a1a;
+}
+body.internal-page #content .content_col .entry div.credits-box p, body.internal-page #content .content_col .entry div.partner-box p {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+}
+body.internal-page #content .content_col .entry div.credits-box p a, body.internal-page #content .content_col .entry div.partner-box p a {
+  text-decoration: none;
+}
+body.internal-page #content .content_col .entry div.partner-box {
+  margin-right: 35px;
 }
 body.internal-page #content #rightcol {
   width: 220px;
@@ -1437,6 +1588,10 @@ body.internal-page #content #rightcol .follow_col .follow_ico a.follow_twitter {
 body.internal-page #content #rightcol .follow_col .follow_ico a.follow_email {
   background-image: url(../i/ico_rightcol_share_email.png);
 }
+body.internal-page #content #rightcol .follow_col .follow_ico a.follow_youtube {
+  width: 21px;
+  background: url(../i/ico_rightcol_share_youtube.png);
+}
 body.internal-page #content.venue_page header.main_internal_page_header {
   width: 100%;
   padding: 0 0 20px 0;
@@ -1489,51 +1644,51 @@ body.internal-page #content.venue_page .leftcol p {
 body.internal-page #content.venue_page .leftcol p a {
   color: #191919;
 }
-body.internal-page.tax-event-venue #content, body.internal-page.single-authors #content {
+body.internal-page.tax-event-venue #content, body.internal-page.single-authors #content, body.internal-page.page-id-49 #content {
   margin-top: 520px;
 }
-body.internal-page.tax-event-venue.open-filters #content, body.internal-page.single-authors.open-filters #content {
+body.internal-page.tax-event-venue.open-filters #content, body.internal-page.single-authors.open-filters #content, body.internal-page.page-id-49.open-filters #content {
   margin-top: 700px;
 }
-body.internal-page.tax-event-venue header.main, body.internal-page.single-authors header.main {
+body.internal-page.tax-event-venue header.main, body.internal-page.single-authors header.main, body.internal-page.page-id-49 header.main {
   height: 520px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-size: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-body.internal-page.tax-event-venue #main_search, body.internal-page.single-authors #main_search {
+body.internal-page.tax-event-venue #main_search, body.internal-page.single-authors #main_search, body.internal-page.page-id-49 #main_search {
   top: 520px;
 }
-body.internal-page.tax-event-venue.scrolled #content, body.internal-page.single-authors.scrolled #content {
+body.internal-page.tax-event-venue.scrolled #content, body.internal-page.single-authors.scrolled #content, body.internal-page.page-id-49.scrolled #content {
   margin-top: 90px;
 }
-body.internal-page.tax-event-venue.scrolled.open-filters #content, body.internal-page.single-authors.scrolled.open-filters #content {
+body.internal-page.tax-event-venue.scrolled.open-filters #content, body.internal-page.single-authors.scrolled.open-filters #content, body.internal-page.page-id-49.scrolled.open-filters #content {
   margin-top: 170px;
 }
-body.internal-page.tax-event-venue.scrolled header.main, body.internal-page.single-authors.scrolled header.main {
+body.internal-page.tax-event-venue.scrolled header.main, body.internal-page.single-authors.scrolled header.main, body.internal-page.page-id-49.scrolled header.main {
   background-color: #fff;
   background-image: none !important;
   height: 90px;
 }
-body.internal-page.tax-event-venue.scrolled header.main .nav_menu li a, body.internal-page.single-authors.scrolled header.main .nav_menu li a {
+body.internal-page.tax-event-venue.scrolled header.main .nav_menu li a, body.internal-page.single-authors.scrolled header.main .nav_menu li a, body.internal-page.page-id-49.scrolled header.main .nav_menu li a {
   background-image: url('../i/ico_nav_menu_000.png');
 }
-body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a {
+body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a, body.internal-page.page-id-49.scrolled header.main .inner h1 a {
   background-image: url('../i/the_tomorrow_logotipo_000.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
-  body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a {
+  body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.internal-page.single-authors.scrolled header.main .inner h1 a, body.internal-page.page-id-49.scrolled header.main .inner h1 a {
     background-image: url('../i/the_tomorrow_logotipo_000@2x.png');
     -webkit-background-size: 40px 35px;
   }
 }
-body.internal-page.tax-event-venue.scrolled #main_search, body.internal-page.single-authors.scrolled #main_search {
+body.internal-page.tax-event-venue.scrolled #main_search, body.internal-page.single-authors.scrolled #main_search, body.internal-page.page-id-49.scrolled #main_search {
   top: 90px;
 }
 body.internal-page.tax-event-venue {
@@ -1557,11 +1712,11 @@ body.internal-page.single-conversations #content p.count-theme {
   margin-bottom: 30px;
 }
 body.internal-page.single-conversations #content .content_col {
+  /* border-top: 1px solid $primary-border-color; */
   width: 732px;
-  border-top: 1px solid #414042;
 }
 body.internal-page.single-conversations #content .content_col article {
-  border-bottom: 1px solid #414042;
+  margin-bottom: 1px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -1570,27 +1725,54 @@ body.internal-page.single-conversations #content .content_col article {
   overflow: hidden;
   height: auto;
 }
+body.internal-page.single-conversations #content .content_col article.active {
+  border-bottom: 1px solid #191919;
+}
 body.internal-page.single-conversations #content .content_col article .letter, body.internal-page.single-conversations #content .content_col article .comments {
   display: block;
 }
 body.internal-page.single-conversations #content .content_col article.closed .entry, body.internal-page.single-conversations #content .content_col article.closed .comments {
   display: none;
 }
-body.internal-page.single-conversations #content .content_col article .meta {
+body.internal-page.single-conversations #content .content_col article.closed .meta {
+  background: #191919;
+  color: #f4f4f0;
+}
+body.internal-page.single-conversations #content .content_col article.closed .meta h3 strong.id {
+  border-right: 1px solid #f4f4f0;
+}
+body.internal-page.single-conversations #content .content_col article .meta, body.internal-page.single-conversations #content .content_col article .meta_forward {
   width: 100%;
   float: left;
-  padding: 22px 0 22px 0;
-  cursor: pointer;
 }
-body.internal-page.single-conversations #content .content_col article .meta h3 {
+body.internal-page.single-conversations #content .content_col article .meta h3, body.internal-page.single-conversations #content .content_col article .meta_forward h3 {
   text-transform: uppercase;
   float: left;
+  height: 59px;
+  line-height: 59px;
 }
-body.internal-page.single-conversations #content .content_col article .meta h3 strong {
+body.internal-page.single-conversations #content .content_col article .meta h3 strong, body.internal-page.single-conversations #content .content_col article .meta_forward h3 strong {
   font-weight: 700;
 }
-body.internal-page.single-conversations #content .content_col article .meta .date {
+body.internal-page.single-conversations #content .content_col article .meta h3 strong.id, body.internal-page.single-conversations #content .content_col article .meta_forward h3 strong.id, body.internal-page.single-conversations #content .content_col article .meta h3 strong.ico, body.internal-page.single-conversations #content .content_col article .meta_forward h3 strong.ico {
+  width: 59px;
+  float: left;
+  text-align: center;
+}
+body.internal-page.single-conversations #content .content_col article .meta .from_to, body.internal-page.single-conversations #content .content_col article .meta_forward .from_to, body.internal-page.single-conversations #content .content_col article .meta .forwarded, body.internal-page.single-conversations #content .content_col article .meta_forward .forwarded {
+  margin-left: 28px;
+}
+body.internal-page.single-conversations #content .content_col article .meta .forwarded, body.internal-page.single-conversations #content .content_col article .meta_forward .forwarded {
+  color: #606a70;
+}
+body.internal-page.single-conversations #content .content_col article .meta .date, body.internal-page.single-conversations #content .content_col article .meta_forward .date {
   float: right;
+  height: 59px;
+  line-height: 59px;
+  margin-right: 28px;
+}
+body.internal-page.single-conversations #content .content_col article .meta {
+  cursor: pointer;
 }
 body.internal-page.single-conversations #content .content_col article .entry .jcarousel {
   position: relative;
@@ -1608,6 +1790,8 @@ body.internal-page.single-conversations #content .content_col article .entry .jc
 body.internal-page.single-conversations #content .content_col article .entry .jcarousel ul li {
   float: left;
   width: 732px;
+  margin: 0;
+  padding: 0;
 }
 body.internal-page.single-conversations #content .content_col article .entry .jcarousel ul li figure {
   height: 440px;
@@ -1744,6 +1928,14 @@ body.internal-page.post-type-archive-authors .archive-box .letters_count a {
 body.internal-page.single-authors .author_desc p {
   font-size: 19px;
   margin-bottom: 35px;
+}
+body.internal-page.single-authors .author_desc p a {
+  text-decoration: underline;
+  color: #000;
+}
+body.internal-page.single-authors .author_desc p a:hover {
+  color: #606a70;
+  text-decoration: none;
 }
 body.internal-page.single-event #content .entry-content {
   width: 100%;
@@ -1912,7 +2104,7 @@ body.internal-page ul.themes-boxes li.first_row a {
 body.internal-page ul.themes-boxes li.col_1 a {
   border-left: 1px solid #191919;
 }
-body.home footer {
+body.home footer, body.search footer {
   display: none;
 }
 footer {
@@ -2050,10 +2242,19 @@ footer .inner .secondary-nav .secondary_menu .menu-social-links-container li a {
   background-position: center center;
 }
 .pagination {
+  border-top: 1px solid #414042;
   position: relative;
   padding: 10px 0;
   height: 18px;
   line-height: 18px;
+  float: left;
+  width: 100%;
+  /*
+#content.taxonomy_content .entry { display: none; }
+#content.taxonomy_content .highlight .entry { display: block; }
+.highlight .entry, .highlight h2 { margin: 0 20px 0 25px }
+#content.taxonomy_content h2 { cursor: pointer; }
+*/
 }
 .pagination span.prev {
   position: absolute;
@@ -2062,12 +2263,9 @@ footer .inner .secondary-nav .secondary_menu .menu-social-links-container li a {
 .pagination span.next {
   position: absolute;
   right: 0;
-  /*
-#content.taxonomy_content .entry { display: none; }
-#content.taxonomy_content .highlight .entry { display: block; }
-.highlight .entry, .highlight h2 { margin: 0 20px 0 25px }
-#content.taxonomy_content h2 { cursor: pointer; }
-*/
+}
+.pagination span a {
+  color: #191919;
 }
 .highlight {
   background: #fff;

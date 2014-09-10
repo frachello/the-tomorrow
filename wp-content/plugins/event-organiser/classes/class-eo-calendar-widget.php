@@ -236,11 +236,11 @@ class EO_Calendar_Widget extends WP_Widget
 	
 			if( $args['show-long'] ){
 		
-				$start = eo_get_the_start( DATETIMEOBJ, $event->ID, null, $event->occurrence_id );
-				$end = eo_get_the_end( DATETIMEOBJ, $event->ID, null, $event->occurrence_id );
+				$start   = eo_get_the_start( DATETIMEOBJ, $event->ID, null, $event->occurrence_id );
+				$end     = eo_get_the_end( DATETIMEOBJ, $event->ID, null, $event->occurrence_id );
 				$pointer = clone $start;
 				
-				while( $pointer <= $end ){
+				while( $pointer->format( 'Ymd' ) <= $end->format( 'Ymd' ) ){
 					$date = eo_format_datetime( $pointer, 'Y-m-d' );
 					$calendar_events[ $date ][] = $event;
 					$pointer->modify( '+1 day' );
@@ -271,10 +271,10 @@ class EO_Calendar_Widget extends WP_Widget
 					<td id='eo-widget-next-month' colspan='3'><a title='%s' href='%s'> %s &raquo; </a></td>
 				</tr></tfoot>",
 				esc_html__( 'Previous month', 'eventorganiser' ),
-				add_query_arg( 'eo_month', $last_month->format( 'Y-m' ) ),
+				add_query_arg( 'eo_month', $last_month->format( 'Y-m' ), home_url() ),
 				esc_html( eo_format_datetime( $last_month, 'M' ) ),
 				esc_html__( 'Next month', 'eventorganiser' ),
-				add_query_arg( 'eo_month', $next_month->format( 'Y-m' ) ),
+				add_query_arg( 'eo_month', $next_month->format( 'Y-m' ), home_url() ),
 				esc_html(eo_format_datetime( $next_month, 'M' ) )
 			);							
 

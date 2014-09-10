@@ -1,5 +1,6 @@
 $wrap-width-desktop	: 1105px;
 $primary-color: #191919;
+$primary-border-color: #414042;
 
 @mixin ir() { font-size: 0; text-indent: -999999px; display: block; }
 
@@ -94,11 +95,10 @@ body{ background: #F4F4F0;
 ************************************************/
 
 header.main{
-
+  @include transition(all 0.2s ease);
   form#search_venues_map{ display: none; }
-
   height: 140px; text-align: left; position:fixed; background: #fff; color: #fff; text-align: center; top: 0; left: 0; z-index: 9; width: 100%;
-  @include transition(all 0.5s ease);
+  
   .inner{
     width: 988px; height: 140px; margin: 0 auto; position: relative;
 
@@ -145,13 +145,6 @@ body.home, body.search {
   }
 }
 
-body.internal-page{
-
-
-
-}
-
-
 
 body.scrolled header.main{ height: 90px;
   .inner{ height: 90px;
@@ -163,9 +156,23 @@ body.scrolled header.main{ height: 90px;
   .nav_menu { top: 34px; }
 }
 body.home.scrolled, body.search.scrolled{
-  header.main .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
+  header.main .inner h1 a {
+    @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0;
+  }
 }
-  
+body.internal-page.page-id-49 header.main.smaller2, body.internal-page.single-authors header.main.smaller2, body.internal-page.tax-event-venue header.main.smaller2, header.main.smaller2{
+  height: 90px; background-color: #fff; background-image: none !important;
+  .inner{ height: 90px;
+    h1 { padding-top: 28px;
+      a { @include ir; width: 70px; height: 35px; @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; } 
+    }
+    h2 { display: none; margin-top: 35px; }
+  }
+  .nav_menu { top: 34px;
+    li a { @include at2x('../i/ico_nav_menu_000', 'png', 40px, 35px); background-repeat: no-repeat; }
+  }
+}
+
   
 body.home header.main, body.search header.main{ background: #606A70; }
 
@@ -230,7 +237,7 @@ body.scrolled #main_search { top: 90px; }
                                     mega menu                                    */
 
 nav#megamenu{
-  background: #606A70; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; color: #fff; text-align: center; display: none;
+  overflow: scroll; background: #606A70; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; color: #fff; text-align: center; display: none;
   .inner{ width: 988px; margin: 0 auto; text-align: left; }
 
   .megahead{ height: 35px; padding: 50px 0 80px 0;
@@ -295,8 +302,14 @@ nav#megamenu{
   .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
     &.event{
       width: 239px; text-align: left;
+
+      .cat, .cat.over{
+        position: absolute; right: 6%; top: 42px; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; z-index: 2;
+      }
+      .cat.over a { color: #fff !important; }
+
       .top{ width: 88%; padding: 6%; float: left; position: relative;
-        .bg{ @include transition(all 0.3s ease); background: lime; width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
+        .bg{ @include transition(all 0.3s ease); width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
         }
         &.over {
           p, p a { color: #fff !important; z-index: 2; position: relative; }
@@ -307,7 +320,6 @@ nav#megamenu{
         .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
         .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
       }
-      .cat{ float: right; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; }
 
       .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
         strong{ font-weight: 700; }
@@ -354,8 +366,8 @@ nav#megamenu{
       
       .top{
         width: 94%; padding: 3%; float: left;
-        .title{ font-family: "adelle"; font-weight: 300; font-size: 36px; font-style: normal; float: left; line-height: 41px;
-          a { font-weight: 800; color: #191919; }
+        .title{ font-family: "adelle"; font-weight: 300; font-size: 42px; font-style: normal; float: left; line-height: 41px;
+          a { font-weight: 300; color: #191919; }
         }
       }
       .bottom{
@@ -382,6 +394,10 @@ nav#megamenu{
                                     internal pages                               */
 body.internal-page{
 
+  &.page-template-page-1-col-php{
+    #content .content_col { width: 100%; }
+  }
+
   h2{ font-weight: 700; font-size: 40px; padding: 0 0 38px 0; margin: 0 0 0 0; font-family: "adelle-sans"; font-weight: 700;
     span { font-weight: 300; }
   }
@@ -395,7 +411,8 @@ body.internal-page{
 
     position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
 
-    .content_col{ width: 732px; border-top: 1px solid #414042; 
+    .content_col{ width: 732px; border-top: 1px solid $primary-border-color; 
+
 
       article{
         .entry{
@@ -415,10 +432,41 @@ body.internal-page{
       &.col_3{ width: 696px; }
       .entry{
         margin-top: 23px; float: left;
-        p, li { font-size: 19px; }
-        p{ margin-bottom: 1em; }
+        h3 { font-size: 24px; margin-bottom: 40px; }
+        h4 { text-transform: uppercase; font-size: 14px; font-family: "adelle-sans"; font-weight: 700; float: left; width: 100%; }
+        p, li { font-size: 19px; line-height: 26px; }
+        p{ margin-bottom: 1em;
+          &.nota { font-size: 11px; }
+        }
         ul, ol { margin-bottom: .5em; }
+        ul { list-style: circle; }
         li{ margin-left: 1.3em; margin-bottom: .5em; }
+        p a, li a { text-decoration: underline; color: #000; }
+        p a:hover, li a:hover { color: #606a70; text-decoration: none; }
+
+        ul.credits-list{
+          width: 570px; list-style: none; margin-bottom: 2em;
+          li{
+            margin-left: 0; margin-bottom: 0;
+            a.twitter,
+            a.email { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 20px; float: right; }
+            a.twitter { background: url(../i/ico_rightcol_share_twitter.png); }
+            a.email { background: url(../i/ico_rightcol_share_email.png); }
+            a.youtube { background: url(../i/ico_rightcol_share_youtube.png); }
+          }
+        } 
+        div.credits-box, div.partner-box {
+          width: 305px; float: left; height: 250px; margin-right: 30px;
+          &.last{ margin-right: 0; }
+          img{ border-bottom: 1px solid #1A1A1A; }
+          p{ text-align: center; margin: 0; font-size: 20px;
+            a { text-decoration: none;
+              &:hover {  }
+            }
+          }
+        }
+        div.partner-box{ margin-right: 35px; }
+
       }
 
     }
@@ -428,7 +476,7 @@ body.internal-page{
         &.relative { position: relative; top: 0; left: 0; margin-left: 0; }
       }
 
-      .li { border-top: 1px solid #414042; width: 220px; float: left;
+      .li { border-top: 1px solid $primary-border-color; width: 220px; float: left;
         a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
         &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
         &.expand a{ background-image: url(../i/ico_rightcol_expand.png); }
@@ -440,7 +488,7 @@ body.internal-page{
         &.credits a{ background-image: url(../i/ico_rightcol_pencil.png); }
       }
 
-      .addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
+      .addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid $primary-border-color;
         p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
         .addthis_toolbox { float: right;
           a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
@@ -452,13 +500,14 @@ body.internal-page{
         .at15t, .at16nc, .at300bs { background: none }
       }      
 
-      .follow_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid #414042;
+      .follow_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid $primary-border-color;
         p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
         .follow_ico { float: right;
           a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px; float: left;
             &.follow_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
             &.follow_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
             &.follow_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+            &.follow_youtube { width: 21px; background: url(../i/ico_rightcol_share_youtube.png); }
           }
 
         }
@@ -478,12 +527,12 @@ body.internal-page{
       .venue-events-calendar { margin: 30px 0; }
       #rightcol{ }
       .content_col{
-        width: 476px; margin-left: 0; margin-left: 220px; padding-top: 26px; padding-left: 36px; border-top: 1px solid #414042;
+        width: 476px; margin-left: 0; margin-left: 220px; padding-top: 26px; padding-left: 36px; border-top: 1px solid $primary-border-color;
         p { margin-bottom: 10px; }
         p, li{ font-size: 20px; }
         div.event{ display: none }
       }
-      .leftcol { width: 220px; margin: 0 36px 0 0; padding-top: 30px; float: left; border-top: 1px solid #414042; border-bottom: 1px solid #414042;
+      .leftcol { width: 220px; margin: 0 36px 0 0; padding-top: 30px; float: left; border-top: 1px solid $primary-border-color; border-bottom: 1px solid $primary-border-color;
         p{
           text-transform: uppercase; padding-bottom: 26px;
           a { color: $primary-color; }
@@ -495,12 +544,13 @@ body.internal-page{
 
   /* place page */
   &.tax-event-venue, 
-  &.single-authors
+  &.single-authors,
+  &.page-id-49
   {
     #content { margin-top: 520px; }
     &.open-filters #content { margin-top: 700px }
     header.main {
-      height: 520px; background-repeat: no-repeat; background-position: center center; background-size:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+      height: 520px; background-repeat: no-repeat; background-position: top center; background-size:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
     }
     #main_search{
       top: 520px;
@@ -518,7 +568,8 @@ body.internal-page{
       }
     }
   }
-  &.tax-event-venue{
+  &.tax-event-venue 
+  {
     header.main {
       .nav_menu li a { background-image: url('../i/ico_nav_menu_fff.png');  }
       .inner h1 a { background: url('../i/the_tomorrow_logo_fff.png') no-repeat 0 0; }
@@ -527,26 +578,37 @@ body.internal-page{
 
   /* single conversation page */
   &.single-conversations{
-    h2{ border-top: 1px solid #414042; }
+    h2{ border-top: 1px solid $primary-border-color; }
     #content {
       p.count-theme { text-transform: uppercase; font-size: 14px; margin-bottom: 30px; }
-      .content_col{ width: 732px; border-top: 1px solid #414042; 
-        article{ border-bottom: 1px solid #414042; @include transition(all 1s ease); overflow: hidden; height: auto;
+      .content_col{ width: 732px; /* border-top: 1px solid $primary-border-color; */
+        article{ margin-bottom: 1px; @include transition(all 1s ease); overflow: hidden; height: auto;
+          &.active { border-bottom: 1px solid #191919; }
           .letter, .comments { display: block; }
           &.closed { 
             .entry, .comments { display: none; }
-          }
-          .meta{ width: 100%; float: left; padding: 22px 0 22px 0; cursor: pointer;
-            h3{ text-transform: uppercase; float: left;
-              strong { font-weight: 700; }
+            .meta { background: $primary-color; color: #F4F4F0;
+              h3 strong.id { border-right: 1px solid #F4F4F0; }
             }
-            .date { float: right; }
           }
+          .meta, .meta_forward{ width: 100%; float: left; 
+            h3{ text-transform: uppercase; float: left; height: 59px; line-height: 59px; 
+              strong { font-weight: 700;
+                &.id, &.ico { width: 59px; float: left; text-align: center; }
+              }
+              
+            }
+            .from_to, .forwarded { margin-left: 28px; }
+            .forwarded { color: #606A70; }
+            .date { float: right; height: 59px; line-height: 59px; margin-right: 28px; }
+          }
+          .meta { cursor: pointer; }
+          .meta_forward { /* border-bottom: 1px solid $primary-border-color; */ }
           .entry{
 //          margin-top: 23px; float: left;
            .jcarousel { position: relative; overflow: hidden; height: 440px; width: 732px;
               ul { width: 20000em; position: absolute; list-style: none; margin: 0; padding: 0; 
-                li { float: left; width:732px;
+                li { float: left; width:732px; margin: 0; padding: 0;
                   figure{ height: 440px; width: 732px; background: $primary_color; text-align: center; }
                 }
               }
@@ -575,8 +637,8 @@ body.internal-page{
     p.rules-link{ position: absolute; top: 90px; right: 0px;
       a { color: $primary-color; font-size: 11px; text-transform: uppercase; font-weight: 700; }
     }
-    h3 { float: left; margin-top: 38px; width: 100%; clear: both; font-size: 19px; font-family: "adelle-sans"; font-weight: 700; border-top: 1px solid #414042; padding: 14px 0 35px 0; }
-    .archive-box{ border-top: 1px solid #414042;
+    h3 { float: left; margin-top: 38px; width: 100%; clear: both; font-size: 19px; font-family: "adelle-sans"; font-weight: 700; border-top: 1px solid $primary-border-color; padding: 14px 0 35px 0; }
+    .archive-box{ border-top: 1px solid $primary-border-color;
       h4 { font-size: 14px; font-weight: 700; margin: 20px 0;
         a { color: #000; }
       }
@@ -595,13 +657,13 @@ body.internal-page{
 
   &.post-type-archive-authors
   {
-    h3 { float: left; margin-top: 38px; width: 100%; clear: both; font-size: 19px; font-family: "adelle-sans"; font-weight: 700; border-top: 1px solid #414042; padding: 14px 0 35px 0; }
+    h3 { float: left; margin-top: 38px; width: 100%; clear: both; font-size: 19px; font-family: "adelle-sans"; font-weight: 700; border-top: 1px solid $primary-border-color; padding: 14px 0 35px 0; }
     .archive-box{
       text-align: center; height: 240px;
       h4 { font-size: 19px; font-weight: 700; margin: 10px 0 5px 0;
         a { color: #000; }
       }
-      a.img{ width: 220px; height: 180px; display: block; border-bottom: 1px solid #414042;
+      a.img{ width: 220px; height: 180px; display: block; border-bottom: 1px solid $primary-border-color;
         img { height: 180px; width: auto; }
       }
       .letters_count{ text-transform: uppercase; font-family: "adelle-sans"; font-size: 13px;
@@ -617,7 +679,11 @@ body.internal-page{
 
   &.single-authors
   {
-    .author_desc p { font-size: 19px; margin-bottom: 35px; }
+    .author_desc p { font-size: 19px; margin-bottom: 35px;
+      a { text-decoration: underline; color: #000;
+        &:hover { color: #606a70; text-decoration: none; }
+      }
+    }
   }
 
   &.single-event {
@@ -739,9 +805,14 @@ footer {
 
 
 /* paginazione standard */
-.pagination {position:relative; padding:10px 0; height:18px; line-height:18px;}
-.pagination span.prev {position:absolute; left:0;}
-.pagination span.next {position:absolute; right:0;}
+.pagination {
+  border-top: 1px solid $primary-border-color; position:relative; padding:10px 0; height:18px; line-height:18px; float: left; width: 100%;
+  span{
+    &.prev {position:absolute; left:0;}
+    &.next {position:absolute; right:0;}
+    a { color: $primary-color; }
+  }
+}
 
 /*
 #content.taxonomy_content .entry { display: none; }

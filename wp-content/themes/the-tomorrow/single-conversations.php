@@ -94,11 +94,20 @@
 
 				<article id="letter-<?php echo $post->ID; ?>" class="letter <?php if($i==1){ echo 'first'; } ?>">
 
+					<?php if(get_field("forwarded_by") && get_field("forwarded_to")): ?>
+					<div class="meta_forward">
+						<h3>
+							<strong class="ico">»</strong>
+							<span class="forwarded"><strong><?php echo get_field( "forwarded_to" ); ?></strong> forwarded the conversation to  <strong><?php echo get_field( "author_to" ); ?></strong></span>
+						</h3>
+					</div>
+					<?php endif; ?>
+
 					<div class="meta">
 						<h3>
-							<strong><?php echo $i; ?></strong> —
-							<?php if(get_field("author_from")||get_field("author_to")): ?>
-								<strong><?php echo get_field( "author_from" ); ?></strong> to <strong><?php echo get_field( "author_to" ); ?></strong>
+							<strong class="id"><?php echo $i; ?></strong>
+							<?php if(get_field("author_from") || get_field("author_to")): ?>
+								<span class="from_to"><strong><?php echo get_field( "author_from" ); ?></strong> to <strong><?php echo get_field( "author_to" ); ?></strong></span>
 							<?php endif; ?>
 						</h3>
 						<p class="date"><?php echo date_ago(); ?></p>

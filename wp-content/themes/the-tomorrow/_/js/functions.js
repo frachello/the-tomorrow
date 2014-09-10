@@ -84,9 +84,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	    })
 
 
-
-		// expand collapse letters
-		if (!current_url_hash){		
+		// expand + collapse letters
+		if (!current_url_hash){
 			current_url_hash = $('article.letter:first-child').attr('id');
 		}
 		window.location.hash = '#'+current_url_hash;
@@ -131,6 +130,13 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 			}
 
 		});
+
+		$('article.letter.active').each(function() {
+			if( $(this).prev('.active').length ){
+				$(this).addClass('atta');
+			}
+		});
+
 		$('#rightcol .toggle_letters a').bind( "click", function(e){
 			e.preventDefault();
 			if( $(this).parent().hasClass('expand') ){
@@ -152,7 +158,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 			var next_letter = '#'+$('.letter.active').next().attr('id');
 		//	console.log(next_letter);
 			if(next_letter !== '#undefined'){ // se è l'ultima lettera della conversazione
-				console.log('go to '+next_letter);
+			//	console.log('go to '+next_letter);
 			    $('html, body').animate({
 			        scrollTop: $(next_letter).offset().top-100
 			    }, 500);
@@ -283,8 +289,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 //	        });
 
 			// apply colors to event boxes
-			$('#home_grid .home_box.event .top .cat a').each(function() {
-				box_top_color = $(this).closest('.top').attr("data-color");
+			$('#home_grid .home_box.event .cat a').each(function() {
+				box_top_color = $(this).parent().attr("data-color");
 				$(this).css('color',box_top_color);
 			});
 
@@ -314,8 +320,8 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
 	// apply colors to event boxes
-	$('.event .top .cat a').each(function() {
-		box_top_color = $(this).closest('.top').attr("data-color");
+	$('#home_grid .home_box.event .cat a').each(function() {
+		box_top_color = $(this).parent().attr("data-color");
 		$(this).css('color',box_top_color);
 	});
 //	$('#home_grid .home_box.event .top .cat a').each(function() {
@@ -386,7 +392,7 @@ resize header
 
 function resize_header() {
     
-	if( $('body.tax-event-venue').length || $('body.single-authors').length ){
+	if( $('body.tax-event-venue').length || $('body.single-authors').length || $('body.page-id-49').length ){
 
 		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
 		open_header_h = 520;
@@ -394,18 +400,20 @@ function resize_header() {
 	    header = document.querySelector("header"),
 	    body = document.querySelector("body");
 	    new_header_height = open_header_h - distanceY;
-//	    console.log('new_header_height: '+new_header_height);
-//	    console.log('distanceY: '+distanceY);
+	//	console.log('new_header_height: '+new_header_height);
+	//	console.log('distanceY: '+distanceY);
 	    if(new_header_height<90){
-//			classie.add(header,"smaller");
+			classie.add(header,"smaller2");
 //			classie.add(body,"scrolled");
 	    }else{
+	    	classie.remove(header,"smaller2");
 //			classie.remove(header,"smaller");
 //			classie.remove(body,"scrolled");
 	    }
 //		if(new_header_height>90){
-		if(new_header_height>140){
+		if(new_header_height>90){
 			$('header.main').css('height',new_header_height+'px');
+			$('#main_search').css('top',new_header_height+'px');
 //			$('header.main').removeClass("smaller");
 //			$('body').removeClass("scrolled");
 	    }else{
@@ -580,11 +588,11 @@ function toggle_share_hp_events(){
 			
 				$(this).find('.share_wrap').bind({
 				  mouseenter: function() {
-				  	console.log('mouseenter');
+				//	console.log('mouseenter');
 					$(this).children('.share_baloon').stop().fadeIn(200,'easeInQuad');
 				  },
 				  mouseleave: function() {
-				  	console.log('mouseenter');
+				//	console.log('mouseenter');
 					$(this).children('.share_baloon').stop().fadeOut(200,'easeOutQuad');
 				  }
 				})
@@ -603,9 +611,12 @@ function toggle_over_class_hp_events(){
 	$('#home_grid .home_box.event').bind({
 	  mouseenter: function() {
 		$(this).children('.top').addClass( "over" );
+		$(this).children('.cat').addClass( "over" );
+
 	  },
 	  mouseleave: function() {
 		$(this).children('.top').removeClass( "over" );
+		$(this).children('.cat').removeClass( "over" );
 	  }
 	});
 }
