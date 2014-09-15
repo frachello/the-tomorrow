@@ -56,7 +56,7 @@
 		</p>
 
 		<div class="title_wrap">
-			<h2 class="post_<?php echo $cur_id; ?>"><?php echo $cur_title; ?></h2>
+			<h2 class="page-title post_<?php echo $cur_id; ?>"><?php echo $cur_title; ?></h2>
 		</div>
 
 		<div id="rightcol" class="col">

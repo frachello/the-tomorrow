@@ -5,7 +5,7 @@
 <!-- main col -->
 <section id="main_content">
 
-<h2>Spiacenti: la pagina che cercavi non esiste</h2>
+<h2 class="page-title">Spiacenti: la pagina che cercavi non esiste</h2>
 
 </section>
 <!-- chiusa section#main_content -->	

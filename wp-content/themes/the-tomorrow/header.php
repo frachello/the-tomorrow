@@ -16,26 +16,28 @@
 
 	<meta charset="utf-8">
 	
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>
-	<?php bloginfo('name'); ?>
+	<?php bloginfo('name'); echo " | "; ?>
 	<?php if (is_home () ) {
-		echo " | "; bloginfo('description');
+		bloginfo('description');
 	} elseif ( is_category() ) {
-		echo " - "; single_cat_title();
+		single_cat_title();
 	} elseif (is_single() || is_page() ) {
-		echo " - "; single_post_title();
+		single_post_title();
 	} elseif (is_search() ) {
-		echo " - "; echo " Search results for: "; echo wp_specialchars($s);
+		echo " Search results for: "; echo wp_specialchars($s);
 	} else { wp_title('',true); } ?>
 	</title>
 
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 
-	<meta name="google-site-verification" content="">
+	<?php // echo '<meta name="google-site-verification" content="">'; ?>
+
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory') ?>/_/i/the-tomorrow-favicon-16x16.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory') ?>/_/i/the-tomorrow-favicon-32x32.png" sizes="16x16" />
 
 	<?php
 		$venue_id = eo_get_venue();

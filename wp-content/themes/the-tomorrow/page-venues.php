@@ -58,7 +58,7 @@ Template Name: Places map
 
 			<?php else : ?>
 
-				<h2>Errore.</h2>
+				<h2 class="page-title">Errore.</h2>
 				<p>Spiacenti, ma la pagina che stai cercando non esite</p>
 
 			<?php endif; ?>	

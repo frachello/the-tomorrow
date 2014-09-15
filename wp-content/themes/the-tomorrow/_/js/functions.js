@@ -1,7 +1,6 @@
 // remap jQuery to $
 (function($){})(window.jQuery);
 
-
 /* trigger when page is ready */
 $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
@@ -320,18 +319,15 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 
 
 	// apply colors to event boxes
-	$('#home_grid .home_box.event .cat a').each(function() {
+	$('.home_box.event .cat a').each(function() {
 		box_top_color = $(this).parent().attr("data-color");
 		$(this).css('color',box_top_color);
 	});
-//	$('#home_grid .home_box.event .top .cat a').each(function() {
-//		$(this).closest('.top').append('<div class="bg" style="background: '+box_top_color+'">');
-//	});
 	
 	toggle_over_class_hp_events();
 
 	// cycle from / to
-	$('#home_grid .home_box.conversations .bottom ul.authors').each(function() {
+	$('.home_box.conversations .bottom ul.authors').each(function() {
 		var $elem = $(this).children('li'), l = $elem.length, i = 0;
 		function go() {
 		    $elem.eq(i % l).animate({ opacity: "0", top: "11" }, 400, "easeInQuad", function() {
@@ -555,8 +551,8 @@ function debounce( fn, threshold ) {
 toggle_share_hp_events */
 
 function toggle_share_hp_events(){
-	if( $('#home_grid .home_box.event').length ){
-		$('#home_grid .home_box.event').each(function(){
+	if( $('.home_box.event').length ){
+		$('.home_box.event').each(function(){
 
 //			debounce(function() {
 			
@@ -582,7 +578,7 @@ function toggle_share_hp_events(){
 toggle_over_class_hp_events */
 
 function toggle_over_class_hp_events(){
-	$('#home_grid .home_box.event').bind({
+	$('.home_box.event').bind({
 	  mouseenter: function() {
 		$(this).children('.top').addClass( "over" );
 		$(this).children('.cat').addClass( "over" );

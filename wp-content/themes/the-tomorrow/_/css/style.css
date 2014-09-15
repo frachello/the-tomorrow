@@ -269,6 +269,11 @@ body.home, body.search {
 }
 body #content {
   margin-top: 140px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: relative;
   z-index: 1;
 }
@@ -295,6 +300,11 @@ body.open-filters #content {
 ************************************************/
 }
 header.main {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   height: 140px;
   text-align: left;
   position: fixed;
@@ -1447,7 +1457,18 @@ body.internal-page #content #rightcol {
   width: 220px;
   margin: 0;
   float: right;
+}
+body.internal-page #content #rightcol.fixed {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: 274px;
+}
+body.internal-page #content #rightcol.fixed.relative {
   position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 0;
 }
 body.internal-page #content #rightcol .li {
   border-top: 1px solid #414042;
@@ -1685,34 +1706,6 @@ body.internal-page.single-conversations {
 body.internal-page.single-conversations h2 {
   border-top: 1px solid #414042;
 }
-body.internal-page.single-conversations #content.scrolled_conversation #rightcol {
-  position: fixed;
-  left: 50%;
-  margin-left: 274px;
-}
-body.internal-page.single-conversations #content.scrolled_conversation .title_wrap {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border-top: 1px solid #f4f4f0;
-  background: #fff;
-  position: fixed;
-  top: 90px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-body.internal-page.single-conversations #content.scrolled_conversation .title_wrap h2 {
-  border-top: none;
-  width: 732px;
-  margin: 0 auto;
-  text-align: left;
-  position: relative;
-  left: -128px;
-}
 body.internal-page.single-conversations #content p.count-theme {
   text-transform: uppercase;
   font-size: 14px;
@@ -1744,9 +1737,6 @@ body.internal-page.single-conversations #content .content_col article.closed .en
 body.internal-page.single-conversations #content .content_col article.closed .meta {
   background: #191919;
   color: #f4f4f0;
-}
-body.internal-page.single-conversations #content .content_col article.closed .meta:hover {
-  background: #333;
 }
 body.internal-page.single-conversations #content .content_col article.closed .meta h3 strong.id {
   border-right: 1px solid #f4f4f0;
@@ -2126,6 +2116,11 @@ footer {
   margin: 35px 0 0 0;
   position: relative;
   z-index: 2;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   /************************************************
 
 

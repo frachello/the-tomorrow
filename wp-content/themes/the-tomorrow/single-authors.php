@@ -11,7 +11,7 @@ Template Name: Single Author
 
 	<div class="page-content">
 
-	<h2><?php the_title(); ?></h2>
+	<h2 class="page-title"><?php the_title(); ?></h2>
 
 	<?php if (have_posts()) : ?>
 
@@ -78,7 +78,7 @@ Template Name: Single Author
 
     <?php else : ?>
 
-        <h2>Non ci sono post, spiacente.</h2>
+        <h2 class="page-title">Non ci sono post, spiacente.</h2>
 
     <?php endif; ?>
 

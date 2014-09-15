@@ -1,6 +1,7 @@
-$wrap-width-desktop	: 1105px;
+$wrap-width-desktop : 1105px;
 $primary-color: #191919;
 $primary-border-color: #414042;
+$dark-grey: #606a70;
 
 @mixin ir() { font-size: 0; text-indent: -999999px; display: block; }
 
@@ -89,9 +90,9 @@ body{ background: #F4F4F0;
 }
 
 .infscr-loading{ z-index: 999 }
-	
+  
 /************************************************
-*	Header  									*
+* Header                    *
 ************************************************/
 
 header.main{
@@ -133,7 +134,7 @@ header.main{
   }
 }
 body.home, body.search {
-  header.main { background: #606A70; 
+  header.main { background: $dark-grey; 
     .nav_menu li a {
       @include at2x('../i/ico_nav_menu_fff', 'png', 72px, 23px);
     }
@@ -160,7 +161,11 @@ body.home.scrolled, body.search.scrolled{
     @include at2x('../i/the_tomorrow_logotipo_fff', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0;
   }
 }
-body.internal-page.page-id-49 header.main.smaller2, body.internal-page.single-authors header.main.smaller2, body.internal-page.tax-event-venue header.main.smaller2, header.main.smaller2{
+body.internal-page.page-id-49 header.main.smaller2,
+body.internal-page.single-authors header.main.smaller2,
+body.internal-page.tax-event-venue header.main.smaller2,
+header.main.smaller2
+{
   height: 90px; background-color: #fff; background-image: none !important;
   .inner{ height: 90px;
     h1 { padding-top: 28px;
@@ -174,7 +179,7 @@ body.internal-page.page-id-49 header.main.smaller2, body.internal-page.single-au
 }
 
   
-body.home header.main, body.search header.main{ background: #606A70; }
+body.home header.main, body.search header.main{ background: $dark-grey; }
 
 /* --------------------------------------------------------------------------------
                                     filter navs                                  */
@@ -237,7 +242,7 @@ body.scrolled #main_search { top: 90px; }
                                     mega menu                                    */
 
 nav#megamenu{
-  overflow: scroll; background: #606A70; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; color: #fff; text-align: center; display: none;
+  overflow: scroll; background: $dark-grey; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; color: #fff; text-align: center; display: none;
   .inner{ width: 988px; margin: 0 auto; text-align: left; }
 
   .megahead{ height: 35px; padding: 50px 0 80px 0;
@@ -289,8 +294,8 @@ nav#megamenu{
 }
 
 
-#logo { position:absolute; top:0px; left:0px; }	
-	
+#logo { position:absolute; top:0px; left:0px; } 
+  
 
 /* --------------------------------------------------------------------------------
                                     internal page                                */
@@ -299,94 +304,95 @@ nav#megamenu{
 #home_grid{ @include transition(all 0.3s ease); width: 100%; height: 100%; border-top: 1px solid #ccc; border-left: 1px solid #ccc; /* padding-bottom: 40px; // per lasciare lo spazio alla immagine di loading */
   .pagination { display: none; }
   #infscr-loading { width: 220px; position: absolute; /* bottom: 0; */ left: 50%; top: 50%; margin-left: -110px; background: #fff; }
-  .home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
-    &.event{
-      width: 239px; text-align: left;
+}
 
-      .cat, .cat.over{
-        position: absolute; right: 6%; top: 42px; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; z-index: 2;
-      }
-      .cat.over a { color: #fff !important; }
+.home_box { position: relative; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; float: left; height: 239px;
+  &.event{
+    width: 239px; text-align: left;
 
-      .top{ width: 88%; padding: 6%; float: left; position: relative;
-        .bg{ @include transition(all 0.3s ease); width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
-        }
-        &.over {
-          p, p a { color: #fff !important; z-index: 2; position: relative; }
-          .bg { height: 100%; }
-        }
-      }
-      .date{ margin: 0;
-        .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
-        .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
-      }
+    .cat, .cat.over{
+      position: absolute; right: 6%; top: 42px; display: block; font-family: "adelle-sans"; text-transform: uppercase; font-size: 11px; font-weight: 700; z-index: 2;
+    }
+    .cat.over a { color: #fff !important; }
 
-      .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
-        strong{ font-weight: 700; }
-        a, strong a { color: #191919; }
+    .top{ width: 88%; padding: 6%; float: left; position: relative;
+      .bg{ @include transition(all 0.3s ease); width: 100%; height: 0; position: absolute; top: 0; left: 0; z-index: 1
       }
+      &.over {
+        p, p a { color: #fff !important; z-index: 2; position: relative; }
+        .bg { height: 100%; }
+      }
+    }
+    .date{ margin: 0;
+      .day{ font-size: 53px; font-family: "adelle"; font-weight: 800; font-style: normal; float: left; line-height: 41px; margin-right: 5px; }
+      .ordinal-month{ font-size: 13px; font-family: "adelle"; font-weight: 300; font-style: normal; vertical-align: super; }
+    }
 
-      .venue-more{ width: 239px; height: 239px; @include ir; position: absolute; z-index: 2; background: transparent;
+    .title{ font-size: 19px; font-family: 'adelle-sans'; font-weight: 300; float: left; margin: 6% 6% 0 6%;
+      strong{ font-weight: 700; }
+      a, strong a { color: #191919; }
+    }
+
+    .venue-more{ width: 239px; height: 239px; @include ir; position: absolute; z-index: 2; background: transparent;
 //      &:hover { background: #eee; }
+    }
+    
+    .bottom{
+      height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
+      .address{
+        background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
       }
-      
-      .bottom{
-        height: 11px; position: absolute; left: 6%; bottom: 6%; width: 88%;
-        .address{
-          background: url(../i/ico_hp_box_marker.png) no-repeat center left; padding: 0 0 0 12px; float: left;
-        }
-      }
+    }
 
-      .share_wrap{
-        z-index: 3; padding: 4px 4px 0 4px; overflow: hidden; @include transition(all 0.4s ease); width: 40px; height: 108px; position: absolute; bottom: 6%; right: 0; background: url(../i/ico_hp_box_share.png); background-repeat: no-repeat; background-position: 20px bottom; height: 11px; cursor: pointer;
-        &:hover { width: 40px; height: 108px; }
-        .share{ @include ir; }
-        .share_baloon{ display: none; position: absolute; top: 4px; left: 5px; width: 40px; height: 92px; @include at2x('../i/ico_share_baloon','png',80px,92px); background-repeat: no-repeat; background-position: 0 0;
-          .addthis_toolbox { 
-            a { width: 40px; height: 28px; @include ir; background-position: center center; background-repeat: no-repeat; background-position: 0 0; padding: 0; margin: 0;
-              &:hover{
-                @include at2x('../i/ico_share_baloon','png',80px,92px);
-                &.addthis_button_facebook { background-position: -40px 0 }
-                &.addthis_button_twitter  { background-position: -40px -28px }
-                &.addthis_button_email    { background-position: -40px -56px; height: 25px; }
-              }
+    .share_wrap{
+      z-index: 3; padding: 4px 4px 0 4px; overflow: hidden; @include transition(all 0.4s ease); width: 40px; height: 108px; position: absolute; bottom: 6%; right: -4px; background: url(../i/ico_hp_box_share.png); background-repeat: no-repeat; background-position: 20px bottom; height: 11px; cursor: pointer;
+      &:hover { width: 40px; height: 108px; }
+      .share{ @include ir; }
+      .share_baloon{ display: none; position: absolute; top: 4px; left: 5px; width: 40px; height: 92px; @include at2x('../i/ico_share_baloon','png',80px,92px); background-repeat: no-repeat; background-position: 0 0;
+        .addthis_toolbox { 
+          a { width: 40px; height: 28px; @include ir; background-position: center center; background-repeat: no-repeat; background-position: 0 0; padding: 0; margin: 0;
+            &:hover{
+              @include at2x('../i/ico_share_baloon','png',80px,92px);
+              &.addthis_button_facebook { background-position: -40px 0 }
+              &.addthis_button_twitter  { background-position: -40px -28px }
+              &.addthis_button_email    { background-position: -40px -56px; height: 25px; }
             }
           }
-          .at15t, .at16nc, .at300bs { background: none }
         }
+        .at15t, .at16nc, .at300bs { background: none }
       }
+    }
 
+  }
+  p{
+    margin-top: 0;
+  }
+  &.conversations{ width: 479px; text-align: left; position: relative; z-index: 1;
+    
+    .more{ width: 479px; height: 239px; @include ir; position: absolute; top: 0; left: 0; z-index: 999; background: url(../i/ico_mega_letter_hover.png) no-repeat 0 0; display: none; }
+    
+    .top{
+      width: 94%; padding: 3%; float: left;
+      .title{ font-family: "adelle"; font-weight: 300; font-size: 42px; font-style: normal; float: left; line-height: 41px;
+        a { font-weight: 300; color: #191919; }
+      }
     }
-    p{
-      margin-top: 0;
-    }
-    &.conversations{ width: 479px; text-align: left; position: relative; z-index: 1;
-      
-      .more{ width: 479px; height: 239px; @include ir; position: absolute; top: 0; left: 0; z-index: 999; background: url(../i/ico_mega_letter_hover.png) no-repeat 0 0; display: none; }
-      
-      .top{
-        width: 94%; padding: 3%; float: left;
-        .title{ font-family: "adelle"; font-weight: 300; font-size: 42px; font-style: normal; float: left; line-height: 41px;
-          a { font-weight: 300; color: #191919; }
+    .bottom{
+      height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
+      p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
+        &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
+        &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; padding-left: 17px;
+          a { color: $primary_color; font-weight: 700; }
         }
       }
-      .bottom{
-        height: 11px; position: absolute; left: 3%; bottom: 6%; width: 94%;
-        p{ font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px; padding: 0 0 0 14px;
-          &.date { background: url(../i/ico_hp_box_time.png) no-repeat center left; float: left;  }
-          &.count-theme { background: url(../i/ico_hp_box_letter.png) no-repeat center left; float: right; padding-left: 17px;
-            a { color: $primary_color; font-weight: 700; }
-          }
-        }
-        ul.authors {
-          width: 190px; position: absolute; bottom: 0; left: 100px; height: 11px; overflow: hidden;
-          li { background: #fff; width: 190px; position: absolute; top: 0; left: 0; font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px;
-            &.to {  }
-          }
+      ul.authors {
+        width: 190px; position: absolute; bottom: 0; left: 100px; height: 11px; overflow: hidden;
+        li { background: #fff; width: 190px; position: absolute; top: 0; left: 0; font-family: "adelle-sans"; font-weight: 300; text-transform: uppercase; font-size: 11px; height: 11px; line-height: 11px;
+          &.to {  }
         }
       }
+    }
 
-    }
   }
 }
 
@@ -398,7 +404,7 @@ body.internal-page{
     #content .content_col { width: 100%; }
   }
 
-  h2{ font-weight: 700; font-size: 40px; padding: 0 0 38px 0; margin: 0 0 0 0; font-family: "adelle-sans"; font-weight: 700;
+  h2.page-title { font-weight: 700; font-size: 40px; padding: 0 0 38px 0; margin: 0 0 0 0; font-family: "adelle-sans"; font-weight: 700;
     span { font-weight: 300; }
   }
   
@@ -442,7 +448,7 @@ body.internal-page{
         ul { list-style: circle; }
         li{ margin-left: 1.3em; margin-bottom: .5em; }
         p a, li a { text-decoration: underline; color: #000; }
-        p a:hover, li a:hover { color: #606a70; text-decoration: none; }
+        p a:hover, li a:hover { color: $dark-grey; text-decoration: none; }
 
         ul.credits-list{
           width: 570px; list-style: none; margin-bottom: 2em;
@@ -520,11 +526,50 @@ body.internal-page{
     &.venue_page{
       header.main_internal_page_header {
         width: 100%; padding: 0 0 20px 0; 
-        .address { width: 220px; margin: 0 36px 0 0; float: left; text-transform: uppercase; }
-        h1.venue_title{ font-family: "adelle-sans"; font-weight: 700; font-size: 40px; height: 1em; line-height: .7em; }
+        .address { width: 220px; margin: 6px 36px 0 0; float: left; text-transform: uppercase; }
+        h1.venue_title{ font-family: "adelle-sans"; font-weight: 700; font-size: 40px; line-height: 1.1em; margin-left: 256px; /* height: 1em; */ }
       }
       .col {  }
-      .venue-events-calendar { margin: 30px 0; }
+      .upcoming_events{ 
+        width: 100%; clear: both; float: left;
+        .site_link { @include at2x('../i/ico_event_box_link', 'png', 20px, 10px); background-repeat: no-repeat; background-position: center left; display: inline-block; height: 10px; background: url('../i/ico_event_box_link.png') no-repeat center left; padding-left: 30px; line-height: 10px; text-transform: uppercase; font-size: 12px; color: $primary-color;
+        &:hover { color: $dark-grey; }
+        }
+        .share_text { position: absolute; bottom: 12px; right: 31px; text-transform: uppercase; }
+        .home_box.event{
+          .venue-more{ display: none; }
+          .bottom { z-index: 2; }
+        }
+        h3.upcoming_events_title{ text-transform: uppercase; font-family: "adelle-sans"; font-weight: 700; font-size: 12px; width: 100%; margin: 70px 0 30px 0; text-align: center; }
+        .upcoming_events_grid{ border-top: 1px solid #ccc; border-left: 1px solid #ccc; float: left;
+          .home_box.event { background: #fff; }
+        }
+      }
+      .venue-events-calendar { margin-bottom: 30px;
+        .eo-fullcalendar{
+          .fc-header{ margin: 70px 0 30px 0; float: left;
+            .fc-button { padding: 0; }
+            .fc-header-left { text-align: right; width: 494px;
+              .fc-header-title { line-height: 25px; }
+            }
+            .fc-header-right { text-align: left; width: 494px;
+              .fc-button-next { padding-left: 0; }
+              .fc-header-space { padding: 0; }
+              .fc-button-today { text-transform: uppercase; font-family: "adelle-sans"; font-weight: 700; font-size: 12px !important; line-height: 21px; }
+            }
+            .fc-header-title h2 { text-transform: uppercase; font-family: "adelle-sans"; font-weight: 700; font-size: 12px; }
+            .fc-button{ 
+              background: none; border: none;
+              &.ui-state-default .ui-icon {
+                &.ui-icon-circle-triangle-w{ background: url(../i/ico_rightcol_prev.png) no-repeat center center; }
+                &.ui-icon-circle-triangle-e{ background: url(../i/ico_rightcol_next.png) no-repeat center center; }
+              }
+            }
+          }
+          .fc-content{ margin-top: 20px; }
+        }
+        
+      }
       #rightcol{ }
       .content_col{
         width: 476px; margin-left: 0; margin-left: 220px; padding-top: 26px; padding-left: 36px; border-top: 1px solid $primary-border-color;
@@ -589,14 +634,15 @@ body.internal-page{
         }
       }
       p.count-theme { text-transform: uppercase; font-size: 14px; margin-bottom: 30px; }
+
       .content_col{ width: 732px; /* border-top: 1px solid $primary-border-color; */
         article{ margin-bottom: 1px; @include transition(all 1s ease); overflow: hidden; height: auto;
           &.active { border-bottom: 1px solid #191919; }
           .letter, .comments { display: block; }
           &.closed { 
             .entry, .comments { display: none; }
-            .meta { background: $primary-color; color: #F4F4F0;
-              &:hover { background: #333; }
+            .meta { background: $primary-color; color: #F4F4F0; @include transition(all 0.5s ease); 
+              &:hover { background: $dark-grey; }
               h3 strong.id { border-right: 1px solid #F4F4F0; }
             }
           }
@@ -608,7 +654,7 @@ body.internal-page{
               
             }
             .from_to, .forwarded { margin-left: 28px; }
-            .forwarded { color: #606A70; }
+            .forwarded { color: $dark-grey; }
             .date { float: right; height: 59px; line-height: 59px; margin-right: 28px; }
           }
           .meta { cursor: pointer; }
@@ -690,7 +736,7 @@ body.internal-page{
   {
     .author_desc p { font-size: 19px; margin-bottom: 35px;
       a { text-decoration: underline; color: #000;
-        &:hover { color: #606a70; text-decoration: none; }
+        &:hover { color: $dark-grey; text-decoration: none; }
       }
     }
   }
@@ -742,10 +788,14 @@ body.internal-page{
 
   ul.themes-boxes{
     li{ width: 329px; height: 140px; float: left; font-size: 19px;
-      a{ font-weight: 700; width: 328px; height: 82px; padding: 57px 0 0 0; float: left; border-right: 1px solid $primary-color; border-bottom: 1px solid $primary-color; text-align: center; display: block; color: $primary-color;
-        span { font-weight: 300; text-transform: uppercase; font-size: 14px; padding-left: .5em; }
+      a{ font-weight: 700; width: 328px; height: 87px; padding: 52px 0 0 0; float: left; border-right: 1px solid $primary-color; border-bottom: 1px solid $primary-color; text-align: center; display: block; color: $primary-color;
+        &:hover { color: $dark-grey;
+          span { color: $primary-color; }
+        }
+        span { display: block; font-weight: 300; text-transform: uppercase; font-size: 14px; padding-left: .5em;
+        }
       }
-    &.first_row a { border-top: 1px solid $primary-color; border-left: 1px solid $primary-color; }
+    &.first_row a { border-top: 1px solid $primary-color; /* border-left: 1px solid $primary-color; */ }
     &.col_1 a { border-left: 1px solid $primary-color; }
     }
   }
@@ -755,14 +805,14 @@ body.internal-page{
 
 
 /************************************************
-*	Footer      								*
+* Footer                      *
 ************************************************/
 
 body.home footer, body.search footer { display: none; }
 // .push { height: 176px; }
 footer { 
   &.sticky { position: fixed; left: 0; bottom: 0; width: 100%;  }
-  height: 176px; background: #606A70; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0; position: relative; z-index: 2; // @include transition(all 0.5s ease);
+  height: 176px; background: $dark-grey; text-align: center; color: #fff; padding: 35px 0 45px 0; margin: 35px 0 0 0; position: relative; z-index: 2; // @include transition(all 0.5s ease);
   .bottom {
     width: 100%; margin: 0 auto; text-align: left; clear: both; display: block; border-top: 1px solid #fff; padding: 10px 0 0 0;
     p.address, p.disclaimer { height: 16px; line-height: 16px; }
@@ -807,7 +857,7 @@ footer {
 
   }
   
-}	
+} 
 
 
 /************************************************

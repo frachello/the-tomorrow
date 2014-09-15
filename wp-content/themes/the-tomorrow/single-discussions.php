@@ -26,7 +26,7 @@
 
 	    <?php else : ?>
 
-	        <h2>Non ci sono post, spiacente.</h2>
+	        <h2 class="page-title">Non ci sono post, spiacente.</h2>
 
 	    <?php endif; ?>
 
@@ -51,7 +51,7 @@ if ( have_posts() ) : ?>
 
 		<div class="post" id="post-<?php echo $cur_id; ?>">
 
-			<h2><?php the_title() ?></h2>
+			<h2 class="page-title"><?php the_title() ?></h2>
 			<div class="postMetaTop">
 				<span class="date"><?php the_time('j F Y') ?></span>
 				<!-- in <span class="category"> <?php the_category(', '); ?></span> -->

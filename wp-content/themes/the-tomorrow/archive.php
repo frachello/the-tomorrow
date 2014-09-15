@@ -68,7 +68,7 @@ Template Name: Archivio
     
         <?php else : ?>
     
-            <h2>Non ci sono post, spiacente.</h2>
+            <h2 class="page-title">Non ci sono post, spiacente.</h2>
     
         <?php endif; ?>
 
@@ -76,9 +76,9 @@ Template Name: Archivio
 	<?php else :
 
 		if ( is_category() ) { // If this is a category archive
-			printf("<h2 class='center'>Spiacenti, non ci sono post nella categoria %s.</h2>", single_cat_title('',false));
+			printf("<h2 class='page-title center'>Spiacenti, non ci sono post nella categoria %s.</h2>", single_cat_title('',false));
 		} else if ( is_date() ) { // If this is a date archive
-			echo("<h2>Spiacenti, non ci sono post per questa data</h2>");
+			echo("<h2 class='page-title'>Spiacenti, non ci sono post per questa data</h2>");
 		} else if ( is_author() ) { // If this is a category archive
 			$userdata = get_userdatabylogin(get_query_var('author_name'));
 			printf("<h2 class='center'>Spiacenti, non ci sono ancora post di %s.</h2>", $userdata->display_name);

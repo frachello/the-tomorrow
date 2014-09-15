@@ -96,6 +96,7 @@
 //		$time = eo_get_venue_meta($venue->term_id, '_opening_times',true);
 		$suggested_by = eo_get_venue_meta($venue->term_id, '_suggested_by',true);
 		$website = eo_get_venue_meta($venue->term_id, '_website',true);
+		$website_name = eo_get_venue_meta($venue->term_id, '_website_name',true);
 		$header_img = eo_get_venue_meta($venue->term_id, '_header_img',true);
 
 		//Remember to use nonces!
@@ -111,6 +112,9 @@
 		<br /><br />
 		<label> Venue website:</label>
 		<input type="text" name="my_website" value="<?php echo esc_attr($website);?>" >
+		<br /><br />
+		<label> Venue website name:</label>
+		<input type="text" name="my_website_name" value="<?php echo esc_attr($website_name);?>" >
 		<br /><br />
 		<label> Image:</label><br />
 		<input type="text" name="my_header_img" value="<?php echo esc_attr($header_img);?>" >
@@ -136,11 +140,13 @@
 	    //Retrieve meta value(s)
 	    $value_suggested_by = $_POST['my_suggested_by'];
 	    $value_website = $_POST['my_website'];
+	    $value_website_name = $_POST['my_website_name'];
 	    $value_header_img = $_POST['my_header_img'];
 
 	    //Update venue meta
 	    eo_update_venue_meta($venue_id,  '_suggested_by', $value_suggested_by);
 	    eo_update_venue_meta($venue_id,  '_website', $value_website);
+	    eo_update_venue_meta($venue_id,  '_website_name', $value_website_name);
 	    eo_update_venue_meta($venue_id,  '_header_img', $value_header_img);
 	    return;
 	}

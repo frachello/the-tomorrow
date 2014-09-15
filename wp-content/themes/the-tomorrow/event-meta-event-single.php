@@ -70,22 +70,7 @@
 
 		</div> <!-- /close .top -->
 
-		<div class="addthis_col">
-		    <p>share</p>
-		    <div class="addthis_toolbox addthis_default_style ">		    
-
-			    <a class="addthis_button_facebook" title="Facebook" href="#">
-			    	Share on facebook</a>
-
-			    <a class="addthis_button_twitter" title="Tweet" href="#">
-					Share on twitter</a>
-
-			    <a class="addthis_button_email" title="Email" href="#">
-			    	Share on email</a>
-
-		    </div>
-		    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-53e1050f71fefa29"></script>
-		</div>		
+		<?php include (TEMPLATEPATH . '/inc/addthis-rightcol.inc.php'); ?>	
 		
 		<p class="title venue_<?php echo $venue_id; ?>">
 			<strong><a href="<?php echo $venue_url; ?>"><?php echo $venue_name ?></a></strong> <br />

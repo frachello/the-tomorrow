@@ -37,7 +37,7 @@ get_header(); ?>
 			<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
 
 				<!-- Display event title -->
-				<h2><?php the_title(); ?></h2>
+				<h2 class="page-title"><?php the_title(); ?></h2>
 
 				<div class="entry-content event">
 					

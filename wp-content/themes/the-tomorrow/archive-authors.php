@@ -12,7 +12,7 @@ Template Name: Authors Archive
 
 	<div class="page-content">
 
-	<h2><?php echo get_queried_object()->label; ?></h2>
+	<h2 class="page-title"><?php echo get_queried_object()->label; ?></h2>
 
 
 	<?php $row_count = 1; $col_count = 1; $cols_number = 4; ?>
@@ -141,7 +141,7 @@ Template Name: Authors Archive
 
     <?php else : ?>
 
-        <h2>Non ci sono post, spiacente.</h2>
+        <h2 class="page-title">Non ci sono post, spiacente.</h2>
 
     <?php endif; wp_reset_postdata(); ?>
 

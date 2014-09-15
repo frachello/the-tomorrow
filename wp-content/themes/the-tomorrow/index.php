@@ -234,9 +234,9 @@
 				<?php // if( eo_reoccurs() ): ?>
 
 					<?php // Event reoccurs - is there a next occurrence? ?>
-					<?php $next =   eo_get_next_occurrence($date_format);?>
+					<?php $next = eo_get_next_occurrence($date_format);?>
 
-					<?php if($next): ?>
+					<?php // if($next): ?>
 
 				<div class="home_box event">
 
@@ -299,12 +299,12 @@
 
 				</div>
 
-					<?php else: ?>
-						<?php
+					<?php // else: close if not $next) 
+						
 						// The event has finished (no more occurrences)
 						// printf('<p class="date">'.__('This event finished on %s').'.</p>', eo_get_schedule_last('d F Y',''));
-						?>
-					<?php endif; ?>
+						
+					 // endif; close if($next) ?>
 
 				<?php // endif; ?>
 

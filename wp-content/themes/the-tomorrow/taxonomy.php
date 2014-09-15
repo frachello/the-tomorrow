@@ -26,7 +26,7 @@ Template Name: Taxonomy
 		<?php while (have_posts()) : the_post(); ?>
 			<?php $post_slug = $slug = basename(get_permalink()); ?>
 			<div class="post" id="<?php echo $post_slug; ?>">
-			<h2><?php the_title() ?></h2>
+			<h2 class="page-title"><?php the_title() ?></h2>
 			<!--
 			<p class="postMetaTop">
 				<span class="autor">Scritto da  <strong><?php the_author(); ?></strong> </span>

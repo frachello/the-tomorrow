@@ -12,7 +12,7 @@ Template Name: Conversations Archive
 
 	<div class="page-content">
 
-	<h2><?php echo get_queried_object()->label; ?></h2>
+	<h2 class="page-title"><?php echo get_queried_object()->label; ?></h2>
 	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
 
 
@@ -100,7 +100,7 @@ Template Name: Conversations Archive
 
     <?php else : ?>
 
-        <h2>Non ci sono post, spiacente.</h2>
+        <h2 class="page-title">Non ci sono post, spiacente.</h2>
 
     <?php endif; ?>
 

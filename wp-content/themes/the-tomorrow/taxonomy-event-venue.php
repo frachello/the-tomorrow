@@ -28,11 +28,13 @@ get_header(); ?>
 		<?php
 			$venue_id = eo_get_venue();
 			$venue_name = eo_get_venue_name();
+			$venue_slug = eo_get_venue_slug();
 			$venue_url = eo_get_venue_link();
 			$address_details = eo_get_venue_address($venue_id);
 			$venue_meta = eo_get_venue_meta($venue_id);
 			$venue_suggested_by = eo_get_venue_meta($venue_id, '_suggested_by', true);
 			$venue_website = eo_get_venue_meta($venue_id, '_website', true);
+			$venue_website_name = eo_get_venue_meta($venue_id, '_website_name', true);
 		?>
 		
 		<p class="address"><strong><?php echo $address_details['state']; ?></strong>, <?php echo $address_details['country']; ?></p>
@@ -49,24 +51,8 @@ get_header(); ?>
 		<div id="rightcol" class="col relative">
 			
 			<div class="li map"><a href="<?php bloginfo('url'); ?>/places/">view on map</a></div>
+			<?php include (TEMPLATEPATH . '/inc/addthis-rightcol.inc.php'); ?>
 			
-			<div class="addthis_col">
-			    <p>share</p>
-			    <div class="addthis_toolbox addthis_default_style ">		    
-
-				    <a class="addthis_button_facebook" title="Facebook" href="#">
-				    	Share on facebook</a>
-
-				    <a class="addthis_button_twitter" title="Tweet" href="#">
-						Share on twitter</a>
-
-				    <a class="addthis_button_email" title="Email" href="#">
-				    	Share on email</a>
-
-			    </div>
-			    
-			</div>
-
 		</div>
 
 		<?php if($venue_suggested_by||$venue_website):?>
@@ -79,8 +65,16 @@ get_header(); ?>
 			<?php endif; ?>
 			<?php if($venue_website):?>
 			<p>
-				website<br />
-				<strong><a href="<?php echo $venue_website; ?>"><?php echo $venue_website; ?></a></strong>
+				more on<br />
+				<strong><a href="<?php echo $venue_website; ?>" target="_blank">
+					<?php
+					if( isset($venue_website_name) && $venue_website_name!='' ){
+						echo $venue_website_name;
+					}else{
+						echo $venue_website;
+					}
+					?>
+				</a></strong>
 			</p>
 			<?php endif; ?>
 		</div>
@@ -155,6 +149,116 @@ get_header(); ?>
 
 		</div>
 
+
+
+		<?php // if( $_GET['dev']==1 ): ?>
+		
+		<?php 
+		$events_array = array(
+		//	'orderby'=>'eventstart' // default
+			'post_type'=>'event',
+			'posts_per_page'=>4,
+			'showpastevents'=>true,
+			'event_start_after'=>'today',
+			'event-venue'=>$venue_slug
+	 	);
+	 	$events_query = new WP_Query( $events_array );
+	 	?>
+						 	
+		<?php if( $events_query->have_posts() ): ?>
+
+		<div class="upcoming_events">
+
+			<h3 class="upcoming_events_title">Upcoming events</h3>
+
+			<div class="box_grid upcoming_events_grid">
+
+			<?php while( $events_query->have_posts() ): $events_query->the_post(); ?>
+
+			<div class="home_box event">
+
+					<?php $categories_list = get_the_term_list( $post->ID, 'event-category', '', ', ',''); ?>
+					<p class="cat" data-color="<?php echo eo_get_event_color(); ?>">
+						<?php echo $categories_list; ?>
+					</p>
+
+					<div class="top" style=" border-top: 8px solid <?php echo eo_get_event_color(); ?>; " data-color="<?php echo eo_get_event_color(); ?>">
+								
+						<?php
+						//	If the event is occurring again in the future, display the date
+							$day = eo_get_schedule_start('d');
+							$ordinal = eo_get_schedule_start('S');
+							$month = eo_get_schedule_start('M');
+						?>
+						<p class="date">
+							<span class="day"><?php echo $day; ?></span>
+							<span class="ordinal-month"><?php echo $ordinal; ?>, <?php echo $month; ?></span>
+						</p>
+
+						<div class="bg" style="background: <?php echo eo_get_event_color(); ?>"></div>
+
+					</div> <!-- /close .top -->
+
+					
+					<p class="title venue_<?php echo $venue_id; ?>">
+						<strong><?php echo $venue_name ?></strong> <br />
+						<?php the_title() ?>
+					</p>
+					
+					<a class="venue-more" href="<?php echo $venue_url; ?>">enter venue</a>
+
+					<?php
+						$event_website=get_the_content();
+						if($event_website):
+					?>
+					<div class="bottom">
+						<a class="site_link" href="<?php echo $event_website; ?>" target="_blank">
+							link
+						</a>
+					</div>
+					<?php endif; ?>
+
+					<p class="share_text">share</p>
+					<div class="share_wrap">
+						
+						<a class="share" href="#">share</a>
+
+						<div class="share_baloon hide">
+
+						    <div class="addthis_toolbox addthis_default_style ">		    
+
+							    <a class="addthis_button_facebook" title="Facebook" href="#">
+							    	Share on facebook</a>
+
+							    <a class="addthis_button_twitter" title="Tweet" href="#">
+									Share on twitter</a>
+
+							    <a class="addthis_button_email" title="Email" href="#">
+							    	Share on email</a>
+
+						    </div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			<?php endwhile; ?>
+
+			</div>
+
+			</div> <!-- / .upcoming_events -->
+
+		<?php // else: ?>
+			<!-- <h2 class="no-content">Sorry, no posts matched your search criteria.</h2> -->
+		<?php endif; ?>
+		<?php wp_reset_postdata(); ?>
+
+		<?php // endif; // close if dev mode ?>
+
+
+
 		<div class="venue-events-calendar">
 		<?php
 			// echo do_shortcode('[eo_fullcalendar]');
@@ -164,6 +268,7 @@ get_header(); ?>
 			));
 		?>
 		</div>
+
 
 	    <div id="disqus_thread"></div>
 	    <script type="text/javascript">

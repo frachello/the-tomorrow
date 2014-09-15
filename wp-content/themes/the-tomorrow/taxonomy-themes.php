@@ -14,7 +14,7 @@ Template Name: Conversations Archive by theme
 
 	<div class="page-content">
 
-	<h2><span>Letters on</span> <?php echo $curr_page_term_name; ?></h2>
+	<h2 class="page-title"><span>Letters on</span> <?php echo $curr_page_term_name; ?></h2>
 	<p class="rules-link"><a href="<?php bloginfo('url'); ?>/rules/">how does it work?</a></p>
 
 	<?php $rows_count = 1; ?>
@@ -90,7 +90,7 @@ Template Name: Conversations Archive by theme
 
     <?php else : ?>
 
-        <h2>Non ci sono post, spiacente.</h2>
+        <h2 class="page-title">Non ci sono post, spiacente.</h2>
 
     <?php endif; ?>
 

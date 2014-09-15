@@ -12,7 +12,7 @@ Template Name: Conversation Themes archive
 
 	<div class="page-content">
 
-	<h2>Themes<?php // echo get_queried_object()->label; ?></h2>
+	<h2 class="page-title">Themes<?php // echo get_queried_object()->label; ?></h2>
 
 	<?php
 
