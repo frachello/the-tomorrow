@@ -16,69 +16,6 @@
 	if ( isset($_GET['to_date']) && ($_GET['to_date'])!='' ){ $to_date = $_GET['to_date']; }
 	if ( isset($_GET['search']) && ($_GET['search'])!='' ){ $search = $_GET['search']; }
 
-/*
-
-	if( isset($from_date) && isset($to_date) ){
-		$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
-		$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
-	 	$home_boxes_array = array(
-			'post_type' => 'event',
-			'event_start_after'=>$from_date,
-			'event_start_before'=>$to_date,
-			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-			'paged' => $paged
-	 	);
-	 	if(isset($city)){
-		 	$city_array = array( 
-			    array(
-			        'key' => '_city',
-			        'value' => $city
-			    )
-			);
-	 	}
-	 	$home_boxes_array['venue_query'] = $city_array;
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
-		
-	}elseif(isset($city)){
-
-	//	echo ('<p class="current-city">'.$city.'</p>');
-	 	$home_boxes_array = array(
-			'post_type' => 'event',
-			'venue_query' => array( 
-			    array(
-			        'key' => '_city',
-			        'value' => $city
-			    )
-			),
-			'event_start_after' => 'today',
-			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-			'paged' => $paged
-	 	);
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
-
-
-	}elseif(isset($cpts)){
-		echo '<!-- results for ' . implode(', ', $cpts) . ' -->';
-	 	$home_boxes_array = array(
-	 		'post_type'=>$cpts,
-	 		'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-	 		'paged' => $paged
-	 	);
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
-	}else{
-
-		$home_boxes_array = array(
-			'post_type'=>array('event','conversations'),
-		//	'post_type'=>array('event'),
-			'posts_per_page'=>20, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-			'paged' => $paged
-
-	 	);
-		$wp_query = new WP_Query($home_boxes_array); // must be called $wp_query or the paging won't work
-
-	}
-*/
-
 	?>
 
 	<?php	// merge different queries
@@ -88,10 +25,10 @@
 			/* --------------------------------------------------------------------------------
 			events query */
 
-			$events_array = array(
+			$events_array_1 = array(
 				'post_type'=>'event',
 			//	'orderby'=>'eventstart' // default
-				'posts_per_page'=>31, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>11, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 				'showpastevents'=>true,
 				'paged' => $paged
 		 	);
@@ -105,28 +42,78 @@
 				    )
 				);
 		 	}
-		 	$events_array['venue_query'] = $city_array;
+		 	$events_array_1['venue_query'] = $city_array;
 
 		 	// filter by date
 		 	if( isset($from_date) ){
 				$from_date = implode("-", (explode("/", $from_date)) );
-				$events_array['event_start_after'] = $from_date;
+				$events_array_1['event_start_after'] = $from_date;
 			}else{
-//				$yesterday = date('Y-m-d',strtotime("-1 days"));
-//				echo ('<!-- yesterday: '.$yesterday.' -->');
-//				$events_array['event_start_after'] = $yesterday;
-//				$events_array['event_start_after'] = 'yesterday';
-				$events_array['event_start_after'] = 'today';
+				$events_array_1['event_start_after'] = 'today';
 			}
 		 	if( isset($to_date) ){
 				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
-				$events_array['event_start_before'] = $to_date;
+				$events_array_1['event_start_before'] = $to_date;
 			}
 
 		 	// filter by search
 			if( isset($search) ){
-				$events_array['s'] = $search;
+				$events_array_1['s'] = $search;
 			}
+
+		//	if( isset($paged) & $paged>1 ){
+		//		$events_1_offset = $paged+1;
+		//		$events_array_1['offset'] = $events_1_offset;
+		//	}
+
+
+			/* --------------------------------------------------------------------------------
+			events query 2 */
+
+			$events_array_2 = array(
+				'post_type'=>'event',
+			//	'orderby'=>'eventstart' // default
+				'posts_per_page'=>1, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'showpastevents'=>true,
+				'paged' => $paged
+//				'offset' => 3
+		 	);
+
+			// filter by city
+		 	if(isset($city)){
+			 	$city_array = array( 
+				    array(
+				        'key' => '_city',
+				        'value' => $city
+				    )
+				);
+		 	}
+		 	$events_array_2['venue_query'] = $city_array;
+
+		 	// filter by date
+		 	if( isset($from_date) ){
+				$from_date = implode("-", (explode("/", $from_date)) );
+				$events_array_2['event_start_after'] = $from_date;
+			}else{
+				$events_array_2['event_start_after'] = 'today';
+			}
+		 	if( isset($to_date) ){
+				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
+				$events_array_2['event_start_before'] = $to_date;
+			}
+
+		 	// filter by search
+			if( isset($search) ){
+				$events_array_2['s'] = $search;
+			}
+
+		//	if( isset($paged) & $paged>1 ){
+		//		$events_2_offset = $paged+2;
+		//		$events_array_2['offset'] = $events_2_offset;
+		//	}else{
+		//		$events_2_offset = 1;
+		//		$events_array_2['offset'] = $events_2_offset;
+		//	}
 
 
 			/* --------------------------------------------------------------------------------
@@ -138,19 +125,6 @@
 				'paged' => $paged
 		 	);
 
-			/* filter by date
-		 	if( isset($from_date) && isset($to_date) ){
-				$from_date = implode("-", ( array_reverse(explode("/", $from_date))) );
-				$to_date = implode("-", ( array_reverse(explode("/", $to_date))) );
-			 	$date_array = array(  
-			        array(  
-			            'after' => $from_date,  
-			            'before' => $to_date,  
-			        )
-				);
-			 	$conversations_array['date_query'] = $date_array;
-		 	} */
-
 		 	// filter by search
 			if( isset($search) ){
 				$conversations_array['s'] = $search;
@@ -159,46 +133,39 @@
 			/* --------------------------------------------------------------------------------
 			merge queries */
 
-			$events_query = new WP_Query( $events_array );
+			$events_query_1 = new WP_Query( $events_array_1 );
+			$events_query_2 = new WP_Query( $events_array_2 );
 			$conversations_query = new WP_Query( $conversations_array );
 
 			if( isset($city) || isset($from_date) || isset($to_date) ){
-				$wp_query->posts = $events_query->posts;
+				$wp_query->posts = $events_query_1->posts;
 			}else{
 				$merged_query = new WP_Query();
-				// start putting the contents in the new object
-				$wp_query->posts = array_merge( $conversations_query->posts, $events_query->posts );
+			//	start putting the contents in the new object
+			//	$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts, $events_query_2->posts );
+				$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts );
+
+
+			//	$merged_query = array_merge( $events_query_1->posts, $conversations_query->posts );
+			//	$postids = array();
+			//	foreach( $merged_query as $item ) {
+			//	$postids[]=$item->ID; //create a new query only of the post ids
+			//	}
+			//	$uniqueposts = array_unique($postids); //remove duplicate post ids
+			//	
+			//	$wp_query = new WP_Query( array(
+			//		'post__in' => $uniqueposts,
+			//		'posts_per_page'=>99, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+			//		'paged' => $paged,
+			//		'post_type'=>array('event','conversations'),
+			//		'orderby'=>'menu_order',
+			//	));	
+
+
 			}
 
-
-//			print_r($merged_query->posts);
-
-			// here you might wanna apply some sort of sorting on $result->posts
-/*
-			$postids = array();
-			foreach( $merged_query->posts as $item ) {
-				$postids[]=$item->ID; //create a new query only of the post ids
-			}
-			$uniqueposts = array_unique($postids);
-
-//			print_r($postids);
-*/
-			// we also need to set post count correctly so as to enable the looping
 			$wp_query->post_count = count( $wp_query->posts );
-/*
-			$wp_query = get_posts(array(
-			    //new query of only the unique post ids on the merged queries from above
-			    'post__in' => $uniqueposts,  
-			    'post_type'=>array('event','conversations'),
-				'posts_per_page'=>12, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
-				'paged' => $paged
-			    ));
-//			foreach( $posts as $post ) :
-//			setup_postdata($post);
-			?>
-			<?php // echo get_the_title(); ?>
-			<?php // echo eo_get_venue_name(); ?>
-*/	
+
 	 // } ?>
 
 	<?php if( $wp_query->have_posts() ): ?>
@@ -206,6 +173,17 @@
 
 	<!-- <?php echo 'paged: ' . $paged; ?> -->
 
+			<!--
+			<div class="home_box event">
+				<?php
+					echo $wp_query->post_count.' posts';
+					echo '<br />';
+				//	print_r($wp_query->posts);
+				//	foreach ($uniqueposts as $key) {
+				//		echo $key.' - ';
+				//	}
+				?>
+			</div> -->
 
 			<?php
 			while( $wp_query->have_posts() ): $wp_query->the_post();
@@ -216,8 +194,12 @@
 
 				<?php if($cur_post_type=='event'):
 				/* ############################## event ############################## */
-				?>
 
+				?>
+				<!--
+				<div class="home_box event">
+					<?php echo 'paged: ' . $paged; ?>
+				</div> -->
 				<?php
 					$venue_id = eo_get_venue();
 					$venue_name = eo_get_venue_name();
@@ -279,13 +261,13 @@
 						<a class="share" href="#">share</a>
 
 						<div class="share_baloon hide">
-
-						    <div class="addthis_toolbox addthis_default_style ">		    
+							<?php $event_website=get_the_content(); ?>
+						    <div class="addthis_toolbox addthis_default_style " addthis:url="<?php if($event_website){ echo $event_website; }else{ echo $venue_url; } ?>" addthis:title="<?php if($event_website){ the_title(); }else{ echo $venue_name; } ?> via @theTomorrownet ">
 
 							    <a class="addthis_button_facebook" title="Facebook" href="#">
 							    	Share on facebook</a>
 
-							    <a class="addthis_button_twitter" title="Tweet" href="#">
+							    <a class="addthis_button_twitter" title="Tweet" href="#" tw:via="theTomorrownet">
 									Share on twitter</a>
 
 							    <a class="addthis_button_email" title="Email" href="#">

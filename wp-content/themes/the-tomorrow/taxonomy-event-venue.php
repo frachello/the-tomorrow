@@ -160,7 +160,8 @@ get_header(); ?>
 			'posts_per_page'=>4,
 			'showpastevents'=>true,
 			'event_start_after'=>'today',
-			'event-venue'=>$venue_slug
+			'event-venue'=>$venue_slug,
+			'group_events_by' => 'series',
 	 	);
 	 	$events_query = new WP_Query( $events_array );
 	 	?>
@@ -225,12 +226,13 @@ get_header(); ?>
 
 						<div class="share_baloon hide">
 
-						    <div class="addthis_toolbox addthis_default_style ">		    
+							<?php $event_website=get_the_content(); ?>
+						    <div class="addthis_toolbox addthis_default_style " addthis:url="<?php if($event_website){ echo $event_website; }else{ echo $venue_url; } ?>" addthis:title="<?php if($event_website){ the_title(); }else{ echo $venue_name; } ?> via @theTomorrownet ">
 
 							    <a class="addthis_button_facebook" title="Facebook" href="#">
 							    	Share on facebook</a>
 
-							    <a class="addthis_button_twitter" title="Tweet" href="#">
+							    <a class="addthis_button_twitter" title="Tweet" href="#" tw:via="theTomorrownet">
 									Share on twitter</a>
 
 							    <a class="addthis_button_email" title="Email" href="#">

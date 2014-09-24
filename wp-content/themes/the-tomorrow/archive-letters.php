@@ -50,7 +50,34 @@ Template Name: Letters Archive
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $rows_count; ?>">
 
 			<h4><a href="<?php echo $hash_permalink; ?>" title="<?php the_title(); ?>">
-				<?php the_title() ?>
+				<span class="title"><?php the_title() ?></span> -
+				<span class="number">
+				<!-- http://stackoverflow.com/questions/8102221/php-multidimensional-array-searching-find-key-by-specific-value/8102246#8102246 -->
+				/ <?php
+				$conversations = get_the_terms( $post->ID, 'conversations' );
+				if ( !empty( $conversations ) ){
+				    // get the first term
+				    $conversation = array_shift( $conversations );
+					$cpt_item_id = $conversation->term_id;
+				}
+				$get_letters_by_cpt_item = array(
+					'post_type' => 'letters',
+					'posts_per_page' => -1,
+					'tax_query' => array (
+				      array (
+				         'taxonomy' => 'conversations',
+				         'field' => 'ID',
+				         'terms' => $cpt_item_id,
+				         'operator' => 'IN'
+				      )
+				   )
+				);
+				$this_cpt_item_letters = new WP_Query($get_letters_by_cpt_item);
+				$letters_num = $this_cpt_item_letters->post_count;
+				echo $letters_num;
+				wp_reset_postdata();
+
+				?></span>
 			</a></h4>
 			<div class="entry">
 			  <?php the_excerpt('[leggi tutto]'); ?>

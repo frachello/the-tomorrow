@@ -39,6 +39,7 @@ Template Name: Authors Archive
 		$cpt_item_id = "";
 		$cpt_item_id = $post->ID;
 		$get_letters_by_cpt_item = array(
+			'status' => 'published',
 			'post_type' => 'letters',
 			'posts_per_page' => -1,
 			'tax_query' => array (
@@ -51,12 +52,20 @@ Template Name: Authors Archive
 		   )
 		);
 		$this_cpt_item_letters = new WP_Query($get_letters_by_cpt_item);
-		if( $this_cpt_item_letters->have_posts() ){
-			$i = 0;
-			$letters_num = $this_cpt_item_letters->post_count;
-		}
+		$this_cpt_item_letters_arr = $this_cpt_item_letters->query_vars;
+//		print_r($this_cpt_item_letters);
+
+		
+//		print_r($this_cpt_item_letters_arr);
+//		echo('ayy');
+//		print_r ($this_cpt_item_letters);
+		$letters_num = $this_cpt_item_letters->found_posts;
 		wp_reset_postdata();
+		
+		if($letters_num>0):
+
 		?>
+
 
 		<div class="archive-box post-<?php the_ID(); ?> counter_<?php echo $col_count; ?>">
 
@@ -134,6 +143,7 @@ Template Name: Authors Archive
 	<?php
 	if($col_count == $cols_number){ $col_count=0; }
 	$col_count ++; $row_count ++;
+	endif;
 	endwhile;
 	?>
 

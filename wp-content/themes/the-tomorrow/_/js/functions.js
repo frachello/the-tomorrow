@@ -260,7 +260,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		$iso_container.isotope({
 			itemSelector: '.home_box',
 			layoutMode:'masonry',
-			sortBy : 'random',
+		//	sortBy : 'random',
 			masonry: {
 				columnWidth: 240
 			}

@@ -483,24 +483,46 @@ body.internal-page{
 //    }
 
       .li { border-top: 1px solid $primary-border-color; width: 220px; float: left;
-        a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat; }
-        &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
-        &.expand a{ background-image: url(../i/ico_rightcol_expand.png); }
-        &.collapse a{ background-image: url(../i/ico_rightcol_collapse.png); }
-        &.map a{ background-image: url(../i/ico_rightcol_map.png); }
-        &.prev_letter a{ background-image: url(../i/ico_rightcol_prev.png); }
-        &.next_letter a{ background-image: url(../i/ico_rightcol_next.png); }
-        &.contact_us a{ background-image: url(../i/ico_rightcol_share_email.png); }
-        &.credits a{ background-image: url(../i/ico_rightcol_pencil.png); }
+        a{ color: #191919; text-indent: 10px; padding: 20px 0; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; background-position: center right; background-repeat: no-repeat;
+          &:hover { color: $dark-grey; text-decoration: none; }
+        }
+//      &.gallery a{ background-image: url(../i/ico_rightcol_gallery.png); }
+        &.collapse a { @include at2x('../i/ico_rightcol_collapse', 'png', 15px, 18px);
+          &:hover {   @include at2x('../i/ico_rightcol_collapse_hover', 'png', 15px, 18px); }
+        }        
+        &.expand a { @include at2x('../i/ico_rightcol_expand', 'png', 15px, 18px);
+          &:hover {   @include at2x('../i/ico_rightcol_expand_hover', 'png', 15px, 18px); }
+        }        
+        &.map a { @include at2x('../i/ico_rightcol_map', 'png', 11px, 17px);
+          &:hover {   @include at2x('../i/ico_rightcol_map_hover', 'png', 11px, 17px); }
+        }        
+        &.prev_letter a{ @include at2x('../i/ico_rightcol_prev', 'png', 5px, 9px);
+          &:hover { @include at2x('../i/ico_rightcol_prev_hover', 'png', 5px, 9px); }
+        }
+        &.next_letter a{ @include at2x('../i/ico_rightcol_next', 'png', 5px, 9px);
+          &:hover { @include at2x('../i/ico_rightcol_next_hover', 'png', 5px, 9px); }
+        }
+        &.contact_us a {  @include at2x('../i/ico_rightcol_share_email', 'png', 19px, 14px);
+          &:hover {       @include at2x('../i/ico_rightcol_share_email_hover', 'png', 19px, 14px); }
+        }      
+        &.credits a { @include at2x('../i/ico_rightcol_pencil', 'png', 15px, 15px);
+          &:hover {   @include at2x('../i/ico_rightcol_pencil_hover', 'png', 15px, 15px); }
+        }      
       }
 
       .addthis_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid $primary-border-color;
         p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
-        .addthis_toolbox { float: right;
+        .addthis_toolbox { float: right; margin-right: 10px;
           a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px;
-            &.addthis_button_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
-            &.addthis_button_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
-            &.addthis_button_email    { background-image: url(../i/ico_rightcol_share_email.png) }
+            &.addthis_button_facebook { @include at2x('../i/ico_rightcol_share_facebook', 'png', 15px, 15px);
+              &:hover { @include at2x('../i/ico_rightcol_share_facebook_hover', 'png', 15px, 15px); }
+            }
+            &.addthis_button_twitter { @include at2x('../i/ico_rightcol_share_twitter', 'png', 19px, 15px);
+              &:hover { @include at2x('../i/ico_rightcol_share_twitter_hover', 'png', 19px, 15px); }
+            }
+            &.addthis_button_email {  @include at2x('../i/ico_rightcol_share_email', 'png', 19px, 14px);
+              &:hover {       @include at2x('../i/ico_rightcol_share_email_hover', 'png', 19px, 14px); }
+            }
           }
         }
         .at15t, .at16nc, .at300bs { background: none }
@@ -508,12 +530,20 @@ body.internal-page{
 
       .follow_col { padding: 20px 0; float: left; width: 220px; border-top: 1px solid $primary-border-color;
         p { color: #191919; text-indent: 10px; text-transform: uppercase; font-size: 14px; display: block; margin-right: 10px; float: left; }
-        .follow_ico { float: right;
+        .follow_ico { float: right; margin-right: 10px;
           a { width: 19px; height: 15px; @include ir; background-position: center center; background-repeat: no-repeat; margin-left: 5px; float: left;
-            &.follow_facebook { background-image: url(../i/ico_rightcol_share_facebook.png) }
-            &.follow_twitter  { background-image: url(../i/ico_rightcol_share_twitter.png) }
-            &.follow_email    { background-image: url(../i/ico_rightcol_share_email.png) }
-            &.follow_youtube { width: 21px; background: url(../i/ico_rightcol_share_youtube.png); }
+            &.follow_facebook { @include at2x('../i/ico_rightcol_share_facebook', 'png', 15px, 15px);
+              &:hover { @include at2x('../i/ico_rightcol_share_facebook_hover', 'png', 15px, 15px); }
+            }
+            &.follow_twitter { @include at2x('../i/ico_rightcol_share_twitter', 'png', 19px, 15px);
+              &:hover { @include at2x('../i/ico_rightcol_share_twitter_hover', 'png', 19px, 15px); }
+            }
+            &.follow_email {  @include at2x('../i/ico_rightcol_share_email', 'png', 19px, 14px);
+              &:hover {       @include at2x('../i/ico_rightcol_share_email_hover', 'png', 19px, 14px); }
+            }
+            &.follow_youtube {  @include at2x('../i/ico_rightcol_share_youtube', 'png', 21px, 15px);
+              &:hover {         @include at2x('../i/ico_rightcol_share_youtube_hover', 'png', 21px, 15px); }
+            }
           }
 
         }
@@ -575,12 +605,16 @@ body.internal-page{
         width: 476px; margin-left: 0; margin-left: 220px; padding-top: 26px; padding-left: 36px; border-top: 1px solid $primary-border-color;
         p { margin-bottom: 10px; }
         p, li{ font-size: 20px; }
+        p a, li a { text-decoration: underline; color: #000; }
+        p a:hover, li a:hover { color: $dark-grey; text-decoration: none; }        
         div.event{ display: none }
       }
       .leftcol { width: 220px; margin: 0 36px 0 0; padding-top: 30px; float: left; border-top: 1px solid $primary-border-color; border-bottom: 1px solid $primary-border-color;
         p{
           text-transform: uppercase; padding-bottom: 26px;
-          a { color: $primary-color; }
+          a { color: $primary-color;
+            &:hover { color: $dark-grey; text-decoration: none; }
+          }
         }
       }
     }
@@ -716,13 +750,17 @@ body.internal-page{
     .archive-box{
       text-align: center; height: 240px;
       h4 { font-size: 19px; font-weight: 700; margin: 10px 0 5px 0;
-        a { color: #000; }
+        a { color: #000;
+          &:hover { color: $dark-grey; text-decoration: none; }
+        }
       }
       a.img{ width: 220px; height: 180px; display: block; border-bottom: 1px solid $primary-border-color;
         img { height: 180px; width: auto; }
       }
       .letters_count{ text-transform: uppercase; font-family: "adelle-sans"; font-size: 13px;
-        a { color: $primary-color; }
+        a { color: $primary-color;
+          &:hover { color: $dark-grey; text-decoration: none; }
+        }
       }
     }
   }
