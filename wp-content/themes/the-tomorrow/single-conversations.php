@@ -179,7 +179,7 @@
 					<div class="comments">
 						<p class="show_comments">
 							<a onclick="loadDisqus(jQuery(this), '<?= $post->ID ?>','<?= $post->guid ?>', '<? the_permalink() ?>');">
-							Show comments
+							Leave a comment
 							</a>
 						</p>
 					</div>

@@ -268,6 +268,11 @@ body.home, body.search {
   background: #fff;
 }
 body #content {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   margin-top: 140px;
   position: relative;
   z-index: 1;
@@ -406,13 +411,13 @@ body.home header.main .inner h1 a, body.search header.main .inner h1 a {
   }
 }
 body.scrolled header.main {
-  height: 90px;
+  height: 60px;
 }
 body.scrolled header.main .inner {
-  height: 90px;
+  height: 60px;
 }
 body.scrolled header.main .inner h1 {
-  padding-top: 28px;
+  padding-top: 13px;
 }
 body.scrolled header.main .inner h1 a {
   font-size: 0;
@@ -435,7 +440,7 @@ body.scrolled header.main .inner h2 {
   margin-top: 35px;
 }
 body.scrolled header.main .nav_menu {
-  top: 34px;
+  top: 19px;
 }
 body.home.scrolled header.main .inner h1 a, body.search.scrolled header.main .inner h1 a {
   background-image: url('../i/the_tomorrow_logotipo_fff.png');
@@ -449,15 +454,15 @@ body.home.scrolled header.main .inner h1 a, body.search.scrolled header.main .in
   }
 }
 body.internal-page.page-id-49 header.main.smaller2, body.internal-page.single-authors header.main.smaller2, body.internal-page.tax-event-venue header.main.smaller2, header.main.smaller2 {
-  height: 90px;
+  height: 60px;
   background-color: #fff;
   background-image: none !important;
 }
 body.internal-page.page-id-49 header.main.smaller2 .inner, body.internal-page.single-authors header.main.smaller2 .inner, body.internal-page.tax-event-venue header.main.smaller2 .inner, header.main.smaller2 .inner {
-  height: 90px;
+  height: 60px;
 }
 body.internal-page.page-id-49 header.main.smaller2 .inner h1, body.internal-page.single-authors header.main.smaller2 .inner h1, body.internal-page.tax-event-venue header.main.smaller2 .inner h1, header.main.smaller2 .inner h1 {
-  padding-top: 28px;
+  padding-top: 13px;
 }
 body.internal-page.page-id-49 header.main.smaller2 .inner h1 a, body.internal-page.single-authors header.main.smaller2 .inner h1 a, body.internal-page.tax-event-venue header.main.smaller2 .inner h1 a, header.main.smaller2 .inner h1 a {
   font-size: 0;
@@ -480,7 +485,7 @@ body.internal-page.page-id-49 header.main.smaller2 .inner h2, body.internal-page
   margin-top: 35px;
 }
 body.internal-page.page-id-49 header.main.smaller2 .nav_menu, body.internal-page.single-authors header.main.smaller2 .nav_menu, body.internal-page.tax-event-venue header.main.smaller2 .nav_menu, header.main.smaller2 .nav_menu {
-  top: 34px;
+  top: 19px;
 }
 body.internal-page.page-id-49 header.main.smaller2 .nav_menu li a, body.internal-page.single-authors header.main.smaller2 .nav_menu li a, body.internal-page.tax-event-venue header.main.smaller2 .nav_menu li a, header.main.smaller2 .nav_menu li a {
   background-image: url('../i/ico_nav_menu_000.png');
@@ -611,7 +616,7 @@ body.home #filter_nav, body.search #filter_nav, body.home #main_search, body.sea
 }
 body.scrolled #filter_nav {
   position: fixed;
-  top: 90px;
+  top: 60px;
 }
 .ui-datepicker {
   background: #fff;
@@ -831,7 +836,7 @@ body.scrolled #filter_nav {
   background: none;
 }
 body.scrolled #main_search {
-  top: 90px;
+  top: 60px;
   /* --------------------------------------------------------------------------------
                                     mega menu                                    */
 }
@@ -1323,7 +1328,7 @@ body.internal-page .archive-box.counter_4 {
 body.internal-page #content {
   position: relative;
   width: 988px;
-  margin: 90px auto 0 auto;
+  margin: 60px auto 0 auto;
   text-align: left;
   padding: 80px 0 0 0;
   /* place page */
@@ -1974,7 +1979,7 @@ body.internal-page.tax-event-venue #main_search, body.internal-page.single-autho
   top: 520px;
 }
 body.internal-page.tax-event-venue.scrolled #content, body.internal-page.single-authors.scrolled #content, body.internal-page.page-id-49.scrolled #content {
-  margin-top: 90px;
+  margin-top: 60px;
 }
 body.internal-page.tax-event-venue.scrolled.open-filters #content, body.internal-page.single-authors.scrolled.open-filters #content, body.internal-page.page-id-49.scrolled.open-filters #content {
   margin-top: 170px;
@@ -1982,7 +1987,7 @@ body.internal-page.tax-event-venue.scrolled.open-filters #content, body.internal
 body.internal-page.tax-event-venue.scrolled header.main, body.internal-page.single-authors.scrolled header.main, body.internal-page.page-id-49.scrolled header.main {
   background-color: #fff;
   background-image: none !important;
-  height: 90px;
+  height: 60px;
 }
 body.internal-page.tax-event-venue.scrolled header.main .nav_menu li a, body.internal-page.single-authors.scrolled header.main .nav_menu li a, body.internal-page.page-id-49.scrolled header.main .nav_menu li a {
   background-image: url('../i/ico_nav_menu_000.png');
@@ -1999,7 +2004,7 @@ body.internal-page.tax-event-venue.scrolled header.main .inner h1 a, body.intern
   }
 }
 body.internal-page.tax-event-venue.scrolled #main_search, body.internal-page.single-authors.scrolled #main_search, body.internal-page.page-id-49.scrolled #main_search {
-  top: 90px;
+  top: 60px;
 }
 body.internal-page.tax-event-venue {
   /* single conversation page */
@@ -2030,7 +2035,7 @@ body.internal-page.single-conversations #content.scrolled_conversation .title_wr
   border-top: 1px solid #f4f4f0;
   background: #fff;
   position: fixed;
-  top: 90px;
+  top: 60px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -2047,7 +2052,7 @@ body.internal-page.single-conversations #content.scrolled_conversation .title_wr
 body.internal-page.single-conversations #content p.count-theme {
   text-transform: uppercase;
   font-size: 14px;
-  margin-bottom: 30px;
+  margin: 17px 0;
 }
 body.internal-page.single-conversations #content .content_col {
   /* border-top: 1px solid $primary-border-color; */
@@ -2171,7 +2176,7 @@ body.internal-page.post-type-archive-letters h2, body.internal-page.post-type-ar
 }
 body.internal-page.post-type-archive-letters p.rules-link, body.internal-page.post-type-archive-conversations p.rules-link, body.internal-page.single-authors p.rules-link, body.internal-page.tax-themes p.rules-link {
   position: absolute;
-  top: 90px;
+  top: 60px;
   right: 0px;
 }
 body.internal-page.post-type-archive-letters p.rules-link a, body.internal-page.post-type-archive-conversations p.rules-link a, body.internal-page.single-authors p.rules-link a, body.internal-page.tax-themes p.rules-link a {

@@ -76,7 +76,7 @@ a, a:hover {text-decoration:none;}
 
 body{ background: #F4F4F0;
   &.home, &.search { background: #fff; }
-  #content {
+  #content { @include transition(all 0.5s ease);
     margin-top: 140px; position: relative; z-index: 1; // @include transition(all 0.5s ease); 
 //  position: relative; width: 100%; margin: 0; text-align: left; padding: 80px 0 0 0;
     h2.no-content{ font-family: "adelle-sans"; font-weight: 300; font-size: 16px; height: 80px; line-height: 80px; border-bottom: 1px solid #ccc; }
@@ -147,14 +147,14 @@ body.home, body.search {
 }
 
 
-body.scrolled header.main{ height: 90px;
-  .inner{ height: 90px;
-    h1 { padding-top: 28px;
+body.scrolled header.main{ height: 60px;
+  .inner{ height: 60px;
+    h1 { padding-top: 13px;
       a { @include ir; width: 70px; height: 35px; @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; } 
     }
     h2 { display: none; margin-top: 35px; }
   }
-  .nav_menu { top: 34px; }
+  .nav_menu { top: 19px; }
 }
 body.home.scrolled, body.search.scrolled{
   header.main .inner h1 a {
@@ -166,14 +166,14 @@ body.internal-page.single-authors header.main.smaller2,
 body.internal-page.tax-event-venue header.main.smaller2,
 header.main.smaller2
 {
-  height: 90px; background-color: #fff; background-image: none !important;
-  .inner{ height: 90px;
-    h1 { padding-top: 28px;
+  height: 60px; background-color: #fff; background-image: none !important;
+  .inner{ height: 60px;
+    h1 { padding-top: 13px;
       a { @include ir; width: 70px; height: 35px; @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; } 
     }
     h2 { display: none; margin-top: 35px; }
   }
-  .nav_menu { top: 34px;
+  .nav_menu { top: 19px;
     li a { @include at2x('../i/ico_nav_menu_000', 'png', 40px, 35px); background-repeat: no-repeat; }
   }
 }
@@ -221,7 +221,7 @@ body.home, body.search{
     .submit { background: #fff; border: 1px solid #191919; width: 90px; height: 40px; float: right; font-family: "adelle-sans"; font-weight: 300; font-size: 12px; text-transform: uppercase; }
   }
 }
-body.scrolled #filter_nav { position: fixed; top: 90px; }
+body.scrolled #filter_nav { position: fixed; top: 60px; }
 
 @import 'datepicker';
 
@@ -236,7 +236,7 @@ body.scrolled #filter_nav { position: fixed; top: 90px; }
     input.text{ width: 100%; border: none; border-bottom: 1px solid #ccc; font-family: "adelle-sans"; font-weight: 300; font-size: 18px; padding: 0; margin: 0; background: none; }
   }
 }
-body.scrolled #main_search { top: 90px; }
+body.scrolled #main_search { top: 60px; }
 
 /* --------------------------------------------------------------------------------
                                     mega menu                                    */
@@ -415,7 +415,7 @@ body.internal-page{
 
   #content {
 
-    position: relative; width: 988px; margin: 90px auto 0 auto; text-align: left; padding: 80px 0 0 0;
+    position: relative; width: 988px; margin: 60px auto 0 auto; text-align: left; padding: 80px 0 0 0;
 
     .content_col{ width: 732px; border-top: 1px solid $primary-border-color; 
 
@@ -635,15 +635,15 @@ body.internal-page{
       top: 520px;
     }  
     &.scrolled {
-      #content{ margin-top: 90px; }
+      #content{ margin-top: 60px; }
       &.open-filters #content { margin-top: 170px; }
       header.main{
-        background-color: #fff; background-image: none !important; height: 90px;
+        background-color: #fff; background-image: none !important; height: 60px;
         .nav_menu li a { background-image: url('../i/ico_nav_menu_000.png'); }
         .inner h1 a { @include at2x('../i/the_tomorrow_logotipo_000', 'png', 40px, 35px); background-repeat: no-repeat; background-position: 0 0; }
       }
       #main_search{
-        top: 90px;
+        top: 60px;
       }
     }
   }
@@ -662,12 +662,12 @@ body.internal-page{
       &.scrolled_conversation {
         #rightcol { position: fixed; left: 50%; margin-left: 274px; }
         .content_col{  }
-        .title_wrap{  @include transition(all .3s ease); border-top: 1px solid #f4f4f0; background: #fff; position: fixed; top: 90px; left: 0; width: 100%; text-align: center; z-index: 1;
+        .title_wrap{  @include transition(all .3s ease); border-top: 1px solid #f4f4f0; background: #fff; position: fixed; top: 60px; left: 0; width: 100%; text-align: center; z-index: 1;
           h2 { border-top: none; width: 732px; margin: 0 auto; text-align: left; position: relative; left: -128px; // padding-bottom: 10px;
           }
         }
       }
-      p.count-theme { text-transform: uppercase; font-size: 14px; margin-bottom: 30px; }
+      p.count-theme { text-transform: uppercase; font-size: 14px; margin: 17px 0; }
 
       .content_col{ width: 732px; /* border-top: 1px solid $primary-border-color; */
         article{ margin-bottom: 1px; @include transition(all 1s ease); overflow: hidden; height: auto;
@@ -723,7 +723,7 @@ body.internal-page{
   &.tax-themes
   {
     h2 { padding-bottom: 0; }
-    p.rules-link{ position: absolute; top: 90px; right: 0px;
+    p.rules-link{ position: absolute; top: 60px; right: 0px;
       a { color: $primary-color; font-size: 11px; text-transform: uppercase; font-weight: 700; }
     }
     h3 { float: left; margin-top: 38px; width: 100%; clear: both; font-size: 19px; font-family: "adelle-sans"; font-weight: 700; border-top: 1px solid $primary-border-color; padding: 14px 0 35px 0; }

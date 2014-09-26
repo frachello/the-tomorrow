@@ -260,7 +260,7 @@ $(document).ready ( function () { //Work as soon as the DOM is ready for parsing
 		$iso_container.isotope({
 			itemSelector: '.home_box',
 			layoutMode:'masonry',
-		//	sortBy : 'random',
+			sortBy : 'random',
 			masonry: {
 				columnWidth: 240
 			}
@@ -400,12 +400,12 @@ function resize_header() {
 	//	console.log('new_header_height: '+new_header_height);
 	//	console.log('distanceY: '+distanceY);
 
-	    if(new_header_height<90){
+	    if(new_header_height<60){
 			classie.add(header,"smaller2");
 	    }else{
 	    	classie.remove(header,"smaller2");
 	    }
-		if(new_header_height>90){
+		if(new_header_height>60){
 			$('header.main').css('height',new_header_height+'px');
 			$('#main_search').css('top',new_header_height+'px');
 	    }
@@ -431,7 +431,7 @@ function resize_header() {
 		    }
 		}
 	    
-		if(new_header_height>90){
+		if(new_header_height>60){
 			$('header.main').css('height',new_header_height+'px');
 			$('#main_search').css('top',new_header_height+'px');
 	    }
@@ -445,7 +445,7 @@ function resize_header() {
 	if( $('body.single-conversations').length ) {
 //		console.log(distanceY);
 		title_wrap_h = $('.title_wrap').height();
-		rightcol_top = title_wrap_h+91;
+		rightcol_top = title_wrap_h+61;
 		if(distanceY>128){
 			$('#rightcol').css('top',rightcol_top+'px');
 	        $('.content_col').css('padding-top',title_wrap_h+'px');
