@@ -28,7 +28,7 @@
 			$events_array_1 = array(
 				'post_type'=>'event',
 			//	'orderby'=>'eventstart' // default
-				'posts_per_page'=>11, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>5, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 				'showpastevents'=>true,
 				'paged' => $paged
 		 	);
@@ -73,7 +73,7 @@
 			$events_array_2 = array(
 				'post_type'=>'event',
 			//	'orderby'=>'eventstart' // default
-				'posts_per_page'=>1, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>5, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 				'showpastevents'=>true,
 				'paged' => $paged
 //				'offset' => 3
@@ -121,7 +121,7 @@
 
 			$conversations_array = array(
 				'post_type'=>'conversations',
-				'posts_per_page'=>8, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
+				'posts_per_page'=>3, // il valore di "Blog pages show at most" deve essere inferiore a questo (http://thetomorrow.dev/wp-admin/options-reading.php?settings-updated=true)
 				'paged' => $paged
 		 	);
 
@@ -142,8 +142,8 @@
 			}else{
 				$merged_query = new WP_Query();
 			//	start putting the contents in the new object
-			//	$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts, $events_query_2->posts );
-				$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts );
+				$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts, $events_query_2->posts );
+			//	$wp_query->posts = array_merge( $events_query_1->posts, $conversations_query->posts );
 
 
 			//	$merged_query = array_merge( $events_query_1->posts, $conversations_query->posts );
